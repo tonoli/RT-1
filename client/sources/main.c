@@ -36,7 +36,13 @@ int main(int argc,char **argv)
 
 	t_env *e = (t_env *)ft_memalloc(sizeof(t_env));
 
-	valread = recv(client_socket, (void *)e, sizeof(t_env), 0);
+//	valread = recv(client_socket, (void *)e, sizeof(t_env), 0);
+
+	valread = 0;
+	while (valread < sizeof(t_env))
+	{
+		valread += recv(client_socket, (void *)(e + valread), sizeof(t_env) - valread, 0);
+	}
 
 	if (valread == -1)
 	{
@@ -54,9 +60,12 @@ int main(int argc,char **argv)
 		ft_printf("Corrupted env data received\n");
 		exit(EXIT_FAILURE);
 	}
+	
 
 	ft_printf("Received data env magic: [%#lX]\n", e->magic);
 	ft_printf("Object to sync : %d\n", e->object_count);
+
+	exit(0);
 
 	e->objects = NULL;
 
