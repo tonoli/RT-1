@@ -96,8 +96,6 @@ int main(int argc, char **argv)
 	struct sockaddr		csin;
 	int					cs;
 
-	e->magic = 0xDEADDEAD;
-
 	printf("Waiting for client...\n");
 	cslen = sizeof(csin);
 	if ((cs = accept(server_socket, (struct sockaddr *)&csin, &cslen)) < 0)
@@ -108,17 +106,16 @@ int main(int argc, char **argv)
 
 	//ENV E
 	send(cs, (void *)e, sizeof(t_env), 0);
-//	send(cs, NULL, 0, 0);
 
-//	//OBJECTS
-//	obj = e->objects;
-//
-//	while (obj)
-//	{
-//		printf("Sending object...\n");
-//		send(cs, (void *)obj, sizeof(t_obj), 0);
-//		obj = obj->next;
-//	}
+	//OBJECTS
+	obj = e->objects;
+
+	while (obj)
+	{
+		printf("Sending object...\n");
+		send(cs, (void *)obj, sizeof(t_obj), 0);
+		obj = obj->next;
+	}
 
 	close(cs);
 	close(server_socket);
