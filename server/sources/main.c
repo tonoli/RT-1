@@ -65,10 +65,11 @@ int main(int argc, char **argv)
 	/////////////////////////////////
 
 
-	int 				port = ft_atoi("1337");
+	int 				port = ft_atoi("1338");
 	struct sockaddr_in	address;
 
 	signal(SIGINT, quit);
+	signal(SIGPIPE, quit);
 
 	if ((server_socket = socket(AF_INET, SOCK_STREAM, 0)) < 0)
 	{
@@ -105,17 +106,18 @@ int main(int argc, char **argv)
 
 	//ENV E
 	send(cs, (void *)e, sizeof(t_env), 0);
+//	send(cs, NULL, 0, 0);
 
-	//OBJECTS
-	obj = e->objects;
+//	//OBJECTS
+//	obj = e->objects;
+//
+//	while (obj)
+//	{
+//		printf("Sending object...\n");
+//		send(cs, (void *)obj, sizeof(t_obj), 0);
+//		obj = obj->next;
+//	}
 
-	while (obj)
-	{
-		printf("Sending object...\n");
-		send(cs, (void *)obj, sizeof(t_obj), 0);
-		obj = obj->next;
-	}
-
-	close(server_socket);
 	close(cs);
+	close(server_socket);
 }
