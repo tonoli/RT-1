@@ -57,10 +57,9 @@ int main(int argc,char **argv)
 
 	if (e->magic != MAGIC)
 	{
-		ft_printf("Corrupted env data received t_env_magic: [%d] vs data: [%d]\n", MAGIC, e->magic);
+		ft_printf("Corrupted env data received t_env_magic: [%#lX] vs data: [%#lX]\n", MAGIC, e->magic);
 		exit(EXIT_FAILURE);
 	}
-
 
 	ft_printf("Received data env magic: [%#lX]\n", e->magic);
 	ft_printf("Object to sync : %d\n", e->object_count);

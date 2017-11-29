@@ -96,6 +96,8 @@ int main(int argc, char **argv)
 	struct sockaddr		csin;
 	int					cs;
 
+	e->magic = 0xDEADDEAD;
+
 	printf("Waiting for client...\n");
 	cslen = sizeof(csin);
 	if ((cs = accept(server_socket, (struct sockaddr *)&csin, &cslen)) < 0)
