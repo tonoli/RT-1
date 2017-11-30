@@ -32,30 +32,30 @@ void		reset_screen(t_env *e)
 //	if (e->render)
 //		SDL_BlitSurface(e->s_raytracer, &(SDL_Rect){0, 0, F_WIDTH, F_HEIGHT},
 //					e->s_background, &(SDL_Rect){82, 72, F_WIDTH, F_HEIGHT});
-	e->sum = 1;
+//	e->sum = 1;
 }
 
 static void	print_screen(t_env *e)
 {
-	int			i;
-	int			j;
-	t_vector	c;
-	SDL_Rect	pixel;
-
-	i = -1;
-	while (++i < (int)F_WIDTH)
-	{
-		j = -1;
-		while (++j < (int)F_HEIGHT)
-		{
-			c = e->color_array[j][i];
-			c = vector_scale(c, 1.0 / (double)e->sum);
-			c = adjust_color(c);
-//			pixel = (SDL_Rect){.w = 1, .h = 1, .x = i, .y = j};
-//			SDL_FillRect(e->s_raytracer, &pixel,
-//						SDL_MapRGB(e->s_raytracer->format, c.x, c.y, c.z));
-		}
-	}
+//	int			i;
+//	int			j;
+//	t_vector	c;
+//	SDL_Rect	pixel;
+//
+//	i = -1;
+//	while (++i < (int)F_WIDTH)
+//	{
+//		j = -1;
+//		while (++j < (int)F_HEIGHT)
+//		{
+//			c = e->color_array[j][i];
+//			c = vector_scale(c, 1.0 / (double)e->sum);
+//			c = adjust_color(c);
+////			pixel = (SDL_Rect){.w = 1, .h = 1, .x = i, .y = j};
+////			SDL_FillRect(e->s_raytracer, &pixel,
+////						SDL_MapRGB(e->s_raytracer->format, c.x, c.y, c.z));
+//		}
+//	}
 //	if (e->render)
 //		SDL_BlitSurface(e->s_raytracer, &(SDL_Rect){0, 0, F_WIDTH, F_HEIGHT},
 //					e->s_background, &(SDL_Rect){82, 72, F_WIDTH, F_HEIGHT});
@@ -74,7 +74,7 @@ static void write_buffer(t_env *e)
 		while (++j < (int)F_HEIGHT)
 		{
 			c = e->color_array[j][i];
-			c = vector_scale(c, 1.0 / (double)e->sum);
+//			c = vector_scale(c, 1.0 / (double)e->sum);
 			c = adjust_color(c);
 
 			g_buffer[(i * (int)F_HEIGHT) + j] =
@@ -88,6 +88,8 @@ void		draw_screen(t_env *e)
 	pthread_t	tid[e->threads];
 	int			i;
 	t_env		*copy;
+
+	reset_screen(e);
 
 	copy = NULL;
 	i = -1;

@@ -6,10 +6,9 @@
 # ifndef GLOBAL_SERVER
 #  define GLOBAL_SERVER
 
-extern int	g_srv_socket;
-extern int	g_cli_socket;
-extern int	g_port;
-extern int	*g_buffer;
+extern int		g_srv_socket;
+extern int		g_port;
+extern t_vector	*g_buffer;
 
 # endif
 
@@ -33,8 +32,8 @@ void		get_options(t_env *e, int argc, char **argv);
 
 void		init_master_socket(void);
 int			connect_to_client(void);
-void		sync_env_obj(t_env *e);
-void		sync_buffer(void);
+void		sync_env_obj(t_env *e, int cs);
+void		sync_buffer(int cs);
 
 /*
 **	DISPLAY
