@@ -22,6 +22,12 @@ LIBFT_DIR		=	../common/libft/
 LIBFT_LIB		=	$(LIBFT_DIR)libft.a
 LIBFT_INC		=	$(LIBFT_DIR)includes/
 
+SDL2_F			=	-framework SDL2 -framework SDL2_ttf -framework SDL2_image -F ../common/frameworks/
+SDL2_P			=	-rpath @executable_path/common/frameworks/
+SDL2_I			=	-I ../common/frameworks/SDL2.framework/Headers
+SDL2_TTF_I		=	-I ../common/frameworks/SDL2_ttf.framework/Headers
+SDL2_IMG_I		=	-I ../common/frameworks/SDL2_image.framework/Headers
+
 RED				=	"\033[1;31m"
 GREEN			=	"\033[1;32m"
 YELLOW			=	"\033[1;33m"
@@ -36,7 +42,7 @@ all:
 					@mv $(NAME) ../ 
 
 $(NAME):			$(OBJ_DIR) $(OBJS)
-					@$(CC) $(FLAGS) $(OBJS) -o $(NAME) -I $(INC_DIR) -I $(LIBFT_INC) -I $(COMMON) $(LIBFT_LIB)
+					@$(CC) $(FLAGS) $(OBJS) -o $(NAME) -I $(INC_DIR) -I $(LIBFT_INC) -I $(COMMON) $(LIBFT_LIB) $(SDL2_P) $(SDL2_F) $(SDL2_I) $(SDL2_TTF_I) $(SDL2_IMG_I)
 
 $(LIBFT_LIB):
 					make -C $(LIBFT_DIR)

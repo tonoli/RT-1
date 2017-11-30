@@ -63,10 +63,10 @@ void		random_spheres(t_env *e)
 
 	basics(e);
 	i = -300;
-	while (i < 60000)
+	while (i < 300)
 	{
 		j = 0;
-		while (j < 1000)
+		while (j < 100)
 		{
 			create_random_sphere(e, i, j);
 			j += 40;

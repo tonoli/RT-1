@@ -15,6 +15,16 @@ unsigned long checksum(void *data, size_t len)
 	return (total);
 }
 
+void	buffer_set_color(int *buffer, int color)
+{
+	int i = 0;
+
+	while (i < (int)(F_WIDTH * F_HEIGHT))
+	{
+		buffer[i] = color;
+		i++;
+	}
+}
 
 int main(int argc,char **argv)
 {
@@ -133,4 +143,29 @@ int main(int argc,char **argv)
 
 
 	printf("Checksum for total sync objects : %lx\n", checksum_total);
+
+
+	printf("Sending back image buffer of %d x %d\n", (int)F_WIDTH, (int)F_HEIGHT);
+
+	int	*image_buffer;
+
+	image_buffer = (int *)ft_memalloc(sizeof(int) * (int)F_WIDTH * (int)F_HEIGHT);
+
+	buffer_set_color(image_buffer, 0xFF00FF00);
+
+//	ft_memset((void *)image_buffer, 0xFF, sizeof(int) * (int)F_WIDTH * (int)F_HEIGHT);
+
+	send(client_socket, image_buffer, sizeof(int) * (int)F_WIDTH * (int)F_HEIGHT, 0);
+
+	printf("Image sent\n");
 }
+
+
+
+
+
+
+
+
+
+

@@ -3,6 +3,23 @@
 int		server_socket;
 int		client_socket;
 
+void	copy_image_to_sdl(SDL_Surface *win, int *image)
+{
+	short	x;
+	short	y;
+
+	y = -1;
+	while (++y < F_HEIGHT)
+	{
+		x = -1;
+		while (++x < F_WIDTH)
+		{
+			*((unsigned *)(win->pixels + y * win->pitch + x * win->format->BytesPerPixel)) = image[x * (int)F_HEIGHT + y];
+		}
+	}
+	printf("created rect\n");
+}
+
 unsigned long checksum(void *data, size_t len)
 {
 	unsigned char *c = (unsigned char *)data;
@@ -205,6 +222,35 @@ int main(int argc, char **argv)
 
 	printf("Checksum for total sync objects : %lx\n", checksum_total);
 
+	printf("Receiving image buffer\n");
+
+	int	*image_buffer;
+
+	image_buffer = (int *)ft_memalloc(sizeof(int) * F_WIDTH * F_HEIGHT);
+
+	int image_size = 0;
+	while (image_size < (sizeof(int) * (int)F_WIDTH * (int)F_HEIGHT))
+	{
+		image_size += recv(client_socket, (void *)image_buffer + image_size, (sizeof(int) * (int)F_WIDTH * (int)F_HEIGHT) - image_size, 0);
+	}
+
+	printf("Displaying it\n");
+
+	SDL_Init(SDL_INIT_VIDEO);
+	if (!(e->win = SDL_CreateWindow("RayTracer Server", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, F_WIDTH, F_HEIGHT, 0)))
+		exit(EXIT_FAILURE);
+	//Pointer to main window surface
+	e->s_background = SDL_GetWindowSurface(e->win);
+
+	copy_image_to_sdl(e->s_background, image_buffer);
+
 	close(client_socket);
 	close(server_socket);
+
+	while(1)
+	{
+		SDL_UpdateWindowSurface(e->win);
+		if (SDL_PollEvent(&e->event));
+			//		handle_events(e);;
+	}
 }
