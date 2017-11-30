@@ -1,28 +1,89 @@
 #include "server.h"
 
 int		server_socket;
+int		client_socket;
 
-void quit(int sig)
+unsigned long checksum(void *data, size_t len)
 {
-	close(server_socket);
-	exit(0);
+	unsigned char *c = (unsigned char *)data;
+	unsigned long total = 5381;
+
+	size_t i = 0;
+	while (i < len)
+	{
+		total = ((total << 5) + total) + *c;
+		c++;
+		i++;
+	}
+	return (total);
 }
 
-void *loop(void *data)
+void	quit(int sig)
 {
-	int cs = (int)data;
+	close(client_socket);
+	close(server_socket);
+	exit(EXIT_SUCCESS);
+}
 
-	while(1)
+void	*loop(void *data)
+{
+	int 	cs = (int)data;
+	char	buffer[100];
+
+	while (1)
 	{
-		char buffer[100];
 		sprintf(buffer, "Sending on CS %3d\n           ", cs);
 		if (send(cs, buffer, strlen(buffer), 0) == -1)
 		{
-			//			perror("send");
-			//			exit(EXIT_FAILURE);
+//			perror("send");
+//			exit(EXIT_FAILURE);
 		}
-		printf("Still connected to %d\n", cs);
+		ft_printf("Still connected to %d\n", cs);
 	}
+}
+
+int		get_port(int argc, char **argv)
+{
+	int i;
+
+	i = 1;
+	while (i < argc - 1)
+	{
+		if (ft_strequ("-p", argv[i]) && ft_str_is_number(argv[i + 1]))
+			return (ft_atoi(argv[i + 1]));
+		i++;
+	}
+	ft_dprintf(2, "Please provide a port argument -p <port>\n");
+	exit(EXIT_FAILURE);
+	return (-1);
+}
+
+char	*get_scene(int argc, char **argv)
+{
+	int i;
+
+	i = 1;
+	while (i < argc)
+	{
+		if (ft_strequ("-p", argv[i]) && ft_str_is_number(argv[i + 1]))
+			i += 2;
+		else
+			return (argv[i]);
+	}
+	return (NULL);
+}
+
+int		get_options(t_env *e, int argc, char **argv)
+{
+	int port;
+
+	port = get_port(argc, argv);
+	e->scene_file = get_scene(argc, argv);
+	if (!e->scene_file)
+		random_spheres(e);
+	else
+		parser(e);
+	return (port);
 }
 
 int main(int argc, char **argv)
@@ -31,13 +92,14 @@ int main(int argc, char **argv)
 
 	t_env *e = (t_env *)ft_memalloc(sizeof(t_env));
 	init_render_env(e);
-	if (argc == 2)
-	{
-		e->scene_file = argv[1];
-		parser(e);
-	}
-	else
-		random_spheres(e);
+
+	int port;
+
+	port = get_options(e, argc, argv);
+
+	ft_printf("PORT : %d\n", port);
+	ft_printf("SCENE : %s\n", e->scene_file);
+
 	ft_printf("server initialised\n");
 
 	/////////////////////////////////
@@ -64,8 +126,6 @@ int main(int argc, char **argv)
 	e->object_count = total;
 	/////////////////////////////////
 
-
-	int 				port = ft_atoi("1338");
 	struct sockaddr_in	address;
 
 	signal(SIGINT, quit);
@@ -92,31 +152,59 @@ int main(int argc, char **argv)
 		exit(EXIT_FAILURE);
 	}
 
-	unsigned int		cslen;
+	socklen_t			cslen;
 	struct sockaddr		csin;
-	int					cs;
 
-	printf("Waiting for client...\n");
+	ft_printf("Waiting for client...\n");
 	cslen = sizeof(csin);
-	if ((cs = accept(server_socket, (struct sockaddr *)&csin, &cslen)) < 0)
+	if ((client_socket = accept(server_socket, (struct sockaddr *)&csin, &cslen)) < 0)
 	{
 		perror("Client socket\n");
+		exit(EXIT_FAILURE);
 	}
-	printf("Connected\nSending env...\n");
+	ft_printf("Connected\nSending env...\n");
+
+	struct timeval	start;
+	struct timeval	end;
+	int				total_send = 0;
+
+	gettimeofday(&start, NULL);
 
 	//ENV E
-	send(cs, (void *)e, sizeof(t_env), 0);
+	send(client_socket, (void *)e, sizeof(t_env), 0);
+	total_send += sizeof(t_env);
 
 	//OBJECTS
 	obj = e->objects;
 
 	while (obj)
 	{
-		printf("Sending object...\n");
-		send(cs, (void *)obj, sizeof(t_obj), 0);
+		send(client_socket, (void *)obj, sizeof(t_obj), 0);
+		total_send += sizeof(t_obj);
 		obj = obj->next;
 	}
 
-	close(cs);
+	gettimeofday(&end, NULL);
+
+	double delta = 0;
+	delta = (end.tv_sec - start.tv_sec) * 1000.0;      // sec to ms
+	delta += (end.tv_usec - start.tv_usec) / 1000.0;   // us to ms
+
+	printf("%f kilobytes sent over %f seconds\n", total_send / 1024.0, delta / 1000.0);
+
+	unsigned long checksum_total = 0;
+
+	checksum_total += checksum((void *)e, sizeof(t_env));
+
+	obj = e->objects;
+	while (obj)
+	{
+		checksum_total += checksum((void *)obj, sizeof(t_obj));
+		obj = obj->next;
+	}
+
+	printf("Checksum for total sync objects : %lx\n", checksum_total);
+
+	close(client_socket);
 	close(server_socket);
 }

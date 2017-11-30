@@ -42,11 +42,11 @@
 # define PITCH				e->camera.dir.y
 # define YAW				e->camera.dir.x
 
+# define _A					(0xff000000)
 # define _R					(0x00ff0000)
 # define _G					(0x0000ff00)
 # define _B					(0x000000ff)
-# define _A					(0xff000000)
 
-# define MAGIC				(0xBAAAAAAD)
+# define MAGIC				(0xBAADA555)
 
 #endif

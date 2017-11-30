@@ -38,7 +38,7 @@ char	*convertl_bis(t_printf *pf, char *format)
 
 int		calcul_zero_u(t_printf *pf, intmax_t a, intmax_t without)
 {
-	int			nb_zero;
+	long	nb_zero;
 
 	nb_zero = 0;
 	if (pf->flag.zero == 1 && pf->size_len > a && pf->size_len > pf->precision)
@@ -49,25 +49,23 @@ int		calcul_zero_u(t_printf *pf, intmax_t a, intmax_t without)
 	{
 		nb_zero = pf->precision - without;
 	}
-	return (nb_zero);
+	return ((int)nb_zero);
 }
 
 int		calcul_space_u(t_printf *pf, intmax_t a,
 		intmax_t without, int nb_zero)
 {
-	int			nb_space;
+	long	nb_space;
 
 	(void)without;
-	nb_space = 0;
 	nb_space = pf->size_len - nb_zero - a;
-	return (nb_space);
+	return ((int)nb_space);
 }
 
 int		check_nothing_u(t_printf *pf)
 {
 	int			index;
 
-	index = 0;
 	if ((pf->precision == 0 || pf->precision == -1) &&
 			pf->nb.oux == 0 && pf->flag.point == 1)
 	{

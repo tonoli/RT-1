@@ -1,5 +1,21 @@
 #include "client.h"
 
+unsigned long checksum(void *data, size_t len)
+{
+	unsigned char *c = (unsigned char *)data;
+	unsigned long total = 5381;
+
+	size_t i = 0;
+	while (i < len)
+	{
+		total = ((total << 5) + total) + *c;
+		c++;
+		i++;
+	}
+	return (total);
+}
+
+
 int main(int argc,char **argv)
 {
 	ft_printf("client\n");
@@ -44,6 +60,10 @@ int main(int argc,char **argv)
 		valread += recv(client_socket, (void *)e + valread, sizeof(t_env) - valread, 0);
 	}
 
+	unsigned long checksum_total = 0;
+
+	checksum_total += checksum((void *)e, sizeof(t_env));
+
 	if (valread == -1)
 	{
 		perror("recv");
@@ -79,6 +99,8 @@ int main(int argc,char **argv)
 		while (valread < sizeof(t_obj))
 			valread += recv(client_socket, (void *)obj + valread, sizeof(t_obj) - valread, 0);
 
+		checksum_total += checksum((void *)obj, sizeof(t_obj));
+
 		obj->next = NULL;
 		obj_push_back(&e->objects, obj);
 		i++;
@@ -108,4 +130,7 @@ int main(int argc,char **argv)
 
 	e->object_count = total;
 	/////////////////////////////////
+
+
+	printf("Checksum for total sync objects : %lx\n", checksum_total);
 }

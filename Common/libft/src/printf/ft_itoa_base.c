@@ -15,9 +15,9 @@
 static int		conversion(uintmax_t nb)
 {
 	if (nb >= 10)
-		return (nb - 10 + 'a');
+		return ((int)nb - 10 + 'a');
 	else
-		return (nb + '0');
+		return ((int)nb + '0');
 }
 
 char			*ft_itoa_base(uintmax_t nb, unsigned int base)
@@ -49,9 +49,9 @@ char			*ft_itoa_base(uintmax_t nb, unsigned int base)
 static int		conversion_x(uintmax_t nb)
 {
 	if (nb >= 10)
-		return (nb - 10 + 'A');
+		return ((int)nb - 10 + 'A');
 	else
-		return (nb + '0');
+		return ((int)nb + '0');
 }
 
 char			*ft_itoa_base_x(uintmax_t nb, unsigned int base)

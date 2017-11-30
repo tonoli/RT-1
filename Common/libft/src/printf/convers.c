@@ -58,7 +58,7 @@ void		read_string(t_printf *pf)
 	pf->count = 0;
 	pf->precision == -1 && pf->flag.point == 1 ? pf->precision = 0 : 0;
 	string_bis(pf);
-	a = ft_strlen(pf->nb.s);
+	a = (int)ft_strlen(pf->nb.s);
 	pf->precision < a && pf->precision >= 0 ? a = pf->precision : 0;
 	while (pf->size_len - a > 0 && pf->flag.minus == 0)
 	{
@@ -90,7 +90,7 @@ void		read_wstring(t_printf *pf)
 		read_string(pf);
 		return ;
 	}
-	a = ft_strwlen(pf->nb.s);
+	a = (int)ft_strwlen(pf->nb.s);
 	pf->precision < a && pf->precision >= 0 ? a = pf->precision : 0;
 	while (pf->size_len - a > 0 && pf->flag.minus == 0)
 	{

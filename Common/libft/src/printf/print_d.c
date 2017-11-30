@@ -14,29 +14,28 @@
 
 static int		calcul_zero_int(t_printf *pf, intmax_t a, intmax_t without)
 {
-	int			nb_zero;
+	long	nb_zero;
 
 	nb_zero = 0;
 	if (pf->flag.zero == 1 && pf->size_len > a && pf->size_len > pf->precision)
 		nb_zero = pf->size_len - a;
 	else if (pf->precision > without)
 		nb_zero = pf->precision - without;
-	return (nb_zero);
+	return ((int)nb_zero);
 }
 
 static int		calcul_space_int(t_printf *pf, intmax_t a, intmax_t without,
 		int nb_zero)
 {
-	int			nb_space;
+	long	nb_space;
 
 	(void)without;
-	nb_space = 0;
 	nb_space = pf->size_len - nb_zero - a;
 	if (pf->flag.space == 1 && nb_space <= 0)
 	{
 		pf->nb.d_i >= 0 ? nb_space = 1 : 0;
 	}
-	return (nb_space);
+	return ((int)nb_space);
 }
 
 static void		print_sign_int(t_printf *pf)
@@ -51,7 +50,6 @@ static int		check_nothing_int(t_printf *pf)
 {
 	int			index;
 
-	index = 0;
 	if ((pf->precision == 0 || pf->precision == -1) &&
 			pf->nb.d_i == 0 && pf->flag.point == 1)
 	{
@@ -74,8 +72,6 @@ void			read_d_i(t_printf *pf)
 	int			nb_zero;
 	char		*s;
 
-	nb_space = 0;
-	nb_zero = 0;
 	if (check_nothing_int(pf) == 1)
 		return ;
 	s = ft_itoa_pf(pf->nb.d_i);

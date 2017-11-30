@@ -63,7 +63,7 @@ void		random_spheres(t_env *e)
 
 	basics(e);
 	i = -300;
-	while (i < 300)
+	while (i < 60000)
 	{
 		j = 0;
 		while (j < 1000)

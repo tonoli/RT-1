@@ -437,12 +437,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A673C181FCFAFC300D6B3E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9ACE3F301FCF0C6500991DFB = {
 			isa = PBXGroup;
 			children = (
 				9ACE3F591FCF0CDB00991DFB /* Common */,
 				9ACE3F581FCF0CC500991DFB /* Client */,
 				9ACE3F571FCF0CBD00991DFB /* Server */,
+				9A673C181FCFAFC300D6B3E5 /* Frameworks */,
 				9ACE3F3A1FCF0C6600991DFB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -850,6 +858,7 @@
 		9ACE3F311FCF0C6500991DFB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0910;
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Nicolas SAMPRE";
 				TargetAttributes = {
@@ -868,6 +877,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 9ACE3F301FCF0C6500991DFB;
 			productRefGroup = 9ACE3F3A1FCF0C6600991DFB /* Products */;

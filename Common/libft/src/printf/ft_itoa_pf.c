@@ -16,14 +16,14 @@ static int			ft_findsign(intmax_t n, uintmax_t sign)
 {
 	if (n < 0)
 		sign = 1;
-	return (sign);
+	return ((int)sign);
 }
 
 static int			ft_findlen(intmax_t n, uintmax_t index)
 {
 	while (n /= 10)
 		index++;
-	return (index);
+	return ((int)index);
 }
 
 char				*ft_itoa_pf(intmax_t n)

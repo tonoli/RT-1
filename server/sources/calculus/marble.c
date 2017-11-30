@@ -23,7 +23,7 @@ void		marble(t_env *e, t_vector *color, t_obj *closest_obj)
 
 //	double ratio = sin((10.0 * closest_obj->cross.z) + col);
 
-	t_vector pute;
+//	t_vector pute;
 
 //	pute.x = 1;
 //	pute.y = 1;
@@ -32,7 +32,7 @@ void		marble(t_env *e, t_vector *color, t_obj *closest_obj)
 //	pute = vector_scale(pute, 0.5 * (1.0 + sin((4.0 * closest_obj->cross.z) + col)));
 
 
-	double width_scale = 0.5;
+	////double width_scale = 0.5;
 
 //	double ratio = (1.0 + sin((width_scale * closest_obj->cross.x) + col));
 	double ratio = col;

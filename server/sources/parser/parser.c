@@ -75,6 +75,7 @@ void	parser(t_env *e)
 	get_input(e);
 	input = e->input;
 	tag = NULL;
+	ptr = NULL;
 	while ((content = get_xml_tag(input, &ptr, &tag)))
 	{
 		input = ptr;
