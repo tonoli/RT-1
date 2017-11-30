@@ -3,6 +3,45 @@
 
 # include "rt_clu.h"
 
+# ifndef GLOBAL_SERVER
+#  define GLOBAL_SERVER
+
+extern int	g_srv_socket;
+extern int	g_cli_socket;
+extern int	g_port;
+extern int	*g_buffer;
+
+# endif
+
+/*
+**	MAIN
+*/
+
+void		quit(int sig);
+void		fatal_quit(char *msg);
+void		custom_quit(char *msg);
+
+/*
+**	OPTIONS
+*/
+
+void		get_options(t_env *e, int argc, char **argv);
+
+/*
+**	CONNEXION
+*/
+
+void		init_master_socket(void);
+int			connect_to_client(void);
+void		sync_env_obj(t_env *e);
+void		sync_buffer(void);
+
+/*
+**	DISPLAY
+*/
+
+void		display_buffer(t_env *e);
+
 /*
 **	MISCELANEOUS
 */

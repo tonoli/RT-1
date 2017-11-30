@@ -32,8 +32,8 @@ void	init_render_env(t_env *e)
 		e->frame_array[i] = (int *)ft_memalloc(sizeof(int) * F_WIDTH);
 	}
 	e->wait = 0;
-	e->increment = 4;
-	e->recursion = 2;
+	e->increment = 1;
+	e->recursion = 25;
 	e->sum = 1;
 	e->threads = 32;
 	e->magic = MAGIC;

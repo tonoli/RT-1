@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A2F6B2F1FD0A9CD0003A3F4 /* connexion.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F6B2E1FD0A9CD0003A3F4 /* connexion.c */; };
+		9A2F6B311FD0A9D70003A3F4 /* connexion.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F6B301FD0A9D70003A3F4 /* connexion.c */; };
+		9A2F6B331FD0AB2D0003A3F4 /* options.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F6B321FD0AB2D0003A3F4 /* options.c */; };
+		9A2F6B351FD0AB4E0003A3F4 /* display.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F6B341FD0AB4E0003A3F4 /* display.c */; };
+		9A2F6B3A1FD0AE3D0003A3F4 /* compute_block.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F6B371FD0AE3D0003A3F4 /* compute_block.c */; };
+		9A2F6B3B1FD0AE3D0003A3F4 /* draw_screen.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F6B381FD0AE3D0003A3F4 /* draw_screen.c */; };
+		9A2F6B3C1FD0AE3D0003A3F4 /* thread.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F6B391FD0AE3D0003A3F4 /* thread.c */; };
+		9A2F6B3E1FD0AEDE0003A3F4 /* miscelaneous.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F6B3D1FD0AEDE0003A3F4 /* miscelaneous.c */; };
+		9A2F6B471FD0AF3B0003A3F4 /* compute_objects.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F6B401FD0AF3B0003A3F4 /* compute_objects.c */; };
+		9A2F6B481FD0AF3B0003A3F4 /* diffuse.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F6B411FD0AF3B0003A3F4 /* diffuse.c */; };
+		9A2F6B4A1FD0AF3B0003A3F4 /* mapping_color.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F6B431FD0AF3B0003A3F4 /* mapping_color.c */; };
+		9A2F6B4B1FD0AF3B0003A3F4 /* marble.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F6B441FD0AF3B0003A3F4 /* marble.c */; };
+		9A2F6B4C1FD0AF3B0003A3F4 /* reflection.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F6B451FD0AF3B0003A3F4 /* reflection.c */; };
+		9A2F6B4D1FD0AF3B0003A3F4 /* refraction.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F6B461FD0AF3B0003A3F4 /* refraction.c */; };
+		9A2F6B531FD0AFB90003A3F4 /* cones.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F6B4F1FD0AFB90003A3F4 /* cones.c */; };
+		9A2F6B541FD0AFB90003A3F4 /* cylinders.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F6B501FD0AFB90003A3F4 /* cylinders.c */; };
+		9A2F6B551FD0AFB90003A3F4 /* planes.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F6B511FD0AFB90003A3F4 /* planes.c */; };
+		9A2F6B561FD0AFB90003A3F4 /* spheres.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F6B521FD0AFB90003A3F4 /* spheres.c */; };
 		9ACE3F651FCF125A00991DFB /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 9ACE3F641FCF125A00991DFB /* main.c */; };
 		9ACE3F6A1FCF126700991DFB /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 9ACE3F671FCF126700991DFB /* main.c */; };
 		9ACE3FF21FCF128000991DFB /* ft_array_copy.c in Sources */ = {isa = PBXBuildFile; fileRef = 9ACE3F7C1FCF128000991DFB /* ft_array_copy.c */; };
@@ -267,6 +285,24 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9A2F6B2E1FD0A9CD0003A3F4 /* connexion.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = connexion.c; sourceTree = "<group>"; };
+		9A2F6B301FD0A9D70003A3F4 /* connexion.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = connexion.c; sourceTree = "<group>"; };
+		9A2F6B321FD0AB2D0003A3F4 /* options.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = options.c; sourceTree = "<group>"; };
+		9A2F6B341FD0AB4E0003A3F4 /* display.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = display.c; sourceTree = "<group>"; };
+		9A2F6B371FD0AE3D0003A3F4 /* compute_block.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = compute_block.c; sourceTree = "<group>"; };
+		9A2F6B381FD0AE3D0003A3F4 /* draw_screen.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = draw_screen.c; sourceTree = "<group>"; };
+		9A2F6B391FD0AE3D0003A3F4 /* thread.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = thread.c; sourceTree = "<group>"; };
+		9A2F6B3D1FD0AEDE0003A3F4 /* miscelaneous.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = miscelaneous.c; sourceTree = "<group>"; };
+		9A2F6B401FD0AF3B0003A3F4 /* compute_objects.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = compute_objects.c; sourceTree = "<group>"; };
+		9A2F6B411FD0AF3B0003A3F4 /* diffuse.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = diffuse.c; sourceTree = "<group>"; };
+		9A2F6B431FD0AF3B0003A3F4 /* mapping_color.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mapping_color.c; sourceTree = "<group>"; };
+		9A2F6B441FD0AF3B0003A3F4 /* marble.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = marble.c; sourceTree = "<group>"; };
+		9A2F6B451FD0AF3B0003A3F4 /* reflection.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = reflection.c; sourceTree = "<group>"; };
+		9A2F6B461FD0AF3B0003A3F4 /* refraction.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = refraction.c; sourceTree = "<group>"; };
+		9A2F6B4F1FD0AFB90003A3F4 /* cones.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cones.c; sourceTree = "<group>"; };
+		9A2F6B501FD0AFB90003A3F4 /* cylinders.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cylinders.c; sourceTree = "<group>"; };
+		9A2F6B511FD0AFB90003A3F4 /* planes.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = planes.c; sourceTree = "<group>"; };
+		9A2F6B521FD0AFB90003A3F4 /* spheres.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = spheres.c; sourceTree = "<group>"; };
 		9ACE3F471FCF0C8900991DFB /* Server */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Server; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ACE3F561FCF0CAC00991DFB /* Client */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Client; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ACE3F5E1FCF0D1700991DFB /* rt_clu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rt_clu.h; sourceTree = "<group>"; };
@@ -437,6 +473,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A2F6B361FD0AE3D0003A3F4 /* display */ = {
+			isa = PBXGroup;
+			children = (
+				9A2F6B381FD0AE3D0003A3F4 /* draw_screen.c */,
+				9A2F6B371FD0AE3D0003A3F4 /* compute_block.c */,
+				9A2F6B391FD0AE3D0003A3F4 /* thread.c */,
+			);
+			path = display;
+			sourceTree = "<group>";
+		};
+		9A2F6B3F1FD0AF3B0003A3F4 /* calculus */ = {
+			isa = PBXGroup;
+			children = (
+				9A2F6B401FD0AF3B0003A3F4 /* compute_objects.c */,
+				9A2F6B411FD0AF3B0003A3F4 /* diffuse.c */,
+				9A2F6B431FD0AF3B0003A3F4 /* mapping_color.c */,
+				9A2F6B441FD0AF3B0003A3F4 /* marble.c */,
+				9A2F6B451FD0AF3B0003A3F4 /* reflection.c */,
+				9A2F6B461FD0AF3B0003A3F4 /* refraction.c */,
+			);
+			path = calculus;
+			sourceTree = "<group>";
+		};
+		9A2F6B4E1FD0AFB90003A3F4 /* primitives */ = {
+			isa = PBXGroup;
+			children = (
+				9A2F6B4F1FD0AFB90003A3F4 /* cones.c */,
+				9A2F6B501FD0AFB90003A3F4 /* cylinders.c */,
+				9A2F6B511FD0AFB90003A3F4 /* planes.c */,
+				9A2F6B521FD0AFB90003A3F4 /* spheres.c */,
+			);
+			path = primitives;
+			sourceTree = "<group>";
+		};
 		9A673C181FCFAFC300D6B3E5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -508,7 +578,12 @@
 			isa = PBXGroup;
 			children = (
 				9ACE3F641FCF125A00991DFB /* main.c */,
+				9A2F6B3D1FD0AEDE0003A3F4 /* miscelaneous.c */,
+				9A2F6B2E1FD0A9CD0003A3F4 /* connexion.c */,
 				9ACE41BB1FCF2F0900991DFB /* init */,
+				9A2F6B361FD0AE3D0003A3F4 /* display */,
+				9A2F6B3F1FD0AF3B0003A3F4 /* calculus */,
+				9A2F6B4E1FD0AFB90003A3F4 /* primitives */,
 			);
 			name = sources;
 			path = client/sources;
@@ -518,6 +593,9 @@
 			isa = PBXGroup;
 			children = (
 				9ACE3F671FCF126700991DFB /* main.c */,
+				9A2F6B321FD0AB2D0003A3F4 /* options.c */,
+				9A2F6B301FD0A9D70003A3F4 /* connexion.c */,
+				9A2F6B341FD0AB4E0003A3F4 /* display.c */,
 				9ACE41B01FCF176B00991DFB /* miscelaneous.c */,
 				9ACE41B81FCF1AAB00991DFB /* calculus */,
 				9ACE41B51FCF199400991DFB /* init */,
@@ -927,9 +1005,11 @@
 				9ACE40411FCF128000991DFB /* ft_strdup.c in Sources */,
 				9ACE41B31FCF17B900991DFB /* libvector.c in Sources */,
 				9ACE41AF1FCF167D00991DFB /* tools.c in Sources */,
+				9A2F6B331FD0AB2D0003A3F4 /* options.c in Sources */,
 				9ACE40341FCF128000991DFB /* ft_escape.c in Sources */,
 				9ACE3FF91FCF128000991DFB /* ft_isalnum.c in Sources */,
 				9ACE40561FCF128000991DFB /* ft_strsplit.c in Sources */,
+				9A2F6B311FD0A9D70003A3F4 /* connexion.c in Sources */,
 				9ACE400A1FCF128000991DFB /* ft_lstdelone.c in Sources */,
 				9ACE41BA1FCF1AAC00991DFB /* marble.c in Sources */,
 				9ACE405A1FCF128000991DFB /* ft_strupcase.c in Sources */,
@@ -1005,6 +1085,7 @@
 				9ACE40161FCF128000991DFB /* ft_memdel.c in Sources */,
 				9ACE402C1FCF128000991DFB /* ft_putchar_fd.c in Sources */,
 				9ACE3FF41FCF128000991DFB /* ft_free_array.c in Sources */,
+				9A2F6B351FD0AB4E0003A3F4 /* display.c in Sources */,
 				9ACE401F1FCF128000991DFB /* ft_putadr_pf.c in Sources */,
 				9ACE40291FCF128000991DFB /* select.c in Sources */,
 				9ACE40401FCF128000991DFB /* ft_strdel.c in Sources */,
@@ -1029,6 +1110,7 @@
 				9ACE40711FCF12A600991DFB /* ft_strdup.c in Sources */,
 				9ACE406D1FCF12A600991DFB /* ft_strclr.c in Sources */,
 				9ACE40B31FCF12BB00991DFB /* ft_lstdel.c in Sources */,
+				9A2F6B3A1FD0AE3D0003A3F4 /* compute_block.c in Sources */,
 				9ACE40861FCF12A600991DFB /* ft_strsplit.c in Sources */,
 				9ACE40651FCF12A600991DFB /* ft_is_quotestring.c in Sources */,
 				9ACE40C51FCF12C400991DFB /* ft_isprint.c in Sources */,
@@ -1044,17 +1126,20 @@
 				9ACE40A31FCF12B100991DFB /* print_x.c in Sources */,
 				9ACE408F1FCF12AD00991DFB /* ft_putendl.c in Sources */,
 				9ACE40C01FCF12C400991DFB /* ft_isalnum.c in Sources */,
+				9A2F6B3C1FD0AE3D0003A3F4 /* thread.c in Sources */,
 				9ACE40741FCF12A600991DFB /* ft_striteri.c in Sources */,
 				9ACE406A1FCF12A600991DFB /* ft_strcapitalize.c in Sources */,
 				9ACE408D1FCF12AD00991DFB /* ft_putchar.c in Sources */,
 				9ACE407F1FCF12A600991DFB /* ft_strnequ.c in Sources */,
 				9ACE409A1FCF12B100991DFB /* ft_printf.c in Sources */,
 				9ACE40C61FCF12C400991DFB /* ft_tolower.c in Sources */,
+				9A2F6B4D1FD0AF3B0003A3F4 /* refraction.c in Sources */,
 				9ACE406F1FCF12A600991DFB /* ft_strcpy.c in Sources */,
 				9ACE40A71FCF12B500991DFB /* ft_bzero.c in Sources */,
 				9ACE41BD1FCF2F0900991DFB /* init_object.c in Sources */,
 				9ACE405F1FCF129200991DFB /* ft_free_array.c in Sources */,
 				9ACE41B41FCF17B900991DFB /* libvector.c in Sources */,
+				9A2F6B4B1FD0AF3B0003A3F4 /* marble.c in Sources */,
 				9ACE40991FCF12B100991DFB /* ft_itoa_pf.c in Sources */,
 				9ACE40B91FCF12C100991DFB /* ft_atod.c in Sources */,
 				9ACE40B61FCF12BB00991DFB /* ft_lstmap.c in Sources */,
@@ -1068,6 +1153,8 @@
 				9ACE40911FCF12AD00991DFB /* ft_putnbr.c in Sources */,
 				9ACE40901FCF12AD00991DFB /* ft_putendl_fd.c in Sources */,
 				9ACE40BF1FCF12C400991DFB /* ft_is_whitespace.c in Sources */,
+				9A2F6B471FD0AF3B0003A3F4 /* compute_objects.c in Sources */,
+				9A2F6B3B1FD0AE3D0003A3F4 /* draw_screen.c in Sources */,
 				9ACE40731FCF12A600991DFB /* ft_striter.c in Sources */,
 				9ACE40AD1FCF12B500991DFB /* ft_memdel.c in Sources */,
 				9ACE40921FCF12AD00991DFB /* ft_putnbr_fd.c in Sources */,
@@ -1084,6 +1171,7 @@
 				9ACE40931FCF12AD00991DFB /* ft_putstr.c in Sources */,
 				9ACE407E1FCF12A600991DFB /* ft_strndup.c in Sources */,
 				9ACE40821FCF12A600991DFB /* ft_strnstr.c in Sources */,
+				9A2F6B3E1FD0AEDE0003A3F4 /* miscelaneous.c in Sources */,
 				9ACE40C21FCF12C400991DFB /* ft_isascii.c in Sources */,
 				9ACE40B81FCF12BE00991DFB /* get_next_line.c in Sources */,
 				9ACE40961FCF12B100991DFB /* ft_abs.c in Sources */,
@@ -1096,8 +1184,10 @@
 				9ACE40981FCF12B100991DFB /* ft_itoa_base.c in Sources */,
 				9ACE40681FCF12A600991DFB /* ft_str_fits_int.c in Sources */,
 				9ACE40A81FCF12B500991DFB /* ft_memalloc.c in Sources */,
+				9A2F6B561FD0AFB90003A3F4 /* spheres.c in Sources */,
 				9ACE40AB1FCF12B500991DFB /* ft_memcmp.c in Sources */,
 				9ACE409C1FCF12B100991DFB /* ft_putnchar.c in Sources */,
+				9A2F6B4C1FD0AF3B0003A3F4 /* reflection.c in Sources */,
 				9ACE407B1FCF12A600991DFB /* ft_strncat.c in Sources */,
 				9ACE40971FCF12B100991DFB /* ft_char_pf.c in Sources */,
 				9ACE40AC1FCF12B500991DFB /* ft_memcpy.c in Sources */,
@@ -1105,6 +1195,8 @@
 				9ACE40721FCF12A600991DFB /* ft_strequ.c in Sources */,
 				9ACE40B71FCF12BB00991DFB /* ft_lstnew.c in Sources */,
 				9ACE40791FCF12A600991DFB /* ft_strmap.c in Sources */,
+				9A2F6B481FD0AF3B0003A3F4 /* diffuse.c in Sources */,
+				9A2F6B541FD0AFB90003A3F4 /* cylinders.c in Sources */,
 				9ACE40B41FCF12BB00991DFB /* ft_lstdelone.c in Sources */,
 				9ACE40771FCF12A600991DFB /* ft_strlen.c in Sources */,
 				9ACE408C1FCF12A900991DFB /* ft_isdir.c in Sources */,
@@ -1116,9 +1208,12 @@
 				9ACE40A91FCF12B500991DFB /* ft_memccpy.c in Sources */,
 				9ACE40B11FCF12B900991DFB /* ft_pow.c in Sources */,
 				9ACE40BB1FCF12C100991DFB /* ft_atoll.c in Sources */,
+				9A2F6B2F1FD0A9CD0003A3F4 /* connexion.c in Sources */,
+				9A2F6B551FD0AFB90003A3F4 /* planes.c in Sources */,
 				9ACE40A51FCF12B100991DFB /* select.c in Sources */,
 				9ACE3F651FCF125A00991DFB /* main.c in Sources */,
 				9ACE409E1FCF12B100991DFB /* ft_putwchar.c in Sources */,
+				9A2F6B531FD0AFB90003A3F4 /* cones.c in Sources */,
 				9ACE40621FCF129200991DFB /* ft_print_array.c in Sources */,
 				9ACE407C1FCF12A600991DFB /* ft_strncmp.c in Sources */,
 				9ACE40A41FCF12B100991DFB /* read_spec.c in Sources */,
@@ -1131,6 +1226,7 @@
 				9ACE40AF1FCF12B500991DFB /* ft_memset.c in Sources */,
 				9ACE408B1FCF12A600991DFB /* ft_trim_quotestr.c in Sources */,
 				9ACE40951FCF12B100991DFB /* convers.c in Sources */,
+				9A2F6B4A1FD0AF3B0003A3F4 /* mapping_color.c in Sources */,
 				9ACE40761FCF12A600991DFB /* ft_strlcat.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
