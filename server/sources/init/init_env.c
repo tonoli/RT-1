@@ -33,7 +33,7 @@ void	init_render_env(t_env *e)
 	}
 	e->wait = 0;
 	e->increment = 1;
-	e->recursion = 25;
+	e->recursion = 10;
 	e->sum = 1;
 	e->threads = 32;
 	e->magic = MAGIC;

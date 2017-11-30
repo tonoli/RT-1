@@ -8,6 +8,8 @@ SRC_BASE		+=	../../common/libvector.c
 CC				=	gcc
 
 # FLAGS			=	-Wall -Wextra -Werror -O3
+FLAGS			+=	-Ofast
+
 
 SRC_DIR			=	sources/
 INC_DIR			=	includes/
