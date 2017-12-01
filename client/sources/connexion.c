@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   connexion.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/12/01 02:49:26 by nsampre           #+#    #+#             */
+/*   Updated: 2017/12/01 02:49:26 by nsampre          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "client.h"
 
 void	connect_to_server(void)
@@ -20,7 +32,6 @@ void	sync_env(t_env *e)
 	ssize_t	r;
 	ssize_t	os;
 
-	ft_printf("Waiting for struct env.\n");
 	os = 0;
 	while (os < sizeof(t_env))
 	{
@@ -31,6 +42,12 @@ void	sync_env(t_env *e)
 	}
 	if (e->magic != MAGIC)
 		custom_quit("Corrupted env data received. Invalid magic.");
+	e->color_array = g_color_array;
+	e->frame_array = g_frame_array;
+	if (e->skybox_index != -1)
+		e->current_skybox = g_mem.s_skybox[e->skybox_index];
+	else
+		e->current_skybox = NULL;
 }
 
 void	sync_objects(t_env *e)
@@ -54,6 +71,16 @@ void	sync_objects(t_env *e)
 				fatal_quit("recv object structure");
 			os += r;
 		}
+		if (obj->texture_index != -1)
+			obj->current_texture = g_mem.s_obj_tx[obj->texture_index];
+		else
+			obj->current_texture = NULL;
+
+		if (obj->tsp_index != -1)
+			obj->current_tsp = g_mem.s_tsp_tx[obj->tsp_index];
+		else
+			obj->current_tsp = NULL;
+
 		obj->next = NULL;
 		obj_push_back(&e->objects, obj);
 	}
@@ -63,9 +90,21 @@ void	sync_buffer(void)
 {
 	ssize_t r;
 
-	ft_printf("Sending back image buffer\n");
 	r = send(g_cli_socket, g_buffer, sizeof(int) * F_WIDTH * F_HEIGHT, 0);
 	if (r == -1)
 		fatal_quit("send buffer");
-	ft_printf("Image sent\n");
+}
+
+void	release_obj(t_env *e)
+{
+	t_obj *obj;
+	t_obj *temp;
+
+	obj = e->objects;
+	while (obj)
+	{
+		temp = obj->next;
+		free(obj);
+		obj = temp;
+	}
 }

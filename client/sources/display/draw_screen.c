@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 13:13:22 by nsampre           #+#    #+#             */
-/*   Updated: 2017/11/28 22:58:45 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/01 03:00:07 by nsampre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,36 +29,6 @@ void		reset_screen(t_env *e)
 			e->color_array[j][i].z = 0;
 		}
 	}
-//	if (e->render)
-//		SDL_BlitSurface(e->s_raytracer, &(SDL_Rect){0, 0, F_WIDTH, F_HEIGHT},
-//					e->s_background, &(SDL_Rect){82, 72, F_WIDTH, F_HEIGHT});
-//	e->sum = 1;
-}
-
-static void	print_screen(t_env *e)
-{
-//	int			i;
-//	int			j;
-//	t_vector	c;
-//	SDL_Rect	pixel;
-//
-//	i = -1;
-//	while (++i < (int)F_WIDTH)
-//	{
-//		j = -1;
-//		while (++j < (int)F_HEIGHT)
-//		{
-//			c = e->color_array[j][i];
-//			c = vector_scale(c, 1.0 / (double)e->sum);
-//			c = adjust_color(c);
-////			pixel = (SDL_Rect){.w = 1, .h = 1, .x = i, .y = j};
-////			SDL_FillRect(e->s_raytracer, &pixel,
-////						SDL_MapRGB(e->s_raytracer->format, c.x, c.y, c.z));
-//		}
-//	}
-//	if (e->render)
-//		SDL_BlitSurface(e->s_raytracer, &(SDL_Rect){0, 0, F_WIDTH, F_HEIGHT},
-//					e->s_background, &(SDL_Rect){82, 72, F_WIDTH, F_HEIGHT});
 }
 
 static void write_buffer(t_env *e)
@@ -74,9 +44,7 @@ static void write_buffer(t_env *e)
 		while (++j < (int)F_HEIGHT)
 		{
 			c = e->color_array[j][i];
-//			c = vector_scale(c, 1.0 / (double)e->sum);
 			c = adjust_color(c);
-
 			g_buffer[(i * (int)F_HEIGHT) + j] =
 			((int)c.x << 16)+ ((int)c.y << 8) + (int)c.z;
 		}
@@ -90,7 +58,6 @@ void		draw_screen(t_env *e)
 	t_env		*copy;
 
 	reset_screen(e);
-
 	copy = NULL;
 	i = -1;
 	while (++i < e->threads)
@@ -106,7 +73,5 @@ void		draw_screen(t_env *e)
 	i = -1;
 	while (++i < e->threads)
 		pthread_join(tid[i], NULL);
-//	print_screen(e);
-
 	write_buffer(e);
 }

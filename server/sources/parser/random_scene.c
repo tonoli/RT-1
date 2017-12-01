@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/26 17:37:45 by nsampre           #+#    #+#             */
-/*   Updated: 2017/11/27 13:17:05 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/01 00:23:24 by nsampre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ void		random_spheres(t_env *e)
 	while (i < 300)
 	{
 		j = 0;
-		while (j < 100)
+		while (j < 300)
 		{
 			create_random_sphere(e, i, j);
 			j += 40;

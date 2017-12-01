@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   mapping_color.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/30 22:31:12 by nsampre           #+#    #+#             */
+/*   Updated: 2017/11/30 22:31:12 by nsampre          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "client.h"
 
 void	color_mapping(t_obj *closest_obj)
 {
-	if (closest_obj->type == OBJ_SPHERE && !closest_obj->marblesize && 1)
+	if (closest_obj->type == OBJ_SPHERE && !closest_obj->marblesize && 0)
 	{
 		if (!closest_obj->current_texture)
 			return ;

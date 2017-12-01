@@ -13,7 +13,7 @@
 		9A2F6B351FD0AB4E0003A3F4 /* display.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F6B341FD0AB4E0003A3F4 /* display.c */; };
 		9A2F6B3A1FD0AE3D0003A3F4 /* compute_block.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F6B371FD0AE3D0003A3F4 /* compute_block.c */; };
 		9A2F6B3B1FD0AE3D0003A3F4 /* draw_screen.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F6B381FD0AE3D0003A3F4 /* draw_screen.c */; };
-		9A2F6B3C1FD0AE3D0003A3F4 /* thread.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F6B391FD0AE3D0003A3F4 /* thread.c */; };
+		9A2F6B3C1FD0AE3D0003A3F4 /* thread_memory.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F6B391FD0AE3D0003A3F4 /* thread_memory.c */; };
 		9A2F6B3E1FD0AEDE0003A3F4 /* miscelaneous.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F6B3D1FD0AEDE0003A3F4 /* miscelaneous.c */; };
 		9A2F6B471FD0AF3B0003A3F4 /* compute_objects.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F6B401FD0AF3B0003A3F4 /* compute_objects.c */; };
 		9A2F6B481FD0AF3B0003A3F4 /* diffuse.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F6B411FD0AF3B0003A3F4 /* diffuse.c */; };
@@ -21,10 +21,6 @@
 		9A2F6B4B1FD0AF3B0003A3F4 /* marble.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F6B441FD0AF3B0003A3F4 /* marble.c */; };
 		9A2F6B4C1FD0AF3B0003A3F4 /* reflection.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F6B451FD0AF3B0003A3F4 /* reflection.c */; };
 		9A2F6B4D1FD0AF3B0003A3F4 /* refraction.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F6B461FD0AF3B0003A3F4 /* refraction.c */; };
-		9A2F6B531FD0AFB90003A3F4 /* cones.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F6B4F1FD0AFB90003A3F4 /* cones.c */; };
-		9A2F6B541FD0AFB90003A3F4 /* cylinders.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F6B501FD0AFB90003A3F4 /* cylinders.c */; };
-		9A2F6B551FD0AFB90003A3F4 /* planes.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F6B511FD0AFB90003A3F4 /* planes.c */; };
-		9A2F6B561FD0AFB90003A3F4 /* spheres.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F6B521FD0AFB90003A3F4 /* spheres.c */; };
 		9ACE3F651FCF125A00991DFB /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 9ACE3F641FCF125A00991DFB /* main.c */; };
 		9ACE3F6A1FCF126700991DFB /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 9ACE3F671FCF126700991DFB /* main.c */; };
 		9ACE3FF21FCF128000991DFB /* ft_array_copy.c in Sources */ = {isa = PBXBuildFile; fileRef = 9ACE3F7C1FCF128000991DFB /* ft_array_copy.c */; };
@@ -259,8 +255,40 @@
 		9ACE41B31FCF17B900991DFB /* libvector.c in Sources */ = {isa = PBXBuildFile; fileRef = 9ACE41B21FCF17B900991DFB /* libvector.c */; };
 		9ACE41B41FCF17B900991DFB /* libvector.c in Sources */ = {isa = PBXBuildFile; fileRef = 9ACE41B21FCF17B900991DFB /* libvector.c */; };
 		9ACE41B71FCF199400991DFB /* init_env.c in Sources */ = {isa = PBXBuildFile; fileRef = 9ACE41B61FCF199400991DFB /* init_env.c */; };
-		9ACE41BA1FCF1AAC00991DFB /* marble.c in Sources */ = {isa = PBXBuildFile; fileRef = 9ACE41B91FCF1AAB00991DFB /* marble.c */; };
 		9ACE41BD1FCF2F0900991DFB /* init_object.c in Sources */ = {isa = PBXBuildFile; fileRef = 9ACE41BC1FCF2F0900991DFB /* init_object.c */; };
+		9AE1BE591FD0EB5C002F5209 /* init_global.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE581FD0EB5C002F5209 /* init_global.c */; };
+		9AE1BE5B1FD0ECBD002F5209 /* quit.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE5A1FD0ECBD002F5209 /* quit.c */; };
+		9AE1BE5D1FD0ED6D002F5209 /* quit.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE5C1FD0ED6D002F5209 /* quit.c */; };
+		9AE1BE5F1FD0EE70002F5209 /* init_globals.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE5E1FD0EE70002F5209 /* init_globals.c */; };
+		9AE1BE641FD0F46E002F5209 /* interface.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE621FD0F46E002F5209 /* interface.c */; };
+		9AE1BE661FD0F515002F5209 /* init_sdl.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE651FD0F515002F5209 /* init_sdl.c */; };
+		9AE1BE6B1FD0F7F5002F5209 /* mouse_rect.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE671FD0F7F5002F5209 /* mouse_rect.c */; };
+		9AE1BE6C1FD0F7F5002F5209 /* init_buttons.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE681FD0F7F5002F5209 /* init_buttons.c */; };
+		9AE1BE6D1FD0F7F5002F5209 /* create_rect.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE691FD0F7F5002F5209 /* create_rect.c */; };
+		9AE1BE6E1FD0F7F5002F5209 /* draw_buttons.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE6A1FD0F7F5002F5209 /* draw_buttons.c */; };
+		9AE1BE791FD1022E002F5209 /* keyboard.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE701FD1022E002F5209 /* keyboard.c */; };
+		9AE1BE7A1FD1022E002F5209 /* move_camera.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE711FD1022E002F5209 /* move_camera.c */; };
+		9AE1BE7B1FD1022E002F5209 /* move_object.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE721FD1022E002F5209 /* move_object.c */; };
+		9AE1BE7C1FD1022E002F5209 /* print_scene.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE731FD1022E002F5209 /* print_scene.c */; };
+		9AE1BE7D1FD1022E002F5209 /* rotate_camera.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE741FD1022E002F5209 /* rotate_camera.c */; };
+		9AE1BE7E1FD1022E002F5209 /* select_object.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE751FD1022E002F5209 /* select_object.c */; };
+		9AE1BE7F1FD1022E002F5209 /* switch_obj_tx.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE761FD1022E002F5209 /* switch_obj_tx.c */; };
+		9AE1BE801FD1022E002F5209 /* switch_skybox.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE771FD1022E002F5209 /* switch_skybox.c */; };
+		9AE1BE811FD1022E002F5209 /* switch_tsp_tx.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE781FD1022E002F5209 /* switch_tsp_tx.c */; };
+		9AE1BE831FD10246002F5209 /* init_perlin.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE821FD10246002F5209 /* init_perlin.c */; };
+		9AE1BE851FD102CB002F5209 /* ray.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE841FD102CB002F5209 /* ray.c */; };
+		9AE1BE871FD10309002F5209 /* get_distance.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE861FD10309002F5209 /* get_distance.c */; };
+		9AE1BE8D1FD10366002F5209 /* cones.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE891FD10366002F5209 /* cones.c */; };
+		9AE1BE8E1FD10366002F5209 /* cones.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE891FD10366002F5209 /* cones.c */; };
+		9AE1BE8F1FD10366002F5209 /* cylinders.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE8A1FD10366002F5209 /* cylinders.c */; };
+		9AE1BE901FD10366002F5209 /* cylinders.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE8A1FD10366002F5209 /* cylinders.c */; };
+		9AE1BE911FD10366002F5209 /* planes.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE8B1FD10366002F5209 /* planes.c */; };
+		9AE1BE921FD10366002F5209 /* planes.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE8B1FD10366002F5209 /* planes.c */; };
+		9AE1BE931FD10366002F5209 /* spheres.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE8C1FD10366002F5209 /* spheres.c */; };
+		9AE1BE941FD10366002F5209 /* spheres.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE8C1FD10366002F5209 /* spheres.c */; };
+		9AE1BE971FD11604002F5209 /* init_skyboxes_sources.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE951FD11603002F5209 /* init_skyboxes_sources.c */; };
+		9AE1BE981FD11604002F5209 /* init_transparency_sources.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE961FD11604002F5209 /* init_transparency_sources.c */; };
+		9AE1BE9A1FD11911002F5209 /* init_color_sources.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE991FD11911002F5209 /* init_color_sources.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -291,7 +319,7 @@
 		9A2F6B341FD0AB4E0003A3F4 /* display.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = display.c; sourceTree = "<group>"; };
 		9A2F6B371FD0AE3D0003A3F4 /* compute_block.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = compute_block.c; sourceTree = "<group>"; };
 		9A2F6B381FD0AE3D0003A3F4 /* draw_screen.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = draw_screen.c; sourceTree = "<group>"; };
-		9A2F6B391FD0AE3D0003A3F4 /* thread.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = thread.c; sourceTree = "<group>"; };
+		9A2F6B391FD0AE3D0003A3F4 /* thread_memory.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = thread_memory.c; sourceTree = "<group>"; };
 		9A2F6B3D1FD0AEDE0003A3F4 /* miscelaneous.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = miscelaneous.c; sourceTree = "<group>"; };
 		9A2F6B401FD0AF3B0003A3F4 /* compute_objects.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = compute_objects.c; sourceTree = "<group>"; };
 		9A2F6B411FD0AF3B0003A3F4 /* diffuse.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = diffuse.c; sourceTree = "<group>"; };
@@ -299,10 +327,6 @@
 		9A2F6B441FD0AF3B0003A3F4 /* marble.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = marble.c; sourceTree = "<group>"; };
 		9A2F6B451FD0AF3B0003A3F4 /* reflection.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = reflection.c; sourceTree = "<group>"; };
 		9A2F6B461FD0AF3B0003A3F4 /* refraction.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = refraction.c; sourceTree = "<group>"; };
-		9A2F6B4F1FD0AFB90003A3F4 /* cones.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cones.c; sourceTree = "<group>"; };
-		9A2F6B501FD0AFB90003A3F4 /* cylinders.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cylinders.c; sourceTree = "<group>"; };
-		9A2F6B511FD0AFB90003A3F4 /* planes.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = planes.c; sourceTree = "<group>"; };
-		9A2F6B521FD0AFB90003A3F4 /* spheres.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = spheres.c; sourceTree = "<group>"; };
 		9ACE3F471FCF0C8900991DFB /* Server */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Server; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ACE3F561FCF0CAC00991DFB /* Client */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Client; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ACE3F5E1FCF0D1700991DFB /* rt_clu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rt_clu.h; sourceTree = "<group>"; };
@@ -430,7 +454,6 @@
 		9ACE3FEE1FCF128000991DFB /* ft_trim_quotestr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ft_trim_quotestr.c; sourceTree = "<group>"; };
 		9ACE3FF01FCF128000991DFB /* ft_isdir.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ft_isdir.c; sourceTree = "<group>"; };
 		9ACE40C81FCF140B00991DFB /* rt_clu_structs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rt_clu_structs.h; sourceTree = "<group>"; };
-		9ACE40C91FCF144C00991DFB /* libvector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = libvector.h; sourceTree = "<group>"; };
 		9ACE40D51FCF152C00991DFB /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDL2.framework; sourceTree = "<group>"; };
 		9ACE40D61FCF152C00991DFB /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDL2_image.framework; sourceTree = "<group>"; };
 		9ACE40D71FCF152C00991DFB /* SDL2_ttf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDL2_ttf.framework; sourceTree = "<group>"; };
@@ -445,8 +468,36 @@
 		9ACE41B01FCF176B00991DFB /* miscelaneous.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = miscelaneous.c; sourceTree = "<group>"; };
 		9ACE41B21FCF17B900991DFB /* libvector.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = libvector.c; sourceTree = "<group>"; };
 		9ACE41B61FCF199400991DFB /* init_env.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = init_env.c; sourceTree = "<group>"; };
-		9ACE41B91FCF1AAB00991DFB /* marble.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = marble.c; sourceTree = "<group>"; };
 		9ACE41BC1FCF2F0900991DFB /* init_object.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = init_object.c; sourceTree = "<group>"; };
+		9AE1BE581FD0EB5C002F5209 /* init_global.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = init_global.c; sourceTree = "<group>"; };
+		9AE1BE5A1FD0ECBD002F5209 /* quit.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = quit.c; sourceTree = "<group>"; };
+		9AE1BE5C1FD0ED6D002F5209 /* quit.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = quit.c; sourceTree = "<group>"; };
+		9AE1BE5E1FD0EE70002F5209 /* init_globals.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = init_globals.c; sourceTree = "<group>"; };
+		9AE1BE621FD0F46E002F5209 /* interface.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = interface.c; sourceTree = "<group>"; };
+		9AE1BE651FD0F515002F5209 /* init_sdl.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = init_sdl.c; sourceTree = "<group>"; };
+		9AE1BE671FD0F7F5002F5209 /* mouse_rect.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mouse_rect.c; sourceTree = "<group>"; };
+		9AE1BE681FD0F7F5002F5209 /* init_buttons.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = init_buttons.c; sourceTree = "<group>"; };
+		9AE1BE691FD0F7F5002F5209 /* create_rect.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = create_rect.c; sourceTree = "<group>"; };
+		9AE1BE6A1FD0F7F5002F5209 /* draw_buttons.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = draw_buttons.c; sourceTree = "<group>"; };
+		9AE1BE701FD1022E002F5209 /* keyboard.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = keyboard.c; sourceTree = "<group>"; };
+		9AE1BE711FD1022E002F5209 /* move_camera.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = move_camera.c; sourceTree = "<group>"; };
+		9AE1BE721FD1022E002F5209 /* move_object.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = move_object.c; sourceTree = "<group>"; };
+		9AE1BE731FD1022E002F5209 /* print_scene.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = print_scene.c; sourceTree = "<group>"; };
+		9AE1BE741FD1022E002F5209 /* rotate_camera.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rotate_camera.c; sourceTree = "<group>"; };
+		9AE1BE751FD1022E002F5209 /* select_object.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = select_object.c; sourceTree = "<group>"; };
+		9AE1BE761FD1022E002F5209 /* switch_obj_tx.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = switch_obj_tx.c; sourceTree = "<group>"; };
+		9AE1BE771FD1022E002F5209 /* switch_skybox.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = switch_skybox.c; sourceTree = "<group>"; };
+		9AE1BE781FD1022E002F5209 /* switch_tsp_tx.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = switch_tsp_tx.c; sourceTree = "<group>"; };
+		9AE1BE821FD10246002F5209 /* init_perlin.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = init_perlin.c; sourceTree = "<group>"; };
+		9AE1BE841FD102CB002F5209 /* ray.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ray.c; sourceTree = "<group>"; };
+		9AE1BE861FD10309002F5209 /* get_distance.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = get_distance.c; sourceTree = "<group>"; };
+		9AE1BE891FD10366002F5209 /* cones.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cones.c; sourceTree = "<group>"; };
+		9AE1BE8A1FD10366002F5209 /* cylinders.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cylinders.c; sourceTree = "<group>"; };
+		9AE1BE8B1FD10366002F5209 /* planes.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = planes.c; sourceTree = "<group>"; };
+		9AE1BE8C1FD10366002F5209 /* spheres.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = spheres.c; sourceTree = "<group>"; };
+		9AE1BE951FD11603002F5209 /* init_skyboxes_sources.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = init_skyboxes_sources.c; sourceTree = "<group>"; };
+		9AE1BE961FD11604002F5209 /* init_transparency_sources.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = init_transparency_sources.c; sourceTree = "<group>"; };
+		9AE1BE991FD11911002F5209 /* init_color_sources.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = init_color_sources.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -478,7 +529,7 @@
 			children = (
 				9A2F6B381FD0AE3D0003A3F4 /* draw_screen.c */,
 				9A2F6B371FD0AE3D0003A3F4 /* compute_block.c */,
-				9A2F6B391FD0AE3D0003A3F4 /* thread.c */,
+				9A2F6B391FD0AE3D0003A3F4 /* thread_memory.c */,
 			);
 			path = display;
 			sourceTree = "<group>";
@@ -494,17 +545,6 @@
 				9A2F6B461FD0AF3B0003A3F4 /* refraction.c */,
 			);
 			path = calculus;
-			sourceTree = "<group>";
-		};
-		9A2F6B4E1FD0AFB90003A3F4 /* primitives */ = {
-			isa = PBXGroup;
-			children = (
-				9A2F6B4F1FD0AFB90003A3F4 /* cones.c */,
-				9A2F6B501FD0AFB90003A3F4 /* cylinders.c */,
-				9A2F6B511FD0AFB90003A3F4 /* planes.c */,
-				9A2F6B521FD0AFB90003A3F4 /* spheres.c */,
-			);
-			path = primitives;
 			sourceTree = "<group>";
 		};
 		9A673C181FCFAFC300D6B3E5 /* Frameworks */ = {
@@ -555,11 +595,11 @@
 		9ACE3F591FCF0CDB00991DFB /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				9AE1BE881FD10365002F5209 /* primitives */,
 				9ACE40D41FCF152C00991DFB /* frameworks */,
 				9ACE3F6B1FCF128000991DFB /* libft */,
 				9ACE3F5E1FCF0D1700991DFB /* rt_clu.h */,
 				9ACE40C81FCF140B00991DFB /* rt_clu_structs.h */,
-				9ACE40C91FCF144C00991DFB /* libvector.h */,
 				9ACE41B21FCF17B900991DFB /* libvector.c */,
 			);
 			path = Common;
@@ -580,10 +620,10 @@
 				9ACE3F641FCF125A00991DFB /* main.c */,
 				9A2F6B3D1FD0AEDE0003A3F4 /* miscelaneous.c */,
 				9A2F6B2E1FD0A9CD0003A3F4 /* connexion.c */,
+				9AE1BE5A1FD0ECBD002F5209 /* quit.c */,
 				9ACE41BB1FCF2F0900991DFB /* init */,
 				9A2F6B361FD0AE3D0003A3F4 /* display */,
 				9A2F6B3F1FD0AF3B0003A3F4 /* calculus */,
-				9A2F6B4E1FD0AFB90003A3F4 /* primitives */,
 			);
 			name = sources;
 			path = client/sources;
@@ -593,10 +633,13 @@
 			isa = PBXGroup;
 			children = (
 				9ACE3F671FCF126700991DFB /* main.c */,
+				9AE1BE5C1FD0ED6D002F5209 /* quit.c */,
 				9A2F6B321FD0AB2D0003A3F4 /* options.c */,
 				9A2F6B301FD0A9D70003A3F4 /* connexion.c */,
 				9A2F6B341FD0AB4E0003A3F4 /* display.c */,
 				9ACE41B01FCF176B00991DFB /* miscelaneous.c */,
+				9AE1BE601FD0F46E002F5209 /* interface */,
+				9AE1BE6F1FD1022E002F5209 /* events */,
 				9ACE41B81FCF1AAB00991DFB /* calculus */,
 				9ACE41B51FCF199400991DFB /* init */,
 				9ACE419F1FCF167C00991DFB /* parser */,
@@ -873,6 +916,9 @@
 			isa = PBXGroup;
 			children = (
 				9ACE41B61FCF199400991DFB /* init_env.c */,
+				9AE1BE5E1FD0EE70002F5209 /* init_globals.c */,
+				9AE1BE651FD0F515002F5209 /* init_sdl.c */,
+				9AE1BE821FD10246002F5209 /* init_perlin.c */,
 			);
 			path = init;
 			sourceTree = "<group>";
@@ -880,7 +926,8 @@
 		9ACE41B81FCF1AAB00991DFB /* calculus */ = {
 			isa = PBXGroup;
 			children = (
-				9ACE41B91FCF1AAB00991DFB /* marble.c */,
+				9AE1BE841FD102CB002F5209 /* ray.c */,
+				9AE1BE861FD10309002F5209 /* get_distance.c */,
 			);
 			path = calculus;
 			sourceTree = "<group>";
@@ -889,9 +936,53 @@
 			isa = PBXGroup;
 			children = (
 				9ACE41BC1FCF2F0900991DFB /* init_object.c */,
+				9AE1BE581FD0EB5C002F5209 /* init_global.c */,
+				9AE1BE951FD11603002F5209 /* init_skyboxes_sources.c */,
+				9AE1BE991FD11911002F5209 /* init_color_sources.c */,
+				9AE1BE961FD11604002F5209 /* init_transparency_sources.c */,
 			);
 			path = init;
 			sourceTree = "<group>";
+		};
+		9AE1BE601FD0F46E002F5209 /* interface */ = {
+			isa = PBXGroup;
+			children = (
+				9AE1BE621FD0F46E002F5209 /* interface.c */,
+				9AE1BE691FD0F7F5002F5209 /* create_rect.c */,
+				9AE1BE6A1FD0F7F5002F5209 /* draw_buttons.c */,
+				9AE1BE681FD0F7F5002F5209 /* init_buttons.c */,
+				9AE1BE671FD0F7F5002F5209 /* mouse_rect.c */,
+			);
+			path = interface;
+			sourceTree = "<group>";
+		};
+		9AE1BE6F1FD1022E002F5209 /* events */ = {
+			isa = PBXGroup;
+			children = (
+				9AE1BE701FD1022E002F5209 /* keyboard.c */,
+				9AE1BE711FD1022E002F5209 /* move_camera.c */,
+				9AE1BE721FD1022E002F5209 /* move_object.c */,
+				9AE1BE731FD1022E002F5209 /* print_scene.c */,
+				9AE1BE741FD1022E002F5209 /* rotate_camera.c */,
+				9AE1BE751FD1022E002F5209 /* select_object.c */,
+				9AE1BE761FD1022E002F5209 /* switch_obj_tx.c */,
+				9AE1BE771FD1022E002F5209 /* switch_skybox.c */,
+				9AE1BE781FD1022E002F5209 /* switch_tsp_tx.c */,
+			);
+			path = events;
+			sourceTree = "<group>";
+		};
+		9AE1BE881FD10365002F5209 /* primitives */ = {
+			isa = PBXGroup;
+			children = (
+				9AE1BE891FD10366002F5209 /* cones.c */,
+				9AE1BE8A1FD10366002F5209 /* cylinders.c */,
+				9AE1BE8B1FD10366002F5209 /* planes.c */,
+				9AE1BE8C1FD10366002F5209 /* spheres.c */,
+			);
+			name = primitives;
+			path = common/primitives;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -981,7 +1072,9 @@
 				9ACE40111FCF128000991DFB /* ft_memalloc.c in Sources */,
 				9ACE40551FCF128000991DFB /* ft_strreplace_once.c in Sources */,
 				9ACE400D1FCF128000991DFB /* ft_lstnew.c in Sources */,
+				9AE1BE791FD1022E002F5209 /* keyboard.c in Sources */,
 				9ACE41AB1FCF167D00991DFB /* input.c in Sources */,
+				9AE1BE931FD10366002F5209 /* spheres.c in Sources */,
 				9ACE404F1FCF128000991DFB /* ft_strnequ.c in Sources */,
 				9ACE3FFF1FCF128000991DFB /* ft_tolower.c in Sources */,
 				9ACE405C1FCF128000991DFB /* ft_isdir.c in Sources */,
@@ -997,6 +1090,8 @@
 				9ACE40071FCF128000991DFB /* get_next_line.c in Sources */,
 				9ACE40051FCF128000991DFB /* ft_xtoa.c in Sources */,
 				9ACE404C1FCF128000991DFB /* ft_strncmp.c in Sources */,
+				9AE1BE7B1FD1022E002F5209 /* move_object.c in Sources */,
+				9AE1BE7A1FD1022E002F5209 /* move_camera.c in Sources */,
 				9ACE40271FCF128000991DFB /* print_x.c in Sources */,
 				9ACE40421FCF128000991DFB /* ft_strequ.c in Sources */,
 				9ACE40361FCF128000991DFB /* ft_is_whitestring.c in Sources */,
@@ -1007,16 +1102,22 @@
 				9ACE41AF1FCF167D00991DFB /* tools.c in Sources */,
 				9A2F6B331FD0AB2D0003A3F4 /* options.c in Sources */,
 				9ACE40341FCF128000991DFB /* ft_escape.c in Sources */,
+				9AE1BE831FD10246002F5209 /* init_perlin.c in Sources */,
+				9AE1BE7C1FD1022E002F5209 /* print_scene.c in Sources */,
 				9ACE3FF91FCF128000991DFB /* ft_isalnum.c in Sources */,
 				9ACE40561FCF128000991DFB /* ft_strsplit.c in Sources */,
+				9AE1BE8F1FD10366002F5209 /* cylinders.c in Sources */,
+				9AE1BE6D1FD0F7F5002F5209 /* create_rect.c in Sources */,
 				9A2F6B311FD0A9D70003A3F4 /* connexion.c in Sources */,
 				9ACE400A1FCF128000991DFB /* ft_lstdelone.c in Sources */,
-				9ACE41BA1FCF1AAC00991DFB /* marble.c in Sources */,
 				9ACE405A1FCF128000991DFB /* ft_strupcase.c in Sources */,
+				9AE1BE6C1FD0F7F5002F5209 /* init_buttons.c in Sources */,
 				9ACE402A1FCF128000991DFB /* utils.c in Sources */,
 				9ACE400B1FCF128000991DFB /* ft_lstiter.c in Sources */,
 				9ACE403F1FCF128000991DFB /* ft_strcpy.c in Sources */,
 				9ACE41AA1FCF167D00991DFB /* create_object.c in Sources */,
+				9AE1BE911FD10366002F5209 /* planes.c in Sources */,
+				9AE1BE7E1FD1022E002F5209 /* select_object.c in Sources */,
 				9ACE40471FCF128000991DFB /* ft_strlen.c in Sources */,
 				9ACE40121FCF128000991DFB /* ft_memccpy.c in Sources */,
 				9ACE40591FCF128000991DFB /* ft_strtrim.c in Sources */,
@@ -1025,14 +1126,18 @@
 				9ACE40541FCF128000991DFB /* ft_strreplace.c in Sources */,
 				9ACE40381FCF128000991DFB /* ft_str_fits_int.c in Sources */,
 				9ACE40331FCF128000991DFB /* ft_cut_string.c in Sources */,
+				9AE1BE7F1FD1022E002F5209 /* switch_obj_tx.c in Sources */,
 				9ACE40011FCF128000991DFB /* ft_atod.c in Sources */,
 				9ACE40501FCF128000991DFB /* ft_strnew.c in Sources */,
 				9ACE41A91FCF167D00991DFB /* add_obj.c in Sources */,
 				9ACE3FF81FCF128000991DFB /* ft_is_whitespace.c in Sources */,
 				9ACE40131FCF128000991DFB /* ft_memchr.c in Sources */,
+				9AE1BE7D1FD1022E002F5209 /* rotate_camera.c in Sources */,
 				9ACE40301FCF128000991DFB /* ft_putnbr_fd.c in Sources */,
+				9AE1BE5D1FD0ED6D002F5209 /* quit.c in Sources */,
 				9ACE40241FCF128000991DFB /* ft_strlen.c in Sources */,
 				9ACE403A1FCF128000991DFB /* ft_strcapitalize.c in Sources */,
+				9AE1BE641FD0F46E002F5209 /* interface.c in Sources */,
 				9ACE40031FCF128000991DFB /* ft_atoll.c in Sources */,
 				9ACE402E1FCF128000991DFB /* ft_putendl_fd.c in Sources */,
 				9ACE40091FCF128000991DFB /* ft_lstdel.c in Sources */,
@@ -1041,6 +1146,7 @@
 				9ACE40171FCF128000991DFB /* ft_memmove.c in Sources */,
 				9ACE40531FCF128000991DFB /* ft_strrchr.c in Sources */,
 				9ACE40261FCF128000991DFB /* print_d.c in Sources */,
+				9AE1BE801FD1022E002F5209 /* switch_skybox.c in Sources */,
 				9ACE405B1FCF128000991DFB /* ft_trim_quotestr.c in Sources */,
 				9ACE3F6A1FCF126700991DFB /* main.c in Sources */,
 				9ACE3FF51FCF128000991DFB /* ft_post_realloc_array.c in Sources */,
@@ -1049,11 +1155,14 @@
 				9ACE403C1FCF128000991DFB /* ft_strchr.c in Sources */,
 				9ACE40141FCF128000991DFB /* ft_memcmp.c in Sources */,
 				9ACE40491FCF128000991DFB /* ft_strmap.c in Sources */,
+				9AE1BE8D1FD10366002F5209 /* cones.c in Sources */,
 				9ACE40191FCF128000991DFB /* convers.c in Sources */,
 				9ACE41B71FCF199400991DFB /* init_env.c in Sources */,
 				9ACE40571FCF128000991DFB /* ft_strstr.c in Sources */,
+				9AE1BE811FD1022E002F5209 /* switch_tsp_tx.c in Sources */,
 				9ACE3FFE1FCF128000991DFB /* ft_isprint.c in Sources */,
 				9ACE3FFC1FCF128000991DFB /* ft_isdigit.c in Sources */,
+				9AE1BE5F1FD0EE70002F5209 /* init_globals.c in Sources */,
 				9ACE3FFB1FCF128000991DFB /* ft_isascii.c in Sources */,
 				9ACE40041FCF128000991DFB /* ft_itoa.c in Sources */,
 				9ACE3FFD1FCF128000991DFB /* ft_isprime.c in Sources */,
@@ -1078,10 +1187,13 @@
 				9ACE3FF71FCF128000991DFB /* ft_print_array.c in Sources */,
 				9ACE40221FCF128000991DFB /* ft_putwchar.c in Sources */,
 				9ACE40151FCF128000991DFB /* ft_memcpy.c in Sources */,
+				9AE1BE871FD10309002F5209 /* get_distance.c in Sources */,
 				9ACE41A81FCF167D00991DFB /* add_camera.c in Sources */,
 				9ACE40001FCF128000991DFB /* ft_toupper.c in Sources */,
 				9ACE404E1FCF128000991DFB /* ft_strndup.c in Sources */,
 				9ACE40061FCF128000991DFB /* ft_xtoi.c in Sources */,
+				9AE1BE851FD102CB002F5209 /* ray.c in Sources */,
+				9AE1BE661FD0F515002F5209 /* init_sdl.c in Sources */,
 				9ACE40161FCF128000991DFB /* ft_memdel.c in Sources */,
 				9ACE402C1FCF128000991DFB /* ft_putchar_fd.c in Sources */,
 				9ACE3FF41FCF128000991DFB /* ft_free_array.c in Sources */,
@@ -1091,7 +1203,9 @@
 				9ACE40401FCF128000991DFB /* ft_strdel.c in Sources */,
 				9ACE40251FCF128000991DFB /* parsing.c in Sources */,
 				9ACE3FF61FCF128000991DFB /* ft_pre_realloc_array.c in Sources */,
+				9AE1BE6B1FD0F7F5002F5209 /* mouse_rect.c in Sources */,
 				9ACE40521FCF128000991DFB /* ft_strnstr.c in Sources */,
+				9AE1BE6E1FD0F7F5002F5209 /* draw_buttons.c in Sources */,
 				9ACE40081FCF128000991DFB /* ft_lstadd.c in Sources */,
 				9ACE40231FCF128000991DFB /* ft_str_pf.c in Sources */,
 				9ACE40451FCF128000991DFB /* ft_strjoin.c in Sources */,
@@ -1103,10 +1217,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AE1BE8E1FD10366002F5209 /* cones.c in Sources */,
 				9ACE40611FCF129200991DFB /* ft_pre_realloc_array.c in Sources */,
 				9ACE40A01FCF12B100991DFB /* ft_strlen.c in Sources */,
 				9ACE408E1FCF12AD00991DFB /* ft_putchar_fd.c in Sources */,
 				9ACE40BA1FCF12C100991DFB /* ft_atoi.c in Sources */,
+				9AE1BE901FD10366002F5209 /* cylinders.c in Sources */,
 				9ACE40711FCF12A600991DFB /* ft_strdup.c in Sources */,
 				9ACE406D1FCF12A600991DFB /* ft_strclr.c in Sources */,
 				9ACE40B31FCF12BB00991DFB /* ft_lstdel.c in Sources */,
@@ -1123,10 +1239,11 @@
 				9ACE40BD1FCF12C100991DFB /* ft_xtoa.c in Sources */,
 				9ACE40A21FCF12B100991DFB /* print_d.c in Sources */,
 				9ACE40B21FCF12BB00991DFB /* ft_lstadd.c in Sources */,
+				9AE1BE971FD11604002F5209 /* init_skyboxes_sources.c in Sources */,
 				9ACE40A31FCF12B100991DFB /* print_x.c in Sources */,
 				9ACE408F1FCF12AD00991DFB /* ft_putendl.c in Sources */,
 				9ACE40C01FCF12C400991DFB /* ft_isalnum.c in Sources */,
-				9A2F6B3C1FD0AE3D0003A3F4 /* thread.c in Sources */,
+				9A2F6B3C1FD0AE3D0003A3F4 /* thread_memory.c in Sources */,
 				9ACE40741FCF12A600991DFB /* ft_striteri.c in Sources */,
 				9ACE406A1FCF12A600991DFB /* ft_strcapitalize.c in Sources */,
 				9ACE408D1FCF12AD00991DFB /* ft_putchar.c in Sources */,
@@ -1144,7 +1261,9 @@
 				9ACE40B91FCF12C100991DFB /* ft_atod.c in Sources */,
 				9ACE40B61FCF12BB00991DFB /* ft_lstmap.c in Sources */,
 				9ACE40641FCF12A600991DFB /* ft_escape.c in Sources */,
+				9AE1BE5B1FD0ECBD002F5209 /* quit.c in Sources */,
 				9ACE40BE1FCF12C100991DFB /* ft_xtoi.c in Sources */,
+				9AE1BE591FD0EB5C002F5209 /* init_global.c in Sources */,
 				9ACE40811FCF12A600991DFB /* ft_strnjoin.c in Sources */,
 				9ACE408A1FCF12A600991DFB /* ft_strupcase.c in Sources */,
 				9ACE40AE1FCF12B500991DFB /* ft_memmove.c in Sources */,
@@ -1152,6 +1271,7 @@
 				9ACE406B1FCF12A600991DFB /* ft_strcat.c in Sources */,
 				9ACE40911FCF12AD00991DFB /* ft_putnbr.c in Sources */,
 				9ACE40901FCF12AD00991DFB /* ft_putendl_fd.c in Sources */,
+				9AE1BE981FD11604002F5209 /* init_transparency_sources.c in Sources */,
 				9ACE40BF1FCF12C400991DFB /* ft_is_whitespace.c in Sources */,
 				9A2F6B471FD0AF3B0003A3F4 /* compute_objects.c in Sources */,
 				9A2F6B3B1FD0AE3D0003A3F4 /* draw_screen.c in Sources */,
@@ -1160,6 +1280,7 @@
 				9ACE40921FCF12AD00991DFB /* ft_putnbr_fd.c in Sources */,
 				9ACE409B1FCF12B100991DFB /* ft_putadr_pf.c in Sources */,
 				9ACE40B51FCF12BB00991DFB /* ft_lstiter.c in Sources */,
+				9AE1BE941FD10366002F5209 /* spheres.c in Sources */,
 				9ACE40781FCF12A600991DFB /* ft_strlowcase.c in Sources */,
 				9ACE40661FCF12A600991DFB /* ft_is_whitestring.c in Sources */,
 				9ACE407A1FCF12A600991DFB /* ft_strmapi.c in Sources */,
@@ -1184,7 +1305,6 @@
 				9ACE40981FCF12B100991DFB /* ft_itoa_base.c in Sources */,
 				9ACE40681FCF12A600991DFB /* ft_str_fits_int.c in Sources */,
 				9ACE40A81FCF12B500991DFB /* ft_memalloc.c in Sources */,
-				9A2F6B561FD0AFB90003A3F4 /* spheres.c in Sources */,
 				9ACE40AB1FCF12B500991DFB /* ft_memcmp.c in Sources */,
 				9ACE409C1FCF12B100991DFB /* ft_putnchar.c in Sources */,
 				9A2F6B4C1FD0AF3B0003A3F4 /* reflection.c in Sources */,
@@ -1196,29 +1316,28 @@
 				9ACE40B71FCF12BB00991DFB /* ft_lstnew.c in Sources */,
 				9ACE40791FCF12A600991DFB /* ft_strmap.c in Sources */,
 				9A2F6B481FD0AF3B0003A3F4 /* diffuse.c in Sources */,
-				9A2F6B541FD0AFB90003A3F4 /* cylinders.c in Sources */,
 				9ACE40B41FCF12BB00991DFB /* ft_lstdelone.c in Sources */,
 				9ACE40771FCF12A600991DFB /* ft_strlen.c in Sources */,
 				9ACE408C1FCF12A900991DFB /* ft_isdir.c in Sources */,
 				9ACE40831FCF12A600991DFB /* ft_strrchr.c in Sources */,
 				9ACE40691FCF12A600991DFB /* ft_str_is_number.c in Sources */,
 				9ACE40601FCF129200991DFB /* ft_post_realloc_array.c in Sources */,
+				9AE1BE921FD10366002F5209 /* planes.c in Sources */,
 				9ACE40BC1FCF12C100991DFB /* ft_itoa.c in Sources */,
 				9ACE40881FCF12A600991DFB /* ft_strsub.c in Sources */,
 				9ACE40A91FCF12B500991DFB /* ft_memccpy.c in Sources */,
 				9ACE40B11FCF12B900991DFB /* ft_pow.c in Sources */,
 				9ACE40BB1FCF12C100991DFB /* ft_atoll.c in Sources */,
 				9A2F6B2F1FD0A9CD0003A3F4 /* connexion.c in Sources */,
-				9A2F6B551FD0AFB90003A3F4 /* planes.c in Sources */,
 				9ACE40A51FCF12B100991DFB /* select.c in Sources */,
 				9ACE3F651FCF125A00991DFB /* main.c in Sources */,
 				9ACE409E1FCF12B100991DFB /* ft_putwchar.c in Sources */,
-				9A2F6B531FD0AFB90003A3F4 /* cones.c in Sources */,
 				9ACE40621FCF129200991DFB /* ft_print_array.c in Sources */,
 				9ACE407C1FCF12A600991DFB /* ft_strncmp.c in Sources */,
 				9ACE40A41FCF12B100991DFB /* read_spec.c in Sources */,
 				9ACE40C11FCF12C400991DFB /* ft_isalpha.c in Sources */,
 				9ACE407D1FCF12A600991DFB /* ft_strncpy.c in Sources */,
+				9AE1BE9A1FD11911002F5209 /* init_color_sources.c in Sources */,
 				9ACE40801FCF12A600991DFB /* ft_strnew.c in Sources */,
 				9ACE406C1FCF12A600991DFB /* ft_strchr.c in Sources */,
 				9ACE40AA1FCF12B500991DFB /* ft_memchr.c in Sources */,

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   connexion.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/30 23:34:12 by nsampre           #+#    #+#             */
+/*   Updated: 2017/11/30 23:34:12 by nsampre          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "server.h"
 
 void	init_master_socket(void)
@@ -46,7 +58,37 @@ void	sync_env_obj(t_env *e, int cs)
 	}
 }
 
-void	sync_buffer(int cs)
+void	write_global_buffer(int *local_buffer, t_env *e)
+{
+	ssize_t	x;
+	ssize_t	y;
+	int		color;
+
+	y = -1;
+	while (++y < F_HEIGHT)
+	{
+		x = -1;
+		while (++x < F_WIDTH)
+		{
+			color = local_buffer[x * (int)F_HEIGHT + y];
+
+			if (e->sum == 1)
+			{
+				g_buffer[x * (int)F_HEIGHT + y].x = (color >> 16) & 255;
+				g_buffer[x * (int)F_HEIGHT + y].y = (color >> 8) & 255;
+				g_buffer[x * (int)F_HEIGHT + y].z = color & 255;
+			}
+			else
+			{
+				g_buffer[x * (int)F_HEIGHT + y].x += (color >> 16) & 255;
+				g_buffer[x * (int)F_HEIGHT + y].y += (color >> 8) & 255;
+				g_buffer[x * (int)F_HEIGHT + y].z += color & 255;
+			}
+		}
+	}
+}
+
+void	sync_buffer(int cs, t_env *e)
 {
 	ssize_t r;
 	ssize_t os;
@@ -63,22 +105,7 @@ void	sync_buffer(int cs)
 			fatal_quit("recv");
 		os += r;
 	}
-
-	short	x;
-	short	y;
-	y = -1;
-	while (++y < F_HEIGHT)
-	{
-		x = -1;
-		while (++x < F_WIDTH)
-		{
-			int color = local_buffer[x * (int)F_HEIGHT + y];
-
-			g_buffer[x * (int)F_HEIGHT + y].x += (color >> 16) & 255;
-			g_buffer[x * (int)F_HEIGHT + y].y += (color >> 8) & 255;
-			g_buffer[x * (int)F_HEIGHT + y].z += color & 255;
-		}
-	}
+	write_global_buffer(local_buffer, e);
 	free(local_buffer);
 	local_buffer = NULL;
 }

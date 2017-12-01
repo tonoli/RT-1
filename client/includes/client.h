@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   client.h                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/12/01 02:50:14 by nsampre           #+#    #+#             */
+/*   Updated: 2017/12/01 02:50:14 by nsampre          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef client_h
 # define client_h
 
@@ -10,15 +22,27 @@ extern int		g_cli_socket;
 extern char		*g_address;
 extern int		g_port;
 extern int		*g_buffer;
+extern int		**g_frame_array;
+extern t_vector	**g_color_array;
+extern t_mem	g_mem;
 
 # endif
 
 /*
-**	MAIN
+**	QUIT
 */
 
 void		custom_quit(char *msg);
 void		fatal_quit(char *msg);
+
+/*
+**	INIT
+*/
+
+void		init_globals(void);
+void		init_skyboxes_tx_sources(t_env *e);
+void		init_color_tx_sources(t_env *e);
+void		init_transparency_tx_sources(t_env *e);
 
 /*
 **	CONNEXION
@@ -28,6 +52,7 @@ void		connect_to_server(void);
 void		sync_env(t_env *e);
 void		sync_objects(t_env *e);
 void		sync_buffer(void);
+void		release_obj(t_env *e);
 
 /*
 **	OBJECT ADD
@@ -65,17 +90,6 @@ t_vector	compute_objects(t_env *e, t_ray ray);
 t_vector	reflection(t_env *e, t_ray ray, t_obj *closest_obj);
 t_vector	refraction(t_env *e, t_ray ray, t_obj *closest_obj);
 t_vector	diffuse(t_env *e, t_ray ray, t_obj *closest_obj);
-
-
-/*
-**	PRIMITIVES
-*/
-
-double		get_distance(t_env *e, t_obj *obj, t_ray ray);
-double		hit_sphere(t_env *e, t_obj *obj, t_ray ray);
-double		hit_plane(t_env *e, t_obj *obj, t_ray ray);
-double		hit_cyl(t_env *e, t_obj *obj, t_ray ray);
-double		hit_cone(t_env *e, t_obj *obj, t_ray ray);
 
 /*
 **	MARBLE

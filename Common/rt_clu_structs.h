@@ -1,5 +1,34 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   rt_clu_structs.h                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/30 23:19:59 by nsampre           #+#    #+#             */
+/*   Updated: 2017/11/30 23:19:59 by nsampre          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef rt_clu_structs_h
 # define rt_clu_structs_h
+
+typedef struct	s_mem
+{
+	//SKYBOX
+	SDL_Surface		*s_skybox[12];
+	SDL_Surface		*current_skybox;
+	int				skybox_index;
+	int				skybox_total;
+
+	//OBJ COLOR TEXTURES
+	SDL_Surface		*s_obj_tx[12];
+	int				obj_tx_total;
+
+	//TRANSPARENCY TEXTURES
+	SDL_Surface		*s_tsp_tx[12];
+	int				tsp_tx_total;
+}				t_mem;
 
 typedef struct 	s_texture_sources
 {
@@ -177,6 +206,9 @@ typedef struct	s_env
 	//Transaction checkup
 	unsigned int	magic;
 	int				object_count;
+
+	//Overriding buffer when live mode
+	int 			reset;
 }				t_env;
 
 

@@ -1,14 +1,27 @@
 #!/usr/bin/make -f
+#******************************************************************************#
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2017/11/30 23:52:47 by nsampre           #+#    #+#              #
+#    Updated: 2017/11/30 23:52:47 by nsampre          ###   ########.fr        #
+#                                                                              #
+#******************************************************************************#
+
 
 NAME			=	rt_server
 
 SRC_BASE		=	$(shell find sources | grep '\.c' | cut -c 9- | sort)
+SRC_BASE		+=	$(shell find ../common/primitives | grep '\.c' | sort | sed 's/^/..\//')
 SRC_BASE		+=	../../common/libvector.c
 
 CC				=	gcc
 
 # FLAGS			=	-Wall -Wextra -Werror -O3
-FLAGS			+=	-Ofast
+FLAGS			+=	-O3
 
 
 SRC_DIR			=	sources/
@@ -19,6 +32,7 @@ COMMON			=	../common/
 
 SRCS			=	$(addprefix $(SRC_DIR), $(SRC_BASE))
 OBJS			=	$(addprefix $(OBJ_DIR), $(SRC_BASE:.c=.o))
+MMD				=	$(addprefix $(OBJ_DIR), $(SRC_BASE:.c=.d))
 
 LIBFT_DIR		=	../common/libft/
 LIBFT_LIB		=	$(LIBFT_DIR)libft.a
@@ -61,8 +75,6 @@ clean:
 					@printf "=> \x1B[31mDeleting $(NAME) .obj files...\x1B[37m\n"
 					@rm -rf $(OBJ_DIR)
 					@printf "=> \x1B[31mDeleting $(COMMON) .obj files...\x1B[37m\n"
-					@rm -rf $(COMMON)op.o
-					@rm -rf $(COMMON)op.d
 					@printf "=> \x1B[31mDeleting libft .obj files...\x1B[37m\n"
 					@make -C $(LIBFT_DIR) clean
 
