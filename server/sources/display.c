@@ -60,5 +60,4 @@ void	reset_screen(t_env *e)
 			g_buffer[j * (int)F_WIDTH + i] = (t_vector){0, 0, 0};
 		}
 	}
-	e->sum = 0;
 }

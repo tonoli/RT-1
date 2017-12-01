@@ -26,25 +26,12 @@ void	create_object(t_env *e)
 	obj_push_back(&e->objects, obj);
 }
 
-void	draw_screen(t_env *e)
-{
-	
-}
-
-void	compute_frame(t_env *e)
-{
-//	e->increment = 1;
-//	e->recursion = 10;
-//	draw_screen(e);
-//	e->sum++;
-}
-
 static int g_key[] =
 {
+	SDLK_l,
 	SDLK_b,
 	SDLK_n,
 	SDLK_m,
-	SDLK_f,
 	SDLK_p,
 	SDLK_w,
 	SDLK_a,
@@ -67,10 +54,10 @@ static int g_key[] =
 
 static const int g_key_value[255] =
 {
+	['l'] = SDLK_l,
 	['b'] = SDLK_b,
 	['n'] = SDLK_n,
 	['m'] = SDLK_m,
-	['f'] = SDLK_f,
 	['p'] = SDLK_p,
 	['w'] = SDLK_w,
 	['a'] = SDLK_a,
@@ -90,12 +77,29 @@ static const int g_key_value[255] =
 	[127 + '2'] = SDLK_KP_2
 };
 
+void	switch_render_mode(t_env *e)
+{
+//	e->sum = 1;
+	if (!e->live)
+	{
+		e->increment = 4;
+		e->recursion = 1;
+	}
+	else
+	{
+		e->increment = 1;
+		e->recursion = 10;
+	}
+	e->live = (e->live & 1) ^ 1;
+	e->reset = 1;
+}
+
 static void (*g_key_func[255])(t_env *e) =
 {
+	['l'] = switch_render_mode,
 	['b'] = create_object,
 	['n'] = switch_obj_tx,
 	['m'] = switch_tsp_tx,
-	['f'] = compute_frame,
 	['p'] = print_scene,
 	['w'] = move_forward,
 	['a'] = move_left,
@@ -133,29 +137,8 @@ void	call_function(t_env *e, int key)
 {
 	int	i;
 
-	if (e->increment != 1 || key != SDLK_f)
-		if (e->sum != 1)
-			reset_screen(e);
-	if (key != SDLK_f)
-	{
-		e->sum = 1;
-		e->increment = 4;
-		e->recursion = 2;
-		e->wait = 1.0;
-		e->reset = 1;
-	}
-	else
-	{
-		if (e->reset == 1)
-		{
-			e->reset = 0;
-			reset_screen(e);
-		}
-		e->sum++;
-		e->increment = 1;
-		e->recursion = 10;
-		e->wait = 0;
-	}
+	if (!e->live)
+		reset_screen(e);
 	i = -1;
 	while (++i < 255)
 	{
@@ -171,7 +154,8 @@ int		keyboard(int key, t_env *e)
 {
 	if (!is_acceptable_key(key))
 		return (0);
-	gettimeofday(&e->last_event, NULL);
+	if (!e->live)
+		switch_render_mode(e);
 	call_function(e, key);
 	return (0);
 }

@@ -15,5 +15,4 @@ void	switch_obj_tx(t_env *e)
 	}
 	else
 		e->selected->current_texture = e->s_obj_tx[e->selected->texture_index];
-	draw_screen(e);
 }

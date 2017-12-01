@@ -51,7 +51,7 @@ void		init_transparency_tx_sources(t_env *e);
 void		connect_to_server(void);
 void		sync_env(t_env *e);
 void		sync_objects(t_env *e, t_obj *obj);
-void		sync_buffer(void);
+void		sync_buffer(t_env *e);
 void		release_obj(t_env *e);
 
 /*
@@ -90,6 +90,7 @@ t_vector	compute_objects(t_env *e, t_ray ray);
 t_vector	reflection(t_env *e, t_ray ray, t_obj *closest_obj);
 t_vector	refraction(t_env *e, t_ray ray, t_obj *closest_obj);
 t_vector	diffuse(t_env *e, t_ray ray, t_obj *closest_obj);
+t_vector	live_preview(t_env *e, t_obj *closest_obj, t_ray ray);
 
 /*
 **	MAPPING

@@ -27,7 +27,7 @@ void	loop(t_env *e)
 		sync_env(e);
 		sync_objects(e, NULL);
 		draw_screen(e);
-		sync_buffer();
+		sync_buffer(e);
 		release_obj(e);
 	}
 }

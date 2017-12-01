@@ -19,10 +19,10 @@ void	init_render_env(t_env *e)
 	perlin_generate_perm((int *)&e->perm_x);
 	perlin_generate_perm((int *)&e->perm_y);
 	perlin_generate_perm((int *)&e->perm_z);
-	e->wait = 0;
-	e->increment = 1;
-	e->recursion = 10;
-	e->sum = 0;
+	e->increment = 4;
+	e->recursion = 1;
+	e->sum = 1;
+	e->live = 1;
 	e->threads = 32;
 	e->magic = MAGIC;
 	e->skybox_total = TOTAL_SKYBOX;

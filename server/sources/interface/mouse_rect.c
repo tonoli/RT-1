@@ -113,10 +113,14 @@ void	is_mouse_in_render(t_env *e)
 	if (i > 82 && i < 82 + F_WIDTH)
 		if (j > 72 && j < 72 + F_WIDTH)
 		{
-			// create_rect(e->s_ui, (SDL_Rect){80, 70, F_WIDTH + 4, 2}, 0xFFFF0000);
-			// create_rect(e->s_ui, (SDL_Rect){80, 70, 40, F_HEIGHT + 4}, 0xFFFF00FF);
-			//create_rect(e->s_background, (SDL_Rect){0, 0, F_WIDTH, F_HEIGHT}, 0xFF2b2b2b);
-			//create_rect(e->s_background, (SDL_Rect){0, 0, F_WIDTH, F_HEIGHT}, 0xFF2b2b2b);
+			create_rect(e->s_background, (SDL_Rect){80, 70, F_WIDTH + 84, 72}, 0xFFFF0000);
+			create_rect(e->s_background, (SDL_Rect){80, 70, 82, F_HEIGHT + 74}, 0xFFFF0000);
+			//create_rect(e->s_background, (SDL_Rect){80, 70, F_WIDTH + 84, 72}, 0xFFFF0000);
+			//create_rect(e->s_background, (SDL_Rect){80, 70, F_WIDTH + 84, 72}, 0xFFFF0000);
+
+//			create_rect(e->s_background, (SDL_Rect){80, 70, 40, F_HEIGHT + 4}, 0xFFFF00FF);
+//			create_rect(e->s_background, (SDL_Rect){80, 70, F_WIDTH + 80, F_HEIGHT + 2}, 0xFFFF0000);
+//			create_rect(e->s_background, (SDL_Rect){0, 0, F_WIDTH, F_HEIGHT}, 0xFF2b2b2b);
 
 			select_obj(i - 82, j - 72, e);
 			printf("SELECTED : %p\n", (void *)e->selected);

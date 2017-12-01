@@ -17,21 +17,6 @@ int			g_port;
 t_vector	*g_buffer;
 t_env		*g_e;
 
-void	set_mode(t_env *e)
-{
-	struct timeval	t;
-	double			secs;
-
-	gettimeofday(&t, NULL);
-	secs = (double)(t.tv_usec - e->last_event.tv_usec) / (double)1000000.0;
-	secs += (double)(t.tv_sec - e->last_event.tv_sec);
-	gettimeofday(&t, NULL);
-	if (secs > e->wait)
-		keyboard(SDLK_f, e);
-	else
-		e->sum = 1;
-}
-
 void	*loop(void *data)
 {
 	int		cs;
@@ -42,7 +27,6 @@ void	*loop(void *data)
 	cs = (int)data;
 	while (42)
 	{
-		set_mode(e);
 		obj = e->objects;
 		e->object_count = 0;
 		while (obj)
@@ -52,6 +36,8 @@ void	*loop(void *data)
 		}
 		sync_env_obj(e, cs);
 		sync_buffer(cs, e);
+//		if (e->live == 0)
+//			e->sum++;
 		display_buffer(e);
 	}
 	return (NULL);

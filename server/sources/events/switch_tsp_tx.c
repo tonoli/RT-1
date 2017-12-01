@@ -12,5 +12,4 @@ void	switch_tsp_tx(t_env *e)
 	}
 	else
 		e->selected->current_tsp = e->s_tsp_tx[e->selected->tsp_index];
-	draw_screen(e);
 }

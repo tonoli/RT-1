@@ -71,7 +71,7 @@ void	write_global_buffer(int *local_buffer, t_env *e)
 		while (++x < F_WIDTH)
 		{
 			color = local_buffer[x * (int)F_HEIGHT + y];
-			if (e->sum == 1)
+			if (e->live == 1 || e->reset)
 			{
 				g_buffer[x * (int)F_HEIGHT + y].x = (color >> 16) & 255;
 				g_buffer[x * (int)F_HEIGHT + y].y = (color >> 8) & 255;
@@ -85,6 +85,11 @@ void	write_global_buffer(int *local_buffer, t_env *e)
 			}
 		}
 	}
+	if (e->live == 1 || e->reset)
+		e->sum = 1;
+	else
+		e->sum++;
+	e->reset = 0;
 }
 
 void	sync_buffer(int cs, t_env *e)
@@ -92,6 +97,8 @@ void	sync_buffer(int cs, t_env *e)
 	ssize_t r;
 	ssize_t os;
 	int		*local_buffer;
+	char	live;
+
 
 	local_buffer = (int *)ft_memalloc(sizeof(int) * F_WIDTH * F_HEIGHT);
 	ft_printf("Receiving image buffer\n");
@@ -104,7 +111,9 @@ void	sync_buffer(int cs, t_env *e)
 			fatal_quit("recv");
 		os += r;
 	}
-	write_global_buffer(local_buffer, e);
+	recv(cs, (void *)&live, sizeof(char), 0);
+	if (live == e->live)
+		write_global_buffer(local_buffer, e);
 	free(local_buffer);
 	local_buffer = NULL;
 }

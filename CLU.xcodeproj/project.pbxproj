@@ -295,6 +295,7 @@
 		9AE1BEA81FD127ED002F5209 /* vec_primary_algebra.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BEA61FD127ED002F5209 /* vec_primary_algebra.c */; };
 		9AE1BEAA1FD12887002F5209 /* vec_secondary_algebra.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BEA91FD12887002F5209 /* vec_secondary_algebra.c */; };
 		9AE1BEAB1FD12887002F5209 /* vec_secondary_algebra.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BEA91FD12887002F5209 /* vec_secondary_algebra.c */; };
+		9AE44E6A1FD176A30076DE81 /* live.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE44E691FD176A30076DE81 /* live.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -507,6 +508,7 @@
 		9AE1BEA01FD1277D002F5209 /* vec_geometry.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = vec_geometry.c; sourceTree = "<group>"; };
 		9AE1BEA61FD127ED002F5209 /* vec_primary_algebra.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = vec_primary_algebra.c; sourceTree = "<group>"; };
 		9AE1BEA91FD12887002F5209 /* vec_secondary_algebra.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = vec_secondary_algebra.c; sourceTree = "<group>"; };
+		9AE44E691FD176A30076DE81 /* live.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = live.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -552,6 +554,7 @@
 				9A2F6B441FD0AF3B0003A3F4 /* marble.c */,
 				9A2F6B451FD0AF3B0003A3F4 /* reflection.c */,
 				9A2F6B461FD0AF3B0003A3F4 /* refraction.c */,
+				9AE44E691FD176A30076DE81 /* live.c */,
 			);
 			path = calculus;
 			sourceTree = "<group>";
@@ -1294,6 +1297,7 @@
 				9ACE408A1FCF12A600991DFB /* ft_strupcase.c in Sources */,
 				9ACE40AE1FCF12B500991DFB /* ft_memmove.c in Sources */,
 				9ACE40851FCF12A600991DFB /* ft_strreplace_once.c in Sources */,
+				9AE44E6A1FD176A30076DE81 /* live.c in Sources */,
 				9ACE406B1FCF12A600991DFB /* ft_strcat.c in Sources */,
 				9ACE40911FCF12AD00991DFB /* ft_putnbr.c in Sources */,
 				9ACE40901FCF12AD00991DFB /* ft_putendl_fd.c in Sources */,

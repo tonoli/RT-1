@@ -101,5 +101,7 @@ t_vector	compute_objects(t_env *e, t_ray ray)
 	}
 	if (closest_obj && e->depth < e->recursion)
 		return (bounce_ray(e, closest_obj, ray));
+	if (closest_obj)
+		return (live_preview(e, closest_obj, ray));
 	return (sky(e, ray.dir, t));
 }

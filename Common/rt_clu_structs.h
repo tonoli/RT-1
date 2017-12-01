@@ -140,6 +140,8 @@ typedef struct	s_env
 	int		        y;
 	char			loader;
 	char			render;
+	char			helper;
+	char			live;
 	char			b_actif;
 	char			i_actif;
 	char			help_actif;
@@ -147,9 +149,8 @@ typedef struct	s_env
 	char			run;
 
 	//LIVE PREVIEW
-	struct timeval	last_event;
-	double			wait;
 	int				increment;
+	int				reset;
 
 	//MULTITHREADING
 	int				threads;
@@ -206,9 +207,6 @@ typedef struct	s_env
 	//Transaction checkup
 	unsigned int	magic;
 	int				object_count;
-
-	//Overriding buffer when live mode
-	int 			reset;
 }				t_env;
 
 

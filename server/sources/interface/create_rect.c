@@ -27,4 +27,5 @@ void	create_rect(SDL_Surface *surf, SDL_Rect rect, int color)
 			surf->format->BytesPerPixel)) = color;
 		}
 	}
+	printf("Rect created\n");
 }

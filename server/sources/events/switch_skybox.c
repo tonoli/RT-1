@@ -10,5 +10,4 @@ void	switch_skybox(t_env *e)
 	}
 	else
 		e->current_skybox = e->s_skybox[e->skybox_index];
-	draw_screen(e);
 }

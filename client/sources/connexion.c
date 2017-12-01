@@ -49,7 +49,6 @@ void	sync_env(t_env *e)
 	else
 		e->current_skybox = NULL;
 	e->objects = NULL;
-	if (e->increment != 1) e->recursion = 2;
 }
 
 void	sync_objects(t_env *e, t_obj *obj)
@@ -80,7 +79,7 @@ void	sync_objects(t_env *e, t_obj *obj)
 	}
 }
 
-void	sync_buffer(void)
+void	sync_buffer(t_env *e)
 {
 	ssize_t r;
 
@@ -88,6 +87,7 @@ void	sync_buffer(void)
 							sizeof(int) * (int)F_WIDTH * (int)F_HEIGHT, 0);
 	if (r == -1)
 		fatal_quit("send buffer");
+	send(g_cli_socket, (void *)&e->live, sizeof(char), 0);
 }
 
 void	release_obj(t_env *e)

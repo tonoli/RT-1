@@ -15,23 +15,19 @@
 void	pitch_up(t_env *e)
 {
 	e->camera.dir.y += ROT_SPEED;
-	draw_screen(e);
 }
 
 void	pitch_down(t_env *e)
 {
 	e->camera.dir.y -= ROT_SPEED;
-	draw_screen(e);
 }
 
 void	yaw_left(t_env *e)
 {
 	e->camera.dir.x += ROT_SPEED;
-	draw_screen(e);
 }
 
 void	yaw_right(t_env *e)
 {
 	e->camera.dir.x -= ROT_SPEED;
-	draw_screen(e);
 }
