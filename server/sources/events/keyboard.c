@@ -136,7 +136,6 @@ void	call_function(t_env *e, int key)
 	if (e->increment != 1 || key != SDLK_f)
 		if (e->sum != 1)
 			reset_screen(e);
-
 	if (key != SDLK_f)
 	{
 		e->sum = 1;
@@ -152,7 +151,6 @@ void	call_function(t_env *e, int key)
 			e->reset = 0;
 			reset_screen(e);
 		}
-
 		e->sum++;
 		e->increment = 1;
 		e->recursion = 10;

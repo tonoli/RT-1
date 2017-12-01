@@ -71,7 +71,6 @@ void	write_global_buffer(int *local_buffer, t_env *e)
 		while (++x < F_WIDTH)
 		{
 			color = local_buffer[x * (int)F_HEIGHT + y];
-
 			if (e->sum == 1)
 			{
 				g_buffer[x * (int)F_HEIGHT + y].x = (color >> 16) & 255;
@@ -100,7 +99,7 @@ void	sync_buffer(int cs, t_env *e)
 	while (os < (sizeof(int) * (int)F_WIDTH * (int)F_HEIGHT))
 	{
 		r = recv(cs, (void *)local_buffer + os,
-				 (sizeof(int) * (int)F_WIDTH * (int)F_HEIGHT) - os, 0);
+						(sizeof(int) * (int)F_WIDTH * (int)F_HEIGHT) - os, 0);
 		if (r == -1)
 			fatal_quit("recv");
 		os += r;
@@ -109,4 +108,3 @@ void	sync_buffer(int cs, t_env *e)
 	free(local_buffer);
 	local_buffer = NULL;
 }
-

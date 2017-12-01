@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef client_h
-# define client_h
+#ifndef CLIENT_H
+# define CLIENT_H
 
 # include "rt_clu.h"
 
@@ -50,7 +50,7 @@ void		init_transparency_tx_sources(t_env *e);
 
 void		connect_to_server(void);
 void		sync_env(t_env *e);
-void		sync_objects(t_env *e);
+void		sync_objects(t_env *e, t_obj *obj);
 void		sync_buffer(void);
 void		release_obj(t_env *e);
 
@@ -92,6 +92,12 @@ t_vector	refraction(t_env *e, t_ray ray, t_obj *closest_obj);
 t_vector	diffuse(t_env *e, t_ray ray, t_obj *closest_obj);
 
 /*
+**	MAPPING
+*/
+
+void		color_mapping(t_obj *closest_obj);
+
+/*
 **	MARBLE
 */
 
@@ -99,6 +105,6 @@ void		marble(t_env *e, t_vector *color, t_obj *closest_obj);
 double		noise(t_env *e, t_vector cross);
 double		turb(t_env *e, t_vector cross);
 void		perlin_generate(t_env *e);
-void		perlin_generate_perm(int *);
+void		perlin_generate_perm(int *p);
 
 #endif

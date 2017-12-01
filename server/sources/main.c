@@ -17,31 +17,32 @@ int			g_port;
 t_vector	*g_buffer;
 t_env		*g_e;
 
+void	set_mode(t_env *e)
+{
+	struct timeval	t;
+	double			secs;
+
+	gettimeofday(&t, NULL);
+	secs = (double)(t.tv_usec - e->last_event.tv_usec) / (double)1000000.0;
+	secs += (double)(t.tv_sec - e->last_event.tv_sec);
+	gettimeofday(&t, NULL);
+	if (secs > e->wait)
+		keyboard(SDLK_f, e);
+	else
+		e->sum = 1;
+}
+
 void	*loop(void *data)
 {
-	int 	cs;
+	int		cs;
 	t_env	*e;
 	t_obj	*obj;
-	struct timeval t;
-	double secs;
 
 	e = g_e;
 	cs = (int)data;
 	while (42)
 	{
-		gettimeofday(&t, NULL);
-		secs = (double)(t.tv_usec - e->last_event.tv_usec) / (double)1000000.0;
-		secs += (double)(t.tv_sec - e->last_event.tv_sec);
-		gettimeofday(&t, NULL);
-
-		if (secs > e->wait)
-			keyboard(SDLK_f, e);
-		else
-		{
-//			reset_screen(e);
-			e->sum = 1;
-		}
-
+		set_mode(e);
 		obj = e->objects;
 		e->object_count = 0;
 		while (obj)
@@ -69,9 +70,9 @@ void	*wait_client(void *data)
 	return (NULL);
 }
 
-int 	main(int argc, char **argv)
+int		main(int argc, char **argv)
 {
-	t_env 		*e;
+	t_env		*e;
 	pthread_t	t;
 
 	e = (t_env *)ft_memalloc(sizeof(t_env));

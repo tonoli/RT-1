@@ -18,9 +18,9 @@ t_vector	diffuse(t_env *e, t_ray ray, t_obj *closest_obj)
 	t_vector v;
 	t_vector obj_col;
 
-	color_mapping(closest_obj);
+	(closest_obj->current_texture) ? color_mapping(closest_obj) : 0;
 	if (closest_obj->emit)
-		return vector_mul(closest_obj->light, closest_obj->color);
+		return (vector_mul(closest_obj->light, closest_obj->color));
 	v = vector_add(closest_obj->cross, closest_obj->normal);
 	v = vector_add(v, random_unit_sphere());
 	ray.ori = closest_obj->cross;

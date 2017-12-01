@@ -29,4 +29,3 @@ void	obj_push_back(t_obj **list, t_obj *cur)
 		list = &(*list)->next;
 	*list = cur;
 }
-

@@ -31,7 +31,7 @@ void		reset_screen(t_env *e)
 	}
 }
 
-static void write_buffer(t_env *e)
+static void	write_buffer(t_env *e)
 {
 	int			i;
 	int			j;
@@ -46,7 +46,7 @@ static void write_buffer(t_env *e)
 			c = e->color_array[j][i];
 			c = adjust_color(c);
 			g_buffer[(i * (int)F_HEIGHT) + j] =
-			((int)c.x << 16)+ ((int)c.y << 8) + (int)c.z;
+			((int)c.x << 16) + ((int)c.y << 8) + (int)c.z;
 		}
 	}
 }

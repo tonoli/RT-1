@@ -28,39 +28,35 @@ double		get_distance(t_env *e, t_obj *obj, t_ray ray)
 	return (t);
 }
 
-t_vector    skybox(t_env *e, t_vector dir)
+t_vector	skybox(t_env *e, t_vector dir, double u, double v)
 {
-	t_vector sky;
-	dir = vector_normalize(dir);
-	double u;
-	double v;
-	double phi = atan2(dir.z, dir.x);
-	double theta = asin(dir.y);
-	u = 1-(phi + M_PI) / (2*M_PI);
-	v = (theta + M_PI/2) / M_PI;
-	int i = u * e->current_skybox->w;
-	int j = (double)(1.0 - v) * e->current_skybox->h;
-	if (i < 0) i = 0;
-	if (j < 0) j = 0;
-	if (i > e->current_skybox->w - 1) i = e->current_skybox->w - 1;
-	if (j > e->current_skybox->h - 1) j = e->current_skybox->h - 1;
+	int			i;
+	int			j;
+	uint32_t	*pixel_array;
+	double		color[3];
 
-	uint32_t *pixel_array = (uint32_t *)e->current_skybox->pixels;
-
-	double r = ((pixel_array[j * e->current_skybox->w + i] >> 16) & 255) / (double)255.0;
-	double g = ((pixel_array[j * e->current_skybox->w + i] >> 8) & 255) / (double)255.0;
-	double b = ((pixel_array[j * e->current_skybox->w + i] >> 0) & 255) / (double)255.0;
-
-	sky.x = r;
-	sky.y = g;
-	sky.z = b;
-	return (sky);
+	u = 1 - (atan2(dir.z, dir.x) + M_PI) / (2 * M_PI);
+	v = (asin(dir.y) + M_PI / 2.0) / M_PI;
+	i = u * e->current_skybox->w;
+	j = (double)(1.0 - v) * e->current_skybox->h;
+	(i < 0) ? i = 0 : 0;
+	(j < 0) ? j = 0 : 0;
+	(i > e->current_skybox->w - 1) ? i = e->current_skybox->w - 1 : 0;
+	(j > e->current_skybox->h - 1) ? j = e->current_skybox->h - 1 : 0;
+	pixel_array = (uint32_t *)e->current_skybox->pixels;
+	color[0] = ((pixel_array[j * e->current_skybox->w + i] >> 16) & 255) /
+																(double)255.0;
+	color[1] = ((pixel_array[j * e->current_skybox->w + i] >> 8) & 255) /
+																(double)255.0;
+	color[2] = ((pixel_array[j * e->current_skybox->w + i] >> 0) & 255) /
+																(double)255.0;
+	return ((t_vector){color[0], color[1], color[2]});
 }
 
 t_vector	sky(t_env *e, t_vector dir, double t)
 {
 	if (e->current_skybox)
-		return (skybox(e, dir));
+		return (skybox(e, vector_normalize(dir), 42, 42));
 	return (diffuse_sky(e, t));
 	return ((t_vector){1, 1, 1});
 	return ((t_vector){1, 0, 0});

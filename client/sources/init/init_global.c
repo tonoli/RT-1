@@ -17,15 +17,16 @@ void	init_globals(void)
 	int				i;
 	struct timeval	t;
 
-	g_buffer = (int *)ft_memalloc(sizeof(int) * F_WIDTH * F_HEIGHT);
+	g_buffer = (int *)ft_memalloc(sizeof(int) * (int)F_WIDTH * (int)F_HEIGHT);
 	g_color_array = (t_vector **)ft_memalloc(
 									sizeof(t_vector *) * (F_HEIGHT + 1));
 	g_frame_array = (int **)ft_memalloc(sizeof(int *) * (F_HEIGHT + 1));
 	i = -1;
 	while (++i < (int)F_HEIGHT)
 	{
-		g_color_array[i] = (t_vector *)ft_memalloc(sizeof(t_vector) * F_WIDTH);
-		g_frame_array[i] = (int *)ft_memalloc(sizeof(int) * F_WIDTH);
+		g_color_array[i] = (t_vector *)ft_memalloc(
+											sizeof(t_vector) * (int)F_WIDTH);
+		g_frame_array[i] = (int *)ft_memalloc(sizeof(int) * (int)F_WIDTH);
 	}
 	gettimeofday(&t, NULL);
 	srand(t.tv_usec);

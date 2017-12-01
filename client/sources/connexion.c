@@ -14,7 +14,7 @@
 
 void	connect_to_server(void)
 {
-	struct	sockaddr_in address;
+	struct sockaddr_in	address;
 
 	ft_printf("Connecting to server\n");
 	if ((g_cli_socket = socket(AF_INET, SOCK_STREAM, 0)) == 0)
@@ -48,17 +48,16 @@ void	sync_env(t_env *e)
 		e->current_skybox = g_mem.s_skybox[e->skybox_index];
 	else
 		e->current_skybox = NULL;
+	e->objects = NULL;
+	if (e->increment != 1) e->recursion = 2;
 }
 
-void	sync_objects(t_env *e)
+void	sync_objects(t_env *e, t_obj *obj)
 {
 	ssize_t	r;
 	ssize_t	os;
-	int 	i;
-	t_obj	*obj;
+	int		i;
 
-	e->objects = NULL;
-	obj = NULL;
 	i = -1;
 	while (++i < e->object_count)
 	{
@@ -67,20 +66,15 @@ void	sync_objects(t_env *e)
 		while (os < sizeof(t_obj))
 		{
 			r = recv(g_cli_socket, (void *)obj + os, sizeof(t_obj) - os, 0);
-			if (r == -1)
-				fatal_quit("recv object structure");
+			(r == -1) ? fatal_quit("recv object structure") : 0;
 			os += r;
 		}
+		obj->current_texture = NULL;
 		if (obj->texture_index != -1)
 			obj->current_texture = g_mem.s_obj_tx[obj->texture_index];
-		else
-			obj->current_texture = NULL;
-
+		obj->current_tsp = NULL;
 		if (obj->tsp_index != -1)
 			obj->current_tsp = g_mem.s_tsp_tx[obj->tsp_index];
-		else
-			obj->current_tsp = NULL;
-
 		obj->next = NULL;
 		obj_push_back(&e->objects, obj);
 	}
@@ -90,7 +84,8 @@ void	sync_buffer(void)
 {
 	ssize_t r;
 
-	r = send(g_cli_socket, g_buffer, sizeof(int) * F_WIDTH * F_HEIGHT, 0);
+	r = send(g_cli_socket, g_buffer,
+							sizeof(int) * (int)F_WIDTH * (int)F_HEIGHT, 0);
 	if (r == -1)
 		fatal_quit("send buffer");
 }

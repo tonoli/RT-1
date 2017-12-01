@@ -252,8 +252,6 @@
 		9ACE41AE1FCF167D00991DFB /* random_scene.c in Sources */ = {isa = PBXBuildFile; fileRef = 9ACE41A61FCF167C00991DFB /* random_scene.c */; };
 		9ACE41AF1FCF167D00991DFB /* tools.c in Sources */ = {isa = PBXBuildFile; fileRef = 9ACE41A71FCF167C00991DFB /* tools.c */; };
 		9ACE41B11FCF176B00991DFB /* miscelaneous.c in Sources */ = {isa = PBXBuildFile; fileRef = 9ACE41B01FCF176B00991DFB /* miscelaneous.c */; };
-		9ACE41B31FCF17B900991DFB /* libvector.c in Sources */ = {isa = PBXBuildFile; fileRef = 9ACE41B21FCF17B900991DFB /* libvector.c */; };
-		9ACE41B41FCF17B900991DFB /* libvector.c in Sources */ = {isa = PBXBuildFile; fileRef = 9ACE41B21FCF17B900991DFB /* libvector.c */; };
 		9ACE41B71FCF199400991DFB /* init_env.c in Sources */ = {isa = PBXBuildFile; fileRef = 9ACE41B61FCF199400991DFB /* init_env.c */; };
 		9ACE41BD1FCF2F0900991DFB /* init_object.c in Sources */ = {isa = PBXBuildFile; fileRef = 9ACE41BC1FCF2F0900991DFB /* init_object.c */; };
 		9AE1BE591FD0EB5C002F5209 /* init_global.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE581FD0EB5C002F5209 /* init_global.c */; };
@@ -289,6 +287,14 @@
 		9AE1BE971FD11604002F5209 /* init_skyboxes_sources.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE951FD11603002F5209 /* init_skyboxes_sources.c */; };
 		9AE1BE981FD11604002F5209 /* init_transparency_sources.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE961FD11604002F5209 /* init_transparency_sources.c */; };
 		9AE1BE9A1FD11911002F5209 /* init_color_sources.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE991FD11911002F5209 /* init_color_sources.c */; };
+		9AE1BE9F1FD12727002F5209 /* vec_normal.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE9E1FD12726002F5209 /* vec_normal.c */; };
+		9AE1BEA11FD1277D002F5209 /* vec_geometry.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BEA01FD1277D002F5209 /* vec_geometry.c */; };
+		9AE1BEA21FD12786002F5209 /* vec_geometry.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BEA01FD1277D002F5209 /* vec_geometry.c */; };
+		9AE1BEA31FD12788002F5209 /* vec_normal.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE9E1FD12726002F5209 /* vec_normal.c */; };
+		9AE1BEA71FD127ED002F5209 /* vec_primary_algebra.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BEA61FD127ED002F5209 /* vec_primary_algebra.c */; };
+		9AE1BEA81FD127ED002F5209 /* vec_primary_algebra.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BEA61FD127ED002F5209 /* vec_primary_algebra.c */; };
+		9AE1BEAA1FD12887002F5209 /* vec_secondary_algebra.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BEA91FD12887002F5209 /* vec_secondary_algebra.c */; };
+		9AE1BEAB1FD12887002F5209 /* vec_secondary_algebra.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BEA91FD12887002F5209 /* vec_secondary_algebra.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -466,7 +472,6 @@
 		9ACE41A61FCF167C00991DFB /* random_scene.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = random_scene.c; sourceTree = "<group>"; };
 		9ACE41A71FCF167C00991DFB /* tools.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tools.c; sourceTree = "<group>"; };
 		9ACE41B01FCF176B00991DFB /* miscelaneous.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = miscelaneous.c; sourceTree = "<group>"; };
-		9ACE41B21FCF17B900991DFB /* libvector.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = libvector.c; sourceTree = "<group>"; };
 		9ACE41B61FCF199400991DFB /* init_env.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = init_env.c; sourceTree = "<group>"; };
 		9ACE41BC1FCF2F0900991DFB /* init_object.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = init_object.c; sourceTree = "<group>"; };
 		9AE1BE581FD0EB5C002F5209 /* init_global.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = init_global.c; sourceTree = "<group>"; };
@@ -498,6 +503,10 @@
 		9AE1BE951FD11603002F5209 /* init_skyboxes_sources.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = init_skyboxes_sources.c; sourceTree = "<group>"; };
 		9AE1BE961FD11604002F5209 /* init_transparency_sources.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = init_transparency_sources.c; sourceTree = "<group>"; };
 		9AE1BE991FD11911002F5209 /* init_color_sources.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = init_color_sources.c; sourceTree = "<group>"; };
+		9AE1BE9E1FD12726002F5209 /* vec_normal.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vec_normal.c; sourceTree = "<group>"; };
+		9AE1BEA01FD1277D002F5209 /* vec_geometry.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = vec_geometry.c; sourceTree = "<group>"; };
+		9AE1BEA61FD127ED002F5209 /* vec_primary_algebra.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = vec_primary_algebra.c; sourceTree = "<group>"; };
+		9AE1BEA91FD12887002F5209 /* vec_secondary_algebra.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = vec_secondary_algebra.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -598,9 +607,9 @@
 				9AE1BE881FD10365002F5209 /* primitives */,
 				9ACE40D41FCF152C00991DFB /* frameworks */,
 				9ACE3F6B1FCF128000991DFB /* libft */,
+				9AE1BE9D1FD12726002F5209 /* libvector */,
 				9ACE3F5E1FCF0D1700991DFB /* rt_clu.h */,
 				9ACE40C81FCF140B00991DFB /* rt_clu_structs.h */,
-				9ACE41B21FCF17B900991DFB /* libvector.c */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -984,6 +993,18 @@
 			path = common/primitives;
 			sourceTree = SOURCE_ROOT;
 		};
+		9AE1BE9D1FD12726002F5209 /* libvector */ = {
+			isa = PBXGroup;
+			children = (
+				9AE1BE9E1FD12726002F5209 /* vec_normal.c */,
+				9AE1BEA61FD127ED002F5209 /* vec_primary_algebra.c */,
+				9AE1BEA91FD12887002F5209 /* vec_secondary_algebra.c */,
+				9AE1BEA01FD1277D002F5209 /* vec_geometry.c */,
+			);
+			name = libvector;
+			path = common/libvector;
+			sourceTree = SOURCE_ROOT;
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1066,6 +1087,7 @@
 			files = (
 				9ACE40101FCF128000991DFB /* ft_bzero.c in Sources */,
 				9ACE402B1FCF128000991DFB /* ft_putchar.c in Sources */,
+				9AE1BEA71FD127ED002F5209 /* vec_primary_algebra.c in Sources */,
 				9ACE40391FCF128000991DFB /* ft_str_is_number.c in Sources */,
 				9ACE404D1FCF128000991DFB /* ft_strncpy.c in Sources */,
 				9ACE3FF31FCF128000991DFB /* ft_array_len.c in Sources */,
@@ -1098,11 +1120,11 @@
 				9ACE404B1FCF128000991DFB /* ft_strncat.c in Sources */,
 				9ACE400F1FCF128000991DFB /* ft_pow.c in Sources */,
 				9ACE40411FCF128000991DFB /* ft_strdup.c in Sources */,
-				9ACE41B31FCF17B900991DFB /* libvector.c in Sources */,
 				9ACE41AF1FCF167D00991DFB /* tools.c in Sources */,
 				9A2F6B331FD0AB2D0003A3F4 /* options.c in Sources */,
 				9ACE40341FCF128000991DFB /* ft_escape.c in Sources */,
 				9AE1BE831FD10246002F5209 /* init_perlin.c in Sources */,
+				9AE1BEA31FD12788002F5209 /* vec_normal.c in Sources */,
 				9AE1BE7C1FD1022E002F5209 /* print_scene.c in Sources */,
 				9ACE3FF91FCF128000991DFB /* ft_isalnum.c in Sources */,
 				9ACE40561FCF128000991DFB /* ft_strsplit.c in Sources */,
@@ -1118,6 +1140,7 @@
 				9ACE41AA1FCF167D00991DFB /* create_object.c in Sources */,
 				9AE1BE911FD10366002F5209 /* planes.c in Sources */,
 				9AE1BE7E1FD1022E002F5209 /* select_object.c in Sources */,
+				9AE1BEAA1FD12887002F5209 /* vec_secondary_algebra.c in Sources */,
 				9ACE40471FCF128000991DFB /* ft_strlen.c in Sources */,
 				9ACE40121FCF128000991DFB /* ft_memccpy.c in Sources */,
 				9ACE40591FCF128000991DFB /* ft_strtrim.c in Sources */,
@@ -1155,6 +1178,7 @@
 				9ACE403C1FCF128000991DFB /* ft_strchr.c in Sources */,
 				9ACE40141FCF128000991DFB /* ft_memcmp.c in Sources */,
 				9ACE40491FCF128000991DFB /* ft_strmap.c in Sources */,
+				9AE1BEA21FD12786002F5209 /* vec_geometry.c in Sources */,
 				9AE1BE8D1FD10366002F5209 /* cones.c in Sources */,
 				9ACE40191FCF128000991DFB /* convers.c in Sources */,
 				9ACE41B71FCF199400991DFB /* init_env.c in Sources */,
@@ -1233,11 +1257,13 @@
 				9ACE406E1FCF12A600991DFB /* ft_strcmp.c in Sources */,
 				9ACE405E1FCF129200991DFB /* ft_array_len.c in Sources */,
 				9ACE40891FCF12A600991DFB /* ft_strtrim.c in Sources */,
+				9AE1BEA11FD1277D002F5209 /* vec_geometry.c in Sources */,
 				9ACE40871FCF12A600991DFB /* ft_strstr.c in Sources */,
 				9ACE409D1FCF12B100991DFB /* ft_putstr_lim.c in Sources */,
 				9ACE40941FCF12AD00991DFB /* ft_putstr_fd.c in Sources */,
 				9ACE40BD1FCF12C100991DFB /* ft_xtoa.c in Sources */,
 				9ACE40A21FCF12B100991DFB /* print_d.c in Sources */,
+				9AE1BEA81FD127ED002F5209 /* vec_primary_algebra.c in Sources */,
 				9ACE40B21FCF12BB00991DFB /* ft_lstadd.c in Sources */,
 				9AE1BE971FD11604002F5209 /* init_skyboxes_sources.c in Sources */,
 				9ACE40A31FCF12B100991DFB /* print_x.c in Sources */,
@@ -1245,6 +1271,7 @@
 				9ACE40C01FCF12C400991DFB /* ft_isalnum.c in Sources */,
 				9A2F6B3C1FD0AE3D0003A3F4 /* thread_memory.c in Sources */,
 				9ACE40741FCF12A600991DFB /* ft_striteri.c in Sources */,
+				9AE1BEAB1FD12887002F5209 /* vec_secondary_algebra.c in Sources */,
 				9ACE406A1FCF12A600991DFB /* ft_strcapitalize.c in Sources */,
 				9ACE408D1FCF12AD00991DFB /* ft_putchar.c in Sources */,
 				9ACE407F1FCF12A600991DFB /* ft_strnequ.c in Sources */,
@@ -1255,7 +1282,6 @@
 				9ACE40A71FCF12B500991DFB /* ft_bzero.c in Sources */,
 				9ACE41BD1FCF2F0900991DFB /* init_object.c in Sources */,
 				9ACE405F1FCF129200991DFB /* ft_free_array.c in Sources */,
-				9ACE41B41FCF17B900991DFB /* libvector.c in Sources */,
 				9A2F6B4B1FD0AF3B0003A3F4 /* marble.c in Sources */,
 				9ACE40991FCF12B100991DFB /* ft_itoa_pf.c in Sources */,
 				9ACE40B91FCF12C100991DFB /* ft_atod.c in Sources */,
@@ -1339,6 +1365,7 @@
 				9ACE407D1FCF12A600991DFB /* ft_strncpy.c in Sources */,
 				9AE1BE9A1FD11911002F5209 /* init_color_sources.c in Sources */,
 				9ACE40801FCF12A600991DFB /* ft_strnew.c in Sources */,
+				9AE1BE9F1FD12727002F5209 /* vec_normal.c in Sources */,
 				9ACE406C1FCF12A600991DFB /* ft_strchr.c in Sources */,
 				9ACE40AA1FCF12B500991DFB /* ft_memchr.c in Sources */,
 				9ACE40A11FCF12B100991DFB /* parsing.c in Sources */,

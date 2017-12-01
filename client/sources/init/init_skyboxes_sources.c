@@ -42,7 +42,6 @@ void	init_skyboxes_tx_sources(t_env *e)
 		i++;
 		g_mem.skybox_total++;
 	}
-
 	g_mem.current_skybox = NULL;
 	g_mem.skybox_index = -1;
 }

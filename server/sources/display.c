@@ -22,9 +22,8 @@ void	copy_pixel_to_sdl(t_env *e, SDL_Surface *s, ssize_t x, ssize_t y)
 	v_color = vector_scale(g_buffer[x * (int)F_HEIGHT + y], 1 / (double)e->sum);
 	c = 0xFF000000;
 	c |= ((int)v_color.x << 16) + ((int)v_color.y << 8) + (int)v_color.z;
-	*((unsigned *)(s->pixels + y * s->pitch + x * s->format->BytesPerPixel)) = c;
+	*((int *)(s->pixels + y * s->pitch + x * s->format->BytesPerPixel)) = c;
 }
-
 
 void	display_buffer(t_env *e)
 {
@@ -42,7 +41,7 @@ void	display_buffer(t_env *e)
 	}
 	if (e->render == 1)
 	{
-		SDL_BlitSurface(e->s_raytracer,  &(SDL_Rect){0, 0, F_WIDTH, F_HEIGHT},
+		SDL_BlitSurface(e->s_raytracer, &(SDL_Rect){0, 0, F_WIDTH, F_HEIGHT},
 					e->s_background, &(SDL_Rect){82, 72, F_WIDTH, F_HEIGHT});
 	}
 }
