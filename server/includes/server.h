@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 02:58:15 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/01 02:58:15 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/04 21:45:37 by tdelmas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -157,6 +157,7 @@ char		*closing_tag(char *opening);
 void		parse_object(t_env *e, t_obj *obj, char *object_tag, char *line);
 void		parse_camera(t_env *e, char *object_tag, char *line);
 t_vector	parse_origin(char *content);
+double		parse_radius(char *content);
 double		parse_radius(char *content);
 t_vector	parse_color(char *content);
 double		parse_angle(char *content);

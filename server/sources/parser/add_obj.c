@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/26 17:37:45 by nsampre           #+#    #+#             */
-/*   Updated: 2017/11/30 18:11:18 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/04 21:26:07 by tdelmas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ void	add_obj_content(t_env *e, t_obj *obj, char *tag, char *content)
 		obj->damier1 = parse_color(content);
 	else if (ft_strequ(tag, "<damier2>"))
 		obj->damier2 = parse_color(content);
+	else if (ft_strequ(tag, "<height>"))
+		obj->height = parse_radius(content);
 	else if (ft_strequ(tag, "<light>"))
 	{
 		obj->emit = 1;

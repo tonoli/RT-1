@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 23:19:59 by nsampre           #+#    #+#             */
-/*   Updated: 2017/11/30 23:19:59 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/04 21:48:32 by tdelmas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,7 @@ typedef struct	s_obj
 	t_vector		ori;
 	t_vector		dir;
 	double			radius;
+	double			height;
 	double			reflection;
 	double			refraction;
 	double			marblesize;
