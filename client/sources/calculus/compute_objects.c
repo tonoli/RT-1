@@ -65,6 +65,7 @@ t_vector	sky(t_env *e, t_vector dir, double t)
 
 t_vector	bounce_ray(t_env *e, t_obj *closest_obj, t_ray ray)
 {
+	ray.dir = vector_normalize(ray.dir);
 	if (closest_obj->damier)
 		damier(closest_obj);
 	if (closest_obj->reflection > 0)

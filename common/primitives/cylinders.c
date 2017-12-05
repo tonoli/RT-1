@@ -61,6 +61,7 @@ double			hit_cyl(t_env *e, t_obj *obj, t_ray ray)
 	t_vector	v;
 	t_cone_coef c;
 
+	ray.dir = vector_normalize(ray.dir);
 	v = vector_sub(ray.ori, obj->ori);
 	decompose_a_coef(obj, ray, &c);
 	decompose_b_coef(obj, v, &c);

@@ -18,6 +18,7 @@ t_vector	diffuse(t_env *e, t_ray ray, t_obj *closest_obj)
 	t_vector v;
 	t_vector obj_col;
 
+	(closest_obj->marblesize) ? marble(e, &closest_obj->color, closest_obj) : 0;
 	(closest_obj->current_texture) ? color_mapping(closest_obj) : 0;
 	if (closest_obj->emit)
 		return (vector_mul(closest_obj->light, closest_obj->color));

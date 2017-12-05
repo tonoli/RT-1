@@ -74,14 +74,26 @@ void		is_mouse_in_rect_left(t_env *e);
 void		is_mouse_in_rect_right(t_env *e);
 void		is_mouse_in_rect_top(t_env *e);
 void		is_mouse_in_render(t_env *e);
+void		draw_all_button_top(t_env *e,  int state);
+void		create_border(t_env *e,int active);
+void		create_rect(SDL_Surface *surf, SDL_Rect rect, int color);
 
 /*
 **	EVENT
 */
 
+//HANDLE
 int			keyboard(int key, t_env *e);
+void		set_live_edition_mode(t_env *e);
+void		set_render_edition_mode(t_env *e);
+
+//Selection
 void		select_obj(int x, int y, t_env *e);
+
+//Print
 void		print_scene(t_env *e);
+
+//Camera
 void		move_up(t_env *e);
 void		move_down(t_env *e);
 void		move_left(t_env *e);
@@ -92,26 +104,45 @@ void		pitch_up(t_env *e);
 void		pitch_down(t_env *e);
 void		yaw_left(t_env *e);
 void		yaw_right(t_env *e);
+
+//Object
 void		move_ojbect_up(t_env *e);
 void		move_ojbect_down(t_env *e);
 void		move_ojbect_left(t_env *e);
 void		move_ojbect_right(t_env *e);
 void		move_ojbect_forward(t_env *e);
 void		move_ojbect_backward(t_env *e);
+
+//Mapping
 void		switch_skybox(t_env *e);
 void		switch_obj_tx(t_env *e);
 void		switch_tsp_tx(t_env *e);
 
+//Create
+void    	create_sphere(t_env *e);
+void		create_plane(t_env *e);
+void		create_cylinder(t_env *e);
+void		create_cone(t_env *e);
+void		create_torus(t_env *e);
+
+//Composed objects
+void		cube_with_spheres(t_env *e);
+void		dna(t_env *e);
+void		solar_system(t_env *e);
+
+//Delete
+void		delete_object(t_env *e);
+
+//Addendum
+void		light_object(t_env *e);
+void		marble_object(t_env *e);
+void		filter_img(t_env *e);
 
 /*
 **	MISCELANEOUS
 */
 
 double		randb(void);
-//t_vector	random_unit_sphere(void);
-//t_vector	adjust_color(t_vector c);
-//t_vector	diffuse_sky(t_env *e, double t);
-//void		damier(t_obj *closest_obj);
 
 /*
 **	INIT
@@ -119,9 +150,6 @@ double		randb(void);
 
 void		init_render_env(t_env *e);
 void		init_globals(t_env *e);
-//void		init_skyboxes_tx_sources(t_env *e);
-//void		init_color_tx_sources(t_env *e);
-//void		init_transparency_tx_sources(t_env *e);
 
 /*
 **	MARBLE

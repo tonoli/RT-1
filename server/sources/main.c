@@ -36,8 +36,6 @@ void	*loop(void *data)
 		}
 		sync_env_obj(e, cs);
 		sync_buffer(cs, e);
-//		if (e->live == 0)
-//			e->sum++;
 		display_buffer(e);
 	}
 	return (NULL);

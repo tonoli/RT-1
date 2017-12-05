@@ -21,6 +21,10 @@
 		9A2F6B4B1FD0AF3B0003A3F4 /* marble.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F6B441FD0AF3B0003A3F4 /* marble.c */; };
 		9A2F6B4C1FD0AF3B0003A3F4 /* reflection.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F6B451FD0AF3B0003A3F4 /* reflection.c */; };
 		9A2F6B4D1FD0AF3B0003A3F4 /* refraction.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F6B461FD0AF3B0003A3F4 /* refraction.c */; };
+		9A8BE2FE1FD5F3D100D0049D /* dna.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A8BE2FD1FD5F3D100D0049D /* dna.c */; };
+		9A8BE3001FD5F3F000D0049D /* solar_system.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A8BE2FF1FD5F3F000D0049D /* solar_system.c */; };
+		9A8BE3021FD5F6AD00D0049D /* delete_obj.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A8BE3011FD5F6AD00D0049D /* delete_obj.c */; };
+		9A8BE3041FD5F72500D0049D /* filter.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A8BE3031FD5F72500D0049D /* filter.c */; };
 		9ACE3F651FCF125A00991DFB /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 9ACE3F641FCF125A00991DFB /* main.c */; };
 		9ACE3F6A1FCF126700991DFB /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 9ACE3F671FCF126700991DFB /* main.c */; };
 		9ACE3FF21FCF128000991DFB /* ft_array_copy.c in Sources */ = {isa = PBXBuildFile; fileRef = 9ACE3F7C1FCF128000991DFB /* ft_array_copy.c */; };
@@ -254,6 +258,10 @@
 		9ACE41B11FCF176B00991DFB /* miscelaneous.c in Sources */ = {isa = PBXBuildFile; fileRef = 9ACE41B01FCF176B00991DFB /* miscelaneous.c */; };
 		9ACE41B71FCF199400991DFB /* init_env.c in Sources */ = {isa = PBXBuildFile; fileRef = 9ACE41B61FCF199400991DFB /* init_env.c */; };
 		9ACE41BD1FCF2F0900991DFB /* init_object.c in Sources */ = {isa = PBXBuildFile; fileRef = 9ACE41BC1FCF2F0900991DFB /* init_object.c */; };
+		9AD38C6A1FD5DBCA00EF5D6A /* create.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AD38C691FD5DBCA00EF5D6A /* create.c */; };
+		9AD38C6C1FD5DD6600EF5D6A /* cube_with_spheres.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AD38C6B1FD5DD6600EF5D6A /* cube_with_spheres.c */; };
+		9AD38C6E1FD5DEB600EF5D6A /* marble.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AD38C6D1FD5DEB600EF5D6A /* marble.c */; };
+		9AD38C701FD5DED600EF5D6A /* light.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AD38C6F1FD5DED600EF5D6A /* light.c */; };
 		9AE1BE591FD0EB5C002F5209 /* init_global.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE581FD0EB5C002F5209 /* init_global.c */; };
 		9AE1BE5B1FD0ECBD002F5209 /* quit.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE5A1FD0ECBD002F5209 /* quit.c */; };
 		9AE1BE5D1FD0ED6D002F5209 /* quit.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE5C1FD0ED6D002F5209 /* quit.c */; };
@@ -334,6 +342,10 @@
 		9A2F6B441FD0AF3B0003A3F4 /* marble.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = marble.c; sourceTree = "<group>"; };
 		9A2F6B451FD0AF3B0003A3F4 /* reflection.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = reflection.c; sourceTree = "<group>"; };
 		9A2F6B461FD0AF3B0003A3F4 /* refraction.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = refraction.c; sourceTree = "<group>"; };
+		9A8BE2FD1FD5F3D100D0049D /* dna.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = dna.c; sourceTree = "<group>"; };
+		9A8BE2FF1FD5F3F000D0049D /* solar_system.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = solar_system.c; sourceTree = "<group>"; };
+		9A8BE3011FD5F6AD00D0049D /* delete_obj.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = delete_obj.c; sourceTree = "<group>"; };
+		9A8BE3031FD5F72500D0049D /* filter.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = filter.c; sourceTree = "<group>"; };
 		9ACE3F471FCF0C8900991DFB /* Server */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Server; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ACE3F561FCF0CAC00991DFB /* Client */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Client; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ACE3F5E1FCF0D1700991DFB /* rt_clu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rt_clu.h; sourceTree = "<group>"; };
@@ -475,6 +487,10 @@
 		9ACE41B01FCF176B00991DFB /* miscelaneous.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = miscelaneous.c; sourceTree = "<group>"; };
 		9ACE41B61FCF199400991DFB /* init_env.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = init_env.c; sourceTree = "<group>"; };
 		9ACE41BC1FCF2F0900991DFB /* init_object.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = init_object.c; sourceTree = "<group>"; };
+		9AD38C691FD5DBCA00EF5D6A /* create.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = create.c; sourceTree = "<group>"; };
+		9AD38C6B1FD5DD6600EF5D6A /* cube_with_spheres.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = cube_with_spheres.c; sourceTree = "<group>"; };
+		9AD38C6D1FD5DEB600EF5D6A /* marble.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = marble.c; sourceTree = "<group>"; };
+		9AD38C6F1FD5DED600EF5D6A /* light.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = light.c; sourceTree = "<group>"; };
 		9AE1BE581FD0EB5C002F5209 /* init_global.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = init_global.c; sourceTree = "<group>"; };
 		9AE1BE5A1FD0ECBD002F5209 /* quit.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = quit.c; sourceTree = "<group>"; };
 		9AE1BE5C1FD0ED6D002F5209 /* quit.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = quit.c; sourceTree = "<group>"; };
@@ -972,6 +988,9 @@
 			isa = PBXGroup;
 			children = (
 				9AE1BE701FD1022E002F5209 /* keyboard.c */,
+				9A8BE3011FD5F6AD00D0049D /* delete_obj.c */,
+				9AD38C6D1FD5DEB600EF5D6A /* marble.c */,
+				9AD38C6F1FD5DED600EF5D6A /* light.c */,
 				9AE1BE711FD1022E002F5209 /* move_camera.c */,
 				9AE1BE721FD1022E002F5209 /* move_object.c */,
 				9AE1BE731FD1022E002F5209 /* print_scene.c */,
@@ -980,6 +999,11 @@
 				9AE1BE761FD1022E002F5209 /* switch_obj_tx.c */,
 				9AE1BE771FD1022E002F5209 /* switch_skybox.c */,
 				9AE1BE781FD1022E002F5209 /* switch_tsp_tx.c */,
+				9AD38C691FD5DBCA00EF5D6A /* create.c */,
+				9AD38C6B1FD5DD6600EF5D6A /* cube_with_spheres.c */,
+				9A8BE2FD1FD5F3D100D0049D /* dna.c */,
+				9A8BE3031FD5F72500D0049D /* filter.c */,
+				9A8BE2FF1FD5F3F000D0049D /* solar_system.c */,
 			);
 			path = events;
 			sourceTree = "<group>";
@@ -1115,11 +1139,13 @@
 				9ACE40071FCF128000991DFB /* get_next_line.c in Sources */,
 				9ACE40051FCF128000991DFB /* ft_xtoa.c in Sources */,
 				9ACE404C1FCF128000991DFB /* ft_strncmp.c in Sources */,
+				9AD38C701FD5DED600EF5D6A /* light.c in Sources */,
 				9AE1BE7B1FD1022E002F5209 /* move_object.c in Sources */,
 				9AE1BE7A1FD1022E002F5209 /* move_camera.c in Sources */,
 				9ACE40271FCF128000991DFB /* print_x.c in Sources */,
 				9ACE40421FCF128000991DFB /* ft_strequ.c in Sources */,
 				9ACE40361FCF128000991DFB /* ft_is_whitestring.c in Sources */,
+				9A8BE2FE1FD5F3D100D0049D /* dna.c in Sources */,
 				9ACE404B1FCF128000991DFB /* ft_strncat.c in Sources */,
 				9ACE400F1FCF128000991DFB /* ft_pow.c in Sources */,
 				9ACE40411FCF128000991DFB /* ft_strdup.c in Sources */,
@@ -1132,6 +1158,7 @@
 				9ACE3FF91FCF128000991DFB /* ft_isalnum.c in Sources */,
 				9ACE40561FCF128000991DFB /* ft_strsplit.c in Sources */,
 				9AE1BE8F1FD10366002F5209 /* cylinders.c in Sources */,
+				9AD38C6E1FD5DEB600EF5D6A /* marble.c in Sources */,
 				9AE1BE6D1FD0F7F5002F5209 /* create_rect.c in Sources */,
 				9A2F6B311FD0A9D70003A3F4 /* connexion.c in Sources */,
 				9ACE400A1FCF128000991DFB /* ft_lstdelone.c in Sources */,
@@ -1139,6 +1166,7 @@
 				9AE1BE6C1FD0F7F5002F5209 /* init_buttons.c in Sources */,
 				9ACE402A1FCF128000991DFB /* utils.c in Sources */,
 				9ACE400B1FCF128000991DFB /* ft_lstiter.c in Sources */,
+				9A8BE3021FD5F6AD00D0049D /* delete_obj.c in Sources */,
 				9ACE403F1FCF128000991DFB /* ft_strcpy.c in Sources */,
 				9ACE41AA1FCF167D00991DFB /* create_object.c in Sources */,
 				9AE1BE911FD10366002F5209 /* planes.c in Sources */,
@@ -1153,6 +1181,7 @@
 				9ACE40381FCF128000991DFB /* ft_str_fits_int.c in Sources */,
 				9ACE40331FCF128000991DFB /* ft_cut_string.c in Sources */,
 				9AE1BE7F1FD1022E002F5209 /* switch_obj_tx.c in Sources */,
+				9AD38C6C1FD5DD6600EF5D6A /* cube_with_spheres.c in Sources */,
 				9ACE40011FCF128000991DFB /* ft_atod.c in Sources */,
 				9ACE40501FCF128000991DFB /* ft_strnew.c in Sources */,
 				9ACE41A91FCF167D00991DFB /* add_obj.c in Sources */,
@@ -1172,6 +1201,7 @@
 				9ACE40171FCF128000991DFB /* ft_memmove.c in Sources */,
 				9ACE40531FCF128000991DFB /* ft_strrchr.c in Sources */,
 				9ACE40261FCF128000991DFB /* print_d.c in Sources */,
+				9A8BE3001FD5F3F000D0049D /* solar_system.c in Sources */,
 				9AE1BE801FD1022E002F5209 /* switch_skybox.c in Sources */,
 				9ACE405B1FCF128000991DFB /* ft_trim_quotestr.c in Sources */,
 				9ACE3F6A1FCF126700991DFB /* main.c in Sources */,
@@ -1207,12 +1237,14 @@
 				9ACE40281FCF128000991DFB /* read_spec.c in Sources */,
 				9ACE40371FCF128000991DFB /* ft_post_realloc_str.c in Sources */,
 				9ACE402D1FCF128000991DFB /* ft_putendl.c in Sources */,
+				9AD38C6A1FD5DBCA00EF5D6A /* create.c in Sources */,
 				9ACE402F1FCF128000991DFB /* ft_putnbr.c in Sources */,
 				9ACE400E1FCF128000991DFB /* ft_factorial.c in Sources */,
 				9ACE40481FCF128000991DFB /* ft_strlowcase.c in Sources */,
 				9ACE40511FCF128000991DFB /* ft_strnjoin.c in Sources */,
 				9ACE3FF71FCF128000991DFB /* ft_print_array.c in Sources */,
 				9ACE40221FCF128000991DFB /* ft_putwchar.c in Sources */,
+				9A8BE3041FD5F72500D0049D /* filter.c in Sources */,
 				9ACE40151FCF128000991DFB /* ft_memcpy.c in Sources */,
 				9AE1BE871FD10309002F5209 /* get_distance.c in Sources */,
 				9ACE41A81FCF167D00991DFB /* add_camera.c in Sources */,

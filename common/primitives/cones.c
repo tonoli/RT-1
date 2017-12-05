@@ -67,6 +67,7 @@ double			hit_cone(t_env *e, t_obj *obj, t_ray ray)
 	t_vector	v;
 	t_cone_coef	c;
 
+	ray.dir = vector_normalize(ray.dir);
 	c.csq = cos(obj->radius) * cos(obj->radius);
 	c.ssq = sin(obj->radius) * sin(obj->radius);
 	v = vector_sub(ray.ori, obj->ori);

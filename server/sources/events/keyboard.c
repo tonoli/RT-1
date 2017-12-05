@@ -12,24 +12,10 @@
 
 #include "server.h"
 
-void	create_object(t_env *e)
-{
-	t_obj *obj;
-
-	obj = new_obj();
-	obj->type = OBJ_SPHERE;
-	obj->radius = 100;
-	obj->color = (t_vector){randb(), randb(), randb()};
-	obj->ori.x = e->camera.ori.x - (10.0 * MOVE_SPEED * cos(PITCH) * sin(YAW));
-	obj->ori.y = e->camera.ori.y + (10.0 * MOVE_SPEED * sin(PITCH));
-	obj->ori.z = e->camera.ori.z + (10.0 * MOVE_SPEED * cos(PITCH) * cos(YAW));
-	obj_push_back(&e->objects, obj);
-}
-
 static int g_key[] =
 {
 	SDLK_l,
-	SDLK_b,
+//	SDLK_b,
 	SDLK_n,
 	SDLK_m,
 	SDLK_p,
@@ -55,7 +41,7 @@ static int g_key[] =
 static const int g_key_value[255] =
 {
 	['l'] = SDLK_l,
-	['b'] = SDLK_b,
+//	['b'] = SDLK_b,
 	['n'] = SDLK_n,
 	['m'] = SDLK_m,
 	['p'] = SDLK_p,
@@ -77,9 +63,24 @@ static const int g_key_value[255] =
 	[127 + '2'] = SDLK_KP_2
 };
 
+void	set_live_edition_mode(t_env *e)
+{
+	e->live = 1;
+	e->increment = 4;
+	e->recursion = 1;
+	e->reset = 1;
+}
+
+void	set_render_edition_mode(t_env *e)
+{
+	e->live = 0;
+	e->increment = 1;
+	e->recursion = 10;
+	e->reset = 1;
+}
+
 void	switch_render_mode(t_env *e)
 {
-//	e->sum = 1;
 	if (!e->live)
 	{
 		e->increment = 4;
@@ -97,7 +98,7 @@ void	switch_render_mode(t_env *e)
 static void (*g_key_func[255])(t_env *e) =
 {
 	['l'] = switch_render_mode,
-	['b'] = create_object,
+//	['b'] = create_object,
 	['n'] = switch_obj_tx,
 	['m'] = switch_tsp_tx,
 	['p'] = print_scene,

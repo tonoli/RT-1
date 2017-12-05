@@ -17,6 +17,7 @@ double	hit_plane(t_env *e, t_obj *obj, t_ray ray)
 	t_vector	v;
 	double		t;
 
+	ray.dir = vector_normalize(ray.dir);
 	obj->b = vector_dot(obj->dir, ray.dir);
 	if (obj->b > 0.00001)
 	{

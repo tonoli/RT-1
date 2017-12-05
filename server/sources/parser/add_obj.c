@@ -25,7 +25,10 @@ void	add_obj_content(t_env *e, t_obj *obj, char *tag, char *content)
 	else if (ft_strequ(tag, "<angle>"))
 		obj->radius = parse_angle(content);
 	else if (ft_strequ(tag, "<color>"))
+	{
 		obj->color = parse_color(content);
+		obj->color_backup = obj->color;
+	}
 	else if (ft_strequ(tag, "<reflection>"))
 		obj->reflection = parse_double(content);
 	else if (ft_strequ(tag, "<refraction>"))

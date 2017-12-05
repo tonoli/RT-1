@@ -3,10 +3,7 @@
 void	switch_obj_tx(t_env *e)
 {
 	if (!e->selected)
-	{
-		switch_skybox(e);
 		return ;
-	}
 	e->selected->texture_index++;
 	if (e->selected->texture_index == e->obj_tx_total)
 	{

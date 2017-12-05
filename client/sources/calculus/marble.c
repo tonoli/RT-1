@@ -16,14 +16,12 @@
 
 void		marble(t_env *e, t_vector *color, t_obj *closest_obj)
 {
-	double col = turb(e, vector_scale(closest_obj->cross, 1.0)) * 8.0;
+	double col = turb(e, vector_scale(closest_obj->cross, 1.0)) * 16.0;
 
 //	double ratio = (double)(sin(fabs(closest_obj->cross.y) * (closest_obj->marblesize * col)));
 //	double ratio = (double)sin((closest_obj->cross.y / (double)10.0) * col);
 
 //	double ratio = sin((10.0 * closest_obj->cross.z) + col);
-
-	t_vector pute;
 
 //	pute.x = 1;
 //	pute.y = 1;
@@ -32,21 +30,39 @@ void		marble(t_env *e, t_vector *color, t_obj *closest_obj)
 //	pute = vector_scale(pute, 0.5 * (1.0 + sin((4.0 * closest_obj->cross.z) + col)));
 
 
-	double width_scale = 0.5;
-
 //	double ratio = (1.0 + sin((width_scale * closest_obj->cross.x) + col));
+
 	double ratio = col;
 
 //	color->x = pute.x;
 //	color->y = pute.y;
 //	color->z = pute.z;
 
-	color->x -= (double)(color->x * ratio * 0.8);
-	color->x += (double)(closest_obj->marblecolor.x * ratio * 0.8);
-	color->y -= (double)(color->y * ratio * 0.8);
-	color->y += (double)(closest_obj->marblecolor.y * ratio * 0.8);
-	color->z -= (double)(color->z * ratio * 0.8);
-	color->z += (double)(closest_obj->marblecolor.z * ratio * 0.8);
+	closest_obj->color.x = closest_obj->marblecolor.x * ratio;
+	closest_obj->color.y = closest_obj->marblecolor.y * ratio;
+	closest_obj->color.z = closest_obj->marblecolor.z * ratio;
+
+	closest_obj->color.x += closest_obj->color_backup.x * (1.0 - ratio);
+	closest_obj->color.y += closest_obj->color_backup.y * (1.0 - ratio);
+	closest_obj->color.z += closest_obj->color_backup.z * (1.0 - ratio);
+
+	if (closest_obj->color.x < 0.0) closest_obj->color.x = 0.0;
+	if (closest_obj->color.y < 0.0) closest_obj->color.y = 0.0;
+	if (closest_obj->color.z < 0.0) closest_obj->color.z = 0.0;
+	if (closest_obj->color.x > 1.0) closest_obj->color.x = 1.0;
+	if (closest_obj->color.y > 1.0) closest_obj->color.y = 1.0;
+	if (closest_obj->color.z > 1.0) closest_obj->color.z = 1.0;
+
+//	color->x = closest_obj->marblecolor.x * ratio;
+//	color->y = closest_obj->marblecolor.y * ratio;
+//	color->z = closest_obj->marblecolor.z * ratio;
+
+//	color->x -= (double)(color->x * ratio * 0.8);
+//	color->x += (double)(closest_obj->marblecolor.x * ratio * 0.8);
+//	color->y -= (double)(color->y * ratio * 0.8);
+//	color->y += (double)(closest_obj->marblecolor.y * ratio * 0.8);
+//	color->z -= (double)(color->z * ratio * 0.8);
+//	color->z += (double)(closest_obj->marblecolor.z * ratio * 0.8);
 }
 
 ////////////////////////// init noise ///////////////////////////

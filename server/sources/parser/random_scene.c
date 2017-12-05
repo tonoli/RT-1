@@ -39,6 +39,7 @@ static void	create_random_sphere(t_env *e, int i, int j)
 	obj->radius = 100.0 * randb() + 50;
 	obj->ori.y = sqrt(obj->radius) - 10;
 	obj->color = (t_vector){randb(), randb(), randb()};
+	obj->color_backup = obj->color;
 	mat = randb();
 	if (mat < 0.33)
 		;

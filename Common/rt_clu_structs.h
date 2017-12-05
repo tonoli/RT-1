@@ -76,7 +76,7 @@ typedef struct	s_obj
 	double			reflection;
 	double			refraction;
 	double			marblesize;
-	double			marblecoef;
+	t_vector		color_backup;
 	t_vector		marblecolor;
 	int				damier;
 	t_vector		damier1;
@@ -138,10 +138,14 @@ typedef struct	s_env
 	int		        win_h;
 	int		        x;
 	int		        y;
+
+	//Segment
 	char			loader;
 	char			render;
 	char			helper;
 	char			live;
+
+	//Buttons
 	char			b_actif;
 	char			i_actif;
 	char			help_actif;

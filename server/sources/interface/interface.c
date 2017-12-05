@@ -46,7 +46,7 @@ void	handle_events(t_env *e)
 			keyboard(e->event.key.keysym.sym, e);
 		}
 	}
-	if ((e->event.type == SDL_MOUSEMOTION || e->event.type == SDL_MOUSEBUTTONDOWN))
+	if (e->event.type == SDL_MOUSEMOTION || e->event.type == SDL_MOUSEBUTTONDOWN)
 	{
 		e->mouse.x = e->event.motion.x;
 		e->mouse.y = e->event.motion.y;
