@@ -3,24 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   init_skyboxes_sources.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mmartins <mmartins@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 11:12:02 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/01 07:29:00 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/05 14:59:51 by mmartins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "client.h"
 
-static const t_texture_sources g_skybox_sources[] =
+static const t_e_sources g_skybox_sources[] =
 {
-	{"appartment", "./textures/skybox/appartment.jpg"},
-	{"bar", "./textures/skybox/bar.jpg"},
-	{"bedroom", "./textures/skybox/bedroom.jpg"},
-	{"clouds", "./textures/skybox/clouds.jpg"},
-	{"fractale", "./textures/skybox/fractale.jpg"},
-	{"snow", "./textures/skybox/snow.jpg"},
-	{"universe", "./textures/skybox/universe.png"},
+	{"appartment", "./es/skybox/appartment.jpg"},
+	{"bar", "./es/skybox/bar.jpg"},
+	{"bedroom", "./es/skybox/bedroom.jpg"},
+	{"clouds", "./es/skybox/clouds.jpg"},
+	{"fractale", "./es/skybox/fractale.jpg"},
+	{"snow", "./es/skybox/snow.jpg"},
+	{"universe", "./es/skybox/universe.png"},
+	{"coucou", "./es/skybox/coucou.png"},
 	{NULL, NULL}
 };
 
@@ -35,7 +36,7 @@ void	init_skyboxes_tx_sources(t_env *e)
 	{
 		if (!(g_mem.s_skybox[i] = IMG_Load(g_skybox_sources[i].file_address)))
 		{
-			printf("FATAL : Failed to load skybox texture %s\n",
+			printf("FATAL : Failed to load skybox e %s\n",
 					g_skybox_sources[i].file_address);
 			exit(EXIT_FAILURE);
 		}
