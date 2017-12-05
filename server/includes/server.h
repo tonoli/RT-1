@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 02:58:15 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/01 02:58:15 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/05 23:50:18 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,14 +70,18 @@ void		init_rects(t_env *e);
 void		draw_button_top(t_env *e, int bt_num, int state);
 void		draw_button_left(t_env *e, int b_num, int state);
 void	 	draw_input(t_env *e, int i_num, int state);
+void		draw_input_top(t_env *e, int bt_num, int state);
 void		is_mouse_in_rect_left(t_env *e);
 void		is_mouse_in_rect_right(t_env *e);
 void		is_mouse_in_rect_top(t_env *e);
+void		is_mouse_in_rect_top_input(t_env *e);
 void		is_mouse_in_render(t_env *e);
 void		draw_all_button_top(t_env *e,  int state);
 void		draw_all_button_left(t_env *e,  int state);
+void        draw_selected(t_env *e);
 void		create_border(t_env *e,int active);
 void		create_rect(SDL_Surface *surf, SDL_Rect rect, int color);
+void		create_b_rect(SDL_Surface *surf, SDL_Rect rect, int bg, int bord);
 
 /*
 **	EVENT
