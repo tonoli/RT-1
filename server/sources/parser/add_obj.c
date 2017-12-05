@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/26 17:37:45 by nsampre           #+#    #+#             */
-/*   Updated: 2017/11/30 18:11:18 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/05 02:12:51 by nsampre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,12 @@ void	add_obj_content(t_env *e, t_obj *obj, char *tag, char *content)
 	else if (ft_strequ(tag, "<light>"))
 	{
 		obj->emit = 1;
-		obj->light = parse_origin(content);
+		obj->light = parse_double(content);
 	}
+	else if (ft_strequ(tag, "<texture>"))
+		;
+	else if (ft_strequ(tag, "<transparent>"))
+		;
 	else
 		parse_error("Unknown attribute.", tag, content);
 }

@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 23:34:12 by nsampre           #+#    #+#             */
-/*   Updated: 2017/11/30 23:34:12 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/01 13:27:50 by nsampre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,11 +85,6 @@ void	write_global_buffer(int *local_buffer, t_env *e)
 			}
 		}
 	}
-	if (e->live == 1 || e->reset)
-		e->sum = 1;
-	else
-		e->sum++;
-	e->reset = 0;
 }
 
 void	sync_buffer(int cs, t_env *e)
@@ -99,21 +94,22 @@ void	sync_buffer(int cs, t_env *e)
 	int		*local_buffer;
 	char	live;
 
-
 	local_buffer = (int *)ft_memalloc(sizeof(int) * F_WIDTH * F_HEIGHT);
-	ft_printf("Receiving image buffer\n");
 	os = 0;
 	while (os < (sizeof(int) * (int)F_WIDTH * (int)F_HEIGHT))
 	{
 		r = recv(cs, (void *)local_buffer + os,
 						(sizeof(int) * (int)F_WIDTH * (int)F_HEIGHT) - os, 0);
-		if (r == -1)
-			fatal_quit("recv");
+		(r == -1) ? fatal_quit("recv") : 0;
 		os += r;
 	}
 	recv(cs, (void *)&live, sizeof(char), 0);
 	if (live == e->live)
+	{
 		write_global_buffer(local_buffer, e);
+		(e->live == 1 || e->reset) ? e->sum = 1 : e->sum++;
+		e->reset = 0;
+	}
 	free(local_buffer);
 	local_buffer = NULL;
 }

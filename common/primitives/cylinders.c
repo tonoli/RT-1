@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/26 17:37:46 by nsampre           #+#    #+#             */
-/*   Updated: 2017/11/30 22:31:04 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/05 03:17:41 by nsampre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,25 +33,34 @@ static void		decompose_c_coef(t_obj *obj, t_cone_coef *c)
 	obj->c = vector_dot(c->sub_b, c->sub_b) - obj->radius;
 }
 
-static double	solution(t_env *e, t_obj *obj, t_ray ray)
+static double	solution(t_env *e, t_obj *obj, t_ray ray, t_vector v)
 {
-	double t;
+	double	t;
+	double	x;
 
 	t = (-obj->b - sqrt(obj->d)) / (2.0 * obj->a);
-	if (t > e->t_min && t < e->t_max && t)
+	x = vector_dot(ray.dir, obj->dir) * t + vector_dot(v, obj->dir);
+	if ((x > 0 && x < obj->height) || obj->height <= 0)
 	{
-		obj->t = t;
-		obj->cross = vector_factor(ray.ori, t, ray.dir);
-		obj->normal = normal_cyl(obj);
-		return (t);
+		if (t > e->t_min && t < e->t_max && t)
+		{
+			obj->t = t;
+			obj->cross = vector_factor(ray.ori, t, ray.dir);
+			obj->normal = normal_cyl(obj);
+			return (t);
+		}
 	}
 	t = (-obj->b + sqrt(obj->d)) / (2.0 * obj->a);
-	if (t > e->t_min && t < e->t_max)
+	x = vector_dot(ray.dir, obj->dir) * t + vector_dot(v, obj->dir);
+	if ((x > 0 && x < obj->height) || obj->height <= 0)
 	{
-		obj->t = t;
-		obj->cross = vector_factor(ray.ori, t, ray.dir);
-		obj->normal = normal_cyl(obj);
-		return (t);
+		if (t > e->t_min && t < e->t_max)
+		{
+			obj->t = t;
+			obj->cross = vector_factor(ray.ori, t, ray.dir);
+			obj->normal = normal_cyl(obj);
+			return (t);
+		}
 	}
 	return (-1);
 }
@@ -68,6 +77,6 @@ double			hit_cyl(t_env *e, t_obj *obj, t_ray ray)
 	decompose_c_coef(obj, &c);
 	obj->d = obj->b * obj->b - (4.0 * obj->a * obj->c);
 	if (obj->d > 0.00001)
-		return (solution(e, obj, ray));
+		return (solution(e, obj, ray, v));
 	return (-1);
 }

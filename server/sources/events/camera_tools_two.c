@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 18:12:26 by nsampre           #+#    #+#             */
-/*   Updated: 2017/11/27 18:44:22 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/05 08:35:37 by nsampre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,4 @@ void	move_right(t_env *e)
 void	move_up(t_env *e)
 {
 	e->camera.ori.y += MOVE_SPEED / (double)2.0;
-}
-
-void	move_down(t_env *e)
-{
-	e->camera.ori.y -= MOVE_SPEED / (double)2.0;
 }

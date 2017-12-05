@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   create.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/12/05 02:29:26 by nsampre           #+#    #+#             */
+/*   Updated: 2017/12/05 08:36:29 by nsampre          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "server.h"
 
 void	create_cone(t_env *e)
@@ -9,14 +21,15 @@ void	create_cone(t_env *e)
 	obj->color = (t_vector){randb(), randb(), randb()};
 	obj->color_backup = obj->color;
 	obj->marblecolor = (t_vector){randb(), randb(), randb()};
-	obj->ori.x = e->camera.ori.x - (10.0 * MOVE_SPEED * cos(PITCH) * sin(YAW));
-	obj->ori.y = e->camera.ori.y + (10.0 * MOVE_SPEED * sin(PITCH));
-	obj->ori.z = e->camera.ori.z + (10.0 * MOVE_SPEED * cos(PITCH) * cos(YAW));
+	obj->ori.x = e->camera.ori.x - (5.0 * MOVE_SPEED * cos(PITCH) * sin(YAW));
+	obj->ori.y = e->camera.ori.y + (5.0 * MOVE_SPEED * sin(PITCH));
+	obj->ori.z = e->camera.ori.z + (5.0 * MOVE_SPEED * cos(PITCH) * cos(YAW));
 	obj->dir.x = 0;
 	obj->dir.y = -1;
 	obj->dir.z = 0;
 	obj->radius = 3;
 	obj_push_back(&e->objects, obj);
+	e->selected = obj;
 }
 
 void	create_plane(t_env *e)
@@ -28,13 +41,14 @@ void	create_plane(t_env *e)
 	obj->color = (t_vector){randb(), randb(), randb()};
 	obj->color_backup = obj->color;
 	obj->marblecolor = (t_vector){randb(), randb(), randb()};
-	obj->ori.x = e->camera.ori.x - (10.0 * MOVE_SPEED * cos(PITCH) * sin(YAW));
-	obj->ori.y = e->camera.ori.y + (10.0 * MOVE_SPEED * sin(PITCH));
-	obj->ori.z = e->camera.ori.z + (10.0 * MOVE_SPEED * cos(PITCH) * cos(YAW));
+	obj->ori.x = e->camera.ori.x - (5.0 * MOVE_SPEED * cos(PITCH) * sin(YAW));
+	obj->ori.y = e->camera.ori.y + (5.0 * MOVE_SPEED * sin(PITCH)) - 10.0;
+	obj->ori.z = e->camera.ori.z + (5.0 * MOVE_SPEED * cos(PITCH) * cos(YAW));
 	obj->dir.x = 0;
 	obj->dir.y = -1;
 	obj->dir.z = 0;
 	obj_push_back(&e->objects, obj);
+	e->selected = obj;
 }
 
 void	create_cylinder(t_env *e)
@@ -47,13 +61,14 @@ void	create_cylinder(t_env *e)
 	obj->color = (t_vector){randb(), randb(), randb()};
 	obj->color_backup = obj->color;
 	obj->marblecolor = (t_vector){randb(), randb(), randb()};
-	obj->ori.x = e->camera.ori.x - (10.0 * MOVE_SPEED * cos(PITCH) * sin(YAW));
-	obj->ori.y = e->camera.ori.y + (10.0 * MOVE_SPEED * sin(PITCH));
-	obj->ori.z = e->camera.ori.z + (10.0 * MOVE_SPEED * cos(PITCH) * cos(YAW));
+	obj->ori.x = e->camera.ori.x - (5.0 * MOVE_SPEED * cos(PITCH) * sin(YAW));
+	obj->ori.y = e->camera.ori.y + (5.0 * MOVE_SPEED * sin(PITCH));
+	obj->ori.z = e->camera.ori.z + (5.0 * MOVE_SPEED * cos(PITCH) * cos(YAW));
 	obj->dir.x = 0;
 	obj->dir.y = 1;
 	obj->dir.z = 0;
 	obj_push_back(&e->objects, obj);
+	e->selected = obj;
 }
 
 void	create_sphere(t_env *e)
@@ -66,13 +81,14 @@ void	create_sphere(t_env *e)
 	obj->color = (t_vector){randb(), randb(), randb()};
 	obj->color_backup = obj->color;
 	obj->marblecolor = (t_vector){randb(), randb(), randb()};
-	obj->ori.x = e->camera.ori.x - (10.0 * MOVE_SPEED * cos(PITCH) * sin(YAW));
-	obj->ori.y = e->camera.ori.y + (10.0 * MOVE_SPEED * sin(PITCH));
-	obj->ori.z = e->camera.ori.z + (10.0 * MOVE_SPEED * cos(PITCH) * cos(YAW));
+	obj->ori.x = e->camera.ori.x - (5.0 * MOVE_SPEED * cos(PITCH) * sin(YAW));
+	obj->ori.y = e->camera.ori.y + (5.0 * MOVE_SPEED * sin(PITCH));
+	obj->ori.z = e->camera.ori.z + (5.0 * MOVE_SPEED * cos(PITCH) * cos(YAW));
 	obj_push_back(&e->objects, obj);
+	e->selected = obj;
 }
 
 void	create_torus(t_env *e)
 {
-	
+
 }

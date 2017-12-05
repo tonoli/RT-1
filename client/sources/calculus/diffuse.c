@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/26 17:37:45 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/01 00:05:48 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/05 02:13:49 by nsampre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ t_vector	diffuse(t_env *e, t_ray ray, t_obj *closest_obj)
 	(closest_obj->marblesize) ? marble(e, &closest_obj->color, closest_obj) : 0;
 	(closest_obj->current_texture) ? color_mapping(closest_obj) : 0;
 	if (closest_obj->emit)
-		return (vector_mul(closest_obj->light, closest_obj->color));
+		return (vector_scale(closest_obj->color, closest_obj->light));
 	v = vector_add(closest_obj->cross, closest_obj->normal);
 	v = vector_add(v, random_unit_sphere());
 	ray.ori = closest_obj->cross;

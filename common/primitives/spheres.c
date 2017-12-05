@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/26 17:37:46 by nsampre           #+#    #+#             */
-/*   Updated: 2017/11/30 22:30:47 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/05 05:54:11 by nsampre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,9 @@ int				check_tsp(t_obj *obj)
 
 static double	solution(t_obj *obj, t_ray ray, double t)
 {
-	double	phi;
-	double	theta;
+	double		phi;
+	double		theta;
+	t_vector	v;
 
 	obj->t = t;
 	obj->cross = vector_factor(ray.ori, obj->t, ray.dir);
@@ -52,6 +53,10 @@ static double	solution(t_obj *obj, t_ray ray, double t)
 	theta = asin(obj->normal.y);
 	obj->u = 1.0 - (phi + M_PI) / (double)(2.0 * M_PI);
 	obj->v = (theta + M_PI / 2.0) / (double)M_PI;
+	v = vector_sub(obj->cross, obj->ori);
+	v.y += sqrt(obj->radius);
+	if (v.y > obj->height && obj->height > 0)
+		return (-1);
 	if (obj->current_tsp && check_tsp(obj) == -1)
 		return (-1);
 	return (obj->t);

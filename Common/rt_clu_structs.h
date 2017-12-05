@@ -73,6 +73,7 @@ typedef struct	s_obj
 	t_vector		ori;
 	t_vector		dir;
 	double			radius;
+	double			height;
 	double			reflection;
 	double			refraction;
 	double			marblesize;
@@ -97,7 +98,7 @@ typedef struct	s_obj
 	t_vector		normal;
 	double			fuzz;
 	int				emit;
-	t_vector		light;
+	double			light;
 
 	char			*tx_selected;
 	SDL_Surface		*current_texture;

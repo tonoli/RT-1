@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   mouse_rect.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/12/04 23:05:01 by nsampre           #+#    #+#             */
+/*   Updated: 2017/12/04 23:05:01 by nsampre          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "server.h"
 
 int			is_mouse_in_rect(t_env *e, SDL_Rect *rect, int rect_len)
@@ -22,7 +34,7 @@ static void (*g_left_btn[])(t_env *e) =
 	create_plane,
 	create_torus,
 	create_cone,
-	solar_system,
+	atom,
 	dna,
 	cube_with_spheres
 };
@@ -47,8 +59,6 @@ void		is_mouse_in_rect_left(t_env *e)
 	}
 
 }
-
-///////////////////////////////// RIGHT //////////////////////////////////////
 
 void		is_mouse_in_rect_right(t_env *e)
 {
@@ -77,8 +87,6 @@ void		is_mouse_in_rect_right(t_env *e)
 	}
 }
 
-////////////////////////////////// TOP ///////////////////////////////////////
-
 static void (*g_top_btn[])(t_env *e) =
 {
 	light_object,
@@ -88,7 +96,7 @@ static void (*g_top_btn[])(t_env *e) =
 	switch_skybox,
 	switch_tsp_tx,
 	delete_object,
-	filter_img,
+	switch_filter,
 	set_render_edition_mode
 };
 
@@ -111,8 +119,6 @@ void		is_mouse_in_rect_top(t_env *e)
 		}
 	}
 }
-
-///////////////////////////////////////// RENDER /////////////////////////////
 
 void		is_mouse_in_render(t_env *e)
 {

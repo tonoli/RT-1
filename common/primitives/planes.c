@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/26 17:37:46 by nsampre           #+#    #+#             */
-/*   Updated: 2017/11/30 22:31:01 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/05 04:42:57 by nsampre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ double	hit_plane(t_env *e, t_obj *obj, t_ray ray)
 {
 	t_vector	v;
 	double		t;
+	double		l;
 
 	ray.dir = vector_normalize(ray.dir);
 	obj->b = vector_dot(obj->dir, ray.dir);
@@ -29,7 +30,9 @@ double	hit_plane(t_env *e, t_obj *obj, t_ray ray)
 			obj->t = t;
 			obj->cross = vector_factor(ray.ori, t, ray.dir);
 			obj->normal = normal_plane(obj, ray);
-			return (t);
+			l = vector_magnitude(vector_sub(obj->cross, obj->ori));
+			if ((l > 0 && l < obj->height) || obj->height <= 0)
+				return (t);
 		}
 	}
 	return (-1);

@@ -41,6 +41,9 @@
 # define MOUSE				1
 # define CLICK 				2
 
+# define INCREASE			1
+# define DECREASE			2
+
 # define F_WIDTH			(double)1024
 # define F_HEIGHT			(double)648
 # define FOV				60

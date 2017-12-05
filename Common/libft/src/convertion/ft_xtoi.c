@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 18:11:18 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/01 07:08:49 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/05 05:21:26 by nsampre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int			ft_xtoi(char *str)
 {
 	int i;
 
-	if (ft_strnequ(str, "0x", 2))
+	if (ft_strnequ(str, "0x", 2) || ft_strnequ(str, "0X", 2))
 		i = hex2int(str + 2);
 	else
 		i = hex2int(str);

@@ -21,10 +21,24 @@
 		9A2F6B4B1FD0AF3B0003A3F4 /* marble.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F6B441FD0AF3B0003A3F4 /* marble.c */; };
 		9A2F6B4C1FD0AF3B0003A3F4 /* reflection.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F6B451FD0AF3B0003A3F4 /* reflection.c */; };
 		9A2F6B4D1FD0AF3B0003A3F4 /* refraction.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F6B461FD0AF3B0003A3F4 /* refraction.c */; };
-		9A8BE2FE1FD5F3D100D0049D /* dna.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A8BE2FD1FD5F3D100D0049D /* dna.c */; };
-		9A8BE3001FD5F3F000D0049D /* solar_system.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A8BE2FF1FD5F3F000D0049D /* solar_system.c */; };
+		9A8BE2FE1FD5F3D100D0049D /* dna_base.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A8BE2FD1FD5F3D100D0049D /* dna_base.c */; };
+		9A8BE3001FD5F3F000D0049D /* atom.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A8BE2FF1FD5F3F000D0049D /* atom.c */; };
 		9A8BE3021FD5F6AD00D0049D /* delete_obj.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A8BE3011FD5F6AD00D0049D /* delete_obj.c */; };
 		9A8BE3041FD5F72500D0049D /* filter.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A8BE3031FD5F72500D0049D /* filter.c */; };
+		9A8BE3061FD6480800D0049D /* limit.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A8BE3051FD6480800D0049D /* limit.c */; };
+		9A8BE3081FD658D200D0049D /* rotate_object.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A8BE3071FD658D200D0049D /* rotate_object.c */; };
+		9A8BE30A1FD65F7600D0049D /* refraction_reflection.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A8BE3091FD65F7600D0049D /* refraction_reflection.c */; };
+		9A8BE30C1FD665AE00D0049D /* type.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A8BE30B1FD665AE00D0049D /* type.c */; };
+		9A8BE30E1FD667BF00D0049D /* fuzz.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A8BE30D1FD667BF00D0049D /* fuzz.c */; };
+		9A8BE3101FD668D700D0049D /* radius.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A8BE30F1FD668D700D0049D /* radius.c */; };
+		9A8BE3121FD6693100D0049D /* color.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A8BE3111FD6693100D0049D /* color.c */; };
+		9A8BE3141FD66C0100D0049D /* marble_color.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A8BE3131FD66C0100D0049D /* marble_color.c */; };
+		9A8BE3161FD66C6B00D0049D /* damier_one.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A8BE3151FD66C6B00D0049D /* damier_one.c */; };
+		9A8BE3181FD66C7400D0049D /* damier_two.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A8BE3171FD66C7400D0049D /* damier_two.c */; };
+		9A8BE31A1FD67F5100D0049D /* mode.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A8BE3191FD67F5100D0049D /* mode.c */; };
+		9A8BE31C1FD6818300D0049D /* move_object_two.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A8BE31B1FD6818300D0049D /* move_object_two.c */; };
+		9A8BE31E1FD6841D00D0049D /* dna_calc.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A8BE31D1FD6841D00D0049D /* dna_calc.c */; };
+		9A8BE3201FD684B000D0049D /* print_scene_two.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A8BE31F1FD684B000D0049D /* print_scene_two.c */; };
 		9ACE3F651FCF125A00991DFB /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 9ACE3F641FCF125A00991DFB /* main.c */; };
 		9ACE3F6A1FCF126700991DFB /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 9ACE3F671FCF126700991DFB /* main.c */; };
 		9ACE3FF21FCF128000991DFB /* ft_array_copy.c in Sources */ = {isa = PBXBuildFile; fileRef = 9ACE3F7C1FCF128000991DFB /* ft_array_copy.c */; };
@@ -260,7 +274,7 @@
 		9ACE41BD1FCF2F0900991DFB /* init_object.c in Sources */ = {isa = PBXBuildFile; fileRef = 9ACE41BC1FCF2F0900991DFB /* init_object.c */; };
 		9AD38C6A1FD5DBCA00EF5D6A /* create.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AD38C691FD5DBCA00EF5D6A /* create.c */; };
 		9AD38C6C1FD5DD6600EF5D6A /* cube_with_spheres.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AD38C6B1FD5DD6600EF5D6A /* cube_with_spheres.c */; };
-		9AD38C6E1FD5DEB600EF5D6A /* marble.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AD38C6D1FD5DEB600EF5D6A /* marble.c */; };
+		9AD38C6E1FD5DEB600EF5D6A /* marble_set.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AD38C6D1FD5DEB600EF5D6A /* marble_set.c */; };
 		9AD38C701FD5DED600EF5D6A /* light.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AD38C6F1FD5DED600EF5D6A /* light.c */; };
 		9AE1BE591FD0EB5C002F5209 /* init_global.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE581FD0EB5C002F5209 /* init_global.c */; };
 		9AE1BE5B1FD0ECBD002F5209 /* quit.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE5A1FD0ECBD002F5209 /* quit.c */; };
@@ -273,10 +287,10 @@
 		9AE1BE6D1FD0F7F5002F5209 /* create_rect.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE691FD0F7F5002F5209 /* create_rect.c */; };
 		9AE1BE6E1FD0F7F5002F5209 /* draw_buttons.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE6A1FD0F7F5002F5209 /* draw_buttons.c */; };
 		9AE1BE791FD1022E002F5209 /* keyboard.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE701FD1022E002F5209 /* keyboard.c */; };
-		9AE1BE7A1FD1022E002F5209 /* move_camera.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE711FD1022E002F5209 /* move_camera.c */; };
-		9AE1BE7B1FD1022E002F5209 /* move_object.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE721FD1022E002F5209 /* move_object.c */; };
-		9AE1BE7C1FD1022E002F5209 /* print_scene.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE731FD1022E002F5209 /* print_scene.c */; };
-		9AE1BE7D1FD1022E002F5209 /* rotate_camera.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE741FD1022E002F5209 /* rotate_camera.c */; };
+		9AE1BE7A1FD1022E002F5209 /* camera_tools_two.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE711FD1022E002F5209 /* camera_tools_two.c */; };
+		9AE1BE7B1FD1022E002F5209 /* move_object_one.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE721FD1022E002F5209 /* move_object_one.c */; };
+		9AE1BE7C1FD1022E002F5209 /* print_scene_one.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE731FD1022E002F5209 /* print_scene_one.c */; };
+		9AE1BE7D1FD1022E002F5209 /* camera_tools_one.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE741FD1022E002F5209 /* camera_tools_one.c */; };
 		9AE1BE7E1FD1022E002F5209 /* select_object.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE751FD1022E002F5209 /* select_object.c */; };
 		9AE1BE7F1FD1022E002F5209 /* switch_obj_tx.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE761FD1022E002F5209 /* switch_obj_tx.c */; };
 		9AE1BE801FD1022E002F5209 /* switch_skybox.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1BE771FD1022E002F5209 /* switch_skybox.c */; };
@@ -342,10 +356,24 @@
 		9A2F6B441FD0AF3B0003A3F4 /* marble.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = marble.c; sourceTree = "<group>"; };
 		9A2F6B451FD0AF3B0003A3F4 /* reflection.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = reflection.c; sourceTree = "<group>"; };
 		9A2F6B461FD0AF3B0003A3F4 /* refraction.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = refraction.c; sourceTree = "<group>"; };
-		9A8BE2FD1FD5F3D100D0049D /* dna.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = dna.c; sourceTree = "<group>"; };
-		9A8BE2FF1FD5F3F000D0049D /* solar_system.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = solar_system.c; sourceTree = "<group>"; };
+		9A8BE2FD1FD5F3D100D0049D /* dna_base.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = dna_base.c; sourceTree = "<group>"; };
+		9A8BE2FF1FD5F3F000D0049D /* atom.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = atom.c; sourceTree = "<group>"; };
 		9A8BE3011FD5F6AD00D0049D /* delete_obj.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = delete_obj.c; sourceTree = "<group>"; };
 		9A8BE3031FD5F72500D0049D /* filter.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = filter.c; sourceTree = "<group>"; };
+		9A8BE3051FD6480800D0049D /* limit.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = limit.c; sourceTree = "<group>"; };
+		9A8BE3071FD658D200D0049D /* rotate_object.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = rotate_object.c; sourceTree = "<group>"; };
+		9A8BE3091FD65F7600D0049D /* refraction_reflection.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = refraction_reflection.c; sourceTree = "<group>"; };
+		9A8BE30B1FD665AE00D0049D /* type.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = type.c; sourceTree = "<group>"; };
+		9A8BE30D1FD667BF00D0049D /* fuzz.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fuzz.c; sourceTree = "<group>"; };
+		9A8BE30F1FD668D700D0049D /* radius.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = radius.c; sourceTree = "<group>"; };
+		9A8BE3111FD6693100D0049D /* color.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = color.c; sourceTree = "<group>"; };
+		9A8BE3131FD66C0100D0049D /* marble_color.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = marble_color.c; sourceTree = "<group>"; };
+		9A8BE3151FD66C6B00D0049D /* damier_one.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = damier_one.c; sourceTree = "<group>"; };
+		9A8BE3171FD66C7400D0049D /* damier_two.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = damier_two.c; sourceTree = "<group>"; };
+		9A8BE3191FD67F5100D0049D /* mode.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = mode.c; sourceTree = "<group>"; };
+		9A8BE31B1FD6818300D0049D /* move_object_two.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = move_object_two.c; sourceTree = "<group>"; };
+		9A8BE31D1FD6841D00D0049D /* dna_calc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = dna_calc.c; sourceTree = "<group>"; };
+		9A8BE31F1FD684B000D0049D /* print_scene_two.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = print_scene_two.c; sourceTree = "<group>"; };
 		9ACE3F471FCF0C8900991DFB /* Server */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Server; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ACE3F561FCF0CAC00991DFB /* Client */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Client; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ACE3F5E1FCF0D1700991DFB /* rt_clu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rt_clu.h; sourceTree = "<group>"; };
@@ -489,7 +517,7 @@
 		9ACE41BC1FCF2F0900991DFB /* init_object.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = init_object.c; sourceTree = "<group>"; };
 		9AD38C691FD5DBCA00EF5D6A /* create.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = create.c; sourceTree = "<group>"; };
 		9AD38C6B1FD5DD6600EF5D6A /* cube_with_spheres.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = cube_with_spheres.c; sourceTree = "<group>"; };
-		9AD38C6D1FD5DEB600EF5D6A /* marble.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = marble.c; sourceTree = "<group>"; };
+		9AD38C6D1FD5DEB600EF5D6A /* marble_set.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = marble_set.c; sourceTree = "<group>"; };
 		9AD38C6F1FD5DED600EF5D6A /* light.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = light.c; sourceTree = "<group>"; };
 		9AE1BE581FD0EB5C002F5209 /* init_global.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = init_global.c; sourceTree = "<group>"; };
 		9AE1BE5A1FD0ECBD002F5209 /* quit.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = quit.c; sourceTree = "<group>"; };
@@ -502,10 +530,10 @@
 		9AE1BE691FD0F7F5002F5209 /* create_rect.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = create_rect.c; sourceTree = "<group>"; };
 		9AE1BE6A1FD0F7F5002F5209 /* draw_buttons.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = draw_buttons.c; sourceTree = "<group>"; };
 		9AE1BE701FD1022E002F5209 /* keyboard.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = keyboard.c; sourceTree = "<group>"; };
-		9AE1BE711FD1022E002F5209 /* move_camera.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = move_camera.c; sourceTree = "<group>"; };
-		9AE1BE721FD1022E002F5209 /* move_object.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = move_object.c; sourceTree = "<group>"; };
-		9AE1BE731FD1022E002F5209 /* print_scene.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = print_scene.c; sourceTree = "<group>"; };
-		9AE1BE741FD1022E002F5209 /* rotate_camera.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rotate_camera.c; sourceTree = "<group>"; };
+		9AE1BE711FD1022E002F5209 /* camera_tools_two.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = camera_tools_two.c; sourceTree = "<group>"; };
+		9AE1BE721FD1022E002F5209 /* move_object_one.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = move_object_one.c; sourceTree = "<group>"; };
+		9AE1BE731FD1022E002F5209 /* print_scene_one.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = print_scene_one.c; sourceTree = "<group>"; };
+		9AE1BE741FD1022E002F5209 /* camera_tools_one.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = camera_tools_one.c; sourceTree = "<group>"; };
 		9AE1BE751FD1022E002F5209 /* select_object.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = select_object.c; sourceTree = "<group>"; };
 		9AE1BE761FD1022E002F5209 /* switch_obj_tx.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = switch_obj_tx.c; sourceTree = "<group>"; };
 		9AE1BE771FD1022E002F5209 /* switch_skybox.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = switch_skybox.c; sourceTree = "<group>"; };
@@ -987,23 +1015,37 @@
 		9AE1BE6F1FD1022E002F5209 /* events */ = {
 			isa = PBXGroup;
 			children = (
-				9AE1BE701FD1022E002F5209 /* keyboard.c */,
+				9A8BE2FF1FD5F3F000D0049D /* atom.c */,
+				9AE1BE741FD1022E002F5209 /* camera_tools_one.c */,
+				9AE1BE711FD1022E002F5209 /* camera_tools_two.c */,
+				9A8BE3111FD6693100D0049D /* color.c */,
+				9AD38C691FD5DBCA00EF5D6A /* create.c */,
+				9AD38C6B1FD5DD6600EF5D6A /* cube_with_spheres.c */,
+				9A8BE3151FD66C6B00D0049D /* damier_one.c */,
+				9A8BE3171FD66C7400D0049D /* damier_two.c */,
 				9A8BE3011FD5F6AD00D0049D /* delete_obj.c */,
-				9AD38C6D1FD5DEB600EF5D6A /* marble.c */,
+				9A8BE2FD1FD5F3D100D0049D /* dna_base.c */,
+				9A8BE31D1FD6841D00D0049D /* dna_calc.c */,
+				9A8BE3031FD5F72500D0049D /* filter.c */,
+				9A8BE30D1FD667BF00D0049D /* fuzz.c */,
+				9AE1BE701FD1022E002F5209 /* keyboard.c */,
 				9AD38C6F1FD5DED600EF5D6A /* light.c */,
-				9AE1BE711FD1022E002F5209 /* move_camera.c */,
-				9AE1BE721FD1022E002F5209 /* move_object.c */,
-				9AE1BE731FD1022E002F5209 /* print_scene.c */,
-				9AE1BE741FD1022E002F5209 /* rotate_camera.c */,
+				9A8BE3051FD6480800D0049D /* limit.c */,
+				9A8BE3131FD66C0100D0049D /* marble_color.c */,
+				9AD38C6D1FD5DEB600EF5D6A /* marble_set.c */,
+				9A8BE3191FD67F5100D0049D /* mode.c */,
+				9AE1BE721FD1022E002F5209 /* move_object_one.c */,
+				9A8BE31B1FD6818300D0049D /* move_object_two.c */,
+				9AE1BE731FD1022E002F5209 /* print_scene_one.c */,
+				9A8BE31F1FD684B000D0049D /* print_scene_two.c */,
+				9A8BE30F1FD668D700D0049D /* radius.c */,
+				9A8BE3091FD65F7600D0049D /* refraction_reflection.c */,
+				9A8BE3071FD658D200D0049D /* rotate_object.c */,
 				9AE1BE751FD1022E002F5209 /* select_object.c */,
 				9AE1BE761FD1022E002F5209 /* switch_obj_tx.c */,
 				9AE1BE771FD1022E002F5209 /* switch_skybox.c */,
 				9AE1BE781FD1022E002F5209 /* switch_tsp_tx.c */,
-				9AD38C691FD5DBCA00EF5D6A /* create.c */,
-				9AD38C6B1FD5DD6600EF5D6A /* cube_with_spheres.c */,
-				9A8BE2FD1FD5F3D100D0049D /* dna.c */,
-				9A8BE3031FD5F72500D0049D /* filter.c */,
-				9A8BE2FF1FD5F3F000D0049D /* solar_system.c */,
+				9A8BE30B1FD665AE00D0049D /* type.c */,
 			);
 			path = events;
 			sourceTree = "<group>";
@@ -1121,6 +1163,7 @@
 				9ACE40111FCF128000991DFB /* ft_memalloc.c in Sources */,
 				9ACE40551FCF128000991DFB /* ft_strreplace_once.c in Sources */,
 				9ACE400D1FCF128000991DFB /* ft_lstnew.c in Sources */,
+				9A8BE3081FD658D200D0049D /* rotate_object.c in Sources */,
 				9AE1BE791FD1022E002F5209 /* keyboard.c in Sources */,
 				9ACE41AB1FCF167D00991DFB /* input.c in Sources */,
 				9AE1BE931FD10366002F5209 /* spheres.c in Sources */,
@@ -1130,22 +1173,25 @@
 				9ACE40311FCF128000991DFB /* ft_putstr.c in Sources */,
 				9ACE40211FCF128000991DFB /* ft_putstr_lim.c in Sources */,
 				9ACE40021FCF128000991DFB /* ft_atoi.c in Sources */,
+				9A8BE3201FD684B000D0049D /* print_scene_two.c in Sources */,
 				9ACE3FF21FCF128000991DFB /* ft_array_copy.c in Sources */,
 				9ACE401C1FCF128000991DFB /* ft_itoa_base.c in Sources */,
 				9ACE40201FCF128000991DFB /* ft_putnchar.c in Sources */,
 				9ACE41B11FCF176B00991DFB /* miscelaneous.c in Sources */,
+				9A8BE3121FD6693100D0049D /* color.c in Sources */,
 				9ACE403B1FCF128000991DFB /* ft_strcat.c in Sources */,
 				9ACE401A1FCF128000991DFB /* ft_abs.c in Sources */,
 				9ACE40071FCF128000991DFB /* get_next_line.c in Sources */,
 				9ACE40051FCF128000991DFB /* ft_xtoa.c in Sources */,
+				9A8BE31A1FD67F5100D0049D /* mode.c in Sources */,
 				9ACE404C1FCF128000991DFB /* ft_strncmp.c in Sources */,
 				9AD38C701FD5DED600EF5D6A /* light.c in Sources */,
-				9AE1BE7B1FD1022E002F5209 /* move_object.c in Sources */,
-				9AE1BE7A1FD1022E002F5209 /* move_camera.c in Sources */,
+				9AE1BE7B1FD1022E002F5209 /* move_object_one.c in Sources */,
+				9AE1BE7A1FD1022E002F5209 /* camera_tools_two.c in Sources */,
 				9ACE40271FCF128000991DFB /* print_x.c in Sources */,
 				9ACE40421FCF128000991DFB /* ft_strequ.c in Sources */,
 				9ACE40361FCF128000991DFB /* ft_is_whitestring.c in Sources */,
-				9A8BE2FE1FD5F3D100D0049D /* dna.c in Sources */,
+				9A8BE2FE1FD5F3D100D0049D /* dna_base.c in Sources */,
 				9ACE404B1FCF128000991DFB /* ft_strncat.c in Sources */,
 				9ACE400F1FCF128000991DFB /* ft_pow.c in Sources */,
 				9ACE40411FCF128000991DFB /* ft_strdup.c in Sources */,
@@ -1154,11 +1200,11 @@
 				9ACE40341FCF128000991DFB /* ft_escape.c in Sources */,
 				9AE1BE831FD10246002F5209 /* init_perlin.c in Sources */,
 				9AE1BEA31FD12788002F5209 /* vec_normal.c in Sources */,
-				9AE1BE7C1FD1022E002F5209 /* print_scene.c in Sources */,
+				9AE1BE7C1FD1022E002F5209 /* print_scene_one.c in Sources */,
 				9ACE3FF91FCF128000991DFB /* ft_isalnum.c in Sources */,
 				9ACE40561FCF128000991DFB /* ft_strsplit.c in Sources */,
 				9AE1BE8F1FD10366002F5209 /* cylinders.c in Sources */,
-				9AD38C6E1FD5DEB600EF5D6A /* marble.c in Sources */,
+				9AD38C6E1FD5DEB600EF5D6A /* marble_set.c in Sources */,
 				9AE1BE6D1FD0F7F5002F5209 /* create_rect.c in Sources */,
 				9A2F6B311FD0A9D70003A3F4 /* connexion.c in Sources */,
 				9ACE400A1FCF128000991DFB /* ft_lstdelone.c in Sources */,
@@ -1175,6 +1221,8 @@
 				9ACE40471FCF128000991DFB /* ft_strlen.c in Sources */,
 				9ACE40121FCF128000991DFB /* ft_memccpy.c in Sources */,
 				9ACE40591FCF128000991DFB /* ft_strtrim.c in Sources */,
+				9A8BE30E1FD667BF00D0049D /* fuzz.c in Sources */,
+				9A8BE3161FD66C6B00D0049D /* damier_one.c in Sources */,
 				9ACE40581FCF128000991DFB /* ft_strsub.c in Sources */,
 				9ACE41AE1FCF167D00991DFB /* random_scene.c in Sources */,
 				9ACE40541FCF128000991DFB /* ft_strreplace.c in Sources */,
@@ -1186,8 +1234,9 @@
 				9ACE40501FCF128000991DFB /* ft_strnew.c in Sources */,
 				9ACE41A91FCF167D00991DFB /* add_obj.c in Sources */,
 				9ACE3FF81FCF128000991DFB /* ft_is_whitespace.c in Sources */,
+				9A8BE3181FD66C7400D0049D /* damier_two.c in Sources */,
 				9ACE40131FCF128000991DFB /* ft_memchr.c in Sources */,
-				9AE1BE7D1FD1022E002F5209 /* rotate_camera.c in Sources */,
+				9AE1BE7D1FD1022E002F5209 /* camera_tools_one.c in Sources */,
 				9ACE40301FCF128000991DFB /* ft_putnbr_fd.c in Sources */,
 				9AE1BE5D1FD0ED6D002F5209 /* quit.c in Sources */,
 				9ACE40241FCF128000991DFB /* ft_strlen.c in Sources */,
@@ -1201,7 +1250,7 @@
 				9ACE40171FCF128000991DFB /* ft_memmove.c in Sources */,
 				9ACE40531FCF128000991DFB /* ft_strrchr.c in Sources */,
 				9ACE40261FCF128000991DFB /* print_d.c in Sources */,
-				9A8BE3001FD5F3F000D0049D /* solar_system.c in Sources */,
+				9A8BE3001FD5F3F000D0049D /* atom.c in Sources */,
 				9AE1BE801FD1022E002F5209 /* switch_skybox.c in Sources */,
 				9ACE405B1FCF128000991DFB /* ft_trim_quotestr.c in Sources */,
 				9ACE3F6A1FCF126700991DFB /* main.c in Sources */,
@@ -1226,13 +1275,16 @@
 				9ACE404A1FCF128000991DFB /* ft_strmapi.c in Sources */,
 				9ACE3FFA1FCF128000991DFB /* ft_isalpha.c in Sources */,
 				9ACE401E1FCF128000991DFB /* ft_printf.c in Sources */,
+				9A8BE31C1FD6818300D0049D /* move_object_two.c in Sources */,
 				9ACE403D1FCF128000991DFB /* ft_strclr.c in Sources */,
 				9ACE40431FCF128000991DFB /* ft_striter.c in Sources */,
 				9ACE40181FCF128000991DFB /* ft_memset.c in Sources */,
+				9A8BE3061FD6480800D0049D /* limit.c in Sources */,
 				9ACE41AD1FCF167D00991DFB /* parser.c in Sources */,
 				9ACE40441FCF128000991DFB /* ft_striteri.c in Sources */,
 				9ACE400C1FCF128000991DFB /* ft_lstmap.c in Sources */,
 				9ACE40351FCF128000991DFB /* ft_is_quotestring.c in Sources */,
+				9A8BE3101FD668D700D0049D /* radius.c in Sources */,
 				9ACE403E1FCF128000991DFB /* ft_strcmp.c in Sources */,
 				9ACE40281FCF128000991DFB /* read_spec.c in Sources */,
 				9ACE40371FCF128000991DFB /* ft_post_realloc_str.c in Sources */,
@@ -1248,6 +1300,7 @@
 				9ACE40151FCF128000991DFB /* ft_memcpy.c in Sources */,
 				9AE1BE871FD10309002F5209 /* get_distance.c in Sources */,
 				9ACE41A81FCF167D00991DFB /* add_camera.c in Sources */,
+				9A8BE30A1FD65F7600D0049D /* refraction_reflection.c in Sources */,
 				9ACE40001FCF128000991DFB /* ft_toupper.c in Sources */,
 				9ACE404E1FCF128000991DFB /* ft_strndup.c in Sources */,
 				9ACE40061FCF128000991DFB /* ft_xtoi.c in Sources */,
@@ -1258,12 +1311,15 @@
 				9ACE3FF41FCF128000991DFB /* ft_free_array.c in Sources */,
 				9A2F6B351FD0AB4E0003A3F4 /* display.c in Sources */,
 				9ACE401F1FCF128000991DFB /* ft_putadr_pf.c in Sources */,
+				9A8BE31E1FD6841D00D0049D /* dna_calc.c in Sources */,
 				9ACE40291FCF128000991DFB /* select.c in Sources */,
 				9ACE40401FCF128000991DFB /* ft_strdel.c in Sources */,
 				9ACE40251FCF128000991DFB /* parsing.c in Sources */,
 				9ACE3FF61FCF128000991DFB /* ft_pre_realloc_array.c in Sources */,
 				9AE1BE6B1FD0F7F5002F5209 /* mouse_rect.c in Sources */,
+				9A8BE3141FD66C0100D0049D /* marble_color.c in Sources */,
 				9ACE40521FCF128000991DFB /* ft_strnstr.c in Sources */,
+				9A8BE30C1FD665AE00D0049D /* type.c in Sources */,
 				9AE1BE6E1FD0F7F5002F5209 /* draw_buttons.c in Sources */,
 				9ACE40081FCF128000991DFB /* ft_lstadd.c in Sources */,
 				9ACE40231FCF128000991DFB /* ft_str_pf.c in Sources */,

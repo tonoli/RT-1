@@ -6,7 +6,7 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 22:44:35 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/11/30 23:01:45 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/04 21:27:07 by nsampre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,12 @@ void	create_rect(SDL_Surface *surf, SDL_Rect rect, int color)
 		while (++x < x_end)
 		{
 			*((unsigned *)(surf->pixels + y * surf->pitch + x *
-						   surf->format->BytesPerPixel)) = color;
+						surf->format->BytesPerPixel)) = color;
 		}
 	}
 }
 
-void create_border(t_env *e,int active)
+void	create_border(t_env *e,int active)
 {
 	if (active == 0)
 	{

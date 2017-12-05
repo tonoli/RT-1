@@ -6,7 +6,7 @@
 /*   By: mmartins <mmartins@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/04 11:14:17 by mmartins          #+#    #+#             */
-/*   Updated: 2017/12/04 17:08:59 by mmartins         ###   ########.fr       */
+/*   Updated: 2017/12/05 08:36:12 by nsampre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,9 @@ void		cube_with_spheres(t_env *e)
 	int		i;
 	int		j;
 	int		k;
-	int		total = 0;
+	int		total;
 
+	total = 0;
 	k = 0;
 	while (k < 10)
 	{

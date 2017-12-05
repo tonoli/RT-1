@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rotate_camera.c                                    :+:      :+:    :+:   */
+/*   radius.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/27 17:55:52 by nsampre           #+#    #+#             */
-/*   Updated: 2017/11/27 18:44:22 by nsampre          ###   ########.fr       */
+/*   Created: 2017/12/05 08:25:11 by nsampre           #+#    #+#             */
+/*   Updated: 2017/12/05 08:35:37 by nsampre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "server.h"
 
-void	pitch_up(t_env *e)
+void	change_radius(t_env *e, int mode)
 {
-	e->camera.dir.y += ROT_SPEED;
+	if (!e->selected)
+		return ;
+	if (mode == INCREASE)
+		e->selected->radius++;
+	else if (mode == DECREASE && e->selected->radius > 0.0)
+		e->selected->radius--;
 }
 
-void	pitch_down(t_env *e)
+void	change_angle(t_env *e, int mode)
 {
-	e->camera.dir.y -= ROT_SPEED;
-}
-
-void	yaw_left(t_env *e)
-{
-	e->camera.dir.x += ROT_SPEED;
-}
-
-void	yaw_right(t_env *e)
-{
-	e->camera.dir.x -= ROT_SPEED;
+	if (!e->selected)
+		return ;
+	if (mode == INCREASE)
+		e->selected->radius += 0.1;
+	else if (mode == DECREASE && e->selected->radius > 0.0)
+		e->selected->radius -= 0.1;
 }

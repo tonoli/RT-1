@@ -1,39 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   move_object.c                                      :+:      :+:    :+:   */
+/*   move_object_two.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/27 18:22:43 by nsampre           #+#    #+#             */
-/*   Updated: 2017/11/27 18:44:22 by nsampre          ###   ########.fr       */
+/*   Created: 2017/12/05 08:26:17 by nsampre           #+#    #+#             */
+/*   Updated: 2017/12/05 08:35:37 by nsampre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "server.h"
-
-void	move_ojbect_up(t_env *e)
-{
-	if (!e->selected)
-		return ;
-	e->selected->ori.y += MOVE_SPEED / (double)2.0;
-}
-
-void	move_ojbect_down(t_env *e)
-{
-	if (!e->selected)
-		return ;
-	e->selected->ori.y -= MOVE_SPEED / (double)2.0;
-}
-
-void	move_ojbect_forward(t_env *e)
-{
-	if (!e->selected)
-		return ;
-	e->selected->ori.x -= MOVE_SPEED * cos(PITCH) * sin(YAW);
-	e->selected->ori.y += MOVE_SPEED * sin(PITCH);
-	e->selected->ori.z += MOVE_SPEED * cos(PITCH) * cos(YAW);
-}
 
 void	move_ojbect_backward(t_env *e)
 {
