@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/04 23:05:01 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/04 23:05:01 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/06 00:19:38 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ void		is_mouse_in_rect_left(t_env *e)
 
 }
 
+// input big boxes in the right
 void		is_mouse_in_rect_right(t_env *e)
 {
 	int state;
@@ -71,18 +72,38 @@ void		is_mouse_in_rect_right(t_env *e)
 		if (btn_i != e->i_actif)
 		{
 			state = e->event.type == SDL_MOUSEBUTTONDOWN ? CLICK : 0;
-			e->i_actif = (state == CLICK) ? btn_i : e->i_actif;
-			draw_input(e, btn_i, state);
 			if (state == CLICK)
 			{
+				draw_input(e, e->i_actif, 0);
+				e->i_actif = btn_i;
+				draw_input(e, btn_i, state);
 				set_live_edition_mode(e);
-				//call
 			}
 		}
 		else if (e->event.type == SDL_MOUSEBUTTONDOWN)
 		{
 			draw_input(e, btn_i, 0);
 			e->i_actif = -1;
+		}
+	}
+}
+
+// input text boxes in the right
+void		is_mouse_in_it_right(t_env *e)
+{
+	int state;
+	int btn_i;
+
+	btn_i = is_mouse_in_rect(e, e->it_rect, 18);
+	if (btn_i != -1 && btn_i > 5)
+	{
+		if (e->i_actif == (btn_i / 3) + 4)
+		{
+			state = e->event.type == SDL_MOUSEBUTTONDOWN ? CLICK : 0;
+			if (state == CLICK)
+			{
+				printf("C'est beau la vie dans btn_i = %d\n", btn_i);
+			}
 		}
 	}
 }
@@ -111,11 +132,38 @@ void		is_mouse_in_rect_top(t_env *e)
 	{
 		state = e->event.type == SDL_MOUSEBUTTONDOWN ? CLICK : MOUSE;
 		draw_button_top(e, btn_i, state);
-		printf("Just draw button %d at state %d\n", btn_i, state);
+		//printf("Just draw button %d at state %d\n", btn_i, state);
 		if (state == CLICK)
 		{
 			set_live_edition_mode(e);
 			g_top_btn[btn_i](e);
+		}
+	}
+}
+
+void		is_mouse_in_rect_top_input(t_env *e)
+{
+	int state;
+	int btn_i;
+
+	btn_i = is_mouse_in_rect(e, e->topin_rect, 3);
+	if (btn_i != -1)
+	{
+		if (btn_i != e->topin_actif)
+		{
+			state = e->event.type == SDL_MOUSEBUTTONDOWN ? CLICK : 0;
+			if (state == CLICK)
+			{
+				draw_input_top(e, e->topin_actif, 0);
+				e->topin_actif = btn_i;
+				draw_input_top(e, btn_i, state);
+				set_live_edition_mode(e);
+			}
+		}
+		else if (e->event.type == SDL_MOUSEBUTTONDOWN)
+		{
+			draw_input_top(e, btn_i, 0);
+			e->topin_actif = -1;
 		}
 	}
 }
@@ -133,8 +181,5 @@ void		is_mouse_in_render(t_env *e)
 		select_obj(i - 82, j - 72, e);
 	}
 	else
-	{
 		create_border(e, 0);
-	}
 }
-

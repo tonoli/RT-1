@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 23:19:59 by nsampre           #+#    #+#             */
-/*   Updated: 2017/11/30 23:19:59 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/06 00:07:36 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,6 +129,9 @@ typedef struct	s_env
 	SDL_Rect		b_rect[9];
 	SDL_Rect		bt_rect[9];
 	SDL_Rect		i_rect[10];
+	SDL_Rect		it_rect[18];
+	SDL_Rect		topin_rect[3];
+	SDL_Rect		tt_rect[3];
 	SDL_Rect		help_rect;
 	SDL_Point		mouse;
 	void	        *img;
@@ -149,8 +152,10 @@ typedef struct	s_env
 	//Buttons
 	char			b_actif;
 	char			i_actif;
+	char			it_actif;
 	char			help_actif;
 	char			bt_actif;
+	char			topin_actif;
 	char			run;
 
 	//LIVE PREVIEW
@@ -212,6 +217,9 @@ typedef struct	s_env
 	//Transaction checkup
 	unsigned int	magic;
 	int				object_count;
+
+	//Clients Clustering
+	int				nb_cli;
 }				t_env;
 
 
