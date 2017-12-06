@@ -6,7 +6,7 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 17:23:36 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/12/06 00:25:05 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/06 15:08:02 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,19 +53,17 @@ void	handle_events(t_env *e)
 		e->mouse.y = e->event.motion.y;
 //		printf("MOUSE x = %d\n", e->mouse.x);
 //		printf("MOUSE y = %d\n", e->mouse.y);
-		create_b_rect(e->s_background, e->it_rect[1], 0xFF2b2b2b, 0xFF5bc4e6);
+		//create_b_rect(e->s_background, e->it_rect[0], 0xFF2b2b2b, 0xFF5bc4e6);
 		is_mouse_in_rect_top_input(e);
 		is_mouse_in_rect_left(e);
 		is_mouse_in_rect_top(e);
 		is_mouse_in_it_right(e);
+		is_mouse_in_rect_right(e);
 		if (e->event.type == SDL_MOUSEBUTTONDOWN)
 			is_mouse_in_render(e);
 	}
-	draw_selected(e);
-	// if (e->event.type == 0x300)
-	// 	handle_keyboard_down(env);
-	// if (e->event.type == 0x301)
-	// 	handle_keyboard_up(env);
+	//draw_selected(e);
+	create_txt_rect(e);
 }
 
 int		free_elements(t_env *e)

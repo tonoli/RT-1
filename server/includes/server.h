@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 02:58:15 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/06 00:22:54 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/06 15:04:12 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ void		init_sdl_env(t_env *e);
 void		init_sdl_interface(t_env *e);
 int			global_loop(t_env *e);
 void		create_rect(SDL_Surface *dst, SDL_Rect rect, int color);
+void        create_txt_rect(t_env *e);
 void		init_rects(t_env *e);
 void        init_txt_rects(t_env *e);
 void		draw_button_top(t_env *e, int bt_num, int state);
