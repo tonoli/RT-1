@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 23:19:59 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/04 21:48:32 by tdelmas          ###   ########.fr       */
+/*   Updated: 2017/12/07 18:33:39 by tdelmas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,11 @@ typedef struct	s_obj
 	int				type;
 	t_vector		ori;
 	t_vector		dir;
+	t_vector		dir2;
+	t_vector		dir3;
+	double			len1;
+	double			len2;
+	double			len3;
 	double			radius;
 	double			height;
 	double			reflection;

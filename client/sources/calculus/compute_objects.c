@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/26 17:37:45 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/05 01:39:04 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/07 18:54:47 by tdelmas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,10 @@ double		get_distance(t_env *e, t_obj *obj, t_ray ray)
 		t = hit_cyl(e, obj, ray);
 	else if (obj->type == OBJ_CONE)
 		t = hit_cone(e, obj, ray);
+	else if (obj->type == OBJ_TRI)
+		t = hit_tri(e, obj, ray);
+	else if (obj->type == OBJ_SQUARRE)
+		t = hit_squarre(e, obj, ray);
 	return (t);
 }
 

@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/26 17:37:45 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/04 21:26:07 by tdelmas          ###   ########.fr       */
+/*   Updated: 2017/12/07 18:48:12 by tdelmas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,16 @@ void	add_obj_content(t_env *e, t_obj *obj, char *tag, char *content)
 		obj->ori = parse_origin(content);
 	else if (ft_strequ(tag, "<direction>"))
 		obj->dir = vector_normalize(parse_direction(content));
+	else if (ft_strequ(tag, "<direction2>"))
+		obj->dir2 = vector_normalize(parse_direction(content));
+	else if (ft_strequ(tag, "<direction3>"))
+		obj->dir3 = vector_normalize(parse_direction(content));
+	else if (ft_strequ(tag, "<lenght1>"))
+		obj->len1 = parse_double(content);
+	else if (ft_strequ(tag, "<lenght2>"))
+		obj->len2 = parse_double(content);
+	else if (ft_strequ(tag, "<lenght3>"))
+		obj->len3 = parse_double(content);
 	else if (ft_strequ(tag, "<radius>"))
 		obj->radius = parse_radius(content);
 	else if (ft_strequ(tag, "<angle>"))
