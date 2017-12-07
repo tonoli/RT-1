@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/04 23:05:01 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/06 00:19:38 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/07 14:06:51 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void		is_mouse_in_rect_left(t_env *e)
 	int state;
 	int btn_i;
 
-	btn_i = is_mouse_in_rect(e, e->b_rect, 9);
+	btn_i = is_mouse_in_rect(e, e->b_rect, 10);
 	draw_all_button_left(e, 0);
 	if (btn_i != -1)
 	{
@@ -132,7 +132,6 @@ void		is_mouse_in_rect_top(t_env *e)
 	{
 		state = e->event.type == SDL_MOUSEBUTTONDOWN ? CLICK : MOUSE;
 		draw_button_top(e, btn_i, state);
-		//printf("Just draw button %d at state %d\n", btn_i, state);
 		if (state == CLICK)
 		{
 			set_live_edition_mode(e);

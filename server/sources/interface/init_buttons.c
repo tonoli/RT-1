@@ -6,7 +6,7 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 12:29:58 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/12/06 18:34:18 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/07 14:23:54 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,10 +50,10 @@ static void init_b_rect(t_env *e)
 	int i;
 
 	i = -1;
-	while (++i < 8)
+	while (++i < 9)
 	{
 			e->b_rect[i].x = 15;
-			e->b_rect[i].y = (i < 5) ? 116 + (59 * i) : 128 + (59 * i);
+			e->b_rect[i].y = (i < 6) ? 116 + (59 * i) : 128 + (59 * i);
 			e->b_rect[i].w = 50;
 			e->b_rect[i].h = 47;
 	}

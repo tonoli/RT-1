@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 23:19:59 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/06 00:07:36 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/07 15:57:16 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,7 +126,7 @@ typedef struct	s_env
 	SDL_Surface		*s_title;
 	SDL_Surface		*s_raytracer;
 	TTF_Font		**font;
-	SDL_Rect		b_rect[9];
+	SDL_Rect		b_rect[10];
 	SDL_Rect		bt_rect[9];
 	SDL_Rect		i_rect[10];
 	SDL_Rect		it_rect[18];
@@ -158,6 +158,10 @@ typedef struct	s_env
 	char			topin_actif;
 	char			run;
 
+	//TOP Rebond + Move + Rotate
+	double			rebond;
+	double			move_speed;
+	double			rot_speed;
 	//LIVE PREVIEW
 	int				increment;
 	int				reset;

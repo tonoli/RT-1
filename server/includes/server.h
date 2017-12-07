@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 02:58:15 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/06 15:04:12 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/07 16:06:49 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,7 @@ void        draw_selected(t_env *e);
 void		create_border(t_env *e,int active);
 void		create_rect(SDL_Surface *surf, SDL_Rect rect, int color);
 void		create_b_rect(SDL_Surface *surf, SDL_Rect rect, int bg, int bord);
+void		write_top_text(t_env *e, int state);
 
 /*
 **	EVENT
