@@ -21,7 +21,7 @@ SRC_BASE		+=	$(shell find ../common/libvector | grep '\.c' | sort | sed 's/^/..\
 CC				=	gcc
 
 # FLAGS			=	-Wall -Wextra -Werror -O3
-FLAGS			+=	-O3
+FLAGS			+=	-O3 -g
 
 
 SRC_DIR			=	sources/
