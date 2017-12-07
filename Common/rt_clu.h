@@ -53,6 +53,7 @@
 # define OBJ_PLANE			2
 # define OBJ_CYL			3
 # define OBJ_CONE			4
+# define OBJ_TORUS			5
 
 # define MOVE_SPEED			(double)10.0
 # define ROT_SPEED			(double)0.1
@@ -80,6 +81,7 @@ double		hit_sphere(t_env *e, t_obj *obj, t_ray ray);
 double		hit_plane(t_env *e, t_obj *obj, t_ray ray);
 double		hit_cyl(t_env *e, t_obj *obj, t_ray ray);
 double		hit_cone(t_env *e, t_obj *obj, t_ray ray);
+double		hit_torus(t_env *e, t_obj *obj, t_ray ray);
 
 /*
 **	LIBVECTOR
@@ -103,5 +105,6 @@ t_vector	normal_sphere(t_obj *closest_obj);
 t_vector	normal_cone(t_obj *closest_obj);
 t_vector	normal_plane(t_obj *closest_obj, t_ray ray);
 t_vector	normal_cyl(t_obj *closest_obj);
+t_vector	normal_torus(t_obj *obj);
 
 #endif

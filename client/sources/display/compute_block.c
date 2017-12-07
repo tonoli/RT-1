@@ -41,10 +41,10 @@ t_ray			cam_ray(t_env *e, double i, double j, double ratio)
 	(e->increment == 1) ? j += randb() : 0;
 	pitch = e->camera.dir.y;
 	yaw = e->camera.dir.x;
-	v.x = ((2 * ((i + 0.5) / F_WIDTH)) - 1) * ratio
-			* (tan((FOV / 2) * M_PI / 180));
-	v.y = ((1 - (2 * ((j + 0.5) / F_HEIGHT)))
-			* tan((FOV / 2) * M_PI / 180));
+	v.x = ((2.0 * ((i + 0.5) / F_WIDTH)) - 1.0) * ratio
+			* (tan((FOV / (double)2.0) * M_PI / (double)180.0));
+	v.y = ((1.0 - (2.0 * ((j + 0.5) / F_HEIGHT)))
+			* tan((FOV / (double)2.0) * M_PI / (double)180.0));
 	ray.ori = e->camera.ori;
 	ray.dir.x = -cos(pitch) * sin(yaw) + v.x * cos(yaw)
 				+ v.y * sin(pitch) * sin(yaw);

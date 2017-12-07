@@ -73,6 +73,8 @@ typedef struct	s_obj
 	t_vector		ori;
 	t_vector		dir;
 	double			radius;
+	double			big_r;
+	double			small_r;
 	double			height;
 	double			reflection;
 	double			refraction;

@@ -2,10 +2,3 @@
         <origin>0, 0, 0</origin>
         <direction>0, 0, 0.000000</direction>
 </camera>
-
-<object>
-        <type>sphere</type>
-        <radius>10.0</radius>
-        <color>0xff, 0x00, 0x00</color>
-        <origin>0,0,25</origin>
-</object>

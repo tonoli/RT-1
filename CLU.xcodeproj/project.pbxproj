@@ -39,6 +39,8 @@
 		9A8BE31C1FD6818300D0049D /* move_object_two.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A8BE31B1FD6818300D0049D /* move_object_two.c */; };
 		9A8BE31E1FD6841D00D0049D /* dna_calc.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A8BE31D1FD6841D00D0049D /* dna_calc.c */; };
 		9A8BE3201FD684B000D0049D /* print_scene_two.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A8BE31F1FD684B000D0049D /* print_scene_two.c */; };
+		9A941D321FD936B200FDC125 /* torus.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A941D311FD936B200FDC125 /* torus.c */; };
+		9A941D331FD936B200FDC125 /* torus.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A941D311FD936B200FDC125 /* torus.c */; };
 		9ACE3F651FCF125A00991DFB /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 9ACE3F641FCF125A00991DFB /* main.c */; };
 		9ACE3F6A1FCF126700991DFB /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 9ACE3F671FCF126700991DFB /* main.c */; };
 		9ACE3FF21FCF128000991DFB /* ft_array_copy.c in Sources */ = {isa = PBXBuildFile; fileRef = 9ACE3F7C1FCF128000991DFB /* ft_array_copy.c */; };
@@ -374,6 +376,7 @@
 		9A8BE31B1FD6818300D0049D /* move_object_two.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = move_object_two.c; sourceTree = "<group>"; };
 		9A8BE31D1FD6841D00D0049D /* dna_calc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = dna_calc.c; sourceTree = "<group>"; };
 		9A8BE31F1FD684B000D0049D /* print_scene_two.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = print_scene_two.c; sourceTree = "<group>"; };
+		9A941D311FD936B200FDC125 /* torus.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = torus.c; sourceTree = "<group>"; };
 		9ACE3F471FCF0C8900991DFB /* Server */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Server; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ACE3F561FCF0CAC00991DFB /* Client */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Client; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ACE3F5E1FCF0D1700991DFB /* rt_clu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rt_clu.h; sourceTree = "<group>"; };
@@ -1057,6 +1060,7 @@
 				9AE1BE8A1FD10366002F5209 /* cylinders.c */,
 				9AE1BE8B1FD10366002F5209 /* planes.c */,
 				9AE1BE8C1FD10366002F5209 /* spheres.c */,
+				9A941D311FD936B200FDC125 /* torus.c */,
 			);
 			name = primitives;
 			path = common/primitives;
@@ -1283,6 +1287,7 @@
 				9ACE41AD1FCF167D00991DFB /* parser.c in Sources */,
 				9ACE40441FCF128000991DFB /* ft_striteri.c in Sources */,
 				9ACE400C1FCF128000991DFB /* ft_lstmap.c in Sources */,
+				9A941D321FD936B200FDC125 /* torus.c in Sources */,
 				9ACE40351FCF128000991DFB /* ft_is_quotestring.c in Sources */,
 				9A8BE3101FD668D700D0049D /* radius.c in Sources */,
 				9ACE403E1FCF128000991DFB /* ft_strcmp.c in Sources */,
@@ -1455,6 +1460,7 @@
 				9ACE40A41FCF12B100991DFB /* read_spec.c in Sources */,
 				9ACE40C11FCF12C400991DFB /* ft_isalpha.c in Sources */,
 				9ACE407D1FCF12A600991DFB /* ft_strncpy.c in Sources */,
+				9A941D331FD936B200FDC125 /* torus.c in Sources */,
 				9AE1BE9A1FD11911002F5209 /* init_color_sources.c in Sources */,
 				9ACE40801FCF12A600991DFB /* ft_strnew.c in Sources */,
 				9AE1BE9F1FD12727002F5209 /* vec_normal.c in Sources */,

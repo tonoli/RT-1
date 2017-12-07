@@ -61,6 +61,19 @@ int		main(int argc, char **argv)
 
 	e = (t_env *)ft_memalloc(sizeof(t_env));
 	init_render_env(e);
+
+	t_obj *obj;
+
+	obj = new_obj();
+	obj->type = OBJ_TORUS;
+	obj->ori = (t_vector){0, -5 -10};
+	obj->dir = (t_vector){0, 1, 0};
+	obj->color = (t_vector){1, 0, 0};
+	obj->color_backup = obj->color;
+	obj->big_r = 10;
+	obj->small_r = 1;
+	obj_push_back(&e->objects, obj);
+
 	get_options(e, argc, argv);
 	init_globals(e);
 	init_master_socket();

@@ -67,3 +67,16 @@ t_vector	normal_cyl(t_obj *closest_obj)
 	b = vector_scale(closest_obj->dir, vector_dot(a, closest_obj->dir));
 	return (vector_normalize(vector_sub(a, b)));
 }
+
+t_vector	normal_torus(t_obj *obj)
+{
+	double		k;
+	double		m;
+	t_vector	a;
+
+	k = vector_dot(vector_sub(obj->cross, obj->ori), obj->dir);
+	a = vector_sub(obj->cross, vector_scale(obj->dir, k));
+	m = sqrt((obj->small_r * obj->small_r) - (k * k));
+	return (vector_sub(vector_sub(obj->cross, a),
+			vector_scale(vector_sub(obj->ori, a), m / (obj->big_r + m))));
+}

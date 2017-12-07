@@ -23,7 +23,8 @@ void	init_render_env(t_env *e)
 	e->recursion = 1;
 	e->sum = 1;
 	e->live = 1;
-	e->threads = 32;
+//	e->threads = 32;
+	e->threads = 1;
 	e->magic = MAGIC;
 	e->skybox_total = TOTAL_SKYBOX;
 	e->obj_tx_total = TOTAL_TX;
