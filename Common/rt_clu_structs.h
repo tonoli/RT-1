@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 23:19:59 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/07 16:48:37 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/07 19:01:03 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ typedef struct	s_obj
 	t_vector		dir;
 	double			radius;
 	double			height;
-	double			reflection;
+	int				reflection;
 	double			refraction;
 	double			marblesize;
 	t_vector		color_backup;
@@ -144,7 +144,7 @@ typedef struct	s_env
 	int		        y;
 
 	//Text
-	char			txt[21][10000]
+	char			txt[21][10000];
 
 	//Segment
 	char			loader;

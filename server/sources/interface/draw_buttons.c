@@ -6,7 +6,7 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 22:43:16 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/12/07 16:06:06 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/07 20:05:26 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void		draw_input_top(t_env *e, int bt_num, int state)
 	rect = e->topin_rect[bt_num];
 	(state == 2) ? rect.y += 60 : 0;
 	write_top_text(e, state);
+	//write_right_text_top(e);
+	//write_right_text(e);
 	SDL_BlitSurface(e->s_ui, &rect, e->s_background, &e->topin_rect[bt_num]);
 }
 
