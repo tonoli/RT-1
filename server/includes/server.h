@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 02:58:15 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/01 02:58:15 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/05 18:46:38 by tdelmas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -176,6 +176,9 @@ void		print_light(t_obj *obj);
 void		print_damier(t_obj *obj);
 void		print_radius_angle(t_obj *obj);
 void		print_basics_obj(t_obj *obj, t_vector o, t_vector d);
+
+//Save
+void		save_scene(t_env *e);
 
 //Radius Angle
 void		change_radius(t_env *e, int mode);

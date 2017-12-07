@@ -1,0 +1,13 @@
+<camera>
+		<origin>-2.543381, 20.731852, 1.164952</origin>
+		<direction>-0.100000, -0.500000, 0.000000</direction>
+</camera>
+<object>
+	<type>cone</type>
+	<origin>-27.419756, -27.534277, 31.464593</origin>
+	<direction>0.000000, -1.000000, 0.000000</direction>
+	<radius>3.000000</radius>
+	<height>0.000000</height>
+	<color>0x12068, 0x1F203, 0x40</color>
+</object>
+
