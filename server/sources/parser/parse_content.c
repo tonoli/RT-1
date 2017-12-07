@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/26 17:37:45 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/01 03:01:24 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/04 21:27:49 by tdelmas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,14 @@ double		parse_radius(char *content)
 
 	r = ft_atod(content);
 	return (r * r);
+}
+
+double		parse_radius(char *content)
+{
+	double r;
+
+	r = ft_atod(content);
+	return (r)
 }
 
 double		parse_angle(char *content)
