@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 04:08:09 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/01 04:08:09 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/07 11:50:47 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,17 @@ void		init_sdl_modules(t_env *e)
 
 void		init_sdl_env(t_env *e)
 {
-	e->win_w = WIN_W; 	//Fenetre totale
-	e->win_h = WIN_H;	//*
-	e->run = 1;			//var SDL while(1) global loop
-	e->b_actif = -1;	//Bouton actifs index
-	e->i_actif = -1;	//Indice input actifs broite
-	e->bt_actif = -1; 	//Tops
-	e->help_actif = -1;	//Help showed
-	e->loader = 1;		//loader
-	e->render = 0;		//render, not activated
+	e->win_w = WIN_W;
+	e->win_h = WIN_H;
+	e->run = 1;
+	e->b_actif = -1;
+	e->i_actif = -1;
+	e->it_actif = -1;
+	e->bt_actif = -1;
+	e->help_actif = -1;
+	e->topin_actif = -1;
+	e->loader = 1;
+	e->render = 0;
 	e->font = (TTF_Font **)ft_memalloc(sizeof(TTF_Font *) * 3);
 }
 
@@ -67,9 +69,9 @@ void		init_sdl_interface(t_env *e)
 	SDL_SetWindowIcon(e->win, e->w_icon);
 	e->s_loader = load_img("./assets/images/loader.png");
 	e->s_ui = load_img("./assets/images/ui.png");
-	e->font[0] = load_ttf("./assets/font/RobotoCondensed-Bold.ttf", 24);
-	e->font[1] = load_ttf("./assets/font/RobotoCondensed-Regular.ttf", 22);
-	e->font[2] = load_ttf("./assets/font/PressStart2P-Regular.ttf", 16);
+	e->font[0] = load_ttf("./assets/font/RobotoCondensed-Light.ttf", 15);
+	e->font[1] = load_ttf("./assets/font/RobotoCondensed-Regular.ttf", 15);
+	e->font[2] = load_ttf("./assets/font/RobotoCondensed-Bold.ttf", 12);
 	e->s_background = SDL_GetWindowSurface(e->win);
 	e->s_raytracer = SDL_CreateRGBSurface(0, F_WIDTH, F_HEIGHT, 32,
 										_R, _G, _B, _A);

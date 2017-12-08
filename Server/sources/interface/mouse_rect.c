@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/04 23:05:01 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/07 16:46:42 by tdelmas          ###   ########.fr       */
+/*   Updated: 2017/12/08 14:21:25 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ int			is_mouse_in_rect(t_env *e, SDL_Rect *rect, int rect_len)
 	return -1;
 }
 
-///////////////////////////////////// LEFT ///////////////////////////////////
 
 static void (*g_left_btn[])(t_env *e) =
 {
@@ -34,6 +33,7 @@ static void (*g_left_btn[])(t_env *e) =
 	create_plane,
 	create_torus,
 	create_cone,
+	create_cube,
 	atom,
 	dna,
 	cube_with_spheres
@@ -44,7 +44,7 @@ void		is_mouse_in_rect_left(t_env *e)
 	int state;
 	int btn_i;
 
-	btn_i = is_mouse_in_rect(e, e->b_rect, 9);
+	btn_i = is_mouse_in_rect(e, e->b_rect, 10);
 	draw_all_button_left(e, 0);
 	if (btn_i != -1)
 	{
@@ -60,6 +60,7 @@ void		is_mouse_in_rect_left(t_env *e)
 
 }
 
+// input big boxes in the right
 void		is_mouse_in_rect_right(t_env *e)
 {
 	int state;
@@ -71,12 +72,12 @@ void		is_mouse_in_rect_right(t_env *e)
 		if (btn_i != e->i_actif)
 		{
 			state = e->event.type == SDL_MOUSEBUTTONDOWN ? CLICK : 0;
-			e->i_actif = (state == CLICK) ? btn_i : e->i_actif;
-			draw_input(e, btn_i, state);
 			if (state == CLICK)
 			{
+				draw_input(e, e->i_actif, 0);
+				e->i_actif = btn_i;
+				draw_input(e, btn_i, state);
 				set_live_edition_mode(e);
-				//call
 			}
 		}
 		else if (e->event.type == SDL_MOUSEBUTTONDOWN)
@@ -87,17 +88,44 @@ void		is_mouse_in_rect_right(t_env *e)
 	}
 }
 
+// input text boxes in the right
+void		is_mouse_in_it_right(t_env *e)
+{
+	int state;
+	int btn_i;
+
+	btn_i = is_mouse_in_rect(e, e->it_rect, 18);
+	if (btn_i != -1 && btn_i > 5)
+	{
+		if (e->i_actif == (btn_i / 3) + 4)
+		{
+			state = e->event.type == SDL_MOUSEBUTTONDOWN ? CLICK : 0;
+			if (state == CLICK)
+			{
+
+				printf("C'est beau la vie dans btn_i = %d\n", btn_i);
+			}
+		}
+	}
+}
+
+void void_unused(t_env *e)
+{
+	
+}
+
 static void (*g_top_btn[])(t_env *e) =
 {
 	light_object,
 	marble_object,
 	switch_obj_tx,
 	//save_scene,
+	void_unused,
 	switch_skybox,
 	switch_tsp_tx,
 	delete_object,
 	switch_filter,
-	set_render_edition_mode
+	set_render_edition_mode,
 };
 
 void		is_mouse_in_rect_top(t_env *e)
@@ -111,11 +139,37 @@ void		is_mouse_in_rect_top(t_env *e)
 	{
 		state = e->event.type == SDL_MOUSEBUTTONDOWN ? CLICK : MOUSE;
 		draw_button_top(e, btn_i, state);
-		printf("Just draw button %d at state %d\n", btn_i, state);
 		if (state == CLICK)
 		{
 			set_live_edition_mode(e);
 			g_top_btn[btn_i](e);
+		}
+	}
+}
+
+void		is_mouse_in_rect_top_input(t_env *e)
+{
+	int state;
+	int btn_i;
+
+	btn_i = is_mouse_in_rect(e, e->topin_rect, 3);
+	if (btn_i != -1)
+	{
+		if (btn_i != e->topin_actif)
+		{
+			state = e->event.type == SDL_MOUSEBUTTONDOWN ? CLICK : 0;
+			if (state == CLICK)
+			{
+				draw_input_top(e, e->topin_actif, 0);
+				e->topin_actif = btn_i;
+				draw_input_top(e, btn_i, state);
+				set_live_edition_mode(e);
+			}
+		}
+		else if (e->event.type == SDL_MOUSEBUTTONDOWN)
+		{
+			draw_input_top(e, btn_i, 0);
+			e->topin_actif = -1;
 		}
 	}
 }
@@ -133,8 +187,5 @@ void		is_mouse_in_render(t_env *e)
 		select_obj(i - 82, j - 72, e);
 	}
 	else
-	{
 		create_border(e, 0);
-	}
 }
-

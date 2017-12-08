@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/26 17:37:45 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/05 02:12:51 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/07 18:48:12 by tdelmas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,16 @@ void	add_obj_content(t_env *e, t_obj *obj, char *tag, char *content)
 		obj->ori = parse_origin(content);
 	else if (ft_strequ(tag, "<direction>"))
 		obj->dir = vector_normalize(parse_direction(content));
+	else if (ft_strequ(tag, "<direction2>"))
+		obj->dir2 = vector_normalize(parse_direction(content));
+	else if (ft_strequ(tag, "<direction3>"))
+		obj->dir3 = vector_normalize(parse_direction(content));
+	else if (ft_strequ(tag, "<lenght1>"))
+		obj->len1 = parse_double(content);
+	else if (ft_strequ(tag, "<lenght2>"))
+		obj->len2 = parse_double(content);
+	else if (ft_strequ(tag, "<lenght3>"))
+		obj->len3 = parse_double(content);
 	else if (ft_strequ(tag, "<radius>"))
 		obj->radius = parse_radius(content);
 	else if (ft_strequ(tag, "<angle>"))
@@ -45,6 +55,8 @@ void	add_obj_content(t_env *e, t_obj *obj, char *tag, char *content)
 		obj->damier1 = parse_color(content);
 	else if (ft_strequ(tag, "<damier2>"))
 		obj->damier2 = parse_color(content);
+	else if (ft_strequ(tag, "<height>"))
+		obj->height = parse_radius(content);
 	else if (ft_strequ(tag, "<light>"))
 	{
 		obj->emit = 1;

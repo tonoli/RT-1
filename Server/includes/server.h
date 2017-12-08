@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 02:58:15 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/05 18:46:38 by tdelmas          ###   ########.fr       */
+/*   Updated: 2017/12/08 14:27:05 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,18 +66,29 @@ void		init_sdl_env(t_env *e);
 void		init_sdl_interface(t_env *e);
 int			global_loop(t_env *e);
 void		create_rect(SDL_Surface *dst, SDL_Rect rect, int color);
+void        create_txt_rect(t_env *e);
 void		init_rects(t_env *e);
+void        init_txt_rects(t_env *e);
 void		draw_button_top(t_env *e, int bt_num, int state);
 void		draw_button_left(t_env *e, int b_num, int state);
 void	 	draw_input(t_env *e, int i_num, int state);
+void		draw_input_top(t_env *e, int bt_num, int state);
 void		is_mouse_in_rect_left(t_env *e);
 void		is_mouse_in_rect_right(t_env *e);
+void		is_mouse_in_it_right(t_env *e);
 void		is_mouse_in_rect_top(t_env *e);
+void		is_mouse_in_rect_top_input(t_env *e);
 void		is_mouse_in_render(t_env *e);
 void		draw_all_button_top(t_env *e,  int state);
 void		draw_all_button_left(t_env *e,  int state);
+void        draw_selected(t_env *e);
 void		create_border(t_env *e,int active);
 void		create_rect(SDL_Surface *surf, SDL_Rect rect, int color);
+void		create_b_rect(SDL_Surface *surf, SDL_Rect rect, int bg, int bord);
+void		write_top_text(t_env *e);
+void		write_right_text_top(t_env *e);
+void		write_right_text(t_env *e);
+
 
 /*
 **	EVENT
@@ -109,6 +120,7 @@ void		create_plane(t_env *e);
 void		create_cylinder(t_env *e);
 void		create_cone(t_env *e);
 void		create_torus(t_env *e);
+void		create_cube(t_env *e);
 void		atom(t_env *e);
 
 //Cube
@@ -176,9 +188,10 @@ void		print_light(t_obj *obj);
 void		print_damier(t_obj *obj);
 void		print_radius_angle(t_obj *obj);
 void		print_basics_obj(t_obj *obj, t_vector o, t_vector d);
+void	    print_marble(t_obj *obj);
 
 //Save
-void		save_scene(t_env *e);
+//void		save_scene(t_env *e);
 
 //Radius Angle
 void		change_radius(t_env *e, int mode);
@@ -251,6 +264,7 @@ char		*closing_tag(char *opening);
 void		parse_object(t_env *e, t_obj *obj, char *object_tag, char *line);
 void		parse_camera(t_env *e, char *object_tag, char *line);
 t_vector	parse_origin(char *content);
+double		parse_radius(char *content);
 double		parse_radius(char *content);
 t_vector	parse_color(char *content);
 double		parse_angle(char *content);

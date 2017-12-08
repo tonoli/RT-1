@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   interface.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 17:23:36 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/12/04 22:10:09 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/08 13:11:27 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,10 @@ void	handle_events(t_env *e)
 							e->s_background, &(SDL_Rect){82, 72, F_WIDTH, F_HEIGHT});
 			//Init interface buttons
 			init_rects(e);
+			init_txt_rects(e);
+
+			//Write text
+			write_top_text(e);
 
 			//Loader step is done, go render shit nigga
 			e->loader = 0;
@@ -52,16 +56,16 @@ void	handle_events(t_env *e)
 		e->mouse.y = e->event.motion.y;
 //		printf("MOUSE x = %d\n", e->mouse.x);
 //		printf("MOUSE y = %d\n", e->mouse.y);
-		is_mouse_in_rect_right(e);
+		is_mouse_in_rect_top_input(e);
 		is_mouse_in_rect_left(e);
 		is_mouse_in_rect_top(e);
+		is_mouse_in_it_right(e);
+		is_mouse_in_rect_right(e);
 		if (e->event.type == SDL_MOUSEBUTTONDOWN)
 			is_mouse_in_render(e);
 	}
-	// if (e->event.type == 0x300)
-	// 	handle_keyboard_down(env);
-	// if (e->event.type == 0x301)
-	// 	handle_keyboard_up(env);
+	draw_selected(e);
+	//create_txt_rect(e);
 }
 
 int		free_elements(t_env *e)

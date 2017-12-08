@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_scene.c                                      :+:      :+:    :+:   */
+/*   print_scene_one.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/26 17:37:45 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/05 08:39:43 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/08 14:25:06 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	print_basics_obj(t_obj *obj, t_vector o, t_vector d)
 	if (obj->type != OBJ_SPHERE)
 		printf("\t<direction>%f, %f, %f</direction>\n", d.x, d.y, d.z);
 	if (obj->reflection)
-		printf("\t<reflection>%f</reflection>\n", obj->reflection);
+		printf("\t<reflection>%d</reflection>\n", obj->reflection);
 	if (obj->refraction)
 		printf("\t<refraction>%f</refraction>\n", obj->refraction);
 	if (obj->fuzz)
