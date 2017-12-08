@@ -36,7 +36,7 @@ static double	solution(t_env *e, t_obj *obj, t_ray ray, t_vector v)
 	{
 		t = (-obj->b - sqrt(obj->d)) / (2.0 * obj->a);
 		x = vector_dot(ray.dir, obj->dir) * t + vector_dot(v, obj->dir);
-		if ((x < (obj->height / 2) && x > -(obj->height / 2)) || obj->height <= 0)
+		if (x < (obj->height / 2) && x > -(obj->height / 2))
 		{
 			if (t > e->t_min && t < e->t_max)
 			{
@@ -48,7 +48,7 @@ static double	solution(t_env *e, t_obj *obj, t_ray ray, t_vector v)
 		}
 		t = (-obj->b + sqrt(obj->d)) / (2.0 * obj->a);
 		x = vector_dot(ray.dir, obj->dir) * t + vector_dot(v, obj->dir);
-		if ((x < (obj->height / 2) && x > -(obj->height / 2)) || obj->height <= 0)
+		if (x < (obj->height / 2) && x > -(obj->height / 2))
 		{
 			if (t > e->t_min && t < e->t_max)
 			{
