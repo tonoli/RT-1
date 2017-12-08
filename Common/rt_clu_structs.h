@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 23:19:59 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/07 19:01:03 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/08 20:25:36 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -140,6 +140,7 @@ typedef struct	s_env
 	SDL_Rect		topin_rect[3];
 	SDL_Rect		tt_rect[3];
 	SDL_Rect		help_rect;
+	SDL_Rect		credit_rect;
 	SDL_Point		mouse;
 	void	        *img;
 	int		        *img_data;
