@@ -6,7 +6,7 @@
 /*   By: tdelmas <tdelmas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/05 10:40:51 by tdelmas           #+#    #+#             */
-/*   Updated: 2017/12/07 20:01:45 by tdelmas          ###   ########.fr       */
+/*   Updated: 2017/12/08 13:48:44 by tdelmas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ double		hit_tri(t_env *e, t_obj *obj, t_ray ray)
 	d = vector_dot(n, obj->ori);
 	
 	t = (vector_dot(n, ray.ori) + d) / -n_dot_raydir;
-	if (t < 0 || (t < e->t_min && t > e->t_max))
+	if (t < 0)
 		return (-1);
 	
 	p = vector_add(ray.ori, vector_scale(ray.dir, t));
@@ -73,8 +73,11 @@ double		hit_tri(t_env *e, t_obj *obj, t_ray ray)
 	if (vector_dot(n, c) < 0)
 		return (-1);
 
+	if (t < e->t_min || t > e->t_max)
+		return (-1);
 	obj->t = t;
 	obj->cross = vector_factor(ray.ori, t, ray.dir);
 	obj->normal = n;
+
 	return (t);
 }

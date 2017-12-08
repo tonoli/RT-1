@@ -6,7 +6,7 @@
 /*   By: tdelmas <tdelmas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/07 17:41:45 by tdelmas           #+#    #+#             */
-/*   Updated: 2017/12/07 18:41:37 by tdelmas          ###   ########.fr       */
+/*   Updated: 2017/12/08 13:23:29 by tdelmas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,7 +108,7 @@ void	face_a(t_env *env)
 	obj_push_back(&env->objects, obj);
 }
 
-void	cube(t_env *e)
+void	create_cube(t_env *e)
 {
 	face_a(e);
 	face_b(e);

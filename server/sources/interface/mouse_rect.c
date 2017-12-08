@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/04 23:05:01 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/07 17:32:45 by tdelmas          ###   ########.fr       */
+/*   Updated: 2017/12/08 13:23:00 by tdelmas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ static void (*g_left_btn[])(t_env *e) =
 	create_plane,
 	create_torus,
 	create_cone,
+	create_cube,
 	atom,
 	dna,
 	cube_with_spheres

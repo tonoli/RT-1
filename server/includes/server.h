@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 02:58:15 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/07 18:32:13 by tdelmas          ###   ########.fr       */
+/*   Updated: 2017/12/08 13:28:34 by tdelmas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,6 +109,7 @@ void		create_plane(t_env *e);
 void		create_cylinder(t_env *e);
 void		create_cone(t_env *e);
 void		create_torus(t_env *e);
+void		create_cube(t_env *e);
 void		atom(t_env *e);
 
 //Cube
