@@ -72,6 +72,11 @@ typedef struct	s_obj
 	int				type;
 	t_vector		ori;
 	t_vector		dir;
+	t_vector		dir2;
+	t_vector		dir3;
+	double			len1;
+	double			len2;
+	double			len3;
 	double			radius;
 	double			big_r;
 	double			small_r;

@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 02:58:15 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/08 13:10:34 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/08 13:28:34 by tdelmas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,6 +117,7 @@ void		create_plane(t_env *e);
 void		create_cylinder(t_env *e);
 void		create_cone(t_env *e);
 void		create_torus(t_env *e);
+void		create_cube(t_env *e);
 void		atom(t_env *e);
 
 //Cube
@@ -186,7 +187,7 @@ void		print_radius_angle(t_obj *obj);
 void		print_basics_obj(t_obj *obj, t_vector o, t_vector d);
 
 //Save
-void		save_scene(t_env *e);
+//void		save_scene(t_env *e);
 
 //Radius Angle
 void		change_radius(t_env *e, int mode);
@@ -259,6 +260,7 @@ char		*closing_tag(char *opening);
 void		parse_object(t_env *e, t_obj *obj, char *object_tag, char *line);
 void		parse_camera(t_env *e, char *object_tag, char *line);
 t_vector	parse_origin(char *content);
+double		parse_radius(char *content);
 double		parse_radius(char *content);
 t_vector	parse_color(char *content);
 double		parse_angle(char *content);
