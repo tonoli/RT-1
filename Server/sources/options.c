@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 22:12:36 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/01 03:01:24 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/05 21:26:33 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static int	get_port(int argc, char **argv)
 			return (ft_atoi(argv[i + 1]));
 		i++;
 	}
-	ft_dprintf(2, "Please provide a port argument -p <port>\n");
+	ft_dprintf(2, "Please provide a port argument : -p <port>\n");
 	exit(EXIT_FAILURE);
 	return (-1);
 }

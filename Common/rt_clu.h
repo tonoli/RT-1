@@ -6,7 +6,7 @@
 /*   By: mmartins <mmartins@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 02:47:25 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/05 21:26:47 by mmartins         ###   ########.fr       */
+/*   Updated: 2017/12/07 13:50:41 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,11 @@
 # define TOTAL_SKYBOX		12
 # define TOTAL_TX			28
 # define TOTAL_TSP			2
+
+# define COLOR_BG           (SDL_Color){43, 43, 43, 255}
+# define COLOR_BT           (SDL_Color){34, 34, 34, 255}
+# define COLOR_TXT          (SDL_Color){60, 60, 60, 255}
+# define COLOR_W            (SDL_Color){255, 255, 255, 255}
 
 
 /*
