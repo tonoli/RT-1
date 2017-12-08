@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_transparency_sources.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mmartins <mmartins@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 06:03:01 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/05 02:09:42 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/05 21:12:12 by mmartins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 static const t_texture_sources g_tsp_sources[] =
 {
 	{"earth", "./textures/transparency/earth.png"},
+	{"zebra", "./textures/transparency/zebra.jpeg"},
 	{NULL, NULL}
 };
 

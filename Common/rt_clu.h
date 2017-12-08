@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rt_clu.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mmartins <mmartins@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 02:47:25 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/01 02:47:25 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/05 21:26:47 by mmartins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,9 +67,9 @@
 
 # define MAGIC				(0xBAADA555)
 
-# define TOTAL_SKYBOX		7
-# define TOTAL_TX			5
-# define TOTAL_TSP			1
+# define TOTAL_SKYBOX		12
+# define TOTAL_TX			28
+# define TOTAL_TSP			2
 
 
 /*
