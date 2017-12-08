@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/04 23:05:01 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/08 14:21:25 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/08 17:11:12 by tdelmas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,12 +119,12 @@ static void (*g_top_btn[])(t_env *e) =
 	light_object,
 	marble_object,
 	switch_obj_tx,
-	//save_scene,
-	void_unused,
-	switch_skybox,
 	switch_tsp_tx,
 	delete_object,
+	switch_skybox,
 	switch_filter,
+	//save_scene,
+	void_unused,
 	set_render_edition_mode,
 };
 
