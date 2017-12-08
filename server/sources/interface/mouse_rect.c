@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/04 23:05:01 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/07 14:06:51 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/08 13:54:24 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ int			is_mouse_in_rect(t_env *e, SDL_Rect *rect, int rect_len)
 	return -1;
 }
 
-///////////////////////////////////// LEFT ///////////////////////////////////
 
 static void (*g_left_btn[])(t_env *e) =
 {
@@ -102,6 +101,7 @@ void		is_mouse_in_it_right(t_env *e)
 			state = e->event.type == SDL_MOUSEBUTTONDOWN ? CLICK : 0;
 			if (state == CLICK)
 			{
+
 				printf("C'est beau la vie dans btn_i = %d\n", btn_i);
 			}
 		}

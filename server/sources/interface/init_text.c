@@ -6,7 +6,7 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/07 14:34:06 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/12/07 19:59:45 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/08 13:52:29 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,21 +36,16 @@ void        center_text(t_env *e, char *str,
 
 
 
-void        write_top_text(t_env *e, int state)
+void        write_top_text(t_env *e)
 {
     int i;
 
     i = -1;
     sprintf(e->txt[0], " %.*f ", 2, e->rebond);
-    sprintf(e->txt[1], " %.*f ", 1, e->move_speed);
-    sprintf(e->txt[2], " %.*f ", 2, e->rot_speed);
+    sprintf(e->txt[1], " %.*f ", 2, e->rot_speed);
+    sprintf(e->txt[2], " %.*f ", 1, e->move_speed);
     while (++i < 3)
-    {
-        if (state == 2)
-            center_text(e, e->txt[i], e->tt_rect[i], COLOR_BT);
-        else
-            center_text(e, e->txt[i], e->tt_rect[i], COLOR_TXT);
-    }
+        center_text(e, e->txt[i], e->tt_rect[i], COLOR_TXT);
 }
 
 char        *name_obj(int i)
@@ -59,15 +54,15 @@ char        *name_obj(int i)
 
     if (i == 1)
         ret = ft_strdup("SPHERE");
-    if (i == 2)
+    else if (i == 2)
         ret = ft_strdup("PLANE");
-    if (i == 3)
+    else if (i == 3)
         ret = ft_strdup("CYLINDRE");
-    if (i == 4)
+    else if (i == 4)
         ret = ft_strdup("CONE");
-    if (i == 5)
+    else if (i == 5)
         ret = ft_strdup("TORUS");
-    if (i == 6)
+    else if (i == 6)
         ret = ft_strdup("TRIANGLE");
     return (ret);
 }
@@ -92,14 +87,14 @@ void        write_right_text_top(t_env *e)
     if (e->selected->emit != 1)
         sprintf(e->txt[4], " -- ");
     else
-        sprintf(e->txt[4], " %03f ", e->selected->light);
+        sprintf(e->txt[4], " %.0f ", e->selected->light);
     sprintf(e->txt[5], " %.*f ", 2, e->selected->fuzz);
     sprintf(e->txt[6], " %s ", yes_no(e->selected->reflection));
     sprintf(e->txt[7], " %.*f ", 2, e->selected->refraction); // Changer
     if (e->selected->type == 6 || e->selected->type == 2)
         sprintf(e->txt[8], " -- ");
     else
-        sprintf(e->txt[8], " %03f ", e->selected->radius);
+        sprintf(e->txt[8], " %.0f ", e->selected->radius);
     while (++i < 6)
     {
         right_text(e, e->txt[i + 3], e->it_rect[i], COLOR_BG);
@@ -110,30 +105,30 @@ void        select_marble_damier(t_env *e, int i)
 {
     if (i == 0)
     {
-        sprintf(e->txt[15], " %03f ", e->selected->marblecolor.x * 255);
-        sprintf(e->txt[16], " %03f ", e->selected->marblecolor.y * 255);
-        sprintf(e->txt[17], " %03f ", e->selected->marblecolor.z * 255);
-        sprintf(e->txt[18], " - ");
-        sprintf(e->txt[19], " - ");
-        sprintf(e->txt[20], " - ");
+        sprintf(e->txt[15], " %.0f ", e->selected->marblecolor.x * 255);
+        sprintf(e->txt[16], " %.0f ", e->selected->marblecolor.y * 255);
+        sprintf(e->txt[17], " %.0f ", e->selected->marblecolor.z * 255);
+        sprintf(e->txt[18], " --- ");
+        sprintf(e->txt[19], " --- ");
+        sprintf(e->txt[20], " --- ");
     }
     else if (i == 1)
     {
-        sprintf(e->txt[15], " %03f ", e->selected->damier1.x * 255);
-        sprintf(e->txt[16], " %03f ", e->selected->damier1.y * 255);
-        sprintf(e->txt[17], " %03f ", e->selected->damier1.z * 255);
-        sprintf(e->txt[18], " %03f ", e->selected->damier2.x * 255);
-        sprintf(e->txt[19], " %03f ", e->selected->damier2.y * 255);
-        sprintf(e->txt[20], " %03f ", e->selected->damier2.z * 255);
+        sprintf(e->txt[15], " %.0f ", e->selected->damier1.x * 255);
+        sprintf(e->txt[16], " %.0f ", e->selected->damier1.y * 255);
+        sprintf(e->txt[17], " %.0f ", e->selected->damier1.z * 255);
+        sprintf(e->txt[18], " %.0f ", e->selected->damier2.x * 255);
+        sprintf(e->txt[19], " %.0f ", e->selected->damier2.y * 255);
+        sprintf(e->txt[20], " %.0f ", e->selected->damier2.z * 255);
     }
     else
     {
-        sprintf(e->txt[15], " - ");
-        sprintf(e->txt[16], " - ");
-        sprintf(e->txt[17], " - ");
-        sprintf(e->txt[18], " - ");
-        sprintf(e->txt[19], " - ");
-        sprintf(e->txt[20], " - ");
+        sprintf(e->txt[15], " --- ");
+        sprintf(e->txt[16], " --- ");
+        sprintf(e->txt[17], " --- ");
+        sprintf(e->txt[18], " --- ");
+        sprintf(e->txt[19], " --- ");
+        sprintf(e->txt[20], " --- ");
     }
 }
 
@@ -143,13 +138,13 @@ void        write_right_text(t_env *e)
 
     i = 5;
     //Color
-    sprintf(e->txt[9], " %03f ", e->selected->color.x * 255);
-    sprintf(e->txt[10], " %03f ", e->selected->color.y * 255);
-    sprintf(e->txt[11], " %03f ", e->selected->color.z) * 255;
+    sprintf(e->txt[9], " %.0f ", e->selected->color.x * 255);
+    sprintf(e->txt[10], " %.0f ", e->selected->color.y * 255);
+    sprintf(e->txt[11], " %.0f ", e->selected->color.z * 255);
     // Rotation
-    sprintf(e->txt[12], " %03f ", e->selected->dir.x);
-    sprintf(e->txt[13], " %03f ", e->selected->dir.y);
-    sprintf(e->txt[14], " %03f ", e->selected->dir.z);
+    sprintf(e->txt[12], " %.0f ", e->selected->dir.x);
+    sprintf(e->txt[13], " %.0f ", e->selected->dir.y);
+    sprintf(e->txt[14], " %.0f ", e->selected->dir.z);
     // Marble
     if (e->selected->marblesize != 0)
         select_marble_damier(e, 0);
