@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   init_color_sources.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mmartins <mmartins@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 06:03:04 by nsampre           #+#    #+#             */
 /*   Updated: 2017/12/08 15:00:16 by itonoli-         ###   ########.fr       */
