@@ -66,11 +66,11 @@ int		main(int argc, char **argv)
 
 	obj = new_obj();
 	obj->type = OBJ_TORUS;
-	obj->ori = (t_vector){0, -5 -10};
-	obj->dir = (t_vector){0, 1, 0};
+	obj->ori = (t_vector){0, 0 -100};
+	obj->dir = (t_vector){0, 0, -1};
 	obj->color = (t_vector){1, 0, 0};
 	obj->color_backup = obj->color;
-	obj->big_r = 10;
+	obj->big_r = 1;
 	obj->small_r = 1;
 	obj_push_back(&e->objects, obj);
 

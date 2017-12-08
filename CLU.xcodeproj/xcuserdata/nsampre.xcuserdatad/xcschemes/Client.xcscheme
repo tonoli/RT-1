@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9ACE3F4E1FCF0CAC00991DFB"
-               BuildableName = "Client"
-               BlueprintName = "Client"
+               BlueprintIdentifier = "9AEAA04D1FDA8E4500A8A4A8"
+               BuildableName = "Server"
+               BlueprintName = "Server"
                ReferencedContainer = "container:CLU.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,9 +33,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9ACE3F4E1FCF0CAC00991DFB"
-            BuildableName = "Client"
-            BlueprintName = "Client"
+            BlueprintIdentifier = "9AEAA04D1FDA8E4500A8A4A8"
+            BuildableName = "Server"
+            BlueprintName = "Server"
             ReferencedContainer = "container:CLU.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -57,9 +57,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9ACE3F4E1FCF0CAC00991DFB"
-            BuildableName = "Client"
-            BlueprintName = "Client"
+            BlueprintIdentifier = "9AEAA04D1FDA8E4500A8A4A8"
+            BuildableName = "Server"
+            BlueprintName = "Server"
             ReferencedContainer = "container:CLU.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -76,9 +76,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9ACE3F4E1FCF0CAC00991DFB"
-            BuildableName = "Client"
-            BlueprintName = "Client"
+            BlueprintIdentifier = "9AEAA04D1FDA8E4500A8A4A8"
+            BuildableName = "Server"
+            BlueprintName = "Server"
             ReferencedContainer = "container:CLU.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
