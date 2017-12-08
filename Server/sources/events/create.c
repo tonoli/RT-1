@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/05 02:29:26 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/05 08:36:29 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/08 14:44:22 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	create_cone(t_env *e)
 	obj->dir.x = 0;
 	obj->dir.y = -1;
 	obj->dir.z = 0;
-	obj->radius = 3;
+	obj->radius = 0.2;
 	obj_push_back(&e->objects, obj);
 	e->selected = obj;
 }
@@ -67,6 +67,7 @@ void	create_cylinder(t_env *e)
 	obj->dir.x = 0;
 	obj->dir.y = 1;
 	obj->dir.z = 0;
+	obj->height = 30;
 	obj_push_back(&e->objects, obj);
 	e->selected = obj;
 }

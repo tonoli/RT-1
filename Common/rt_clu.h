@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rt_clu.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmartins <mmartins@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 02:47:25 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/01 02:47:25 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/08 14:30:34 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@
 # define OBJ_CYL			3
 # define OBJ_CONE			4
 # define OBJ_TRI			5
-# define OBJ_SQUARRE		6
+# define OBJ_SQUARE		    6
 # define OBJ_TORUS			7
 
 # define MOVE_SPEED			(double)10.0
@@ -89,6 +89,9 @@ double		hit_sphere(t_env *e, t_obj *obj, t_ray ray);
 double		hit_plane(t_env *e, t_obj *obj, t_ray ray);
 double		hit_cyl(t_env *e, t_obj *obj, t_ray ray);
 double		hit_cone(t_env *e, t_obj *obj, t_ray ray);
+double      hit_tri(t_env *e, t_obj *obj, t_ray ray);
+double	    hit_torus(t_env *e, t_obj *obj, t_ray ray);
+double		hit_square(t_env *e, t_obj *obj, t_ray ray);
 
 /*
 **	LIBVECTOR
@@ -112,5 +115,6 @@ t_vector	normal_sphere(t_obj *closest_obj);
 t_vector	normal_cone(t_obj *closest_obj);
 t_vector	normal_plane(t_obj *closest_obj, t_ray ray);
 t_vector	normal_cyl(t_obj *closest_obj);
+t_vector	normal_torus(t_obj *closest_obj);
 
 #endif

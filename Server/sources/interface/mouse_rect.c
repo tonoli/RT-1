@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/04 23:05:01 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/05 18:37:38 by tdelmas          ###   ########.fr       */
+/*   Updated: 2017/12/08 14:21:25 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,17 +109,23 @@ void		is_mouse_in_it_right(t_env *e)
 	}
 }
 
+void void_unused(t_env *e)
+{
+	
+}
+
 static void (*g_top_btn[])(t_env *e) =
 {
 	light_object,
 	marble_object,
 	switch_obj_tx,
-	save_scene,
+	//save_scene,
+	void_unused,
 	switch_skybox,
 	switch_tsp_tx,
 	delete_object,
 	switch_filter,
-	set_render_edition_mode
+	set_render_edition_mode,
 };
 
 void		is_mouse_in_rect_top(t_env *e)

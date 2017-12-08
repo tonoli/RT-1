@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 02:58:15 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/08 13:28:34 by tdelmas          ###   ########.fr       */
+/*   Updated: 2017/12/08 14:27:05 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,9 @@ void		create_border(t_env *e,int active);
 void		create_rect(SDL_Surface *surf, SDL_Rect rect, int color);
 void		create_b_rect(SDL_Surface *surf, SDL_Rect rect, int bg, int bord);
 void		write_top_text(t_env *e);
+void		write_right_text_top(t_env *e);
+void		write_right_text(t_env *e);
+
 
 /*
 **	EVENT
@@ -185,6 +188,7 @@ void		print_light(t_obj *obj);
 void		print_damier(t_obj *obj);
 void		print_radius_angle(t_obj *obj);
 void		print_basics_obj(t_obj *obj, t_vector o, t_vector d);
+void	    print_marble(t_obj *obj);
 
 //Save
 //void		save_scene(t_env *e);

@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/26 17:37:45 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/08 13:27:09 by tdelmas          ###   ########.fr       */
+/*   Updated: 2017/12/08 14:29:06 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ int			parse_type(char *content)
 		return (OBJ_CONE);
 	else if (ft_strequ(content, "triangle"))
 		return (OBJ_TRI);
-	else if (ft_strequ(content, "squarre"))
-		return (OBJ_SQUARRE);
+	else if (ft_strequ(content, "square"))
+		return (OBJ_SQUARE);
 	else
 		parse_error("Unknown type object.", NULL, content);
 	return (-1);

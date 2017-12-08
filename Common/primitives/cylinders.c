@@ -6,25 +6,25 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/26 17:37:46 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/04 21:24:01 by tdelmas          ###   ########.fr       */
+/*   Updated: 2017/12/08 14:46:06 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "rt_clu.h"
 
-static void	decomorie_a_coef(t_obj *obj, t_ray ray)
+static void	decompose_a_coef(t_obj *obj, t_ray ray)
 {
 	obj->a = vector_dot(ray.dir, ray.dir) -
 		(vector_dot(ray.dir, obj->dir) * (vector_dot(ray.dir, obj->dir)));
 }
 
-static void	decomorie_b_coef(t_obj	*obj, t_ray ray, t_vector v)
+static void	decompose_b_coef(t_obj	*obj, t_ray ray, t_vector v)
 {
 	obj->b = 2 * (vector_dot(ray.dir, v) -
 			vector_dot(ray.dir, obj->dir) * vector_dot(v, obj->dir));
 }
 
-static void	decomorie_c_coef(t_obj *obj, t_ray ray, t_vector v)
+static void	decompose_c_coef(t_obj *obj, t_ray ray, t_vector v)
 {
 	obj->c = vector_dot(v, v) -
 		(vector_dot(v, obj->dir) * vector_dot(v, obj->dir)) - obj->radius;
@@ -37,7 +37,7 @@ static double	solution(t_env *e, t_obj *obj, t_ray ray, t_vector v)
 
 	t = (-obj->b - sqrt(obj->d)) / (2.0 * obj->a);
 	x = vector_dot(ray.dir, obj->dir) * t + vector_dot(v, obj->dir);
-	if (x < obj->height && x > 0)
+	if (x < obj->height && x >= 0)
 	{
 		if (t > e->t_min && t < e->t_max && t)
 		{
@@ -49,7 +49,7 @@ static double	solution(t_env *e, t_obj *obj, t_ray ray, t_vector v)
 	}
 	t = (-obj->b + sqrt(obj->d)) / (2.0 * obj->a);
 	x = vector_dot(ray.dir, obj->dir) * t + vector_dot(v, obj->dir);
-	if (x < obj->height && x > 0)
+	if (x < obj->height && x >= 0)
 	{
 		if (t > e->t_min && t < e->t_max)
 		{

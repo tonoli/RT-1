@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 02:59:21 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/04 23:01:28 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/08 14:38:16 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,15 +64,15 @@ int		main(int argc, char **argv)
 
 	t_obj *obj;
 
-	obj = new_obj();
-	obj->type = OBJ_TORUS;
-	obj->ori = (t_vector){0, 0 -100};
-	obj->dir = (t_vector){0, 0, -1};
-	obj->color = (t_vector){1, 0, 0};
-	obj->color_backup = obj->color;
-	obj->big_r = 1;
-	obj->small_r = 1;
-	obj_push_back(&e->objects, obj);
+	// obj = new_obj();
+	// obj->type = OBJ_TORUS;
+	// obj->ori = (t_vector){0, 0 -100};
+	// obj->dir = (t_vector){0, 0, -1};
+	// obj->color = (t_vector){1, 0, 0};
+	// obj->color_backup = obj->color;
+	// obj->big_r = 1;
+	// obj->small_r = 1;
+	// obj_push_back(&e->objects, obj);
 
 	get_options(e, argc, argv);
 	init_globals(e);

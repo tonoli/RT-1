@@ -4,7 +4,7 @@
 </camera>
 
 <object>
-	<type>squarre</type>
+	<type>square</type>
 	<origin>0, 0, 0</origin>
 	<direction>1, 0, 0</direction>
 	<lenght1>42</lenght1>
@@ -14,7 +14,7 @@
 </object>
 
 <object>
-	<type>squarre</type>
+	<type>square</type>
 	<origin>0, 0, 0</origin>
 	<direction>0, 0, 1</direction>
 	<lenght1>42</lenght1>
@@ -24,7 +24,7 @@
 </object>
 
 <object>
-	<type>squarre</type>
+	<type>square</type>
 	<origin>0, 0, 0</origin>
 	<direction>0, 0, 1</direction>
 	<lenght1>42</lenght1>
@@ -34,7 +34,7 @@
 </object>
 
 <object>
-	<type>squarre</type>
+	<type>square</type>
 	<origin>0, 0, -42</origin>
 	<direction>1, 0, 0</direction>
 	<lenght1>42</lenght1>
@@ -44,7 +44,7 @@
 </object>
 
 <object>
-	<type>squarre</type>
+	<type>square</type>
 	<origin>0, -42, 0</origin>
 	<direction>0, 0, 1</direction>
 	<lenght1>42</lenght1>
@@ -54,7 +54,7 @@
 </object>
 
 <object>
-	<type>squarre</type>
+	<type>square</type>
 	<origin>-42, 0, 0</origin>
 	<direction>0, 0, 1</direction>
 	<lenght1>42</lenght1>

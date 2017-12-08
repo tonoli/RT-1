@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/26 17:37:45 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/08 13:20:42 by tdelmas          ###   ########.fr       */
+/*   Updated: 2017/12/08 14:29:20 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ double		get_distance(t_env *e, t_obj *obj, t_ray ray)
 		t = hit_torus(e, obj, ray);
 	else if (obj->type == OBJ_TRI)
 		t = hit_tri(e, obj, ray);
-	else if (obj->type == OBJ_SQUARRE)
-		t = hit_squarre(e, obj, ray);
+	else if (obj->type == OBJ_SQUARE)
+		t = hit_square(e, obj, ray);
 	return (t);
 }
 
