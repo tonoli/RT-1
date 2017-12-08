@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/26 17:37:46 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/04 21:22:52 by tdelmas          ###   ########.fr       */
+/*   Updated: 2017/12/08 14:55:42 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static double	solution(t_env *e, t_obj *obj, t_ray ray, t_vector v)
 	{
 		t = (-obj->b - sqrt(obj->d)) / (2.0 * obj->a);
 		x = vector_dot(ray.dir, obj->dir) * t + vector_dot(v, obj->dir);
-		if (x < (obj->height / 2) && x > -(obj->height / 2))
+		if ((x < (obj->height / 2) && x > -(obj->height / 2)) || obj->height <= 0)
 		{
 			if (t > e->t_min && t < e->t_max)
 			{
@@ -48,7 +48,7 @@ static double	solution(t_env *e, t_obj *obj, t_ray ray, t_vector v)
 		}
 		t = (-obj->b + sqrt(obj->d)) / (2.0 * obj->a);
 		x = vector_dot(ray.dir, obj->dir) * t + vector_dot(v, obj->dir);
-		if (x < (obj->height / 2) && x > -(obj->height / 2))
+		if ((x < (obj->height / 2) && x > -(obj->height / 2)) || obj->height <= 0)
 		{
 			if (t > e->t_min && t < e->t_max)
 			{
@@ -75,4 +75,3 @@ double			hit_cone(t_env *e, t_obj *obj, t_ray ray)
 	obj->d = obj->b * obj->b - (4.0 * obj->a * obj->c);
 	return (solution(e, obj, ray, v));
 }
-

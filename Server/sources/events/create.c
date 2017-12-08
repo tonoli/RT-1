@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/05 02:29:26 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/08 14:44:22 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/08 14:54:31 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ void	create_cone(t_env *e)
 	obj->dir.y = -1;
 	obj->dir.z = 0;
 	obj->radius = 0.2;
+	obj->height = 30;
 	obj_push_back(&e->objects, obj);
 	e->selected = obj;
 }
