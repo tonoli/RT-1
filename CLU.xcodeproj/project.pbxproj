@@ -997,15 +997,15 @@
 		9A337F451FDA8EC500DE3AD9 /* interface */ = {
 			isa = PBXGroup;
 			children = (
-				9A4FBCBF1FDBCC95000023EE /* init_text_rect.c */,
-				9A4FBCC21FDBCC95000023EE /* init_text.c */,
-				9A4FBCC01FDBCC95000023EE /* loader.c */,
-				9A4FBCC11FDBCC95000023EE /* selection.c */,
 				9A337F461FDA8EC500DE3AD9 /* create_rect.c */,
 				9A337F471FDA8EC500DE3AD9 /* draw_buttons.c */,
 				9A337F481FDA8EC500DE3AD9 /* init_buttons.c */,
+				9A4FBCBF1FDBCC95000023EE /* init_text_rect.c */,
+				9A4FBCC21FDBCC95000023EE /* init_text.c */,
 				9A337F491FDA8EC500DE3AD9 /* interface.c */,
+				9A4FBCC01FDBCC95000023EE /* loader.c */,
 				9A337F4A1FDA8EC500DE3AD9 /* mouse_rect.c */,
+				9A4FBCC11FDBCC95000023EE /* selection.c */,
 			);
 			path = interface;
 			sourceTree = "<group>";

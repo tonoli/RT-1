@@ -61,8 +61,8 @@ t_vector	skybox(t_env *e, t_vector dir, double u, double v)
 
 t_vector	sky(t_env *e, t_vector dir, double t)
 {
-//	if (e->current_skybox)
-//		return (skybox(e, vector_normalize(dir), 42, 42));
+	if (e->current_skybox)
+		return (skybox(e, vector_normalize(dir), 42, 42));
 	return (diffuse_sky(e, t));
 //	return ((t_vector){1, 1, 1});
 //	return ((t_vector){1, 0, 0});

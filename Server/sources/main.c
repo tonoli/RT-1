@@ -54,6 +54,19 @@ void	*wait_client(void *data)
 	return (NULL);
 }
 
+void	launch_local_client(t_env *e)
+{
+	e->child = fork();
+	if (e->child == -1)
+		fatal_quit("fork");
+	if (!e->child)
+	{
+		if (execlp("./rt_client", "rt_client",
+					"127.0.0.1", ft_itoa(g_port), (char *)NULL) == -1)
+			fatal_quit("execlp");
+	}
+}
+
 int		main(int argc, char **argv)
 {
 	t_env		*e;
@@ -64,6 +77,8 @@ int		main(int argc, char **argv)
 	get_options(e, argc, argv);
 	init_globals(e);
 	init_master_socket();
+	if (e->local_compute)
+		launch_local_client(e);
 	if (pthread_create(&t, NULL, wait_client, NULL))
 		fatal_quit("pthread_create");
 	start_interface(e);

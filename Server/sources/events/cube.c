@@ -12,6 +12,13 @@
 
 #include "server.h"
 
+void	scale_ori(t_env *e, t_obj *obj)
+{
+	obj->ori.x = e->camera.ori.x - (5.0 * MOVE_SPEED * cos(PITCH) * sin(YAW));
+	obj->ori.y = e->camera.ori.y + (5.0 * MOVE_SPEED * sin(PITCH));
+	obj->ori.z = e->camera.ori.z + (5.0 * MOVE_SPEED * cos(PITCH) * cos(YAW));
+}
+
 static void	face_f(t_env *e, double size)
 {
 	t_obj *obj;
@@ -68,6 +75,7 @@ static void	face_c(t_env *e, double size)
 	obj = new_obj();
 	obj->type = 6;
 	obj->ori = (t_vector){0, 0, 0};
+//	scale_ori(e, obj);
 	obj->dir = (t_vector){0, 1, 0};
 	obj->dir2 = (t_vector){0, 0, 1};
 	obj->len2 = size;
@@ -84,6 +92,7 @@ static void	face_b(t_env *e, double size)
 	obj = new_obj();
 	obj->type = 6;
 	obj->ori = (t_vector){0, 0, 0};
+//	scale_ori(e, obj);
 	obj->dir = (t_vector){1, 0, 0};
 	obj->dir2 = (t_vector){0, 0, 1};
 	obj->len1 = size;
@@ -100,6 +109,7 @@ static void	face_a(t_env *e, double size)
 	obj = new_obj();
 	obj->type = 6;
 	obj->ori = (t_vector){0, 0, 0};
+//	scale_ori(e, obj);
 	obj->dir = (t_vector){0, 1, 0};
 	obj->dir2 = (t_vector){1, 0, 0};
 	obj->len1 = size;

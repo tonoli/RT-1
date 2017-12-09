@@ -77,7 +77,6 @@ double		hit_tri(t_env *e, t_obj *obj, t_ray ray)
 		return (-1);
 	obj->t = t;
 	obj->cross = vector_factor(ray.ori, t, ray.dir);
-	obj->normal = n;
-
+	obj->normal = vector_normalize(n);
 	return (t);
 }

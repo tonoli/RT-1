@@ -247,6 +247,15 @@ double		turb(t_env *e, t_vector cross);
 void		perlin_generate(t_env *e);
 void		perlin_generate_perm(int *);
 
+
+/*
+**	FILTER
+*/
+
+void		sepia(t_vector *pixel);
+void		black_and_white(t_vector *pixel);
+void		negative(t_vector *pixel);
+
 /*
 **	CALCULUS
 */
@@ -279,5 +288,8 @@ int			parse_type(char *content);
 t_vector	parse_direction(char *content);
 double		parse_double(char *content);
 void   		parse_skybox(t_env *e, char *content);
+int			parse_texture(char *content);
+int			parse_tsp(char *content);
+
 
 #endif

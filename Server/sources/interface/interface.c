@@ -49,7 +49,7 @@ void	handle_events(t_env *e)
 	{
 		if (e->loader == 1 && e->nb_cli > 0)
 			start_render(e);
-		else if (e->render == 1 && e->event.key.keysym.sym != SDLK_f)
+		else if (e->render == 1)
 			keyboard(e->event.key.keysym.sym, e);
 	}
 
@@ -74,6 +74,7 @@ int		free_elements(t_env *e)
 	e->font = NULL;
 	TTF_Quit();
 	SDL_Quit();
+	kill(e->child, SIGTERM);
 	exit(EXIT_SUCCESS);
 	return (0);
 }

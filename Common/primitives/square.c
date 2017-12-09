@@ -12,34 +12,40 @@
 
 #include "rt_clu.h"
 
-double		hit_square(t_env *e, t_obj *obj, t_ray ray)
+t_obj	*new_tmp_obj(void)
+{
+	t_obj *new;
+
+	new = (t_obj *)ft_memalloc(sizeof(t_obj));
+	new->tsp_index = -1;
+	new->texture_index = -1;
+	new->next = NULL;
+	return (new);
+}
+
+double	hit_square(t_env *e, t_obj *obj, t_ray ray)
 {
 	t_vector	v1;
 	t_vector	v2;
-	t_vector	tmp1;
-	t_vector	tmp2;
-	t_vector	tmp3;
 	double		t;
+	t_obj		*tmp;
 
 	size_interpretor(obj, &v1, &v2);
 	if ((t = hit_tri(e, obj, ray)) > -1)
 		return (t);
-	tmp1 = obj->ori;
-	tmp2 = obj->dir;
-	tmp3 = obj->dir2;
-
-	obj->ori = vector_add(vector_add(obj->ori, vector_scale(obj->dir, obj->len1)), vector_scale(obj->dir2, obj->len2));
-	obj->dir = vector_negative(obj->dir);
-	obj->dir2 = vector_negative(obj->dir2);
-	if ((t = hit_tri(e, obj, ray)) != -1)
+	tmp = new_tmp_obj();
+	tmp->len1 = obj->len1;
+	tmp->len2 = obj->len2;
+	tmp->ori = vector_add(vector_add(obj->ori, vector_scale(obj->dir, obj->len1)), vector_scale(obj->dir2, obj->len2));
+	tmp->dir = vector_negative(obj->dir);
+	tmp->dir2 = vector_negative(obj->dir2);
+	if ((t = hit_tri(e, tmp, ray)) != -1)
 	{
-		obj->ori = tmp1;
-		obj->dir = tmp2;
-		obj->dir2 = tmp3;
-		return (t);
+		obj->t = tmp->t;
+		obj->cross = tmp->cross;
+		obj->normal = tmp->normal;
 	}
-	obj->ori = tmp1;
-	obj->dir = tmp2;
-	obj->dir2 = tmp3;
-	return (-1);
+	free(tmp);
+	tmp = NULL;
+	return (t);
 }

@@ -27,9 +27,15 @@ void	init_render_env(t_env *e)
 	e->sum = 1;
 	e->live = 1;
 	e->threads = 32;
-	// e->threads = 1;
+	e->local_compute = 1;
 	e->magic = MAGIC;
-	e->skybox_total = TOTAL_SKYBOX;
-	e->obj_tx_total = TOTAL_TX;
-	e->tsp_tx_total = TOTAL_TSP;
+
+//	e->skybox_total = TOTAL_SKYBOX;
+//	e->obj_tx_total = TOTAL_TX;
+//	e->tsp_tx_total = TOTAL_TSP;
+
+	e->skybox_index = -1;
+	e->skybox_total = 2;
+	e->obj_tx_total = 4;
+	e->tsp_tx_total = 2;
 }

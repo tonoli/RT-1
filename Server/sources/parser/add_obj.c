@@ -63,9 +63,9 @@ void	add_obj_content(t_env *e, t_obj *obj, char *tag, char *content)
 		obj->light = parse_double(content);
 	}
 	else if (ft_strequ(tag, "<texture>"))
-		;
+		obj->texture_index = parse_texture(content);
 	else if (ft_strequ(tag, "<transparent>"))
-		;
+		obj->tsp_index = parse_tsp(content);
 	else
 		parse_error("Unknown attribute.", tag, content);
 }

@@ -32,6 +32,13 @@ void	loop(t_env *e)
 	}
 }
 
+void	quit(int k)
+{
+	(void)k;
+	close(g_cli_socket);
+	exit(EXIT_SUCCESS);
+}
+
 int		main(int argc, char **argv)
 {
 	t_env	*e;
@@ -44,6 +51,7 @@ int		main(int argc, char **argv)
 	g_port = ft_atoi(argv[2]);
 	g_address = argv[1];
 	connect_to_server();
+	signal(SIGTERM, quit);
 	e = (t_env *)ft_memalloc(sizeof(t_env));
 	init_globals();
 	init_skyboxes_tx_sources(e);

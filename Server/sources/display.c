@@ -20,6 +20,12 @@ void	copy_pixel_to_sdl(t_env *e, SDL_Surface *s, ssize_t x, ssize_t y)
 	if (!e->sum)
 		return ;
 	v_color = vector_scale(g_buffer[x * (int)F_HEIGHT + y], 1 / (double)e->sum);
+	if (e->filter == 1)
+		sepia(&v_color);
+	else if (e->filter == 2)
+		black_and_white(&v_color);
+	else if (e->filter == 3)
+		negative(&v_color);
 	c = 0xFF000000;
 	c |= ((int)v_color.x << 16) + ((int)v_color.y << 8) + (int)v_color.z;
 	*((int *)(s->pixels + y * s->pitch + x * s->format->BytesPerPixel)) = c;

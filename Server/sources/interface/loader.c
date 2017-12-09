@@ -19,7 +19,7 @@ void		loader_wait(t_env *e)
 	{
 		SDL_BlitSurface(e->s_slave, &(SDL_Rect){0 + (120 * e->slave), 0, 120,
 			190}, e->s_background, &(SDL_Rect){580, 490, 120, 190});
-		// e->slave++;
+		e->slave++;
 		// sleep(1);
 		if (e->slave == 13)
 			e->slave = 0;

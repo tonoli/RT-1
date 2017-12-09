@@ -16,6 +16,8 @@ void	init_master_socket(void)
 {
 	struct sockaddr_in	address;
 
+	signal(SIGTERM, quit);
+	signal(SIGQUIT, quit);
 	signal(SIGINT, quit);
 	signal(SIGPIPE, quit);
 	if ((g_srv_socket = socket(AF_INET, SOCK_STREAM, 0)) < 0)
@@ -66,6 +68,7 @@ void	write_global_buffer(int *local_buffer, t_env *e)
 	ssize_t	y;
 	int		color;
 
+	e->lock = 1;
 	y = -1;
 	while (++y < F_HEIGHT)
 	{
@@ -87,6 +90,7 @@ void	write_global_buffer(int *local_buffer, t_env *e)
 			}
 		}
 	}
+	e->lock = 0;
 }
 
 void	sync_buffer(int cs, t_env *e)
@@ -108,6 +112,7 @@ void	sync_buffer(int cs, t_env *e)
 	recv(cs, (void *)&live, sizeof(char), 0);
 	if (live == e->live)
 	{
+		while (e->lock);
 		write_global_buffer(local_buffer, e);
 		(e->live == 1 || e->reset) ? e->sum = 1 : e->sum++;
 		e->reset = 0;

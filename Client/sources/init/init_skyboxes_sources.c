@@ -32,31 +32,19 @@ void	init_skyboxes_tx_sources(t_env *e)
 {
 	int i;
 
-	g_mem.skybox_index = 0;
 	g_mem.skybox_total = 0;
 	i = 0;
 	while (g_skybox_sources[i].file_address)
 	{
-		// printf("index = %d\n", e->skybox_index);
 		if (!(g_mem.s_skybox[i] = IMG_Load(g_skybox_sources[i].file_address)))
 		{
-			printf("FATAL : Failed to load skybox texture %s\n",
+			dprintf(2, "FATAL : Failed to load skybox texture %s\n",
 					g_skybox_sources[i].file_address);
 			exit(EXIT_FAILURE);
-		}
-		// printf("g_skybox_sources[i].name = %s\n", g_skybox_sources[i].name);
-		// printf("e->skybox_selected = %s\n", e->skybox_selected);
-		if (g_skybox_sources[i].name == e->skybox_selected && e->skybox == 1)
-		{
-			e->skybox_index = i;
-		//  printf("index init if = %d\n", e->skybox_index);
 		}
 		i++;
 		g_mem.skybox_total++;
 	}
-	if (e->skybox != 1)
-	{
-		g_mem.current_skybox = NULL;
-		g_mem.skybox_index = -1;
-	}
+	g_mem.current_skybox = NULL;
+	g_mem.skybox_index = -1;
 }

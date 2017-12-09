@@ -192,6 +192,7 @@ typedef struct	s_env
 	t_vector		**color_array;
 	t_obj			camera;
 	t_obj			*objects;
+	int				lock;
 
 	//CALCULUS
 	t_obj			*avoid;
@@ -211,12 +212,14 @@ typedef struct	s_env
 	int				perm_y[256];
 	int				perm_z[256];
 
+	//Filter
+	int				filter;
+
 	//SKYDIFFUSE
 	double			vpos;
 
 	//SKYBOX TEXTURES
 	int				skybox;
-	char			*skybox_selected;
 	SDL_Surface		*s_skybox[12];
 	SDL_Surface		*current_skybox;
 	int				skybox_index;
@@ -236,6 +239,8 @@ typedef struct	s_env
 
 	//Clients Clustering
 	int				nb_cli;
+	int				local_compute;
+	pid_t			child;
 }				t_env;
 
 typedef struct		s_quartic

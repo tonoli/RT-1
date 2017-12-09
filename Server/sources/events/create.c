@@ -63,7 +63,7 @@ void	create_cylinder(t_env *e)
 	obj->color_backup = obj->color;
 	obj->marblecolor = (t_vector){randb(), randb(), randb()};
 	obj->ori.x = e->camera.ori.x - (5.0 * MOVE_SPEED * cos(PITCH) * sin(YAW));
-	obj->ori.y = e->camera.ori.y + (5.0 * MOVE_SPEED * sin(PITCH));
+	obj->ori.y = e->camera.ori.y - 15 + (5.0 * MOVE_SPEED * sin(PITCH));
 	obj->ori.z = e->camera.ori.z + (5.0 * MOVE_SPEED * cos(PITCH) * cos(YAW));
 	obj->dir.x = 0;
 	obj->dir.y = 1;

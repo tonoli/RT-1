@@ -19,7 +19,7 @@ t_obj	*new_torus(t_env *e)
 	obj = new_obj();
 	obj->type = OBJ_TORUS;
 	obj->small_r = 0.3;
-	obj->big_r = 10;
+	obj->big_r = 10 + (randb() * 3);
 	obj->ori.x = e->camera.ori.x - (5.0 * MOVE_SPEED * cos(PITCH) * sin(YAW));
 	obj->ori.y = e->camera.ori.y + (5.0 * MOVE_SPEED * sin(PITCH));
 	obj->ori.z = e->camera.ori.z + (5.0 * MOVE_SPEED * cos(PITCH) * cos(YAW));
