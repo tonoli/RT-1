@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 18:29:47 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/04 21:08:09 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/09 10:17:23 by nsampre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ static void		fill_cell(t_env *e, int i, int j, t_vector final_color)
 	int	b;
 
 	a = i - 1;
-	while (++a < i + e->increment && a < F_WIDTH)
+	while (++a < i + e->increment && a < (int)F_WIDTH)
 	{
 		b = j - 1;
-		while (++b < j + e->increment && b < F_HEIGHT)
+		while (++b < j + e->increment && b < (int)F_HEIGHT)
 		{
 			e->color_array[b][a].x += final_color.x;
 			e->color_array[b][a].y += final_color.y;
@@ -43,14 +43,15 @@ t_ray			cam_ray(t_env *e, double i, double j, double ratio)
 	yaw = e->camera.dir.x;
 	v.x = ((2.0 * ((i + 0.5) / F_WIDTH)) - 1.0) * ratio
 			* (tan((FOV / (double)2.0) * M_PI / (double)180.0));
-	v.y = ((1.0 - (2.0 * ((j + 0.5) / F_HEIGHT)))
-			* tan((FOV / (double)2.0) * M_PI / (double)180.0));
+	v.y = (1.0 - (2.0 * ((j + 0.5) / F_HEIGHT)))
+			* tan((FOV / (double)2.0) * M_PI / (double)180.0);
 	ray.ori = e->camera.ori;
 	ray.dir.x = -cos(pitch) * sin(yaw) + v.x * cos(yaw)
 				+ v.y * sin(pitch) * sin(yaw);
 	ray.dir.y = sin(pitch) + v.y * cos(pitch);
 	ray.dir.z = cos(pitch) * cos(yaw) + v.x * sin(yaw)
 				- v.y * sin(pitch) * cos(yaw);
+	ray.dir = vector_normalize(ray.dir);
 	return (ray);
 }
 
@@ -82,7 +83,7 @@ void			*compute_block(void *data)
 		j = 0;
 		while (j < F_HEIGHT)
 		{
-			ray = cam_ray(e, i, j, F_WIDTH / (double)F_HEIGHT);
+			ray = cam_ray(e, i, j, F_WIDTH / F_HEIGHT);
 			e->avoid = NULL;
 			e->vpos = ray.dir.y;
 			e->depth = 0;

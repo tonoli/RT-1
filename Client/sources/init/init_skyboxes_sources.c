@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 11:12:02 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/09 01:19:41 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/09 09:05:20 by nsampre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,15 @@ static const t_texture_sources g_skybox_sources[] =
 {
 	{"appartment", "./textures/skybox/appartment.jpg"},
 	{"bar", "./textures/skybox/bar.jpg"},
-	{"bedroom", "./textures/skybox/bedroom.jpg"},
-	{"clouds", "./textures/skybox/clouds.jpg"},
-	{"fractale", "./textures/skybox/fractale.jpg"},
-	{"snow", "./textures/skybox/snow.jpg"},
-	{"universe", "./textures/skybox/universe.png"},
-	{"aurore", "./textures/skybox/aurore.jpg"},
-	{"Notre-Dame", "./textures/skybox/Notre-Dame.jpg"},
-	{"mountain", "./textures/skybox/mountain.jpg"},
-	{"galaxy", "./textures/skybox/galaxy.jpg"},
+//	{"bedroom", "./textures/skybox/bedroom.jpg"},
+//	{"clouds", "./textures/skybox/clouds.jpg"},
+//	{"fractale", "./textures/skybox/fractale.jpg"},
+//	{"snow", "./textures/skybox/snow.jpg"},
+//	{"universe", "./textures/skybox/universe.png"},
+//	{"aurore", "./textures/skybox/aurore.jpg"},
+//	{"Notre-Dame", "./textures/skybox/Notre-Dame.jpg"},
+//	{"mountain", "./textures/skybox/mountain.jpg"},
+//	{"galaxy", "./textures/skybox/galaxy.jpg"},
 	{NULL, NULL}
 };
 
