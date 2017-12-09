@@ -238,5 +238,45 @@ typedef struct	s_env
 	int				nb_cli;
 }				t_env;
 
+typedef struct		s_quartic
+{
+	double  		coeffs[4];
+	double  		z;
+	double			u;
+	double			v;
+	double			sub;
+	double  		A;
+	double			B;
+	double			C;
+	double			D;
+	double 			sq_A;
+	double			p;
+	double			q;
+	double			r;
+	int    			i;
+	int				num;
+}					t_quartic;
 
-#endif /* rt_clu_structs_h */
+typedef struct		s_cubic
+{
+	int				i;
+	int				num;
+	double			sub;
+	double			A;
+	double			B;
+	double			C;
+	double			sq_A;
+	double			p;
+	double			q;
+	double			cb_p;
+	double			D;
+}					t_cubic;
+
+typedef struct		s_quadric
+{
+	double			p;
+	double			q;
+	double			D;
+}					t_quadric;
+
+#endif

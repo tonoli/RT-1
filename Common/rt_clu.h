@@ -78,6 +78,14 @@
 # define COLOR_TXT          (SDL_Color){60, 60, 60, 255}
 # define COLOR_W            (SDL_Color){255, 255, 255, 255}
 
+# define EQN_EPS			1e-9
+# define IsZero(x)			((x) > -EQN_EPS && (x) < EQN_EPS)
+
+# define cbrt_l
+# define cbtr_r(x)			((x) < 0.0 ? -pow((double)-(x), 1.0/3.0) : 0.0))
+# define cbrt(x)			((x) > 0.0 ? pow((double)(x), 1.0/3.0) : cbtr_r(x)
+
+
 
 /*
 **	PRIMITIVES
@@ -92,6 +100,10 @@ double		hit_cone(t_env *e, t_obj *obj, t_ray ray);
 double      hit_tri(t_env *e, t_obj *obj, t_ray ray);
 double	    hit_torus(t_env *e, t_obj *obj, t_ray ray);
 double		hit_square(t_env *e, t_obj *obj, t_ray ray);
+int			solve_quartic(double c[5], double s[4]);
+int			solve_cubic(double c[4], double s[3]);
+int			solve_quadric(double c[3], double s[2]);
+
 
 /*
 **	LIBVECTOR

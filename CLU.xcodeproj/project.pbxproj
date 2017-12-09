@@ -324,6 +324,22 @@
 		9A337FF41FDA8F3100DE3AD9 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A337FE01FDA8F3100DE3AD9 /* main.c */; };
 		9A337FF51FDA8F3100DE3AD9 /* miscelaneous.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A337FE11FDA8F3100DE3AD9 /* miscelaneous.c */; };
 		9A337FF61FDA8F3100DE3AD9 /* quit.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A337FE21FDA8F3100DE3AD9 /* quit.c */; };
+		9A4FBCB71FDBCC41000023EE /* square.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A4FBCB51FDBCC41000023EE /* square.c */; };
+		9A4FBCB81FDBCC41000023EE /* square.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A4FBCB51FDBCC41000023EE /* square.c */; };
+		9A4FBCB91FDBCC41000023EE /* triangle.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A4FBCB61FDBCC41000023EE /* triangle.c */; };
+		9A4FBCBA1FDBCC41000023EE /* triangle.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A4FBCB61FDBCC41000023EE /* triangle.c */; };
+		9A4FBCBD1FDBCC83000023EE /* input_top.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A4FBCBB1FDBCC83000023EE /* input_top.c */; };
+		9A4FBCBE1FDBCC83000023EE /* cube.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A4FBCBC1FDBCC83000023EE /* cube.c */; };
+		9A4FBCC31FDBCC95000023EE /* init_text_rect.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A4FBCBF1FDBCC95000023EE /* init_text_rect.c */; };
+		9A4FBCC41FDBCC95000023EE /* loader.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A4FBCC01FDBCC95000023EE /* loader.c */; };
+		9A4FBCC51FDBCC95000023EE /* selection.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A4FBCC11FDBCC95000023EE /* selection.c */; };
+		9A4FBCC61FDBCC95000023EE /* init_text.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A4FBCC21FDBCC95000023EE /* init_text.c */; };
+		9A4FBCC81FDBE6CC000023EE /* quartic.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A4FBCC71FDBE6CC000023EE /* quartic.c */; };
+		9A4FBCCA1FDBE6D6000023EE /* cubic.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A4FBCC91FDBE6D6000023EE /* cubic.c */; };
+		9A61CDA41FDBEAA100805C3D /* quartic.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A4FBCC71FDBE6CC000023EE /* quartic.c */; };
+		9A61CDA61FDBEAC700805C3D /* quadric.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A61CDA51FDBEAC700805C3D /* quadric.c */; };
+		9A61CDA71FDBEAD200805C3D /* cubic.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A4FBCC91FDBE6D6000023EE /* cubic.c */; };
+		9A61CDA81FDBEB7C00805C3D /* quadric.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A61CDA51FDBEAC700805C3D /* quadric.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -562,6 +578,17 @@
 		9A337FE01FDA8F3100DE3AD9 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		9A337FE11FDA8F3100DE3AD9 /* miscelaneous.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = miscelaneous.c; sourceTree = "<group>"; };
 		9A337FE21FDA8F3100DE3AD9 /* quit.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = quit.c; sourceTree = "<group>"; };
+		9A4FBCB51FDBCC41000023EE /* square.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = square.c; sourceTree = "<group>"; };
+		9A4FBCB61FDBCC41000023EE /* triangle.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = triangle.c; sourceTree = "<group>"; };
+		9A4FBCBB1FDBCC83000023EE /* input_top.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = input_top.c; sourceTree = "<group>"; };
+		9A4FBCBC1FDBCC83000023EE /* cube.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cube.c; sourceTree = "<group>"; };
+		9A4FBCBF1FDBCC95000023EE /* init_text_rect.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = init_text_rect.c; sourceTree = "<group>"; };
+		9A4FBCC01FDBCC95000023EE /* loader.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = loader.c; sourceTree = "<group>"; };
+		9A4FBCC11FDBCC95000023EE /* selection.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = selection.c; sourceTree = "<group>"; };
+		9A4FBCC21FDBCC95000023EE /* init_text.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = init_text.c; sourceTree = "<group>"; };
+		9A4FBCC71FDBE6CC000023EE /* quartic.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = quartic.c; sourceTree = "<group>"; };
+		9A4FBCC91FDBE6D6000023EE /* cubic.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = cubic.c; sourceTree = "<group>"; };
+		9A61CDA51FDBEAC700805C3D /* quadric.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = quadric.c; sourceTree = "<group>"; };
 		9AEAA04E1FDA8E4500A8A4A8 /* Server */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Server; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -857,9 +884,14 @@
 		9A337E1E1FDA8EB100DE3AD9 /* primitives */ = {
 			isa = PBXGroup;
 			children = (
+				9A4FBCB51FDBCC41000023EE /* square.c */,
+				9A4FBCB61FDBCC41000023EE /* triangle.c */,
 				9A337E1F1FDA8EB100DE3AD9 /* cones.c */,
 				9A337E201FDA8EB100DE3AD9 /* cylinders.c */,
 				9A337E211FDA8EB100DE3AD9 /* planes.c */,
+				9A4FBCC71FDBE6CC000023EE /* quartic.c */,
+				9A4FBCC91FDBE6D6000023EE /* cubic.c */,
+				9A61CDA51FDBEAC700805C3D /* quadric.c */,
 				9A337E221FDA8EB100DE3AD9 /* spheres.c */,
 				9A337E231FDA8EB100DE3AD9 /* torus.c */,
 			);
@@ -887,9 +919,9 @@
 		9A337F1A1FDA8EC500DE3AD9 /* sources */ = {
 			isa = PBXGroup;
 			children = (
+				9A337F4B1FDA8EC500DE3AD9 /* main.c */,
 				9A337F1E1FDA8EC500DE3AD9 /* connexion.c */,
 				9A337F1F1FDA8EC500DE3AD9 /* display.c */,
-				9A337F4B1FDA8EC500DE3AD9 /* main.c */,
 				9A337F4C1FDA8EC500DE3AD9 /* miscelaneous.c */,
 				9A337F4D1FDA8EC500DE3AD9 /* options.c */,
 				9A337F571FDA8EC500DE3AD9 /* quit.c */,
@@ -916,6 +948,8 @@
 			children = (
 				9A337F211FDA8EC500DE3AD9 /* atom.c */,
 				9A337F221FDA8EC500DE3AD9 /* camera_tools_one.c */,
+				9A4FBCBC1FDBCC83000023EE /* cube.c */,
+				9A4FBCBB1FDBCC83000023EE /* input_top.c */,
 				9A337F231FDA8EC500DE3AD9 /* camera_tools_two.c */,
 				9A337F241FDA8EC500DE3AD9 /* color.c */,
 				9A337F251FDA8EC500DE3AD9 /* create.c */,
@@ -963,6 +997,10 @@
 		9A337F451FDA8EC500DE3AD9 /* interface */ = {
 			isa = PBXGroup;
 			children = (
+				9A4FBCBF1FDBCC95000023EE /* init_text_rect.c */,
+				9A4FBCC21FDBCC95000023EE /* init_text.c */,
+				9A4FBCC01FDBCC95000023EE /* loader.c */,
+				9A4FBCC11FDBCC95000023EE /* selection.c */,
 				9A337F461FDA8EC500DE3AD9 /* create_rect.c */,
 				9A337F471FDA8EC500DE3AD9 /* draw_buttons.c */,
 				9A337F481FDA8EC500DE3AD9 /* init_buttons.c */,
@@ -1152,12 +1190,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A4FBCBA1FDBCC41000023EE /* triangle.c in Sources */,
 				9A337E371FDA8EB100DE3AD9 /* ft_pre_realloc_array.c in Sources */,
 				9A337FEB1FDA8F3100DE3AD9 /* connexion.c in Sources */,
 				9A337E471FDA8EB100DE3AD9 /* ft_isprint.c in Sources */,
 				9A337E491FDA8EB100DE3AD9 /* ft_tolower.c in Sources */,
 				9A337F071FDA8EB100DE3AD9 /* vec_normal.c in Sources */,
 				9A337F031FDA8EB100DE3AD9 /* ft_isdir.c in Sources */,
+				9A61CDA41FDBEAA100805C3D /* quartic.c in Sources */,
 				9A337E411FDA8EB100DE3AD9 /* ft_isascii.c in Sources */,
 				9A337E951FDA8EB100DE3AD9 /* parsing.c in Sources */,
 				9A337FF11FDA8F3100DE3AD9 /* init_object.c in Sources */,
@@ -1176,6 +1216,7 @@
 				9A337ED51FDA8EB100DE3AD9 /* ft_strjoin.c in Sources */,
 				9A337E991FDA8EB100DE3AD9 /* print_x.c in Sources */,
 				9A337EDB1FDA8EB100DE3AD9 /* ft_strlowcase.c in Sources */,
+				9A4FBCB81FDBCC41000023EE /* square.c in Sources */,
 				9A337F111FDA8EB100DE3AD9 /* planes.c in Sources */,
 				9A337EE31FDA8EB100DE3AD9 /* ft_strncmp.c in Sources */,
 				9A337EB71FDA8EB100DE3AD9 /* ft_is_whitestring.c in Sources */,
@@ -1184,6 +1225,7 @@
 				9A337F0D1FDA8EB100DE3AD9 /* cones.c in Sources */,
 				9A337E5F1FDA8EB100DE3AD9 /* ft_lstdelone.c in Sources */,
 				9A337E331FDA8EB100DE3AD9 /* ft_free_array.c in Sources */,
+				9A61CDA81FDBEB7C00805C3D /* quadric.c in Sources */,
 				9A337ED71FDA8EB100DE3AD9 /* ft_strlcat.c in Sources */,
 				9A337ED91FDA8EB100DE3AD9 /* ft_strlen.c in Sources */,
 				9A337EBB1FDA8EB100DE3AD9 /* ft_str_fits_int.c in Sources */,
@@ -1275,6 +1317,7 @@
 				9A337EF71FDA8EB100DE3AD9 /* ft_strsplit.c in Sources */,
 				9A337EEB1FDA8EB100DE3AD9 /* ft_strnew.c in Sources */,
 				9A337FEA1FDA8F3100DE3AD9 /* refraction.c in Sources */,
+				9A61CDA71FDBEAD200805C3D /* cubic.c in Sources */,
 				9A337E771FDA8EB100DE3AD9 /* ft_memdel.c in Sources */,
 				9A337EED1FDA8EB100DE3AD9 /* ft_strnjoin.c in Sources */,
 				9A337FE81FDA8F3100DE3AD9 /* marble.c in Sources */,
@@ -1338,7 +1381,9 @@
 				9A337E921FDA8EB100DE3AD9 /* ft_strlen.c in Sources */,
 				9A337F0C1FDA8EB100DE3AD9 /* cones.c in Sources */,
 				9A337F781FDA8EC500DE3AD9 /* switch_obj_tx.c in Sources */,
+				9A4FBCC51FDBCC95000023EE /* selection.c in Sources */,
 				9A337E5E1FDA8EB100DE3AD9 /* ft_lstdelone.c in Sources */,
+				9A4FBCC61FDBCC95000023EE /* init_text.c in Sources */,
 				9A337E321FDA8EB100DE3AD9 /* ft_free_array.c in Sources */,
 				9A337ED61FDA8EB100DE3AD9 /* ft_strlcat.c in Sources */,
 				9A337ED81FDA8EB100DE3AD9 /* ft_strlen.c in Sources */,
@@ -1356,6 +1401,7 @@
 				9A337EBC1FDA8EB100DE3AD9 /* ft_str_is_number.c in Sources */,
 				9A337F081FDA8EB100DE3AD9 /* vec_primary_algebra.c in Sources */,
 				9A337F851FDA8EC500DE3AD9 /* main.c in Sources */,
+				9A4FBCCA1FDBE6D6000023EE /* cubic.c in Sources */,
 				9A337E3E1FDA8EB100DE3AD9 /* ft_isalpha.c in Sources */,
 				9A337F831FDA8EC500DE3AD9 /* interface.c in Sources */,
 				9A337F661FDA8EC500DE3AD9 /* dna_base.c in Sources */,
@@ -1414,17 +1460,21 @@
 				9A337E341FDA8EB100DE3AD9 /* ft_post_realloc_array.c in Sources */,
 				9A337F6F1FDA8EC500DE3AD9 /* mode.c in Sources */,
 				9A337E881FDA8EB100DE3AD9 /* ft_putadr_pf.c in Sources */,
+				9A4FBCC31FDBCC95000023EE /* init_text_rect.c in Sources */,
+				9A4FBCBD1FDBCC83000023EE /* input_top.c in Sources */,
 				9A337E8E1FDA8EB100DE3AD9 /* ft_putwchar.c in Sources */,
 				9A337E5A1FDA8EB100DE3AD9 /* ft_lstadd.c in Sources */,
 				9A337E4E1FDA8EB100DE3AD9 /* ft_atoi.c in Sources */,
 				9A337F5A1FDA8EC500DE3AD9 /* ray.c in Sources */,
 				9A337F7F1FDA8EC500DE3AD9 /* init_sdl.c in Sources */,
+				9A4FBCBE1FDBCC83000023EE /* cube.c in Sources */,
 				9A337E2C1FDA8EB100DE3AD9 /* Makefile in Sources */,
 				9A337EC01FDA8EB100DE3AD9 /* ft_strcat.c in Sources */,
 				9A337F5F1FDA8EC500DE3AD9 /* camera_tools_two.c in Sources */,
 				9A337F721FDA8EC500DE3AD9 /* print_scene_one.c in Sources */,
 				9A337E901FDA8EB100DE3AD9 /* ft_str_pf.c in Sources */,
 				9A337ECC1FDA8EB100DE3AD9 /* ft_strdup.c in Sources */,
+				9A4FBCB91FDBCC41000023EE /* triangle.c in Sources */,
 				9A337EDE1FDA8EB100DE3AD9 /* ft_strmapi.c in Sources */,
 				9A337EA41FDA8EB100DE3AD9 /* ft_putendl.c in Sources */,
 				9A337F6A1FDA8EC500DE3AD9 /* keyboard.c in Sources */,
@@ -1440,6 +1490,8 @@
 				9A337F871FDA8EC500DE3AD9 /* options.c in Sources */,
 				9A337E6C1FDA8EB100DE3AD9 /* ft_memalloc.c in Sources */,
 				9A337F7B1FDA8EC500DE3AD9 /* type.c in Sources */,
+				9A61CDA61FDBEAC700805C3D /* quadric.c in Sources */,
+				9A4FBCC41FDBCC95000023EE /* loader.c in Sources */,
 				9A337E9A1FDA8EB100DE3AD9 /* read_spec.c in Sources */,
 				9A337E381FDA8EB100DE3AD9 /* ft_print_array.c in Sources */,
 				9A337EC81FDA8EB100DE3AD9 /* ft_strcpy.c in Sources */,
@@ -1448,6 +1500,7 @@
 				9A337F001FDA8EB100DE3AD9 /* ft_trim_quotestr.c in Sources */,
 				9A337F8F1FDA8EC500DE3AD9 /* tools.c in Sources */,
 				9A337EF61FDA8EB100DE3AD9 /* ft_strsplit.c in Sources */,
+				9A4FBCB71FDBCC41000023EE /* square.c in Sources */,
 				9A337F7C1FDA8EC500DE3AD9 /* init_env.c in Sources */,
 				9A337F7E1FDA8EC500DE3AD9 /* init_perlin.c in Sources */,
 				9A337F811FDA8EC500DE3AD9 /* draw_buttons.c in Sources */,
@@ -1464,6 +1517,7 @@
 				9A337EB41FDA8EB100DE3AD9 /* ft_is_quotestring.c in Sources */,
 				9A337EE61FDA8EB100DE3AD9 /* ft_strndup.c in Sources */,
 				9A337F891FDA8EC500DE3AD9 /* add_obj.c in Sources */,
+				9A4FBCC81FDBE6CC000023EE /* quartic.c in Sources */,
 				9A337F141FDA8EB100DE3AD9 /* torus.c in Sources */,
 				9A337F601FDA8EC500DE3AD9 /* color.c in Sources */,
 				9A337F8B1FDA8EC500DE3AD9 /* input.c in Sources */,
