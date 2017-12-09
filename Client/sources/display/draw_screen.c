@@ -67,6 +67,7 @@ void		draw_screen(t_env *e)
 		if (pthread_create(&tid[i], NULL, (void *)compute_block, copy) != 0)
 		{
 			printf("FATAL ERROR : Failed to create thread\n");
+//			close(g_cli_socket);
 			exit(EXIT_FAILURE);
 		}
 	}

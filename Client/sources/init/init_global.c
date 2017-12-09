@@ -12,6 +12,17 @@
 
 #include "client.h"
 
+void	start_win(void)
+{
+	if (SDL_Init(SDL_INIT_VIDEO) == -1)
+		g_win.activate = 0;
+	if (!(g_win.win = SDL_CreateWindow("RayTracer Client Frame",
+		SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, F_WIDTH, F_HEIGHT, 0)))
+		g_win.activate = 0;
+	g_win.s_background = SDL_GetWindowSurface(g_win.win);
+	SDL_PollEvent(&g_win.event);
+}
+
 void	init_globals(void)
 {
 	int				i;
@@ -28,6 +39,8 @@ void	init_globals(void)
 											sizeof(t_vector) * (int)F_WIDTH);
 		g_frame_array[i] = (int *)ft_memalloc(sizeof(int) * (int)F_WIDTH);
 	}
+	if (g_win.activate)
+		start_win();
 	gettimeofday(&t, NULL);
 	srand(t.tv_usec);
 }

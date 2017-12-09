@@ -37,6 +37,8 @@ static char	*get_scene(int argc, char **argv)
 	{
 		if (ft_strequ("-p", argv[i]) && ft_str_is_number(argv[i + 1]))
 			i += 2;
+		else if (ft_strequ("--not-local", argv[i]))
+			i++;
 		else
 			return (argv[i]);
 	}
@@ -45,7 +47,7 @@ static char	*get_scene(int argc, char **argv)
 
 static void	get_local_compute(t_env *e, int argc, char **argv)
 {
-	int i;
+	int	i;
 
 	i = 1;
 	while (i < argc)

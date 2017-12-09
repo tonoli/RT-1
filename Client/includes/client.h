@@ -25,6 +25,7 @@ extern int		*g_buffer;
 extern int		**g_frame_array;
 extern t_vector	**g_color_array;
 extern t_mem	g_mem;
+extern t_window	g_win;
 
 # endif
 

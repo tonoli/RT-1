@@ -284,4 +284,12 @@ typedef struct		s_quadric
 	double			D;
 }					t_quadric;
 
+typedef struct		s_window
+{
+	SDL_Event     	event;
+	int				activate;
+	SDL_Window		*win;
+	SDL_Surface		*s_background;
+}					t_window;
+
 #endif
