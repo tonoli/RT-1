@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 02:58:15 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/09 01:12:17 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/09 17:32:44 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -168,6 +168,11 @@ void		change_light(t_env *e, int mode);
 void		decrease_limit(t_env *e);
 void		increase_limit(t_env *e);
 
+// Select marble or damier1
+void        damier_marble_r(t_env *e, int mode);
+void        damier_marble_g(t_env *e, int mode);
+void        damier_marble_b(t_env *e, int mode);
+
 //Marble color
 void		marble_color_r(t_env *e, int mode);
 void		marble_color_g(t_env *e, int mode);
@@ -201,6 +206,7 @@ void	    print_marble(t_obj *obj);
 //void		save_scene(t_env *e);
 
 //Radius Angle
+void	    change_radius_angle(t_env *e, int mode);
 void		change_radius(t_env *e, int mode);
 void		change_angle(t_env *e, int mode);
 
@@ -222,7 +228,10 @@ void		switch_skybox(t_env *e);
 void		switch_tsp_tx(t_env *e);
 
 //Type
-void		change_type(t_env *e);
+void		change_type(t_env *e, int mode);
+
+// change_values
+void        change_inputs(t_env *e);
 
 /*
 **	MISCELANEOUS

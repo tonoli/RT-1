@@ -6,7 +6,7 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/07 14:34:06 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/12/09 11:47:28 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/09 17:35:59 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,6 @@ void        center_text(t_env *e, char *str,
     SDL_FreeSurface(e->s_tmp);
 }
 
-
-
 void        write_top_text(t_env *e)
 {
     int i;
@@ -45,7 +43,10 @@ void        write_top_text(t_env *e)
     sprintf(e->txt[1], " %.*f ", 2, e->rot_speed);
     sprintf(e->txt[2], " %.*f ", 1, e->move_speed);
     while (++i < 3)
+    {
+        create_rect(e->s_background, e->tt_rect[i], 0x3c3c3c);
         center_text(e, e->txt[i], e->tt_rect[i], COLOR_TXT);
+    }
 }
 
 char        *name_obj(int i)
@@ -97,6 +98,7 @@ void        write_right_text_top(t_env *e)
         sprintf(e->txt[8], " %.0f ", e->selected->radius);
     while (++i < 6)
     {
+        create_rect(e->s_background, e->it_rect[i], 0x2b2b2b);
         right_text(e, e->txt[i + 3], e->it_rect[i], COLOR_BG);
     }
 }
@@ -153,5 +155,12 @@ void        write_right_text(t_env *e)
     else
         select_marble_damier(e, 2);
     while (++i < 18)
+    {
+        if (i == e->it_actif)
+            create_b_rect(e->s_background, e->it_rect[e->it_actif], 0x3c3c3c, 0x5bc4e6);
+        else
+            create_rect(e->s_background, e->it_rect[i], 0x3c3c3c);
         center_text(e, e->txt[i + 3], e->it_rect[i], COLOR_TXT);
+    }
+
 }
