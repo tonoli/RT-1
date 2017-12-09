@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/04 23:05:01 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/09 01:22:43 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/09 15:49:16 by tdelmas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -123,8 +123,7 @@ static void (*g_top_btn[])(t_env *e) =
 	delete_object,
 	switch_skybox,
 	switch_filter,
-	//save_scene,
-	void_unused,
+	save_scene,
 	set_render_edition_mode,
 };
 

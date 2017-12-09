@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 02:58:15 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/09 01:12:17 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/09 15:49:56 by tdelmas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -198,7 +198,7 @@ void		print_basics_obj(t_obj *obj, t_vector o, t_vector d);
 void	    print_marble(t_obj *obj);
 
 //Save
-//void		save_scene(t_env *e);
+void		save_scene(t_env *e);
 
 //Radius Angle
 void		change_radius(t_env *e, int mode);
