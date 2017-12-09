@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 04:08:09 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/07 11:50:47 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/09 00:28:43 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ void		init_sdl_env(t_env *e)
 	e->loader = 1;
 	e->render = 0;
 	e->font = (TTF_Font **)ft_memalloc(sizeof(TTF_Font *) * 3);
+	e->slave = 0;
 }
 
 SDL_Surface	*load_img(char *addr)
@@ -69,8 +70,9 @@ void		init_sdl_interface(t_env *e)
 	SDL_SetWindowIcon(e->win, e->w_icon);
 	e->s_loader = load_img("./assets/images/loader.png");
 	e->s_ui = load_img("./assets/images/ui.png");
-	e->font[0] = load_ttf("./assets/font/RobotoCondensed-Light.ttf", 15);
-	e->font[1] = load_ttf("./assets/font/RobotoCondensed-Regular.ttf", 15);
+	e->s_slave = load_img("./assets/images/slaves.png");
+	e->font[0] = load_ttf("./assets/font/RobotoCondensed-Regular.ttf", 20);
+	e->font[1] = load_ttf("./assets/font/RobotoCondensed-Regular.ttf", 20);
 	e->font[2] = load_ttf("./assets/font/RobotoCondensed-Bold.ttf", 12);
 	e->s_background = SDL_GetWindowSurface(e->win);
 	e->s_raytracer = SDL_CreateRGBSurface(0, F_WIDTH, F_HEIGHT, 32,

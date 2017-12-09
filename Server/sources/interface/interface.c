@@ -6,66 +6,62 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 17:23:36 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/12/08 13:11:27 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/09 01:02:29 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "server.h"
 
+void		start_render(t_env *e)
+{
+	init_rects(e);
+	init_txt_rects(e);
+	SDL_BlitSurface(e->s_ui, 		 &(SDL_Rect){0, 0, e->win_w, e->win_h},
+					e->s_background, &(SDL_Rect){0, 0, e->win_w, e->win_h});
+	create_rect(e->s_raytracer, (SDL_Rect){0, 0, F_WIDTH, F_HEIGHT}, 0xFF2b2b2b);
+	SDL_BlitSurface(e->s_raytracer,  &(SDL_Rect){0, 0, F_WIDTH, F_HEIGHT},
+					e->s_background, &(SDL_Rect){82, 72, F_WIDTH, F_HEIGHT});
+	create_rect(e->s_background,
+				(SDL_Rect){1126, 80, 160, 530}, 0xFF2b2b2b);
+	write_top_text(e);
+	e->loader = 0;
+	e->render = 1;
+}
+
+void		where_is_mickey(t_env *e)
+{
+	is_mouse_in_rect_top_input(e);
+	is_mouse_in_rect_left(e);
+	is_mouse_in_rect_top(e);
+	if (e->event.type == SDL_MOUSEBUTTONDOWN)
+		is_mouse_in_render(e);
+}
+
 void	handle_events(t_env *e)
 {
+	// EXIT
 	if (e->event.window.event == SDL_WINDOWEVENT_CLOSE ||
 		(e->event.type == SDL_KEYDOWN && e->event.key.keysym.sym == SDLK_ESCAPE))
-	{
-		//Stop, free and quit
 		e->run = 0;
-	}
 
+	// KEYBOARD
 	if (e->event.type == SDL_KEYDOWN && e->event.key.keysym.sym != SDLK_ESCAPE)
 	{
-		if (e->loader == 1)
-		{
-			//Place UI on main window
-			SDL_BlitSurface(e->s_ui, 		 &(SDL_Rect){0, 0, e->win_w, e->win_h},
-							e->s_background, &(SDL_Rect){0, 0, e->win_w, e->win_h});
-			//Draw shit on render space
-			create_rect(e->s_raytracer, (SDL_Rect){0, 0, F_WIDTH, F_HEIGHT}, 0xFF2b2b2b);
-			SDL_BlitSurface(e->s_raytracer,  &(SDL_Rect){0, 0, F_WIDTH, F_HEIGHT},
-							e->s_background, &(SDL_Rect){82, 72, F_WIDTH, F_HEIGHT});
-			//Init interface buttons
-			init_rects(e);
-			init_txt_rects(e);
-
-			//Write text
-			write_top_text(e);
-
-			//Loader step is done, go render shit nigga
-			e->loader = 0;
-			e->render = 1;
-		}
+		if (e->loader == 1 && e->nb_cli > 0)
+			start_render(e);
 		else if (e->render == 1 && e->event.key.keysym.sym != SDLK_f)
-		{
-			//f is a reserved simulated key
-			//if user calls f manually, it messes up e->sum
 			keyboard(e->event.key.keysym.sym, e);
-		}
 	}
-	if (e->event.type == SDL_MOUSEMOTION || e->event.type == SDL_MOUSEBUTTONDOWN)
+
+	// MOUSE
+	if ((e->event.type == SDL_MOUSEMOTION ||
+		e->event.type == SDL_MOUSEBUTTONDOWN) && e->render == 1)
 	{
 		e->mouse.x = e->event.motion.x;
 		e->mouse.y = e->event.motion.y;
-//		printf("MOUSE x = %d\n", e->mouse.x);
-//		printf("MOUSE y = %d\n", e->mouse.y);
-		is_mouse_in_rect_top_input(e);
-		is_mouse_in_rect_left(e);
-		is_mouse_in_rect_top(e);
-		is_mouse_in_it_right(e);
-		is_mouse_in_rect_right(e);
-		if (e->event.type == SDL_MOUSEBUTTONDOWN)
-			is_mouse_in_render(e);
+		draw_selected(e);
+		where_is_mickey(e);
 	}
-	draw_selected(e);
-	//create_txt_rect(e);
 }
 
 int		free_elements(t_env *e)
@@ -87,13 +83,13 @@ int		global_loop(t_env *e)
 	//Display loader
 	SDL_BlitSurface(e->s_loader,     &(SDL_Rect){0, 0, e->win_w, e->win_h},
 					e->s_background, &(SDL_Rect){0, 0, e->win_w, e->win_h});
-
 	//While loop, two states :
 	// - Loader
 	// - Render
 	while (e->run)
 	{
 		SDL_UpdateWindowSurface(e->win);
+		loader_wait(e);
 		if (SDL_PollEvent(&e->event))
 			handle_events(e);
 	}

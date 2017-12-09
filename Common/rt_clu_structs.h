@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 23:19:59 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/08 20:25:36 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/09 00:39:59 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,7 +129,7 @@ typedef struct	s_env
 	SDL_Surface		*s_t2;
 	SDL_Surface		*s_ui;
 	SDL_Surface		*s_loader;
-	SDL_Surface		*s_versus;
+	SDL_Surface		*s_slave;
 	SDL_Surface		*s_title;
 	SDL_Surface		*s_raytracer;
 	TTF_Font		**font;
@@ -150,9 +150,10 @@ typedef struct	s_env
 	int		        win_h;
 	int		        x;
 	int		        y;
+	int				slave;
 
 	//Text
-	char			txt[21][10000];
+	char			txt[24][10000];
 
 	//Segment
 	char			loader;
