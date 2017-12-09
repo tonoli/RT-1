@@ -6,7 +6,7 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 12:29:58 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/12/07 14:23:54 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/08 21:02:42 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,15 +85,6 @@ static void init_i_rect(t_env *e)
 	}
 }
 
-static void init_it_rect(t_env *e)
-{
-	e->it_rect[1].x = 1137;
-	e->it_rect[1].y = 370;
-	e->it_rect[1].w = 43;
-	e->it_rect[1].h = 21;
-}
-
-
 void init_rects(t_env *e)
 {
 	init_b_rect(e);
@@ -101,4 +92,5 @@ void init_rects(t_env *e)
 	init_i_rect(e);
 	init_topin_rect(e);
 	e->help_rect = (SDL_Rect){707, 294, 350, 400};
+	e->credit_rect = (SDL_Rect){1108, 665, 195, 57};
 }

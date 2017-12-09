@@ -6,7 +6,7 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 22:44:35 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/12/06 00:04:07 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/08 18:05:33 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,6 @@ void	create_b_rect(SDL_Surface *surf, SDL_Rect rect, int bg, int bo)
 		}
 	}
 }
-
 
 void	create_border(t_env *e,int active)
 {

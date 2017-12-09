@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/04 23:05:01 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/08 17:11:12 by tdelmas          ###   ########.fr       */
+/*   Updated: 2017/12/09 01:22:43 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ void		is_mouse_in_rect_right(t_env *e)
 				draw_input(e, e->i_actif, 0);
 				e->i_actif = btn_i;
 				draw_input(e, btn_i, state);
-				set_live_edition_mode(e);
+				//set_live_edition_mode(e);
 			}
 		}
 		else if (e->event.type == SDL_MOUSEBUTTONDOWN)
@@ -111,7 +111,7 @@ void		is_mouse_in_it_right(t_env *e)
 
 void void_unused(t_env *e)
 {
-	
+
 }
 
 static void (*g_top_btn[])(t_env *e) =
@@ -141,11 +141,19 @@ void		is_mouse_in_rect_top(t_env *e)
 		draw_button_top(e, btn_i, state);
 		if (state == CLICK)
 		{
-			set_live_edition_mode(e);
+			if (btn_i != 7)
+				set_live_edition_mode(e);
 			g_top_btn[btn_i](e);
 		}
 	}
 }
+
+static void (*g_top_input[])(t_env *e, int mode) =
+{
+	change_rebond,
+	change_rot_speed,
+	change_move_speed,
+};
 
 void		is_mouse_in_rect_top_input(t_env *e)
 {
@@ -163,7 +171,7 @@ void		is_mouse_in_rect_top_input(t_env *e)
 				draw_input_top(e, e->topin_actif, 0);
 				e->topin_actif = btn_i;
 				draw_input_top(e, btn_i, state);
-				set_live_edition_mode(e);
+				g_top_input[btn_i](e, 1);
 			}
 		}
 		else if (e->event.type == SDL_MOUSEBUTTONDOWN)

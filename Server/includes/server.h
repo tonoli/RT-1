@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 02:58:15 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/08 14:27:05 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/09 01:12:17 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ void		draw_screen(t_env *e);
 **	INTERFACE
 */
 
+void		loader_wait(t_env *e);
 void		start_interface(t_env *e);
 void		init_sdl_modules(t_env *e);
 void		init_sdl_env(t_env *e);
@@ -93,6 +94,12 @@ void		write_right_text(t_env *e);
 /*
 **	EVENT
 */
+
+// Top input_top
+
+void        change_rebond(t_env *e, int mode);
+void        change_rot_speed(t_env *e, int mode);
+void        change_move_speed(t_env *e, int mode);
 
 //Atom
 void		atom(t_env *e);
