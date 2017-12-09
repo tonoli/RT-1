@@ -12,6 +12,16 @@
 
 #include "server.h"
 
+static int	count(const t_texture_sources t[])
+{
+	int	i;
+
+	i = 0;
+	while (t[i].name)
+		i++;
+	return (i);
+}
+
 void	init_render_env(t_env *e)
 {
 	e->avoid = NULL;
@@ -29,13 +39,8 @@ void	init_render_env(t_env *e)
 	e->threads = 32;
 	e->local_compute = 1;
 	e->magic = MAGIC;
-
-//	e->skybox_total = TOTAL_SKYBOX;
-//	e->obj_tx_total = TOTAL_TX;
-//	e->tsp_tx_total = TOTAL_TSP;
-
 	e->skybox_index = -1;
-	e->skybox_total = 2;
-	e->obj_tx_total = 4;
-	e->tsp_tx_total = 2;
+	e->skybox_total = count(g_skybox_sources);
+	e->obj_tx_total = count(g_color_sources);
+	e->tsp_tx_total = count(g_tsp_sources);
 }

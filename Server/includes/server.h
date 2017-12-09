@@ -299,6 +299,7 @@ double		parse_double(char *content);
 void   		parse_skybox(t_env *e, char *content);
 int			parse_texture(char *content);
 int			parse_tsp(char *content);
+int			parse_filter(char *content);
 
 
 #endif

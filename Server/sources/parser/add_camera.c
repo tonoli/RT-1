@@ -20,6 +20,8 @@ void	add_camera_content(t_env *e, char *tag, char *content)
 		e->camera.dir = parse_direction(content);
 	else if (ft_strequ(tag, "<skybox>"))
 		parse_skybox(e, content);
+	else if (ft_strequ(tag, "<filter>"))
+		e->filter = parse_filter(content);
 	else
 		parse_error("Unknown attribute.", tag, content);
 }

@@ -51,20 +51,22 @@ void        write_top_text(t_env *e)
 
 char        *name_obj(int i)
 {
-    char *ret;
+    char *ret = NULL;
 
-    if (i == 1)
+    if (i == OBJ_SPHERE)
         ret = ft_strdup("SPHERE");
-    else if (i == 2)
+    else if (i == OBJ_PLANE)
         ret = ft_strdup("PLANE");
-    else if (i == 3)
+    else if (i == OBJ_CYL)
         ret = ft_strdup("CYLINDRE");
-    else if (i == 4)
+    else if (i == OBJ_CONE)
         ret = ft_strdup("CONE");
-    else if (i == 5)
+    else if (i == OBJ_TORUS)
         ret = ft_strdup("TORUS");
-    else if (i == 6)
+    else if (i == OBJ_TRI)
         ret = ft_strdup("TRIANGLE");
+	else if (i == OBJ_SQUARE)
+		ret = ft_strdup("SQUARE");
     return (ret);
 }
 

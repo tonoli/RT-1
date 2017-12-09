@@ -345,6 +345,8 @@
 		9A61CDAE1FDC603600805C3D /* change_values.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A61CDAB1FDC603600805C3D /* change_values.c */; };
 		9A61CDB01FDC604700805C3D /* damier_marble.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A61CDAF1FDC604700805C3D /* damier_marble.c */; };
 		9A61CDB51FDC728700805C3D /* save_scene.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A61CDB41FDC728700805C3D /* save_scene.c */; };
+		9A61CDB71FDC765700805C3D /* mapping.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A61CDB61FDC765600805C3D /* mapping.c */; };
+		9A61CDB81FDC765700805C3D /* mapping.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A61CDB61FDC765600805C3D /* mapping.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -599,6 +601,7 @@
 		9A61CDAB1FDC603600805C3D /* change_values.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = change_values.c; sourceTree = "<group>"; };
 		9A61CDAF1FDC604700805C3D /* damier_marble.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = damier_marble.c; sourceTree = "<group>"; };
 		9A61CDB41FDC728700805C3D /* save_scene.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = save_scene.c; sourceTree = "<group>"; };
+		9A61CDB61FDC765600805C3D /* mapping.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mapping.c; path = mapping/mapping.c; sourceTree = "<group>"; };
 		9AEAA04E1FDA8E4500A8A4A8 /* Server */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Server; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -629,8 +632,9 @@
 		9A337D8E1FDA8EB100DE3AD9 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				9A337E251FDA8EB100DE3AD9 /* rt_clu_structs.h */,
+				9A61CDB61FDC765600805C3D /* mapping.c */,
 				9A337E241FDA8EB100DE3AD9 /* rt_clu.h */,
+				9A337E251FDA8EB100DE3AD9 /* rt_clu_structs.h */,
 				9A337D8F1FDA8EB100DE3AD9 /* frameworks */,
 				9A337D931FDA8EB100DE3AD9 /* libft */,
 				9A337E191FDA8EB100DE3AD9 /* libvector */,
@@ -958,14 +962,12 @@
 			children = (
 				9A337F211FDA8EC500DE3AD9 /* atom.c */,
 				9A337F221FDA8EC500DE3AD9 /* camera_tools_one.c */,
-				9A61CDB41FDC728700805C3D /* save_scene.c */,
-				9A61CDAF1FDC604700805C3D /* damier_marble.c */,
-				9A4FBCBC1FDBCC83000023EE /* cube.c */,
-				9A4FBCBB1FDBCC83000023EE /* input_top.c */,
 				9A337F231FDA8EC500DE3AD9 /* camera_tools_two.c */,
 				9A337F241FDA8EC500DE3AD9 /* color.c */,
 				9A337F251FDA8EC500DE3AD9 /* create.c */,
 				9A337F261FDA8EC500DE3AD9 /* cube_with_spheres.c */,
+				9A4FBCBC1FDBCC83000023EE /* cube.c */,
+				9A61CDAF1FDC604700805C3D /* damier_marble.c */,
 				9A337F271FDA8EC500DE3AD9 /* damier_one.c */,
 				9A337F281FDA8EC500DE3AD9 /* damier_two.c */,
 				9A337F291FDA8EC500DE3AD9 /* delete_obj.c */,
@@ -973,6 +975,7 @@
 				9A337F2B1FDA8EC500DE3AD9 /* dna_calc.c */,
 				9A337F2C1FDA8EC500DE3AD9 /* filter.c */,
 				9A337F2D1FDA8EC500DE3AD9 /* fuzz.c */,
+				9A4FBCBB1FDBCC83000023EE /* input_top.c */,
 				9A337F2E1FDA8EC500DE3AD9 /* keyboard.c */,
 				9A337F2F1FDA8EC500DE3AD9 /* light.c */,
 				9A337F301FDA8EC500DE3AD9 /* limit.c */,
@@ -986,6 +989,7 @@
 				9A337F381FDA8EC500DE3AD9 /* radius.c */,
 				9A337F391FDA8EC500DE3AD9 /* refraction_reflection.c */,
 				9A337F3A1FDA8EC500DE3AD9 /* rotate_object.c */,
+				9A61CDB41FDC728700805C3D /* save_scene.c */,
 				9A337F3B1FDA8EC500DE3AD9 /* select_object.c */,
 				9A337F3C1FDA8EC500DE3AD9 /* switch_obj_tx.c */,
 				9A337F3D1FDA8EC500DE3AD9 /* switch_skybox.c */,
@@ -1294,6 +1298,7 @@
 				9A337E451FDA8EB100DE3AD9 /* ft_isprime.c in Sources */,
 				9A337EA31FDA8EB100DE3AD9 /* ft_putchar_fd.c in Sources */,
 				9A337EA71FDA8EB100DE3AD9 /* ft_putendl_fd.c in Sources */,
+				9A61CDB81FDC765700805C3D /* mapping.c in Sources */,
 				9A337E6B1FDA8EB100DE3AD9 /* ft_bzero.c in Sources */,
 				9A337FE61FDA8F3100DE3AD9 /* live.c in Sources */,
 				9A337FE31FDA8F3100DE3AD9 /* Makefile in Sources */,
@@ -1367,6 +1372,7 @@
 				9A337EF21FDA8EB100DE3AD9 /* ft_strreplace.c in Sources */,
 				9A337E641FDA8EB100DE3AD9 /* ft_lstnew.c in Sources */,
 				9A337F691FDA8EC500DE3AD9 /* fuzz.c in Sources */,
+				9A61CDB71FDC765700805C3D /* mapping.c in Sources */,
 				9A337F741FDA8EC500DE3AD9 /* radius.c in Sources */,
 				9A337EFA1FDA8EB100DE3AD9 /* ft_strsub.c in Sources */,
 				9A337F881FDA8EC500DE3AD9 /* add_camera.c in Sources */,

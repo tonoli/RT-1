@@ -22,11 +22,11 @@ typedef struct	s_mem
 	int				skybox_total;
 
 	//OBJ COLOR TEXTURES
-	SDL_Surface		*s_obj_tx[12];
+	SDL_Surface		*s_obj_tx[30];
 	int				obj_tx_total;
 
 	//TRANSPARENCY TEXTURES
-	SDL_Surface		*s_tsp_tx[12];
+	SDL_Surface		*s_tsp_tx[3];
 	int				tsp_tx_total;
 }				t_mem;
 
@@ -226,11 +226,11 @@ typedef struct	s_env
 	int				skybox_total;
 
 	//OBJECTS TEXTURES
-	SDL_Surface		*s_obj_tx[12];
+	SDL_Surface		*s_obj_tx[30];
 	int				obj_tx_total;
 
 	//TRANSPARENCY TEXTURES
-	SDL_Surface		*s_tsp_tx[12];
+	SDL_Surface		*s_tsp_tx[3];
 	int				tsp_tx_total;
 
 	//Transaction checkup

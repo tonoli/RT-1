@@ -27,5 +27,9 @@ double		get_distance(t_env *e, t_obj *obj, t_ray ray)
 		t = hit_cone(e, obj, ray);
 	else if (obj->type == OBJ_TORUS)
 		t = hit_torus(e, obj, ray);
+	else if (obj->type == OBJ_TRI)
+		t = hit_tri(e, obj, ray);
+	else if (obj->type == OBJ_SQUARE)
+		t = hit_square(e, obj, ray);
 	return (t);
 }
