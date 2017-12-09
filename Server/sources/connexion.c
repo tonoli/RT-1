@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 23:34:12 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/01 13:27:50 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/09 00:04:27 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ int		connect_to_client(void)
 	cslen = sizeof(csin);
 	if ((cs = accept(g_srv_socket, (struct sockaddr *)&csin, &cslen)) < 0)
 		fatal_quit("accept");
+	else
+		g_e->nb_cli++;
 	ft_printf("Connected to client\n");
 	return (cs);
 }

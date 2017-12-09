@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_skyboxes_sources.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmartins <mmartins@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 11:12:02 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/05 20:53:14 by mmartins         ###   ########.fr       */
+/*   Updated: 2017/12/09 01:19:41 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static const t_texture_sources g_skybox_sources[] =
 	{"snow", "./textures/skybox/snow.jpg"},
 	{"universe", "./textures/skybox/universe.png"},
 	{"aurore", "./textures/skybox/aurore.jpg"},
-	{"Notre-Dame", "./textures/skybox/Notre-Dame.jpg"},	
+	{"Notre-Dame", "./textures/skybox/Notre-Dame.jpg"},
 	{"mountain", "./textures/skybox/mountain.jpg"},
 	{"galaxy", "./textures/skybox/galaxy.jpg"},
 	{NULL, NULL}
@@ -37,7 +37,7 @@ void	init_skyboxes_tx_sources(t_env *e)
 	i = 0;
 	while (g_skybox_sources[i].file_address)
 	{
-		// printf("index = %d\n", e->skybox_index);		
+		// printf("index = %d\n", e->skybox_index);
 		if (!(g_mem.s_skybox[i] = IMG_Load(g_skybox_sources[i].file_address)))
 		{
 			printf("FATAL : Failed to load skybox texture %s\n",
@@ -46,11 +46,11 @@ void	init_skyboxes_tx_sources(t_env *e)
 		}
 		// printf("g_skybox_sources[i].name = %s\n", g_skybox_sources[i].name);
 		// printf("e->skybox_selected = %s\n", e->skybox_selected);
-		// if (g_skybox_sources[i].name == e->skybox_selected && e->skybox == 1)
-		// {
-		// 	e->skybox_index = i;
+		if (g_skybox_sources[i].name == e->skybox_selected && e->skybox == 1)
+		{
+			e->skybox_index = i;
 		//  printf("index init if = %d\n", e->skybox_index);
-		// }
+		}
 		i++;
 		g_mem.skybox_total++;
 	}
