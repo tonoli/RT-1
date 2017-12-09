@@ -6,7 +6,7 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/07 14:34:06 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/12/09 20:36:34 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/10 00:01:04 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,18 +53,21 @@ char        *name_obj(int i)
 {
     char *ret;
 
-    if (i == 1)
-        ret = ft_strdup("  SPHERE");
-    else if (i == 2)
-        ret = ft_strdup("   PLANE");
-    else if (i == 3)
+    ret = NULL;
+    if (i == OBJ_SPHERE)
+        ret = ft_strdup("   SPHERE");
+    else if (i == OBJ_PLANE)
+        ret = ft_strdup("       PLANE");
+    else if (i == OBJ_CYL)
         ret = ft_strdup("CYLINDRE");
-    else if (i == 4)
-        ret = ft_strdup("    CONE");
-    else if (i == 5)
-        ret = ft_strdup("   TORUS");
-    else if (i == 6)
+    else if (i == OBJ_CONE)
+        ret = ft_strdup("         CONE");
+    else if (i == OBJ_TRI)
         ret = ft_strdup("TRIANGLE");
+    else if (i == OBJ_TORUS)
+        ret = ft_strdup("    TORUS");
+    else if (i == OBJ_SQUARE)
+        ret = ft_strdup("   SQUARE");
     return (ret);
 }
 
@@ -72,6 +75,7 @@ char        *yes_no(int i)
 {
     char *ret;
 
+    ret = NULL;
     if (i == 1)
         ret = ft_strdup("YES");
     else
