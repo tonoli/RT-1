@@ -1,13 +1,1907 @@
 <camera>
-		<origin>-2.543381, 20.731852, 1.164952</origin>
-		<direction>-0.100000, -0.500000, 0.000000</direction>
+	<origin>0.000000, 125.000000, -160.000000</origin>
+	<direction>0.000000, 			-0.400000, 0.000000</direction>
 </camera>
+
+<object>
+	<type>sphere</type>
+	<origin>0.000000, 0.000000, 0.000000			</origin>
+	<radius>3.500000</radius>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>20.000000, 0.000000, 0.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0xFF, 0x33, 0x33</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>-20.000000, 0.000000, 0.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0x33, 0xFF, 0x33</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 0.000000			</origin>
+	<direction>1.000000, 0.000000, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 0.000000			</origin>
+	<direction>-1.000000, 0.000000, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>0.000000, 0.000000, 20.000000			</origin>
+	<radius>3.500000</radius>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>19.378248, 4.948079, 20.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>-19.378248, -4.948079, 20.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0xFF, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 20.000000			</origin>
+	<direction>0.968912, 0.247404, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 20.000000			</origin>
+	<direction>-0.968912, -0.247404, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>19.378248, 4.948079, 20.000000			</origin>
+	<direction>0.030164, -0.240054, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>-19.378248, -4.948079, 20.000000			</origin>
+	<direction>-0.030164, 0.240054, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>0.000000, 0.000000, 40.000000			</origin>
+	<radius>3.500000</radius>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>17.551651, 9.588511, 40.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>-17.551651, -9.588511, 40.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0x33, 0xFF, 0x33</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 40.000000			</origin>
+	<direction>0.877582, 0.479426, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 40.000000			</origin>
+	<direction>-0.877582, -0.479426, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>17.551651, 9.588511, 40.000000			</origin>
+	<direction>0.088617, -0.225128, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>-17.551651, -9.588511, 40.000000			</origin>
+	<direction>-0.088617, 0.225128, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>0.000000, 0.000000, 60.000000			</origin>
+	<radius>3.500000</radius>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>14.633777, 13.632775, 60.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0xFF, 0x33, 0x33</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>-14.633777, -13.632775, 60.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0x33, 0xFF, 0x33</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 60.000000			</origin>
+	<direction>0.731689, 0.681639, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 60.000000			</origin>
+	<direction>-0.731689, -0.681639, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>14.633777, 13.632775, 60.000000			</origin>
+	<direction>0.141559, -0.196206, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>-14.633777, -13.632775, 60.000000			</origin>
+	<direction>-0.141559, 0.196206, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>0.000000, 0.000000, 80.000000			</origin>
+	<radius>3.500000</radius>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>10.806046, 16.829420, 80.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>-10.806046, -16.829420, 80.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0x33, 0xFF, 0x33</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 80.000000			</origin>
+	<direction>0.540302, 0.841471, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 80.000000			</origin>
+	<direction>-0.540302, -0.841471, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>10.806046, 16.829420, 80.000000			</origin>
+	<direction>0.185701, -0.155084, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>-10.806046, -16.829420, 80.000000			</origin>
+	<direction>-0.185701, 0.155084, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>0.000000, 0.000000, 100.000000			</origin>
+	<radius>3.500000</radius>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>6.306447, 18.979692, 100.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0xFF, 0x33, 0x33</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>-6.306447, -18.979692, 100.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0xFF, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 100.000000			</origin>
+	<direction>0.315322, 0.948985, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 100.000000			</origin>
+	<direction>-0.315322, -0.948985, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>6.306447, 18.979692, 100.000000			</origin>
+	<direction>0.218296, -0.104319, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>-6.306447, -18.979692, 100.000000			</origin>
+	<direction>-0.218296, 0.104319, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>0.000000, 0.000000, 120.000000			</origin>
+	<radius>3.500000</radius>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>1.414744, 19.949900, 120.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0xFF, 0x33, 0x33</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>-1.414744, -19.949900, 120.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0xFF, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 120.000000			</origin>
+	<direction>0.070737, 0.997495, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 120.000000			</origin>
+	<direction>-0.070737, -0.997495, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>1.414744, 19.949900, 120.000000			</origin>
+	<direction>0.237319, -0.047069, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>-1.414744, -19.949900, 120.000000			</origin>
+	<direction>-0.237319, 0.047069, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>0.000000, 0.000000, 140.000000			</origin>
+	<radius>3.500000</radius>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>-3.564921, 19.679719, 140.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>3.564921, -19.679719, 140.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0xFF, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 140.000000			</origin>
+	<direction>-0.178246, 0.983986, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 140.000000			</origin>
+	<direction>0.178246, -0.983986, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>-3.564921, 19.679719, 140.000000			</origin>
+	<direction>0.241586, 0.013108, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>3.564921, -19.679719, 140.000000			</origin>
+	<direction>-0.241586, -0.013108, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>0.000000, 0.000000, 160.000000			</origin>
+	<radius>3.500000</radius>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>-8.322937, 18.185949, 160.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0xFF, 0x33, 0x33</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>8.322937, -18.185949, 160.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0x33, 0xFF, 0x33</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 160.000000			</origin>
+	<direction>-0.416147, 0.909297, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 160.000000			</origin>
+	<direction>0.416147, -0.909297, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>-8.322937, 18.185949, 160.000000			</origin>
+	<direction>0.230833, 0.072470, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>8.322937, -18.185949, 160.000000			</origin>
+	<direction>-0.230833, -0.072470, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>0.000000, 0.000000, 180.000000			</origin>
+	<radius>3.500000</radius>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>-12.563472, 15.561464, 180.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0xFF, 0x33, 0x33</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>12.563472, -15.561464, 180.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0x33, 0xFF, 0x33</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 180.000000			</origin>
+	<direction>-0.628174, 0.778073, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 180.000000			</origin>
+	<direction>0.628174, -0.778073, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>-12.563472, 15.561464, 180.000000			</origin>
+	<direction>0.205728, 0.127326, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>12.563472, -15.561464, 180.000000			</origin>
+	<direction>-0.205728, -0.127326, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>0.000000, 0.000000, 200.000000			</origin>
+	<radius>3.500000</radius>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>-16.022872, 11.969443, 200.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0xFF, 0x33, 0x33</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>16.022872, -11.969443, 200.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0x33, 0xFF, 0x33</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 200.000000			</origin>
+	<direction>-0.801144, 0.598472, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 200.000000			</origin>
+	<direction>0.801144, -0.598472, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>-16.022872, 11.969443, 200.000000			</origin>
+	<direction>0.167831, 0.174265, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>16.022872, -11.969443, 200.000000			</origin>
+	<direction>-0.167831, -0.174265, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>0.000000, 0.000000, 220.000000			</origin>
+	<radius>3.500000</radius>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>-18.486048, 7.633220, 220.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0xFF, 0x33, 0x33</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>18.486048, -7.633220, 220.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0x33, 0xFF, 0x33</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 220.000000			</origin>
+	<direction>-0.924302, 0.381661, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 220.000000			</origin>
+	<direction>0.924302, -0.381661, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>-18.486048, 7.633220, 220.000000			</origin>
+	<direction>0.119500, 0.210370, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>18.486048, -7.633220, 220.000000			</origin>
+	<direction>-0.119500, -0.210370, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>0.000000, 0.000000, 240.000000			</origin>
+	<radius>3.500000</radius>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>-19.799850, 2.822400, 240.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>19.799850, -2.822400, 240.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0x33, 0xFF, 0x33</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 240.000000			</origin>
+	<direction>-0.989992, 0.141120, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 240.000000			</origin>
+	<direction>0.989992, -0.141120, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>-19.799850, 2.822400, 240.000000			</origin>
+	<direction>0.063739, 0.233395, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>19.799850, -2.822400, 240.000000			</origin>
+	<direction>-0.063739, -0.233395, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>0.000000, 0.000000, 260.000000			</origin>
+	<radius>3.500000</radius>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>-19.882594, -2.163903, 260.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0xFF, 0x33, 0x33</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>19.882594, 2.163903, 260.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0x33, 0xFF, 0x33</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 260.000000			</origin>
+	<direction>-0.994130, -0.108195, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 260.000000			</origin>
+	<direction>0.994130, 0.108195, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>-19.882594, -2.163903, 260.000000			</origin>
+	<direction>0.004014, 0.241908, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>19.882594, 2.163903, 260.000000			</origin>
+	<direction>-0.004014, -0.241908, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>0.000000, 0.000000, 280.000000			</origin>
+	<radius>3.500000</radius>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>-18.729134, -7.015665, 280.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0xFF, 0x33, 0x33</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>18.729134, 7.015665, 280.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0x33, 0xFF, 0x33</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 280.000000			</origin>
+	<direction>-0.936457, -0.350783, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 280.000000			</origin>
+	<direction>0.936457, 0.350783, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>-18.729134, -7.015665, 280.000000			</origin>
+	<direction>-0.055960, 0.235381, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>18.729134, 7.015665, 280.000000			</origin>
+	<direction>0.055960, -0.235381, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>0.000000, 0.000000, 300.000000			</origin>
+	<radius>3.500000</radius>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>-16.411187, -11.431226, 300.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0xFF, 0x33, 0x33</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>16.411187, 11.431226, 300.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0xFF, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 300.000000			</origin>
+	<direction>-0.820559, -0.571561, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 300.000000			</origin>
+	<direction>0.820559, 0.571561, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>-16.411187, -11.431226, 300.000000			</origin>
+	<direction>-0.112454, 0.214219, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>16.411187, 11.431226, 300.000000			</origin>
+	<direction>0.112454, -0.214219, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>0.000000, 0.000000, 320.000000			</origin>
+	<radius>3.500000</radius>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>-13.072872, -15.136050, 320.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>13.072872, 15.136050, 320.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0x33, 0xFF, 0x33</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 320.000000			</origin>
+	<direction>-0.653644, -0.756802, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 320.000000			</origin>
+	<direction>0.653644, 0.756802, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>-13.072872, -15.136050, 320.000000			</origin>
+	<direction>-0.161957, 0.179738, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>13.072872, 15.136050, 320.000000			</origin>
+	<direction>0.161957, -0.179738, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>0.000000, 0.000000, 340.000000			</origin>
+	<radius>3.500000</radius>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>-8.921750, -17.899787, 340.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0xFF, 0x33, 0x33</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>8.921750, 17.899787, 340.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0x33, 0xFF, 0x33</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 340.000000			</origin>
+	<direction>-0.446087, -0.894989, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 340.000000			</origin>
+	<direction>0.446087, 0.894989, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>-8.921750, -17.899787, 340.000000			</origin>
+	<direction>-0.201390, 0.134081, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>8.921750, 17.899787, 340.000000			</origin>
+	<direction>0.201390, -0.134081, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>0.000000, 0.000000, 360.000000			</origin>
+	<radius>3.500000</radius>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>-4.215916, -19.550602, 360.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0xFF, 0x33, 0x33</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>4.215916, 19.550602, 360.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0x33, 0xFF, 0x33</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 360.000000			</origin>
+	<direction>-0.210796, -0.977530, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 360.000000			</origin>
+	<direction>0.210796, 0.977530, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>-4.215916, -19.550602, 360.000000			</origin>
+	<direction>-0.228301, 0.080089, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>4.215916, 19.550602, 360.000000			</origin>
+	<direction>0.228301, -0.080089, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>0.000000, 0.000000, 380.000000			</origin>
+	<radius>3.500000</radius>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>0.752043, -19.985856, 380.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>-0.752043, 19.985856, 380.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0xFF, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 380.000000			</origin>
+	<direction>0.037602, -0.999293, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 380.000000			</origin>
+	<direction>-0.037602, 0.999293, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.752043, -19.985856, 380.000000			</origin>
+	<direction>-0.241018, 0.021116, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>-0.752043, 19.985856, 380.000000			</origin>
+	<direction>0.241018, -0.021116, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>0.000000, 0.000000, 400.000000			</origin>
+	<radius>3.500000</radius>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>5.673244, -19.178485, 400.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0xFF, 0x33, 0x33</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>-5.673244, 19.178485, 400.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0xFF, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 400.000000			</origin>
+	<direction>0.283662, -0.958924, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 400.000000			</origin>
+	<direction>-0.283662, 0.958924, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>5.673244, -19.178485, 400.000000			</origin>
+	<direction>-0.238750, -0.039169, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>-5.673244, 19.178485, 400.000000			</origin>
+	<direction>0.238750, 0.039169, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>0.000000, 0.000000, 420.000000			</origin>
+	<radius>3.500000</radius>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>10.241710, -17.178690, 420.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>-10.241710, 17.178690, 420.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0xFF, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 420.000000			</origin>
+	<direction>0.512085, -0.858935, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 420.000000			</origin>
+	<direction>-0.512085, 0.858935, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>10.241710, -17.178690, 420.000000			</origin>
+	<direction>-0.221637, -0.097019, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>-10.241710, 17.178690, 420.000000			</origin>
+	<direction>0.221637, 0.097019, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>0.000000, 0.000000, 440.000000			</origin>
+	<radius>3.500000</radius>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>14.173395, -14.110807, 440.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>-14.173395, 14.110807, 440.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0x33, 0xFF, 0x33</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 440.000000			</origin>
+	<direction>0.708670, -0.705540, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 440.000000			</origin>
+	<direction>-0.708670, 0.705540, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>14.173395, -14.110807, 440.000000			</origin>
+	<direction>-0.190744, -0.148837, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>-14.173395, 14.110807, 440.000000			</origin>
+	<direction>0.190744, 0.148837, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>0.000000, 0.000000, 460.000000			</origin>
+	<radius>3.500000</radius>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>17.223848, -10.165582, 460.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>-17.223848, 10.165582, 460.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0x33, 0xFF, 0x33</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 460.000000			</origin>
+	<direction>0.861192, -0.508279, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 460.000000			</origin>
+	<direction>-0.861192, 0.508279, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>17.223848, -10.165582, 460.000000			</origin>
+	<direction>-0.147991, -0.191401, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>-17.223848, 10.165582, 460.000000			</origin>
+	<direction>0.147991, 0.191401, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>0.000000, 0.000000, 480.000000			</origin>
+	<radius>3.500000</radius>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>19.203406, -5.588310, 480.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0xFF, 0x33, 0x33</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>-19.203406, 5.588310, 480.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0xFF, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 480.000000			</origin>
+	<direction>0.960170, -0.279415, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 480.000000			</origin>
+	<direction>-0.960170, 0.279415, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>19.203406, -5.588310, 480.000000			</origin>
+	<direction>-0.096037, -0.222064, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>-19.203406, 5.588310, 480.000000			</origin>
+	<direction>0.096037, 0.222064, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>0.000000, 0.000000, 500.000000			</origin>
+	<radius>3.500000</radius>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>19.988988, -0.663584, 500.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>-19.988988, 0.663584, 500.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0x33, 0xFF, 0x33</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 500.000000			</origin>
+	<direction>0.999449, -0.033179, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 500.000000			</origin>
+	<direction>-0.999449, 0.033179, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>19.988988, -0.663584, 500.000000			</origin>
+	<direction>-0.038112, -0.238921, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>-19.988988, 0.663584, 500.000000			</origin>
+	<direction>0.038112, 0.238921, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>0.000000, 0.000000, 520.000000			</origin>
+	<radius>3.500000</radius>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>19.531753, 4.302400, 520.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0xFF, 0x33, 0x33</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>-19.531753, -4.302400, 520.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0x33, 0xFF, 0x33</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 520.000000			</origin>
+	<direction>0.976588, 0.215120, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 520.000000			</origin>
+	<direction>-0.976588, -0.215120, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>19.531753, 4.302400, 520.000000			</origin>
+	<direction>0.022183, -0.240922, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>-19.531753, -4.302400, 520.000000			</origin>
+	<direction>-0.022183, 0.240922, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>0.000000, 0.000000, 540.000000			</origin>
+	<radius>3.500000</radius>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>17.860127, 9.000881, 540.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>-17.860127, -9.000881, 540.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0xFF, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 540.000000			</origin>
+	<direction>0.893006, 0.450044, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 540.000000			</origin>
+	<direction>-0.893006, -0.450044, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>17.860127, 9.000881, 540.000000			</origin>
+	<direction>0.081098, -0.227945, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>-17.860127, -9.000881, 540.000000			</origin>
+	<direction>-0.081098, 0.227945, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>0.000000, 0.000000, 560.000000			</origin>
+	<radius>3.500000</radius>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>15.078045, 13.139732, 560.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0xFF, 0x33, 0x33</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>-15.078045, -13.139732, 560.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0xFF, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 560.000000			</origin>
+	<direction>0.753902, 0.656987, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 560.000000			</origin>
+	<direction>-0.753902, -0.656987, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>15.078045, 13.139732, 560.000000			</origin>
+	<direction>0.134971, -0.200794, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>-15.078045, -13.139732, 560.000000			</origin>
+	<direction>-0.134971, 0.200794, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>0.000000, 0.000000, 580.000000			</origin>
+	<radius>3.500000</radius>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>11.358483, 16.461618, 580.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0xFF, 0x33, 0x33</color>			
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>-11.358483, -16.461618, 580.000000			</origin>
+	<radius>7.000000</radius>
+	<color>0xFF, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 580.000000			</origin>
+	<direction>0.567924, 0.823081, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>0.000000, 0.000000, 580.000000			</origin>
+	<direction>-0.567924, -0.823081, 0.000000</direction>
+	<radius>2.000000			</radius>
+	<height>4.472136</height>
+	<color>0xFF, 0xFF, 0xFF</color>			
+	<light>10.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>11.358483, 16.461618, 580.000000			</origin>
+	<direction>0.180453, -0.161160, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>-11.358483, -16.461618, 580.000000			</origin>
+	<direction>-0.180453, 0.161160, -0.970291</direction>
+	<radius>4.000000			</radius>
+	<height>4.540086</height>
+	<color>0x33, 0x33, 0xFF</color>			
+</object>
+
+<object>
+	<type>square</type>
+	<origin>0.000000, 0.000000, 0.000000			</origin>
+	<direction>0.000000, 1.000000, 0.000000</direction>
+	<direction2>1.000000,			0.000000, 0.000000</direction2>
+	<direction3>0.000000, 0.000000, 0.000000</direction3>
+				lenght1>42.000000</lenght1>
+	<lenght2>42.000000</lenght2>
+	<lenght>42.000000			</lenght>
+	<color>0x39, 0xCB, 0x94</color>
+</object>
+
+<object>
+	<type>square</type>
+	<origin>0.000000, 0.000000, 0.000000			</origin>
+	<direction>1.000000, 0.000000, 0.000000</direction>
+	<direction2>0.000000,			0.000000, 1.000000</direction2>
+	<direction3>0.000000, 0.000000, 0.000000</direction3>
+				lenght1>42.000000</lenght1>
+	<lenght2>42.000000</lenght2>
+	<lenght>42.000000			</lenght>
+	<color>0x04, 0x37, 0x04</color>
+</object>
+
+<object>
+	<type>square</type>
+	<origin>0.000000, 0.000000, 0.000000			</origin>
+	<direction>0.000000, 1.000000, 0.000000</direction>
+	<direction2>0.000000,			0.000000, 1.000000</direction2>
+	<direction3>0.000000, 0.000000, 0.000000</direction3>
+				lenght1>42.000000</lenght1>
+	<lenght2>42.000000</lenght2>
+	<lenght>42.000000			</lenght>
+	<color>0x30, 0x81, 0x94</color>
+</object>
+
+<object>
+	<type>square</type>
+	<origin>0.000000, 0.000000, -42.000000			</origin>
+	<direction>0.000000, 1.000000, 0.000000</direction>
+	<direction2>1.000000,			0.000000, 0.000000</direction2>
+	<direction3>0.000000, 0.000000, 0.000000</direction3>
+				lenght1>42.000000</lenght1>
+	<lenght2>42.000000</lenght2>
+	<lenght>42.000000			</lenght>
+	<color>0xEA, 0x52, 0x90</color>
+</object>
+
+<object>
+	<type>square</type>
+	<origin>0.000000, -42.000000, 0.000000			</origin>
+	<direction>1.000000, 0.000000, 0.000000</direction>
+	<direction2>0.000000,			0.000000, 1.000000</direction2>
+	<direction3>0.000000, 0.000000, 0.000000</direction3>
+				lenght1>42.000000</lenght1>
+	<lenght2>42.000000</lenght2>
+	<lenght>42.000000			</lenght>
+	<color>0xBA, 0x4B, 0xF6</color>
+</object>
+
+<object>
+	<type>square</type>
+	<origin>-42.000000, 0.000000, 0.000000			</origin>
+	<direction>0.000000, 1.000000, 0.000000</direction>
+	<direction2>0.000000,			0.000000, 1.000000</direction2>
+	<direction3>0.000000, 0.000000, 0.000000</direction3>
+				lenght1>42.000000</lenght1>
+	<lenght2>42.000000</lenght2>
+	<lenght>42.000000			</lenght>
+	<color>0xB7, 0xB7, 0xA2</color>
+</object>
+
 <object>
 	<type>cone</type>
-	<origin>-27.419756, -27.534277, 31.464593</origin>
+	<origin>-30.000000, 105.529083, -113.946950			</origin>
 	<direction>0.000000, -1.000000, 0.000000</direction>
-	<radius>3.000000</radius>
-	<height>0.000000</height>
-	<color>0x12068, 0x1F203, 0x40</color>
+	<radius>0.447214			</radius>
+	<height>5.477226</height>
+	<color>0x51, 0xF1, 0x5C			</color>
+	<marblesize>0.000535</marblesize>
+	<marblecolor>201.15, 177.62, 				33.00</marblecolor>
+	<light>3.000000</light>
+</object>
+
+<object>
+	<type>cylinder</type>
+	<origin>50.000000, 89.952349, -77.104511			</origin>
+	<direction>0.000000, 1.000000, 0.000000</direction>
+	<radius>5.477226			</radius>
+	<height>5.477226</height>
+	<color>0x41, 0x47, 0x58</color>			
+	<marblesize>0.000693</marblesize>
+	<marblecolor>54.97, 70.77, 				39.12</marblecolor>
+	<light>3.000000</light>
+</object>
+
+<object>
+	<type>plane</type>
+	<origin>-20.000000, 87.740716, -95.525730			</origin>
+	<direction>0.000000, -1.000000, 0.000000</direction>
+	<color>0x19,			0x71, 0x4D</color>
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>50.000000, 70.481432, -31.051461			</origin>
+	<radius>10.000000</radius>
+	<color>0x2A, 0x5B, 0xA7</color>			
+	<marblesize>0.000391</marblesize>
+	<marblecolor>187.09, 231.19, 				235.14</marblecolor>
+	<light>3.000000</light>
+</object>
+
+<object>
+	<type>sphere</type>
+	<origin>-30.000000, 70.481432, -31.051461			</origin>
+	<radius>10.000000</radius>
+	<color>0x2A, 0x15, 0xCC</color>			
 </object>
 

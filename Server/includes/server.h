@@ -203,7 +203,7 @@ void		print_basics_obj(t_obj *obj, t_vector o, t_vector d);
 void	    print_marble(t_obj *obj);
 
 //Save
-//void		save_scene(t_env *e);
+void		save_scene(t_env *e);
 
 //Radius Angle
 void	    change_radius_angle(t_env *e, int mode);
