@@ -6,7 +6,7 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/07 14:34:06 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/12/09 17:35:59 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/09 20:36:34 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,15 +54,15 @@ char        *name_obj(int i)
     char *ret;
 
     if (i == 1)
-        ret = ft_strdup("SPHERE");
+        ret = ft_strdup("  SPHERE");
     else if (i == 2)
-        ret = ft_strdup("PLANE");
+        ret = ft_strdup("   PLANE");
     else if (i == 3)
         ret = ft_strdup("CYLINDRE");
     else if (i == 4)
-        ret = ft_strdup("CONE");
+        ret = ft_strdup("    CONE");
     else if (i == 5)
-        ret = ft_strdup("TORUS");
+        ret = ft_strdup("   TORUS");
     else if (i == 6)
         ret = ft_strdup("TRIANGLE");
     return (ret);
@@ -91,7 +91,7 @@ void        write_right_text_top(t_env *e)
         sprintf(e->txt[4], " %.0f ", e->selected->light);
     sprintf(e->txt[5], " %.*f ", 2, e->selected->fuzz);
     sprintf(e->txt[6], " %s ", yes_no(e->selected->reflection));
-    sprintf(e->txt[7], " %.*f ", 2, e->selected->refraction); // Changer
+    sprintf(e->txt[7], " %.*f ", 1, e->selected->refraction);
     if (e->selected->type == 6 || e->selected->type == 2)
         sprintf(e->txt[8], " -- ");
     else

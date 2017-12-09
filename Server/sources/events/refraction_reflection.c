@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/05 06:02:43 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/09 15:06:33 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/09 20:32:20 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	change_refraction(t_env *e, int sense)
 		return ;
 	if (sense == INCREASE)
 		e->selected->refraction += 0.1;
-	else if (sense == DECREASE && e->selected->refraction > 0.0)
+	else if (sense == DECREASE && e->selected->refraction > 1.05)
 		e->selected->refraction -= 0.1;
 }
 
