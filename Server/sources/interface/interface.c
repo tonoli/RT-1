@@ -6,7 +6,7 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 17:23:36 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/12/09 18:10:44 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/09 18:34:32 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,8 @@ void	handle_events(t_env *e)
 		e->mouse.y = e->event.motion.y;
 		where_is_mickey(e);
 	}
-	draw_selected(e);
+	if (e->render == 1)
+		draw_selected(e);
 }
 
 int		free_elements(t_env *e)

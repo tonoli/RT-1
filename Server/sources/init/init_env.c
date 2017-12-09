@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 11:35:45 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/09 08:45:23 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/09 18:47:04 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ void	init_render_env(t_env *e)
 	perlin_generate_perm((int *)&e->perm_z);
 	e->increment = 4;
 	e->recursion = 1;
-	e->rot_speed = ROT_SPEED;
-	e->move_speed = MOVE_SPEED;
+	e->rot_speed = (double)0.1;
+	e->move_speed = (double)10.0;
 	e->rebond = 0.8;
 	e->sum = 1;
 	e->live = 1;

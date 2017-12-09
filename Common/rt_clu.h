@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 02:47:25 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/08 14:30:34 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/09 18:46:29 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,8 +57,8 @@
 # define OBJ_SQUARE		    6
 # define OBJ_TORUS			7
 
-# define MOVE_SPEED			(double)10.0
-# define ROT_SPEED			(double)0.1
+# define MOVE_SPEED			e->move_speed
+# define ROT_SPEED			e->rot_speed
 # define PITCH				e->camera.dir.y
 # define YAW				e->camera.dir.x
 

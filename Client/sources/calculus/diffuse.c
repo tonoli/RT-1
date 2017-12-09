@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/26 17:37:45 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/09 08:45:22 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/09 18:47:53 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ t_vector	diffuse(t_env *e, t_ray ray, t_obj *closest_obj)
 	ray.dir = vector_sub(v, closest_obj->cross);
 	obj_col = closest_obj->color;
 	color = compute_objects(e, ray);
-	color.x *= obj_col.x * 0.8;
-	color.y *= obj_col.y * 0.8;
-	color.z *= obj_col.z * 0.8;
+	color.x *= obj_col.x * e->rebond;
+	color.y *= obj_col.y * e->rebond;
+	color.z *= obj_col.z * e->rebond;
 	if (closest_obj->marblesize)
 		marble(e, &color, closest_obj);
 	return (color);
