@@ -6,7 +6,7 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 17:23:36 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/12/09 08:45:23 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/09 18:10:44 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,13 @@ void	handle_events(t_env *e)
 	{
 		if (e->loader == 1 && e->nb_cli > 0)
 			start_render(e);
-		else if (e->render == 1 && e->event.key.keysym.sym != SDLK_f)
-			keyboard(e->event.key.keysym.sym, e);
+		else if (e->render == 1)
+		{
+			if (e->i_actif != -1 || e->topin_actif != -1)
+				change_inputs(e);
+			else
+				keyboard(e->event.key.keysym.sym, e);
+		}
 	}
 
 	// MOUSE
@@ -59,9 +64,9 @@ void	handle_events(t_env *e)
 	{
 		e->mouse.x = e->event.motion.x;
 		e->mouse.y = e->event.motion.y;
-		draw_selected(e);
 		where_is_mickey(e);
 	}
+	draw_selected(e);
 }
 
 int		free_elements(t_env *e)
