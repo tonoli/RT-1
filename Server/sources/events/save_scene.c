@@ -6,11 +6,37 @@
 /*   By: tdelmas <tdelmas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/05 15:47:13 by tdelmas           #+#    #+#             */
-/*   Updated: 2017/12/09 18:55:17 by tdelmas          ###   ########.fr       */
+/*   Updated: 2017/12/09 20:08:15 by tdelmas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "server.h"
+
+static void	ft_save_transparent(char **str, t_obj *obj)
+{
+	char	*tmp;
+	char	*tmp2;
+
+		asprintf(&tmp, "\t<transparent>%s</transparent>\n", g_tsp_sources[obj->tsp_index].name);
+		tmp2 = ft_strdup(*str);
+		ft_strdel(str);
+		*str = ft_strjoin(tmp2, tmp);
+		ft_strdel(&tmp);
+		ft_strdel(&tmp2);
+}
+
+static void	ft_save_texture(char **str, t_obj *obj)
+{
+	char	*tmp;
+	char	*tmp2;
+
+		asprintf(&tmp, "\t<texture>%s</texture>\n", g_color_sources[obj->texture_index].name);
+		tmp2 = ft_strdup(*str);
+		ft_strdel(str);
+		*str = ft_strjoin(tmp2, tmp);
+		ft_strdel(&tmp);
+		ft_strdel(&tmp2);
+}
 
 static void	ft_save_light(char **str, t_obj *obj)
 {
