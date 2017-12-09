@@ -12,13 +12,6 @@
 
 #include "client.h"
 
-static const t_texture_sources g_tsp_sources[] =
-{
-	{"earth", "./textures/transparency/earth.png"},
-	{"zebra", "./textures/transparency/zebra.jpeg"},
-	{NULL, NULL}
-};
-
 void	init_transparency_tx_sources(t_env *e)
 {
 	int i;

@@ -20,7 +20,7 @@ void	init_render_env(t_env *e)
 	perlin_generate_perm((int *)&e->perm_y);
 	perlin_generate_perm((int *)&e->perm_z);
 	e->increment = 4;
-	e->recursion = 1;
+	e->recursion = 2;
 	e->rot_speed = (double)0.1;
 	e->move_speed = (double)10.0;
 	e->rebond = 0.8;

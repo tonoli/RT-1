@@ -85,6 +85,14 @@
 # define cbtr_r(x)			((x) < 0.0 ? -pow((double)-(x), 1.0/3.0) : 0.0))
 # define cbrt(x)			((x) > 0.0 ? pow((double)(x), 1.0/3.0) : cbtr_r(x)
 
+# ifndef GLOBAL_CLU
+#  define GLOBAL_CLU
+
+extern const	t_texture_sources g_color_sources[];
+extern const	t_texture_sources g_skybox_sources[];
+extern const	t_texture_sources g_tsp_sources[];
+
+# endif
 
 
 /*

@@ -20,6 +20,7 @@ int			**g_frame_array;
 t_vector	**g_color_array;
 t_mem		g_mem;
 t_window	g_win;
+t_env		*g_e;
 
 void	quit(int k)
 {
@@ -90,6 +91,7 @@ int		main(int argc, char **argv)
 	connect_to_server();
 	signal(SIGTERM, quit);
 	e = (t_env *)ft_memalloc(sizeof(t_env));
+	g_e = e;
 	init_globals();
 	init_skyboxes_tx_sources(e);
 	init_color_tx_sources(e);

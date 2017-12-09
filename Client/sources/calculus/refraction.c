@@ -35,17 +35,17 @@ t_ray		launch_ray(t_env *e, t_obj *closest_obj, t_vector v, double cosine)
 		reflect_probe = schlick(cosine, closest_obj->refraction);
 	else
 		reflect_probe = 1.0;
-	if (randb() > reflect_probe)
+	if (!e->live && randb() < reflect_probe)
 	{
-		ray.dir = vector_sub(vector_scale(vector_sub(v,
-			vector_scale(closest_obj->normal, dt)), e->ni_nt),
-			vector_scale(closest_obj->normal, sqrt(discriminant)));
+		ray.dir = vector_sub(v, vector_scale(closest_obj->normal, 2.0 *
+										vector_dot(v, closest_obj->normal)));
 		ray.ori = closest_obj->cross;
 	}
 	else
 	{
-		ray.dir = vector_sub(v, vector_scale(closest_obj->normal, 2.0 *
-										vector_dot(v, closest_obj->normal)));
+		ray.dir = vector_sub(vector_scale(vector_sub(v,
+													 vector_scale(closest_obj->normal, dt)), e->ni_nt),
+							 vector_scale(closest_obj->normal, sqrt(discriminant)));
 		ray.ori = closest_obj->cross;
 	}
 	return (ray);

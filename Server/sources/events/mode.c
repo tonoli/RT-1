@@ -16,7 +16,7 @@ void	set_live_edition_mode(t_env *e)
 {
 	e->live = 1;
 	e->increment = 4;
-	e->recursion = 1;
+	e->recursion = 2;
 	e->reset = 1;
 }
 
@@ -33,7 +33,7 @@ void	switch_render_mode(t_env *e)
 	if (!e->live)
 	{
 		e->increment = 4;
-		e->recursion = 1;
+		e->recursion = 2;
 	}
 	else
 	{

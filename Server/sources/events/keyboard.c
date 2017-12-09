@@ -18,6 +18,8 @@ static int g_key[] =
 	SDLK_a,
 	SDLK_s,
 	SDLK_d,
+	SDLK_q,
+	SDLK_e,
 	SDLK_SPACE,
 	SDLK_c,
 	SDLK_LEFT,
@@ -41,6 +43,8 @@ static const int g_key_value[255] =
 	['a'] = SDLK_a,
 	['s'] = SDLK_s,
 	['d'] = SDLK_d,
+	['q'] = SDLK_q,
+	['e'] = SDLK_e,
 	[' '] = SDLK_SPACE,
 	['c'] = SDLK_c,
 	[127 + 'l'] = SDLK_LEFT,
@@ -57,12 +61,28 @@ static const int g_key_value[255] =
 	[127 + '9'] = SDLK_KP_9
 };
 
+void	turn_left(t_env *e)
+{
+	keyboard(SDLK_d, e);
+	keyboard(SDLK_d, e);
+	keyboard(SDLK_LEFT, e);
+}
+
+void	turn_right(t_env *e)
+{
+	keyboard(SDLK_a, e);
+	keyboard(SDLK_a, e);
+	keyboard(SDLK_RIGHT, e);
+}
+
 static void (*g_key_func[255])(t_env *e) =
 {
 	['w'] = move_forward,
 	['a'] = move_left,
 	['s'] = move_backward,
 	['d'] = move_right,
+	['q'] = turn_right,
+	['e'] = turn_left,
 	[' '] = move_up,
 	['c'] = move_down,
 	[127 + 'l'] = yaw_left,

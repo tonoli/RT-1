@@ -12,22 +12,6 @@
 
 #include "client.h"
 
-static const t_texture_sources g_skybox_sources[] =
-{
-	{"appartment", "./textures/skybox/appartment.jpg"},
-	{"bar", "./textures/skybox/bar.jpg"},
-//	{"bedroom", "./textures/skybox/bedroom.jpg"},
-//	{"clouds", "./textures/skybox/clouds.jpg"},
-//	{"fractale", "./textures/skybox/fractale.jpg"},
-//	{"snow", "./textures/skybox/snow.jpg"},
-//	{"universe", "./textures/skybox/universe.png"},
-//	{"aurore", "./textures/skybox/aurore.jpg"},
-//	{"Notre-Dame", "./textures/skybox/Notre-Dame.jpg"},
-//	{"mountain", "./textures/skybox/mountain.jpg"},
-//	{"galaxy", "./textures/skybox/galaxy.jpg"},
-	{NULL, NULL}
-};
-
 void	init_skyboxes_tx_sources(t_env *e)
 {
 	int i;

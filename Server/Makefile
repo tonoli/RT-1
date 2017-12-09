@@ -17,6 +17,7 @@ NAME			=	rt_server
 SRC_BASE		=	$(shell find sources | grep '\.c' | cut -c 9- | sort)
 SRC_BASE		+=	$(shell find ../common/primitives | grep '\.c' | sort | sed 's/^/..\//')
 SRC_BASE		+=	$(shell find ../common/libvector | grep '\.c' | sort | sed 's/^/..\//')
+SRC_BASE		+=	$(shell find ../common/mapping | grep '\.c' | sort | sed 's/^/..\//')
 
 CC				=	gcc
 
