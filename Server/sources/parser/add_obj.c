@@ -70,14 +70,10 @@ void	tag_pack_one(t_env *e, t_obj *obj, char *tag, char *content)
 		obj->dir = vector_normalize(parse_direction(content));
 	else if (ft_strequ(tag, "<direction2>"))
 		obj->dir2 = vector_normalize(parse_direction(content));
-	else if (ft_strequ(tag, "<direction3>"))
-		obj->dir3 = vector_normalize(parse_direction(content));
 	else if (ft_strequ(tag, "<lenght1>"))
 		obj->len1 = parse_double(content);
 	else if (ft_strequ(tag, "<lenght2>"))
 		obj->len2 = parse_double(content);
-	else if (ft_strequ(tag, "<lenght3>"))
-		obj->len3 = parse_double(content);
 	else if (ft_strequ(tag, "<radius>"))
 		obj->radius = parse_radius(content);
 	else if (ft_strequ(tag, "<angle>"))

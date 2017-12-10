@@ -71,10 +71,8 @@ typedef struct		s_obj
 	t_vector		ori;
 	t_vector		dir;
 	t_vector		dir2;
-	t_vector		dir3;
 	double			len1;
 	double			len2;
-	double			len3;
 	double			radius;
 	double			small_r;
 	double			height;
@@ -99,6 +97,7 @@ typedef struct		s_obj
 	t_vector		color;
 	t_vector		cross;
 	double			cross_distance;
+	double			alpha_cross;
 	t_vector		normal;
 	double			fuzz;
 	int				emit;

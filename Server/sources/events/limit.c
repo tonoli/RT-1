@@ -16,12 +16,35 @@ void	increase_limit(t_env *e)
 {
 	if (!e->selected)
 		return ;
-	e->selected->height++;
+	if (e->selected->type == OBJ_SQUARE)
+	{
+		e->selected->len1++;
+		e->selected->len2++;
+	}
+	else if (e->selected->type == OBJ_TORUS)
+	{
+		if (e->selected->small_r < e->selected->radius)
+			e->selected->small_r++;
+	}
+	else
+		e->selected->height++;
 }
 
 void	decrease_limit(t_env *e)
 {
-	if (!e->selected || e->selected->height == 0)
+	if (!e->selected ||
+		(e->selected->height == 0 && e->selected->type != OBJ_TORUS))
 		return ;
-	e->selected->height--;
+	if (e->selected->type == OBJ_SQUARE)
+	{
+		e->selected->len1--;
+		e->selected->len2--;
+	}
+	else if (e->selected->type == OBJ_TORUS)
+	{
+		if (e->selected->small_r > 0)
+			e->selected->small_r--;
+	}
+	else
+		e->selected->height--;
 }

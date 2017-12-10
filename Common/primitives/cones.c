@@ -47,12 +47,18 @@ static double	solution(t_env *e, t_obj *obj, t_ray ray, t_vector v)
 		x = vector_dot(ray.dir, obj->dir) * t + vector_dot(v, obj->dir);
 		if (((x < (obj->height / 2) && x > -(obj->height / 2)) ||
 			obj->height <= 0) && dist_priority(e, obj, ray, t) == t)
+		{
+			obj->alpha_cross = x;
 			return (t);
+		}
 		t = (-obj->b + sqrt(obj->d)) / (2.0 * obj->a);
 		x = vector_dot(ray.dir, obj->dir) * t + vector_dot(v, obj->dir);
 		if (((x < (obj->height / 2) && x > -(obj->height / 2)) ||
 			obj->height <= 0) && dist_priority(e, obj, ray, t) == t)
+		{
+			obj->alpha_cross = x;
 			return (t);
+		}
 	}
 	return (-1);
 }
