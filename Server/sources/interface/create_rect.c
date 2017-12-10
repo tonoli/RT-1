@@ -58,7 +58,7 @@ void	create_b_rect(SDL_Surface *surf, SDL_Rect rect, int bg, int bo)
 	}
 }
 
-void	create_border(t_env *e,int active)
+void	create_border(t_env *e, int active)
 {
 	if (e->loader == 0 && active == 0)
 	{

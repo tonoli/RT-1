@@ -15,6 +15,7 @@
 void		draw_input_top(t_env *e, int bt_num, int state)
 {
 	SDL_Rect rect;
+
 	rect = e->topin_rect[bt_num];
 	(state == 2) ? rect.y += 60 : 0;
 	SDL_BlitSurface(e->s_ui, &rect, e->s_background, &e->topin_rect[bt_num]);
@@ -24,6 +25,7 @@ void		draw_input_top(t_env *e, int bt_num, int state)
 void		draw_button_top(t_env *e, int bt_num, int state)
 {
 	SDL_Rect rect;
+
 	if (bt_num != 8)
 	{
 		rect = e->bt_rect[bt_num];
@@ -42,13 +44,14 @@ void		draw_button_top(t_env *e, int bt_num, int state)
 	}
 }
 
-void		draw_all_button_top(t_env *e,  int state)
+void		draw_all_button_top(t_env *e, int state)
 {
 	int i;
 
 	i = -1;
 	while (++i < 9)
 	{
-		SDL_BlitSurface(e->s_ui, &e->bt_rect[i], e->s_background, &e->bt_rect[i]);
+		SDL_BlitSurface(e->s_ui, &e->bt_rect[i], e->s_background,
+			&e->bt_rect[i]);
 	}
 }

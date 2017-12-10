@@ -68,15 +68,15 @@ void		is_mouse_in_credit(t_env *e)
 	int btn_i;
 
 	if (SDL_PointInRect(&e->mouse, &e->credit_rect)
-    && e->event.type == SDL_MOUSEBUTTONDOWN)
-    {
-        if (e->credit_actif == 0)
-        {
-            e->credit_actif = 1;
-            SDL_BlitSurface(e->s_credit, &(SDL_Rect){0, 0, F_WIDTH, F_HEIGHT}
-            , e->s_background, &(SDL_Rect){82, 72, F_WIDTH, F_HEIGHT});
-        }
-        else
-            e->credit_actif = 0;
-    }
+		&& e->event.type == SDL_MOUSEBUTTONDOWN)
+	{
+		if (e->credit_actif == 0)
+		{
+			e->credit_actif = 1;
+			SDL_BlitSurface(e->s_credit, &(SDL_Rect){0, 0, F_WIDTH, F_HEIGHT}
+					, e->s_background, &(SDL_Rect){82, 72, F_WIDTH, F_HEIGHT});
+		}
+		else
+			e->credit_actif = 0;
+	}
 }

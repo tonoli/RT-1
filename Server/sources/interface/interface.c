@@ -16,10 +16,11 @@ void		start_render(t_env *e)
 {
 	init_rects(e);
 	init_txt_rects(e);
-	SDL_BlitSurface(e->s_ui, 		 &(SDL_Rect){0, 0, e->win_w, e->win_h},
+	SDL_BlitSurface(e->s_ui, &(SDL_Rect){0, 0, e->win_w, e->win_h},
 					e->s_background, &(SDL_Rect){0, 0, e->win_w, e->win_h});
-	create_rect(e->s_raytracer, (SDL_Rect){0, 0, F_WIDTH, F_HEIGHT}, 0xFF2b2b2b);
-	SDL_BlitSurface(e->s_raytracer,  &(SDL_Rect){0, 0, F_WIDTH, F_HEIGHT},
+	create_rect(e->s_raytracer,
+				(SDL_Rect){0, 0, F_WIDTH, F_HEIGHT}, 0xFF2b2b2b);
+	SDL_BlitSurface(e->s_raytracer, &(SDL_Rect){0, 0, F_WIDTH, F_HEIGHT},
 					e->s_background, &(SDL_Rect){82, 72, F_WIDTH, F_HEIGHT});
 	create_rect(e->s_background,
 				(SDL_Rect){1126, 80, 160, 530}, 0xFF2b2b2b);
@@ -44,10 +45,11 @@ void		where_is_mickey(t_env *e)
 	draw_selected(e);
 }
 
-void	handle_events(t_env *e)
+void		handle_events(t_env *e)
 {
 	if (e->event.window.event == SDL_WINDOWEVENT_CLOSE ||
-		(e->event.type == SDL_KEYDOWN && e->event.key.keysym.sym == SDLK_ESCAPE))
+		(e->event.type == SDL_KEYDOWN && e->event.key.keysym.sym ==
+	SDLK_ESCAPE))
 		e->run = 0;
 	if (e->event.type == SDL_KEYDOWN && e->event.key.keysym.sym != SDLK_ESCAPE)
 	{
@@ -70,7 +72,7 @@ void	handle_events(t_env *e)
 	}
 }
 
-int		free_elements(t_env *e)
+int			free_elements(t_env *e)
 {
 	SDL_DestroyWindow(e->win);
 	SDL_FreeCursor(e->cursor);
@@ -86,10 +88,10 @@ int		free_elements(t_env *e)
 	return (0);
 }
 
-int		global_loop(t_env *e)
+int			global_loop(t_env *e)
 {
 	//Display loader
-	SDL_BlitSurface(e->s_loader,     &(SDL_Rect){0, 0, e->win_w, e->win_h},
+	SDL_BlitSurface(e->s_loader, &(SDL_Rect){0, 0, e->win_w, e->win_h},
 					e->s_background, &(SDL_Rect){0, 0, e->win_w, e->win_h});
 	//While loop, two states :
 	// - Loader
@@ -104,7 +106,7 @@ int		global_loop(t_env *e)
 	return (free_elements(e));
 }
 
-void	start_interface(t_env *e)
+void		start_interface(t_env *e)
 {
 	init_sdl_modules(e);
 	init_sdl_env(e);

@@ -20,11 +20,10 @@ int			is_mouse_in_rect(t_env *e, SDL_Rect *rect, int rect_len)
 	while (++i < rect_len)
 	{
 		if (SDL_PointInRect(&e->mouse, &rect[i]))
-			return i;
+			return (i);
 	}
-	return -1;
+	return (-1);
 }
-
 
 static void (*g_left_btn[])(t_env *e) =
 {
@@ -58,5 +57,4 @@ void		is_mouse_in_rect_left(t_env *e)
 			g_left_btn[btn_i](e);
 		}
 	}
-
 }

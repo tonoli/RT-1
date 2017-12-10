@@ -12,7 +12,7 @@
 
 #include "server.h"
 
-static void init_topin_rect(t_env *e)
+static void		init_topin_rect(t_env *e)
 {
 	int i;
 
@@ -26,18 +26,17 @@ static void init_topin_rect(t_env *e)
 	}
 }
 
-static void init_bt_rect(t_env *e)
+static void		init_bt_rect(t_env *e)
 {
 	int i;
 
 	i = -1;
 	while (++i < 8)
 	{
-			e->bt_rect[i].x = (i < 5) ? 582 + (66 * i) : 587 + (66 * i);
-			e->bt_rect[i].y = 16;
-			e->bt_rect[i].w = 44;
-			e->bt_rect[i].h = 42;
-
+		e->bt_rect[i].x = (i < 5) ? 582 + (66 * i) : 587 + (66 * i);
+		e->bt_rect[i].y = 16;
+		e->bt_rect[i].w = 44;
+		e->bt_rect[i].h = 42;
 	}
 	e->bt_rect[i].x = 1135;
 	e->bt_rect[i].y = 16;
@@ -45,17 +44,17 @@ static void init_bt_rect(t_env *e)
 	e->bt_rect[i].h = 42;
 }
 
-static void init_b_rect(t_env *e)
+static void		init_b_rect(t_env *e)
 {
 	int i;
 
 	i = -1;
 	while (++i < 9)
 	{
-			e->b_rect[i].x = 15;
-			e->b_rect[i].y = (i < 6) ? 116 + (59 * i) : 128 + (59 * i);
-			e->b_rect[i].w = 50;
-			e->b_rect[i].h = 47;
+		e->b_rect[i].x = 15;
+		e->b_rect[i].y = (i < 6) ? 116 + (59 * i) : 128 + (59 * i);
+		e->b_rect[i].w = 50;
+		e->b_rect[i].h = 47;
 	}
 	e->b_rect[i].x = 23;
 	e->b_rect[i].y = 670;
@@ -63,7 +62,7 @@ static void init_b_rect(t_env *e)
 	e->b_rect[i].h = 35;
 }
 
-static void init_i_rect(t_env *e)
+static void		init_i_rect(t_env *e)
 {
 	int i;
 
@@ -85,7 +84,7 @@ static void init_i_rect(t_env *e)
 	}
 }
 
-void init_rects(t_env *e)
+void			init_rects(t_env *e)
 {
 	init_b_rect(e);
 	init_bt_rect(e);

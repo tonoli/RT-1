@@ -25,7 +25,7 @@ void		draw_button_left(t_env *e, int b_num, int state)
 	}
 }
 
-void 		draw_input(t_env *e, int i_num, int state)
+void		draw_input(t_env *e, int i_num, int state)
 {
 	SDL_Rect rect;
 
@@ -34,13 +34,13 @@ void 		draw_input(t_env *e, int i_num, int state)
 	SDL_BlitSurface(e->s_ui, &rect, e->s_background, &e->i_rect[i_num]);
 }
 
-void		draw_all_button_left(t_env *e,  int state)
+void		draw_all_button_left(t_env *e, int state)
 {
 	int i;
 
 	i = -1;
 	while (++i < 9)
 	{
-		SDL_BlitSurface(e->s_ui, &e->b_rect[i] , e->s_background, &e->b_rect[i]);
+		SDL_BlitSurface(e->s_ui, &e->b_rect[i], e->s_background, &e->b_rect[i]);
 	}
 }
