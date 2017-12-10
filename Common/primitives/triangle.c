@@ -6,73 +6,67 @@
 /*   By: tdelmas <tdelmas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/05 10:40:51 by tdelmas           #+#    #+#             */
-/*   Updated: 2017/12/09 08:45:23 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/10 15:34:00 by tdelmas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "rt_clu.h"
 
-void		size_interpretor(t_obj *obj, t_vector *v1, t_vector *v2)
+void			size_interpretor(t_obj *obj, t_vector *v1, t_vector *v2)
 {
-	*v1 = vector_sub(obj->ori, vector_scale(vector_negative(obj->dir), obj->len1));
-	*v2 = vector_sub(obj->ori, vector_scale(vector_negative(obj->dir2), obj->len2));
+	*v1 = vector_sub(obj->ori, vector_scale(vector_negative(obj->dir),
+	obj->len1));
+	*v2 = vector_sub(obj->ori, vector_scale(vector_negative(obj->dir2),
+	obj->len2));
 }
 
-double		hit_tri(t_env *e, t_obj *obj, t_ray ray)
+static int		triangle_edge(t_vector a, t_vector b, t_vector p,
+	t_vector n)
 {
-	t_vector	v1;
-	t_vector	v2;
-	t_vector	v0v1;
-	t_vector	v0v2;
-	t_vector	n;
-	t_vector	p;
-	t_vector	c;
-	t_vector	edge0;
-	t_vector	vp0;
-	t_vector	edge1;
-	t_vector	vp1;
-	t_vector	edge2;
-	t_vector	vp2;
-	double		n_dot_raydir;
-	double		d;
-	double		t;
+	t_vector		edge;
+	t_vector		vp;
+	t_vector		c;
 
-	size_interpretor(obj, &v1, &v2);
-	v0v1 = vector_sub(v1, obj->ori);
-	v0v2 = vector_sub(v2, obj->ori);
+	edge = vector_sub(a, b);
+	vp = vector_sub(p, b);
+	c = vector_cross(edge, vp);
+	if (vector_dot(n, c) < 0)
+		return (-1);
+	return (1);
+}
 
-	n = vector_cross(v0v1, v0v2);
+static double	ray_dist(t_vector n, t_ray ray, t_obj *obj)
+{
+	double	d;
+	double	n_dot_raydir;
+	double	t;
 
 	n_dot_raydir = vector_dot(n, ray.dir);
 	if (fabs(n_dot_raydir) < 0.00000001)
 		return (-1);
-
 	d = vector_dot(n, obj->ori);
-	
 	t = (vector_dot(n, ray.ori) + d) / -n_dot_raydir;
 	if (t < 0)
 		return (-1);
-	
+	return (t);
+}
+
+double			hit_tri(t_env *e, t_obj *obj, t_ray ray)
+{
+	t_vector	v1;
+	t_vector	v2;
+	t_vector	n;
+	t_vector	p;
+	double		t;
+
+	size_interpretor(obj, &v1, &v2);
+	n = normal_triangle(obj, v1, v2);
+	if (ray_dist(n, ray, obj) == -1)
+		return (-1);
 	p = vector_add(ray.ori, vector_scale(ray.dir, t));
-	
-	edge0 = vector_sub(v1, obj->ori);
-	vp0 = vector_sub(p, obj->ori);
-	c = vector_cross(edge0, vp0);
-	if (vector_dot(n, c) < 0)
+	if (triangle_edge(v1, obj->ori, p, n) == -1 || triangle_edge(v2, v1, p, n)
+		== -1 || triangle_edge(obj->ori, v2, p, n) == -1)
 		return (-1);
-
-	edge1 = vector_sub(v2, v1);
-	vp1 = vector_sub(p, v1);
-	c = vector_cross(edge1, vp1);
-	if (vector_dot(n, c) < 0)
-		return (-1);
-
-	edge2 = vector_sub(obj->ori, v2);
-	vp2 = vector_sub(p, v2);
-	c = vector_cross(edge2, vp2);
-	if (vector_dot(n, c) < 0)
-		return (-1);
-
 	if (t < e->t_min || t > e->t_max)
 		return (-1);
 	obj->t = t;

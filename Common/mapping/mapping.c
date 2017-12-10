@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   mapping.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tdelmas <tdelmas@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/12/10 15:36:14 by tdelmas           #+#    #+#             */
+/*   Updated: 2017/12/10 15:37:36 by tdelmas          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "rt_clu.h"
 
 const t_texture_sources	g_color_sources[] =
@@ -55,4 +67,3 @@ const t_texture_sources g_tsp_sources[] =
 	{"zebra", "./textures/transparency/zebra.jpeg"},
 	{NULL, NULL}
 };
-
