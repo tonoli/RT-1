@@ -44,6 +44,7 @@ void		is_mouse_in_rect_right(t_env *e)
 	int state;
 	int btn_i;
 
+	state = 0;
 	btn_i = is_mouse_in_rect(e, e->i_rect, 10);
 	if (btn_i != -1)
 		btn_actif(e, btn_i, state);
@@ -68,9 +69,6 @@ void		is_mouse_in_it_right(t_env *e)
 
 void		is_mouse_in_credit(t_env *e)
 {
-	int state;
-	int btn_i;
-
 	if (SDL_PointInRect(&e->mouse, &e->credit_rect)
 		&& e->event.type == SDL_MOUSEBUTTONDOWN)
 	{

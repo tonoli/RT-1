@@ -21,9 +21,7 @@ SRC_BASE		+=	$(shell find ../common/mapping | grep '\.c' | sort | sed 's/^/..\//
 
 CC				=	gcc
 
-#FLAGS			=	-Wall -Wextra -Werror -O3
-FLAGS			+=	-O3 -g
-
+FLAGS			+=	-Wall -Wextra -Werror -O3
 
 SRC_DIR			=	sources/
 INC_DIR			=	includes/

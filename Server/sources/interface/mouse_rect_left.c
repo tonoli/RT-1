@@ -45,7 +45,7 @@ void		is_mouse_in_rect_left(t_env *e)
 	int btn_i;
 
 	btn_i = is_mouse_in_rect(e, e->b_rect, 10);
-	draw_all_button_left(e, 0);
+	draw_all_button_left(e);
 	if (btn_i != -1)
 	{
 		state = e->event.type == SDL_MOUSEBUTTONDOWN ? CLICK : MOUSE;

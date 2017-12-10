@@ -30,7 +30,7 @@ void		is_mouse_in_rect_top(t_env *e)
 	int state;
 	int btn_i;
 
-	draw_all_button_top(e, 0);
+	draw_all_button_top(e);
 	btn_i = is_mouse_in_rect(e, e->bt_rect, 9);
 	if (btn_i != -1)
 	{
@@ -44,13 +44,6 @@ void		is_mouse_in_rect_top(t_env *e)
 		}
 	}
 }
-
-static void (*g_top_input[])(t_env *e, int mode) =
-{
-	change_rebond,
-	change_rot_speed,
-	change_move_speed,
-};
 
 void		is_mouse_in_rect_top_input(t_env *e)
 {

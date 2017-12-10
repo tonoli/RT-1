@@ -61,7 +61,7 @@ void		write_right_text(t_env *e)
 	while (++i < 18)
 	{
 		if (i == e->it_actif)
-			create_b_rect(e->s_background, e->it_rect[e->it_actif],
+			create_b_rect(e->s_background, e->it_rect[(int)e->it_actif],
 				0x3c3c3c, 0x5bc4e6);
 		else
 			create_rect(e->s_background, e->it_rect[i], 0x3c3c3c);

@@ -44,7 +44,7 @@ void		draw_button_top(t_env *e, int bt_num, int state)
 	}
 }
 
-void		draw_all_button_top(t_env *e, int state)
+void		draw_all_button_top(t_env *e)
 {
 	int i;
 

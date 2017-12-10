@@ -24,13 +24,13 @@ void			change_values_top_input(t_env *e)
 	if (e->topin_actif != -1)
 	{
 		if (e->event.key.keysym.sym == SDLK_DOWN)
-			g_top_input[e->topin_actif](e, DECREASE);
+			g_top_input[(int)e->topin_actif](e, DECREASE);
 		else if (e->event.key.keysym.sym == SDLK_UP)
-			g_top_input[e->topin_actif](e, INCREASE);
+			g_top_input[(int)e->topin_actif](e, INCREASE);
 		else if (e->event.key.keysym.sym == SDLK_LEFT)
-			g_top_input[e->topin_actif](e, DECREASE_MAX);
+			g_top_input[(int)e->topin_actif](e, DECREASE_MAX);
 		else if (e->event.key.keysym.sym == SDLK_RIGHT)
-			g_top_input[e->topin_actif](e, INCREASE_MAX);
+			g_top_input[(int)e->topin_actif](e, INCREASE_MAX);
 	}
 }
 
@@ -49,13 +49,13 @@ void			change_right_top_input(t_env *e)
 	if (e->i_actif != -1 && e->i_actif < 6)
 	{
 		if (e->event.key.keysym.sym == SDLK_DOWN)
-			g_right_top_input[e->i_actif](e, DECREASE);
+			g_right_top_input[(int)e->i_actif](e, DECREASE);
 		else if (e->event.key.keysym.sym == SDLK_UP)
-			g_right_top_input[e->i_actif](e, INCREASE);
+			g_right_top_input[(int)e->i_actif](e, INCREASE);
 		else if (e->event.key.keysym.sym == SDLK_LEFT)
-			g_right_top_input[e->i_actif](e, DECREASE_MAX);
+			g_right_top_input[(int)e->i_actif](e, DECREASE_MAX);
 		else if (e->event.key.keysym.sym == SDLK_RIGHT)
-			g_right_top_input[e->i_actif](e, INCREASE_MAX);
+			g_right_top_input[(int)e->i_actif](e, INCREASE_MAX);
 		set_live_edition_mode(e);
 	}
 }
@@ -81,13 +81,13 @@ void			change_right_input(t_env *e)
 	if (e->i_actif >= 6 && e->it_actif >= 6)
 	{
 		if (e->event.key.keysym.sym == SDLK_DOWN)
-			g_right_input[e->it_actif - 6](e, DECREASE);
+			g_right_input[(int)e->it_actif - 6](e, DECREASE);
 		else if (e->event.key.keysym.sym == SDLK_UP)
-			g_right_input[e->it_actif - 6](e, INCREASE);
+			g_right_input[(int)e->it_actif - 6](e, INCREASE);
 		else if (e->event.key.keysym.sym == SDLK_LEFT)
-			g_right_input[e->it_actif - 6](e, DECREASE_MAX);
+			g_right_input[(int)e->it_actif - 6](e, DECREASE_MAX);
 		else if (e->event.key.keysym.sym == SDLK_RIGHT)
-			g_right_input[e->it_actif - 6](e, INCREASE_MAX);
+			g_right_input[(int)e->it_actif - 6](e, INCREASE_MAX);
 		set_live_edition_mode(e);
 	}
 }
