@@ -6,20 +6,31 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 22:31:12 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/09 08:45:22 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/10 13:47:55 by nsampre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "client.h"
 
-void	color_mapping(t_obj *obj)
+static int	requierements(t_obj *obj)
+{
+	if (obj->type != OBJ_CYL &&
+		obj->type != OBJ_CONE &&
+		obj->type != OBJ_SPHERE)
+		return (0);
+	if (obj->reflection || obj->marblesize)
+		return (0);
+	return (1);
+}
+
+void		color_mapping(t_obj *obj)
 {
 	int			i;
 	int			j;
 	uint32_t	*pixel_array;
 	double		color[3];
 
-	if (!(obj->type == OBJ_SPHERE && !obj->marblesize))
+	if (!requierements(obj))
 		return ;
 	i = obj->u * obj->current_texture->w;
 	j = (double)(1.0 - obj->v) * obj->current_texture->h;

@@ -25,6 +25,8 @@
 # include <arpa/inet.h>
 # include <netdb.h>
 # include <signal.h>
+# include <sys/stat.h>
+# include <sys/types.h>
 
 # include "frameworks/SDL2.framework/Headers/SDL.h"
 # include "frameworks/SDL2_ttf.framework/Headers/SDL_ttf.h"

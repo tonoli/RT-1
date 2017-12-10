@@ -293,4 +293,19 @@ typedef struct		s_window
 	SDL_Surface		*s_background;
 }					t_window;
 
+typedef	struct		s_perlin
+{
+	int				i;
+	int				j;
+	int				k;
+	double			u;
+	double			v;
+	double			w;
+	double			uu;
+	double			vv;
+	double			ww;
+	double			accum;
+	t_vector		weight;
+}					t_perlin;
+
 #endif

@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/26 17:37:45 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/09 08:45:22 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/10 13:42:36 by nsampre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,9 +64,6 @@ t_vector	sky(t_env *e, t_vector dir, double t)
 	if (e->current_skybox)
 		return (skybox(e, vector_normalize(dir), 42, 42));
 	return (diffuse_sky(e, t));
-//	return ((t_vector){1, 1, 1});
-//	return ((t_vector){1, 0, 0});
-//	return ((t_vector){0, 0, 0});
 }
 
 t_vector	bounce_ray(t_env *e, t_obj *closest_obj, t_ray ray)
@@ -82,16 +79,14 @@ t_vector	bounce_ray(t_env *e, t_obj *closest_obj, t_ray ray)
 		return (diffuse(e, ray, closest_obj));
 }
 
-t_vector	compute_objects(t_env *e, t_ray ray)
+t_vector	compute_objects(t_env *e, t_ray ray, double t)
 {
 	t_obj		*obj;
 	t_obj		*closest_obj;
-	double		t;
 
 	e->depth++;
 	obj = e->objects;
 	closest_obj = NULL;
-	t = -1;
 	e->t_min = 0.0;
 	e->t_max = INT_MAX;
 	while (obj)
@@ -109,6 +104,6 @@ t_vector	compute_objects(t_env *e, t_ray ray)
 	if (closest_obj && e->depth < e->recursion)
 		return (bounce_ray(e, closest_obj, ray));
 	if (closest_obj)
-		return (live_preview(e, closest_obj, ray));
+		return (live_preview(closest_obj));
 	return (sky(e, ray.dir, t));
 }

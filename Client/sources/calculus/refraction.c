@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/26 17:37:45 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/09 08:45:22 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/10 14:28:05 by nsampre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,14 +38,14 @@ t_ray		launch_ray(t_env *e, t_obj *closest_obj, t_vector v, double cosine)
 	if (randb() > reflect_probe)
 	{
 		ray.dir = vector_sub(vector_scale(vector_sub(v,
-													 vector_scale(closest_obj->normal, dt)), e->ni_nt),
-							 vector_scale(closest_obj->normal, sqrt(discriminant)));
+						vector_scale(closest_obj->normal, dt)), e->ni_nt),
+						vector_scale(closest_obj->normal, sqrt(discriminant)));
 		ray.ori = closest_obj->cross;
 	}
 	else
 	{
 		ray.dir = vector_sub(v, vector_scale(closest_obj->normal, 2.0 *
-											 vector_dot(v, closest_obj->normal)));
+						vector_dot(v, closest_obj->normal)));
 		ray.ori = closest_obj->cross;
 	}
 	return (ray);
@@ -60,14 +60,14 @@ t_vector	refraction(t_env *e, t_ray ray, t_obj *closest_obj)
 	e->avoid = closest_obj;
 	if (closest_obj->fuzz)
 		ray.dir = vector_add(ray.dir, vector_scale(random_unit_sphere(),
-															closest_obj->fuzz));
+						closest_obj->fuzz));
 	v = ray.dir;
 	n = closest_obj->normal;
 	if (vector_dot(ray.dir, n) > (double)0.0)
 	{
 		e->ni_nt = closest_obj->refraction;
 		cosine = closest_obj->refraction * vector_dot(v, n) /
-															vector_magnitude(v);
+						vector_magnitude(v);
 	}
 	else
 	{
@@ -75,5 +75,5 @@ t_vector	refraction(t_env *e, t_ray ray, t_obj *closest_obj)
 		cosine = -vector_dot(v, n) / vector_magnitude(v);
 	}
 	ray = launch_ray(e, closest_obj, ray.dir, cosine);
-	return (vector_mul(compute_objects(e, ray), closest_obj->color));
+	return (vector_mul(compute_objects(e, ray, -1), closest_obj->color));
 }

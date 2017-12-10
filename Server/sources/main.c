@@ -38,7 +38,7 @@ void	*loop(void *data)
 		sync_env_obj(e, cs);
 		sync_buffer(cs, e);
 		display_buffer(e);
-	}
+ 	}
 	return (NULL);
 }
 

@@ -328,6 +328,7 @@
 		9A4EFEE81FDD467C0036A51B /* mouse_rect_left.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A4EFEE51FDD467C0036A51B /* mouse_rect_left.c */; };
 		9A4EFEE91FDD467C0036A51B /* mouse_rect_right.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A4EFEE61FDD467C0036A51B /* mouse_rect_right.c */; };
 		9A4EFEEB1FDD468E0036A51B /* mouse_rect_top.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A4EFEEA1FDD468E0036A51B /* mouse_rect_top.c */; };
+		9A4EFEED1FDD64F30036A51B /* perlin.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A4EFEEC1FDD64F30036A51B /* perlin.c */; };
 		9A4FBCB71FDBCC41000023EE /* square.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A4FBCB51FDBCC41000023EE /* square.c */; };
 		9A4FBCB81FDBCC41000023EE /* square.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A4FBCB51FDBCC41000023EE /* square.c */; };
 		9A4FBCB91FDBCC41000023EE /* triangle.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A4FBCB61FDBCC41000023EE /* triangle.c */; };
@@ -592,6 +593,7 @@
 		9A4EFEE51FDD467C0036A51B /* mouse_rect_left.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mouse_rect_left.c; sourceTree = "<group>"; };
 		9A4EFEE61FDD467C0036A51B /* mouse_rect_right.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mouse_rect_right.c; sourceTree = "<group>"; };
 		9A4EFEEA1FDD468E0036A51B /* mouse_rect_top.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mouse_rect_top.c; sourceTree = "<group>"; };
+		9A4EFEEC1FDD64F30036A51B /* perlin.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = perlin.c; sourceTree = "<group>"; };
 		9A4FBCB51FDBCC41000023EE /* square.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = square.c; sourceTree = "<group>"; };
 		9A4FBCB61FDBCC41000023EE /* triangle.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = triangle.c; sourceTree = "<group>"; };
 		9A4FBCBB1FDBCC83000023EE /* input_top.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = input_top.c; sourceTree = "<group>"; };
@@ -1056,8 +1058,8 @@
 		9A337FC41FDA8F3100DE3AD9 /* Client */ = {
 			isa = PBXGroup;
 			children = (
-				9A337FC51FDA8F3100DE3AD9 /* includes */,
 				9A337FC71FDA8F3100DE3AD9 /* Makefile */,
+				9A337FC51FDA8F3100DE3AD9 /* includes */,
 				9A337FCC1FDA8F3100DE3AD9 /* sources */,
 			);
 			path = Client;
@@ -1074,9 +1076,9 @@
 		9A337FCC1FDA8F3100DE3AD9 /* sources */ = {
 			isa = PBXGroup;
 			children = (
-				9A337FD51FDA8F3100DE3AD9 /* connexion.c */,
 				9A337FE01FDA8F3100DE3AD9 /* main.c */,
 				9A337FE11FDA8F3100DE3AD9 /* miscelaneous.c */,
+				9A337FD51FDA8F3100DE3AD9 /* connexion.c */,
 				9A337FE21FDA8F3100DE3AD9 /* quit.c */,
 				9A337FCD1FDA8F3100DE3AD9 /* calculus */,
 				9A337FD61FDA8F3100DE3AD9 /* display */,
@@ -1093,6 +1095,7 @@
 				9A337FD01FDA8F3100DE3AD9 /* live.c */,
 				9A337FD11FDA8F3100DE3AD9 /* mapping_color.c */,
 				9A337FD21FDA8F3100DE3AD9 /* marble.c */,
+				9A4EFEEC1FDD64F30036A51B /* perlin.c */,
 				9A337FD31FDA8F3100DE3AD9 /* reflection.c */,
 				9A337FD41FDA8F3100DE3AD9 /* refraction.c */,
 			);
@@ -1269,6 +1272,7 @@
 				9A337E551FDA8EB100DE3AD9 /* ft_xtoa.c in Sources */,
 				9A337FED1FDA8F3100DE3AD9 /* draw_screen.c in Sources */,
 				9A337EF91FDA8EB100DE3AD9 /* ft_strstr.c in Sources */,
+				9A4EFEED1FDD64F30036A51B /* perlin.c in Sources */,
 				9A337FF51FDA8F3100DE3AD9 /* miscelaneous.c in Sources */,
 				9A337EA91FDA8EB100DE3AD9 /* ft_putnbr.c in Sources */,
 				9A337EBD1FDA8EB100DE3AD9 /* ft_str_is_number.c in Sources */,

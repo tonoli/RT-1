@@ -12,7 +12,7 @@
 
 #include "client.h"
 
-void	init_skyboxes_tx_sources(t_env *e)
+void	init_skyboxes_tx_sources(void)
 {
 	int i;
 

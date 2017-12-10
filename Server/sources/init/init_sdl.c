@@ -75,8 +75,9 @@ void		init_sdl_interface(t_env *e)
 	e->font[1] = load_ttf("./assets/font/RobotoCondensed-Regular.ttf", 20);
 	e->font[2] = load_ttf("./assets/font/RobotoCondensed-Bold.ttf", 12);
 	e->s_background = SDL_GetWindowSurface(e->win);
-	e->s_raytracer = SDL_CreateRGBSurface(0, F_WIDTH, F_HEIGHT, 32,
-										_R, _G, _B, _A);
+//	e->s_raytracer = SDL_CreateRGBSurface(0, F_WIDTH, F_HEIGHT, 32,
+//										_R, _G, _B, _A);
+	e->s_raytracer = SDL_CreateRGBSurfaceWithFormat(0, F_WIDTH, F_HEIGHT, 32, SDL_PIXELFORMAT_ARGB8888);
 	if (!e->s_background || !e->s_raytracer)
 		fatal_quit("SDL_GetWindowSurface");
 }
