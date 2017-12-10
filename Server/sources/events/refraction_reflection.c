@@ -25,9 +25,9 @@ void	change_refraction(t_env *e, int sense)
 	else if (sense == DECREASE && e->selected->refraction <= 1.09)
 		e->selected->refraction = 0;
 	else if (sense == DECREASE_MAX)
-			e->selected->refraction = 0;
+		e->selected->refraction = 0;
 	else if (sense == INCREASE_MAX && e->selected->refraction >= 1.00)
-			e->selected->refraction += 1;
+		e->selected->refraction += 1;
 }
 
 void	change_reflection(t_env *e, int sense)

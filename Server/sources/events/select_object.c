@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 10:45:09 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/10 18:20:53 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/10 21:21:39 by tdelmas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,6 @@ void			select_obj(int x, int y, t_env *e)
 {
 	e->depth = 0;
 	if (e->help_actif != 1)
-		e->selected = search_obj(e, cam_ray(e, x, y, F_WIDTH / (double)F_HEIGHT));
+		e->selected = search_obj(e, cam_ray(e, x, y, F_WIDTH /
+			(double)F_HEIGHT));
 }

@@ -12,34 +12,34 @@
 
 #include "server.h"
 
-void        change_rebond(t_env *e, int mode)
+void		change_rebond(t_env *e, int mode)
 {
-    if (((mode == INCREASE) || (mode == INCREASE_MAX))
-    && (e->rebond < 1))
-        e->rebond += 0.01;
-    else if(((mode == DECREASE) || (mode == DECREASE_MAX))
-    && (e->rebond > 0.01))
-        e->rebond -= 0.01;
+	if (((mode == INCREASE) || (mode == INCREASE_MAX))
+		&& (e->rebond < 1))
+		e->rebond += 0.01;
+	else if (((mode == DECREASE) || (mode == DECREASE_MAX))
+			&& (e->rebond > 0.01))
+		e->rebond -= 0.01;
 }
 
-void        change_rot_speed(t_env *e, int mode)
+void		change_rot_speed(t_env *e, int mode)
 {
-    if (((mode == INCREASE) || (mode == INCREASE_MAX))
-    && (e->rot_speed < 1))
-        e->rot_speed += 0.01;
-    else if(((mode == DECREASE) || (mode == DECREASE_MAX))
-    && (e->rot_speed > 0.01))
-        e->rot_speed -= 0.01;
+	if (((mode == INCREASE) || (mode == INCREASE_MAX))
+		&& (e->rot_speed < 1))
+		e->rot_speed += 0.01;
+	else if (((mode == DECREASE) || (mode == DECREASE_MAX))
+			&& (e->rot_speed > 0.01))
+		e->rot_speed -= 0.01;
 }
 
-void        change_move_speed(t_env *e, int mode)
+void		change_move_speed(t_env *e, int mode)
 {
-    if ((mode == INCREASE) && (e->move_speed < 100))
-        e->move_speed += 0.1;
-    else if((mode == DECREASE) && (e->move_speed > 0.05))
-        e->move_speed -= 0.1;
-    else if((mode == INCREASE_MAX) && (e->move_speed < 99))
-        e->move_speed += 1;
-    else if((mode == DECREASE_MAX) && (e->move_speed > 1))
-        e->move_speed -= 1;
+	if ((mode == INCREASE) && (e->move_speed < 100))
+		e->move_speed += 0.1;
+	else if ((mode == DECREASE) && (e->move_speed > 0.05))
+		e->move_speed -= 0.1;
+	else if ((mode == INCREASE_MAX) && (e->move_speed < 99))
+		e->move_speed += 1;
+	else if ((mode == DECREASE_MAX) && (e->move_speed > 1))
+		e->move_speed -= 1;
 }

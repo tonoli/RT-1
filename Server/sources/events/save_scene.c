@@ -12,7 +12,7 @@
 
 #include "server.h"
 
-static char	*g_filter[] =
+static char		*g_filter[] =
 {
 	NULL,
 	"sepia",
@@ -20,7 +20,7 @@ static char	*g_filter[] =
 	"negative"
 };
 
-static void	ft_save_filter(char **str)
+static void		ft_save_filter(char **str)
 {
 	char *tmp;
 
@@ -30,7 +30,7 @@ static void	ft_save_filter(char **str)
 	ft_strdel(&tmp);
 }
 
-static void	ft_save_skybox(char **str)
+static void		ft_save_skybox(char **str)
 {
 	char	*tmp;
 
@@ -40,7 +40,7 @@ static void	ft_save_skybox(char **str)
 	ft_strdel(&tmp);
 }
 
-static void	ft_save_transparent(char **str, t_obj *obj)
+static void		ft_save_transparent(char **str, t_obj *obj)
 {
 	char	*tmp;
 
@@ -50,7 +50,7 @@ static void	ft_save_transparent(char **str, t_obj *obj)
 	ft_strdel(&tmp);
 }
 
-static void	ft_save_texture(char **str, t_obj *obj)
+static void		ft_save_texture(char **str, t_obj *obj)
 {
 	char	*tmp;
 	char	*tmp2;
@@ -64,7 +64,7 @@ static void	ft_save_texture(char **str, t_obj *obj)
 	ft_strdel(&tmp2);
 }
 
-static void	ft_save_light(char **str, t_obj *obj)
+static void		ft_save_light(char **str, t_obj *obj)
 {
 	char	*tmp;
 	char	*tmp2;
@@ -77,7 +77,7 @@ static void	ft_save_light(char **str, t_obj *obj)
 	ft_strdel(&tmp2);
 }
 
-static void	ft_save_damier(char **str, t_obj *obj)
+static void		ft_save_damier(char **str, t_obj *obj)
 {
 	char	*tmp;
 	char	*tmp2;
@@ -95,13 +95,14 @@ static void	ft_save_damier(char **str, t_obj *obj)
 	ft_strdel(&tmp2);
 }
 
-static void	ft_save_marble(char **str, t_obj *obj)
+static void		ft_save_marble(char **str, t_obj *obj)
 {
 	char	*tmp;
 	char	*tmp2;
 
-	asprintf(&tmp, "\t<marblesize>%f</marblesize>\n\t<marblecolor>0x%.2X, 0x%.2X, \
-0x%.2X</marblecolor>\n", obj->marblesize, (int)(obj->marblecolor.x * 255.0),
+	asprintf(&tmp, "\t<marblesize>%f</marblesize>\n\t<marblecolor>0x%.2X, \
+0x%.2X, 0x%.2X</marblecolor>\n", obj->marblesize,
+		(int)(obj->marblecolor.x * 255.0),
 	(int)(obj->marblecolor.y * 255.0), (int)(obj->marblecolor.z * 255.0));
 	tmp2 = ft_strdup(*str);
 	ft_strdel(str);
@@ -110,7 +111,7 @@ static void	ft_save_marble(char **str, t_obj *obj)
 	ft_strdel(&tmp2);
 }
 
-static void	ft_save_fuzz(char **str, t_obj *obj)
+static void		ft_save_fuzz(char **str, t_obj *obj)
 {
 	char	*tmp;
 	char	*tmp2;
@@ -123,7 +124,7 @@ static void	ft_save_fuzz(char **str, t_obj *obj)
 	ft_strdel(&tmp2);
 }
 
-static void	ft_save_refraction(char **str, t_obj *obj)
+static void		ft_save_refraction(char **str, t_obj *obj)
 {
 	char	*tmp;
 	char	*tmp2;
@@ -136,7 +137,7 @@ static void	ft_save_refraction(char **str, t_obj *obj)
 	ft_strdel(&tmp2);
 }
 
-static void	ft_save_reflection(char **str, t_obj *obj)
+static void		ft_save_reflection(char **str, t_obj *obj)
 {
 	char	*tmp;
 	char	*tmp2;
@@ -149,7 +150,7 @@ static void	ft_save_reflection(char **str, t_obj *obj)
 	ft_strdel(&tmp2);
 }
 
-static void	ft_save_square(t_obj *obj, char **buf)
+static void		ft_save_square(t_obj *obj, char **buf)
 {
 	char	*str;
 
@@ -174,7 +175,7 @@ static void	ft_save_square(t_obj *obj, char **buf)
 	*buf = ft_strdup(str);
 }
 
-static void	ft_save_triangle(t_obj *obj, char **buf)
+static void		ft_save_triangle(t_obj *obj, char **buf)
 {
 	char	*str;
 
@@ -199,7 +200,7 @@ static void	ft_save_triangle(t_obj *obj, char **buf)
 	*buf = ft_strdup(str);
 }
 
-static void	ft_save_cone(t_obj *obj, char **buf)
+static void		ft_save_cone(t_obj *obj, char **buf)
 {
 	char	*str;
 
@@ -223,7 +224,7 @@ static void	ft_save_cone(t_obj *obj, char **buf)
 	*buf = ft_strdup(str);
 }
 
-static void	ft_save_cylinder(t_obj *obj, char **buf)
+static void		ft_save_cylinder(t_obj *obj, char **buf)
 {
 	char	*str;
 
@@ -247,7 +248,7 @@ static void	ft_save_cylinder(t_obj *obj, char **buf)
 	*buf = ft_strdup(str);
 }
 
-static void	ft_save_torus(t_obj *obj, char **buf)
+static void		ft_save_torus(t_obj *obj, char **buf)
 {
 	char	*str;
 
@@ -272,8 +273,7 @@ static void	ft_save_torus(t_obj *obj, char **buf)
 	*buf = ft_strdup(str);
 }
 
-
-static void	ft_save_plane(t_obj *obj, char **buf)
+static void		ft_save_plane(t_obj *obj, char **buf)
 {
 	char	*str;
 
@@ -281,7 +281,8 @@ static void	ft_save_plane(t_obj *obj, char **buf)
 </origin>\n\t<direction>%f, %f, %f</direction>\n\t<height>%f</height>\n\t\
 <color>0x%.2X, 0x%.2X, 0x%.2X</color>\n", obj->ori.x, obj->ori.y, obj->ori.z,
 	obj->dir.x, obj->dir.y, obj->dir.z, sqrt(obj->height),
-	(int)(obj->color.x * 255.0), (int)(obj->color.y * 255.0), (int)(obj->color.z * 255.0));
+	(int)(obj->color.x * 255.0), (int)(obj->color.y * 255.0),
+		(int)(obj->color.z * 255.0));
 	if (obj->reflection)
 		ft_save_reflection(&str, obj);
 	if (obj->refraction)
@@ -297,7 +298,7 @@ static void	ft_save_plane(t_obj *obj, char **buf)
 	*buf = ft_strdup(str);
 }
 
-static void	ft_save_sphere(t_obj *obj, char **buf)
+static void		ft_save_sphere(t_obj *obj, char **buf)
 {
 	char	*str;
 
@@ -323,7 +324,7 @@ static void	ft_save_sphere(t_obj *obj, char **buf)
 	*buf = ft_strdup(str);
 }
 
-static void	ft_save_camera(t_obj *cam, char **buf)
+static void		ft_save_camera(t_obj *cam, char **buf)
 {
 	asprintf(buf, "<camera>\n\t<origin>%f, %f, %f</origin>\n\t<direction>%f, \
 %f, %f</direction>\n", cam->ori.x, cam->ori.y,
@@ -334,7 +335,7 @@ static void	ft_save_camera(t_obj *cam, char **buf)
 		ft_save_filter(buf);
 }
 
-char	*name_file(void)
+char			*name_file(void)
 {
 	char			*buffer;
 	struct tm		*tm_info;
@@ -347,10 +348,9 @@ char	*name_file(void)
 	return (buffer);
 }
 
-
-void  save_scene(t_env *env)
+void			save_scene(t_env *env)
 {
-	char  *buf;
+	char  	*buf;
 	int    file_xml;
 	int    file_bmp;
 	t_obj  *tmp;
