@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/09 11:45:22 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/09 11:45:22 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/10 13:47:38 by tdelmas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,17 +25,17 @@ int	solve_quadric(double c[3], double s[2])
 	}
 	qd.p = c[1] / (2 * c[2]);
 	qd.q = c[0] / c[2];
-	qd.D = qd.p * qd.p - qd.q;
-	if (IsZero(qd.D))
+	qd.d = qd.p * qd.p - qd.q;
+	if (IsZero(qd.d))
 		s[0] = -qd.p;
-	if (IsZero(qd.D))
+	if (IsZero(qd.d))
 		return (1);
-	else if (qd.D < 0)
+	else if (qd.d < 0)
 		return (0);
-	else if (qd.D > 0)
+	else if (qd.d > 0)
 	{
-		s[0] = sqrt(qd.D) - qd.p;
-		s[1] = -sqrt(qd.D) - qd.p;
+		s[0] = sqrt(qd.d) - qd.p;
+		s[1] = -sqrt(qd.d) - qd.p;
 		return (2);
 	}
 	return (0);
