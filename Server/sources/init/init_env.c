@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 11:35:45 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/10 02:41:18 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/10 15:02:29 by nsampre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static int	count(const t_texture_sources t[])
 	return (i);
 }
 
-void	init_render_env(t_env *e)
+void		init_render_env(t_env *e)
 {
 	e->avoid = NULL;
 	perlin_generate(e);

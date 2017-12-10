@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 23:35:47 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/10 02:39:54 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/10 14:59:49 by nsampre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,9 @@ void	display_buffer(t_env *e)
 	if (e->render == 1)
 	{
 		if (e->help_actif != 1 && e->credit_actif != 1)
-			SDL_BlitSurface(e->s_raytracer, &(SDL_Rect){0, 0, F_WIDTH, F_HEIGHT},
-					e->s_background, &(SDL_Rect){82, 72, F_WIDTH, F_HEIGHT});
+			SDL_BlitSurface(e->s_raytracer,
+			&(SDL_Rect){0, 0, F_WIDTH, F_HEIGHT}, e->s_background,
+			&(SDL_Rect){82, 72, F_WIDTH, F_HEIGHT});
 	}
 }
 

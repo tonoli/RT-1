@@ -6,19 +6,19 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 02:59:21 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/09 10:22:49 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/10 14:57:08 by nsampre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "server.h"
 
-int			g_srv_socket;
-int			g_port;
-t_vector	*g_buffer;
-t_env		*g_e;
+int				g_srv_socket;
+int				g_port;
+t_vector		*g_buffer;
+t_env			*g_e;
 pthread_mutex_t	g_mutex;
 
-void	*loop(void *data)
+static void	*loop(void *data)
 {
 	int		cs;
 	t_env	*e;
@@ -38,11 +38,11 @@ void	*loop(void *data)
 		sync_env_obj(e, cs);
 		sync_buffer(cs, e);
 		display_buffer(e);
- 	}
+	}
 	return (NULL);
 }
 
-void	*wait_client(void *data)
+static void	*wait_client(void *data)
 {
 	pthread_t	t;
 	int64_t		cs;
@@ -56,7 +56,7 @@ void	*wait_client(void *data)
 	return (NULL);
 }
 
-void	launch_local_client(t_env *e)
+static void	launch_local_client(t_env *e)
 {
 	e->child = fork();
 	if (e->child == -1)
@@ -69,7 +69,7 @@ void	launch_local_client(t_env *e)
 	}
 }
 
-int		main(int argc, char **argv)
+int			main(int argc, char **argv)
 {
 	t_env		*e;
 	pthread_t	t;

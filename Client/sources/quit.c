@@ -15,7 +15,7 @@
 void	custom_quit(char *msg)
 {
 	if (msg)
-		ft_dprintf(2, "Fatal error : %s\n", msg);
+		ft_dprintf(2, "\nFatal error : %s\n", msg);
 	close(g_cli_socket);
 	exit(EXIT_FAILURE);
 }
