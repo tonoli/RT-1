@@ -40,14 +40,14 @@ double	hit_torus(t_env *e, t_obj *obj, t_ray ray)
 	obj->a = 1.0 - (v * v);
 	obj->b = 2.0 * (vector_dot(Q, P1) - (u * v));
 	obj->c = vector_dot(Q, Q) - (u * u);
-	obj->d = vector_dot(Q, Q) + (obj->big_r * obj->big_r) - (obj->small_r * obj->small_r);
+	obj->d = vector_dot(Q, Q) + (obj->radius * obj->radius) - (obj->small_r * obj->small_r);
 
 	double cube[5];
 	cube[4] = 1.0;
 	cube[3] = 4.0 * (vector_dot(Q, P1));
-	cube[2] = (2.0 * obj->d) + (0.25 * cube[3] * cube[3]) - (4.0 * obj->big_r * obj->big_r * obj->a);
-	cube[1] = (cube[3] * obj->d) - (4.0 * obj->big_r * obj->big_r * obj->b);
-	cube[0] = (obj->d * obj->d) - (4.0 * obj->big_r * obj->big_r * obj->c);
+	cube[2] = (2.0 * obj->d) + (0.25 * cube[3] * cube[3]) - (4.0 * obj->radius * obj->radius * obj->a);
+	cube[1] = (cube[3] * obj->d) - (4.0 * obj->radius * obj->radius * obj->b);
+	cube[0] = (obj->d * obj->d) - (4.0 * obj->radius * obj->radius * obj->c);
 
 	double ret[4] = {-1.0, -1.0, -1.0, -1.0};
 

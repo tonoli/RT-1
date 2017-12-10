@@ -25,7 +25,7 @@ void		int_obj(t_env *e)
 	if (e->selected->type == OBJ_TORUS)
 	{
 		e->selected->small_r = sqrt(10);
-		e->selected->big_r = sqrt(100);
+		e->selected->radius = sqrt(100);
 	}
 	else
 	{

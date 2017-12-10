@@ -78,7 +78,6 @@ typedef struct	s_obj
 	double			len2;
 	double			len3;
 	double			radius;
-	double			big_r;
 	double			small_r;
 	double			height;
 	int				reflection;
