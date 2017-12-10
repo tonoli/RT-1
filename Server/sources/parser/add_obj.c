@@ -68,8 +68,8 @@ void	add_obj_content(t_env *e, t_obj *obj, char *tag, char *content)
 		obj->tsp_index = parse_tsp(content);
 	else if (ft_strequ(tag, "<small_radius>"))
 		obj->small_r = parse_radius(content);
-	else if (ft_strequ(tag, "<big_radius>"))
-		obj->big_r = parse_radius(content);
+	else if (ft_strequ(tag, "<radius>"))
+		obj->radius = parse_radius(content);
 	else
 		parse_error("Unknown attribute.", tag, content);
 }

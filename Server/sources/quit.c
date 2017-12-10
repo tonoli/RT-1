@@ -31,3 +31,10 @@ void	custom_quit(char *msg)
 		ft_dprintf(2, "Fatal error : %s\n", msg);
 	quit(0);
 }
+
+void	thread_quit(char *msg)
+{
+	if (msg && 0)
+		ft_dprintf(2, "Warning : %s. Quiting thread.\n", msg);
+	pthread_exit(NULL);
+}

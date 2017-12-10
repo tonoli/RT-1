@@ -33,6 +33,7 @@ extern pthread_mutex_t	g_mutex;
 void		quit(int sig);
 void		fatal_quit(char *msg);
 void		custom_quit(char *msg);
+void		thread_quit(char *msg);
 
 /*
 **	OPTIONS

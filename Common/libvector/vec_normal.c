@@ -78,5 +78,5 @@ t_vector	normal_torus(t_obj *obj)
 	a = vector_sub(obj->cross, vector_scale(obj->dir, k));
 	m = sqrt((obj->small_r * obj->small_r) - (k * k));
 	return (vector_sub(vector_sub(obj->cross, a),
-			vector_scale(vector_sub(obj->ori, a), m / (obj->big_r + m))));
+			vector_scale(vector_sub(obj->ori, a), m / (obj->radius + m))));
 }

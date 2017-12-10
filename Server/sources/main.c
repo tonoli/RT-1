@@ -36,10 +36,8 @@ void	*loop(void *data)
 			obj = obj->next;
 		}
 		sync_env_obj(e, cs);
-		pthread_mutex_lock(&g_mutex);
 		sync_buffer(cs, e);
 		display_buffer(e);
-		pthread_mutex_unlock(&g_mutex);
 	}
 	return (NULL);
 }
@@ -52,7 +50,8 @@ void	*wait_client(void *data)
 	while (42)
 	{
 		cs = connect_to_client();
-		pthread_create(&t, NULL, loop, (void *)cs);
+		if (pthread_create(&t, NULL, loop, (void *)cs))
+			fatal_quit("pthread_create");
 	}
 	return (NULL);
 }
