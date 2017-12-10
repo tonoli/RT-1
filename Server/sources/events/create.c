@@ -97,7 +97,7 @@ void	create_torus(t_env *e)
 	obj = new_obj();
 	obj->type = OBJ_TORUS;
 	obj->small_r = sqrt(10.0);
-	obj->big_r = sqrt(100);
+	obj->radius = sqrt(100);
 	obj->color = (t_vector){randb(), randb(), randb()};
 	obj->color_backup = obj->color;
 	obj->marblecolor = (t_vector){randb(), randb(), randb()};

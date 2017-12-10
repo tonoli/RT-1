@@ -254,11 +254,11 @@ static void	ft_save_torus(t_obj *obj, char **buf)
 	char	*str;
 
 	asprintf(&str, "<object>\n\t<type>torus</type>\n\t<origin>%f, %f, %f\
-</origin>\n\t<direction>%f, %f, %f</direction>\n\t<big_radius>%f\
-</big_radius>\n\t<small_radius>%f</small_radius>\n\t<color>0x%.2X,\
+</origin>\n\t<direction>%f, %f, %f</direction>\n\t<radius>%f\
+</radius>\n\t<small_radius>%f</small_radius>\n\t<color>0x%.2X,\
 0x%.2X, 0x%.2X</color>\n",
 	obj->ori.x, obj->ori.y, obj->ori.z, obj->dir.x, obj->dir.y,
-	obj->dir.z, sqrt(obj->big_r), sqrt(obj->small_r),
+	obj->dir.z, sqrt(obj->radius), sqrt(obj->small_r),
 	(int)(obj->color.x * 255.0), (int)(obj->color.y * 255.0),
 	(int)(obj->color.z * 255.0));
 	if (obj->reflection)

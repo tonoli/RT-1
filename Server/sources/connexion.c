@@ -27,7 +27,7 @@ void	init_master_socket(void)
 	address.sin_port = htons(g_port);
 	if (bind(g_srv_socket, (struct sockaddr *)&address, sizeof(address)) < 0)
 		fatal_quit("bind");
-	if (listen(g_srv_socket, 42) < 0)
+	if (listen(g_srv_socket, 256) < 0)
 		fatal_quit("listen");
 }
 
@@ -52,12 +52,12 @@ void	sync_env_obj(t_env *e, int cs)
 	t_obj	*obj;
 
 	if (send(cs, (void *)e, sizeof(t_env), 0) < 0)
-		fatal_quit("send");
+		thread_quit("send");
 	obj = e->objects;
 	while (obj)
 	{
 		if (send(cs, (void *)obj, sizeof(t_obj), 0) < 0)
-			fatal_quit("send");
+			thread_quit("send");
 		obj = obj->next;
 	}
 }
@@ -68,7 +68,7 @@ void	write_global_buffer(int *local_buffer, t_env *e)
 	ssize_t	y;
 	int		color;
 
-	e->lock = 1;
+	pthread_mutex_lock(&g_mutex);
 	y = -1;
 	while (++y < F_HEIGHT)
 	{
@@ -90,7 +90,7 @@ void	write_global_buffer(int *local_buffer, t_env *e)
 			}
 		}
 	}
-	e->lock = 0;
+	pthread_mutex_unlock(&g_mutex);
 }
 
 void	sync_buffer(int cs, t_env *e)
@@ -106,13 +106,13 @@ void	sync_buffer(int cs, t_env *e)
 	{
 		r = recv(cs, (void *)local_buffer + os,
 						(sizeof(int) * (int)F_WIDTH * (int)F_HEIGHT) - os, 0);
-		(r == -1) ? fatal_quit("recv") : 0;
+		(r == -1) ? thread_quit("recv") : 0;
 		os += r;
 	}
-	recv(cs, (void *)&live, sizeof(char), 0);
+	r = recv(cs, (void *)&live, sizeof(char), 0);
+	(r == -1) ? thread_quit("recv") : 0;
 	if (live == e->live)
 	{
-		while (e->lock);
 		write_global_buffer(local_buffer, e);
 		(e->live == 1 || e->reset) ? e->sum = 1 : e->sum++;
 		e->reset = 0;

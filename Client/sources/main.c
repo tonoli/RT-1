@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 02:51:04 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/09 08:45:22 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/10 13:33:38 by nsampre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ t_env		*g_e;
 void	quit(int k)
 {
 	(void)k;
-//	close(g_cli_socket);
+	close(g_cli_socket);
 	exit(EXIT_SUCCESS);
 }
 
@@ -58,7 +58,7 @@ void	show_frame(void)
 									g_win.event.key.keysym.sym == SDLK_ESCAPE))
 		quit(0);
 	SDL_BlitSurface(g_win.s_background, &(SDL_Rect){0, 0, F_WIDTH, F_HEIGHT},
-					 g_win.s_background, &(SDL_Rect){0, 0, F_WIDTH, F_HEIGHT});
+					g_win.s_background, &(SDL_Rect){0, 0, F_WIDTH, F_HEIGHT});
 	SDL_UpdateWindowSurface(g_win.win);
 }
 
@@ -93,8 +93,8 @@ int		main(int argc, char **argv)
 	e = (t_env *)ft_memalloc(sizeof(t_env));
 	g_e = e;
 	init_globals();
-	init_skyboxes_tx_sources(e);
-	init_color_tx_sources(e);
-	init_transparency_tx_sources(e);
+	init_skyboxes_tx_sources();
+	init_color_tx_sources();
+	init_transparency_tx_sources();
 	loop(e);
 }

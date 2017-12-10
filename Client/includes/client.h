@@ -42,9 +42,9 @@ void		fatal_quit(char *msg);
 */
 
 void		init_globals(void);
-void		init_skyboxes_tx_sources(t_env *e);
-void		init_color_tx_sources(t_env *e);
-void		init_transparency_tx_sources(t_env *e);
+void		init_skyboxes_tx_sources(void);
+void		init_color_tx_sources(void);
+void		init_transparency_tx_sources(void);
 
 /*
 **	CONNEXION
@@ -88,11 +88,11 @@ void		release_copy(t_env **copy);
 **	CALCULUS
 */
 
-t_vector	compute_objects(t_env *e, t_ray ray);
+t_vector	compute_objects(t_env *e, t_ray ray, double t);
 t_vector	reflection(t_env *e, t_ray ray, t_obj *closest_obj);
 t_vector	refraction(t_env *e, t_ray ray, t_obj *closest_obj);
 t_vector	diffuse(t_env *e, t_ray ray, t_obj *closest_obj);
-t_vector	live_preview(t_env *e, t_obj *closest_obj, t_ray ray);
+t_vector	live_preview(t_obj *closest_obj);
 
 /*
 **	MAPPING
@@ -104,9 +104,8 @@ void		color_mapping(t_obj *closest_obj);
 **	MARBLE
 */
 
-void		marble(t_env *e, t_vector *color, t_obj *closest_obj);
+void		marble(t_env *e, t_obj *closest_obj);
 double		noise(t_env *e, t_vector cross);
-double		turb(t_env *e, t_vector cross);
 void		perlin_generate(t_env *e);
 void		perlin_generate_perm(int *p);
 

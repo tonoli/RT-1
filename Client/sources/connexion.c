@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 02:49:26 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/09 08:45:22 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/10 11:37:46 by nsampre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	connect_to_server(void)
 void	sync_env(t_env *e)
 {
 	ssize_t	r;
-	ssize_t	os;
+	size_t	os;
 
 	os = 0;
 	while (os < sizeof(t_env))
@@ -54,7 +54,7 @@ void	sync_env(t_env *e)
 void	sync_objects(t_env *e, t_obj *obj)
 {
 	ssize_t	r;
-	ssize_t	os;
+	size_t	os;
 	int		i;
 
 	i = -1;
@@ -81,13 +81,14 @@ void	sync_objects(t_env *e, t_obj *obj)
 
 void	sync_buffer(t_env *e)
 {
-	ssize_t r;
+	ssize_t	r;
 
 	r = send(g_cli_socket, g_buffer,
 							sizeof(int) * (int)F_WIDTH * (int)F_HEIGHT, 0);
 	if (r == -1)
 		fatal_quit("send buffer");
 	send(g_cli_socket, (void *)&e->live, sizeof(char), 0);
+	printf("buffer synced ! %f\n", randb());
 }
 
 void	release_obj(t_env *e)

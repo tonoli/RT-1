@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   live.c                                             :+:      :+:    :+:   */
+/*   object_dist.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tdelmas <tdelmas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/01 12:39:32 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/09 11:52:18 by nsampre          ###   ########.fr       */
+/*   Created: 2017/12/10 14:10:46 by tdelmas           #+#    #+#             */
+/*   Updated: 2017/12/10 14:11:49 by tdelmas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "client.h"
-
-t_vector	live_preview(t_obj *closest_obj)
+double		dist_priority(t_env *e, t_obj *obj, t_ray ray, double t)
 {
-	if (closest_obj->damier)
-		damier(closest_obj);
-	if (closest_obj->current_texture)
-		color_mapping(closest_obj);
-	return (closest_obj->color);
+	if (t > e->t_min && t < e->t_max)
+	{
+		obj->t = t;
+		obj->cross = vector_factor(ray.ori, t, ray.dir);
+		obj->normal = normal_cone(obj);
+		return (t);
+	}
+	return (-1);
 }

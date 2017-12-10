@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   live.c                                             :+:      :+:    :+:   */
+/*   set_helper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
+/*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/01 12:39:32 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/09 11:52:18 by nsampre          ###   ########.fr       */
+/*   Created: 2017/12/10 03:03:34 by itonoli-          #+#    #+#             */
+/*   Updated: 2017/12/10 03:13:59 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "client.h"
+#include "server.h"
 
-t_vector	live_preview(t_obj *closest_obj)
+void        set_helper(t_env *e)
 {
-	if (closest_obj->damier)
-		damier(closest_obj);
-	if (closest_obj->current_texture)
-		color_mapping(closest_obj);
-	return (closest_obj->color);
+    e->help_actif = (e->help_actif == 0) ? 1 : 0;
+    if (e->help_actif)
+    {
+        SDL_BlitSurface(e->s_ui, &e->help_rect, e->s_background, &(SDL_Rect){405, 190, 350, 400});
+    }
 }

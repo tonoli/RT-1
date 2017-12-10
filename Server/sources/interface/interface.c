@@ -6,7 +6,7 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 17:23:36 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/12/09 18:34:32 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/10 03:32:00 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,21 +30,23 @@ void		start_render(t_env *e)
 
 void		where_is_mickey(t_env *e)
 {
-	is_mouse_in_rect_top_input(e);
-	is_mouse_in_rect_left(e);
-	is_mouse_in_rect_top(e);
-	if (e->event.type == SDL_MOUSEBUTTONDOWN)
+	if ((e->event.type == SDL_MOUSEMOTION ||
+		e->event.type == SDL_MOUSEBUTTONDOWN))
+	{
+		is_mouse_in_rect_top_input(e);
+		is_mouse_in_rect_left(e);
+		is_mouse_in_rect_top(e);
 		is_mouse_in_render(e);
+		is_mouse_in_credit(e);
+	}
+	draw_selected(e);
 }
 
 void	handle_events(t_env *e)
 {
-	// EXIT
 	if (e->event.window.event == SDL_WINDOWEVENT_CLOSE ||
 		(e->event.type == SDL_KEYDOWN && e->event.key.keysym.sym == SDLK_ESCAPE))
 		e->run = 0;
-
-	// KEYBOARD
 	if (e->event.type == SDL_KEYDOWN && e->event.key.keysym.sym != SDLK_ESCAPE)
 	{
 		if (e->loader == 1 && e->nb_cli > 0)
@@ -57,17 +59,12 @@ void	handle_events(t_env *e)
 				keyboard(e->event.key.keysym.sym, e);
 		}
 	}
-
-	// MOUSE
-	if ((e->event.type == SDL_MOUSEMOTION ||
-		e->event.type == SDL_MOUSEBUTTONDOWN) && e->render == 1)
+	if (e->render == 1)
 	{
 		e->mouse.x = e->event.motion.x;
 		e->mouse.y = e->event.motion.y;
 		where_is_mickey(e);
 	}
-	if (e->render == 1)
-		draw_selected(e);
 }
 
 int		free_elements(t_env *e)
@@ -81,7 +78,7 @@ int		free_elements(t_env *e)
 	TTF_Quit();
 	SDL_Quit();
 	kill(e->child, SIGTERM);
-//	close(g_srv_socket);
+	close(g_srv_socket);
 	exit(EXIT_SUCCESS);
 	return (0);
 }

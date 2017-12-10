@@ -87,7 +87,7 @@ void			*compute_block(void *data)
 			e->avoid = NULL;
 			e->vpos = ray.dir.y;
 			e->depth = 0;
-			save_final_color(e, compute_objects(e, ray), i, j);
+			save_final_color(e, compute_objects(e, ray, -1), i, j);
 			j += e->increment;
 		}
 		i += e->increment;

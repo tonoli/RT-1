@@ -155,7 +155,7 @@
 	<type>torus</type>
 	<origin>59.800000, 16.985118, 29.356209</origin>
 	<direction>0.000000, -0.959396, -0.282062</direction>
-	<big_radius>3.162278</big_radius>
+	<radius>3.162278</radius>
 	<small_radius>1.778279</small_radius>
 	<color>0x86,0x21, 0xDA</color>
 	<reflection>1</reflection>
@@ -165,7 +165,7 @@
 	<type>torus</type>
 	<origin>0.300000, 24.660191, 29.655171</origin>
 	<direction>0.000000, 0.000000, -1.000000</direction>
-	<big_radius>3.162278</big_radius>
+	<radius>3.162278</radius>
 	<small_radius>1.778279</small_radius>
 	<color>0xA6,0x67, 0xD9</color>
 	<refraction>1.100000</refraction>

@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   live.c                                             :+:      :+:    :+:   */
+/*   vec_normal2.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tdelmas <tdelmas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/01 12:39:32 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/09 11:52:18 by nsampre          ###   ########.fr       */
+/*   Created: 2017/12/10 12:15:32 by tdelmas           #+#    #+#             */
+/*   Updated: 2017/12/10 12:15:54 by tdelmas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "client.h"
+#include "rt_clu.h"
 
-t_vector	live_preview(t_obj *closest_obj)
+t_vector	vector_normalize(t_vector a)
 {
-	if (closest_obj->damier)
-		damier(closest_obj);
-	if (closest_obj->current_texture)
-		color_mapping(closest_obj);
-	return (closest_obj->color);
+	t_vector v;
+
+	v = vector_scale(a, 1.0 / vector_magnitude(a));
+	return (v);
 }

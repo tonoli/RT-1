@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/26 17:37:45 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/09 08:45:22 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/10 13:46:49 by nsampre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ t_vector	reflection(t_env *e, t_ray ray, t_obj *closest_obj)
 		ray.dir = vector_normalize(ray.dir);
 	}
 	if ((double)vector_dot(ray.dir, n) > (double)0.0)
-		color = compute_objects(e, ray);
+		color = compute_objects(e, ray, -1);
 	else
 		color = closest_obj->color;
-	(closest_obj->marblesize) ? marble(e, &color, closest_obj) : 0;
+	(closest_obj->marblesize) ? marble(e, closest_obj) : 0;
 	return (vector_mul(color, closest_obj->color));
 }

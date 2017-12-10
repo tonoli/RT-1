@@ -16,6 +16,7 @@ int			g_srv_socket;
 int			g_port;
 t_vector	*g_buffer;
 t_env		*g_e;
+pthread_mutex_t	g_mutex;
 
 void	*loop(void *data)
 {
@@ -37,7 +38,7 @@ void	*loop(void *data)
 		sync_env_obj(e, cs);
 		sync_buffer(cs, e);
 		display_buffer(e);
-	}
+ 	}
 	return (NULL);
 }
 
@@ -49,7 +50,8 @@ void	*wait_client(void *data)
 	while (42)
 	{
 		cs = connect_to_client();
-		pthread_create(&t, NULL, loop, (void *)cs);
+		if (pthread_create(&t, NULL, loop, (void *)cs))
+			fatal_quit("pthread_create");
 	}
 	return (NULL);
 }

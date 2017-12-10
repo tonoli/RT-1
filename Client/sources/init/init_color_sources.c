@@ -12,7 +12,7 @@
 
 #include "client.h"
 
-void	init_color_tx_sources(t_env *e)
+void	init_color_tx_sources(void)
 {
 	int i;
 
