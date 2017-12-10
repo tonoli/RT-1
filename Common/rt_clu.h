@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 02:47:25 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/10 16:58:15 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/10 18:41:33 by nsampre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,11 +85,10 @@
 # define COLOR_Y            (SDL_Color){239, 236, 0, 255}
 
 # define EQN_EPS			1e-9
-# define IsZero(x)			((x) > -EQN_EPS && (x) < EQN_EPS)
+# define ISZERO(x)			((x) > -EQN_EPS && (x) < EQN_EPS)
 
-# define cbrt_l
-# define cbtr_r(x)			((x) < 0.0 ? -pow((double)-(x), 1.0/3.0) : 0.0))
-# define cbrt(x)			((x) > 0.0 ? pow((double)(x), 1.0/3.0) : cbtr_r(x)
+# define CBRT_R(x)			((x) < 0.0 ? -pow((double)-(x), 1.0/3.0) : 0.0))
+# define CBRT(x)			((x) > 0.0 ? pow((double)(x), 1.0/3.0) : CBRT_R(x)
 
 # ifndef GLOBAL_CLU
 #  define GLOBAL_CLU
@@ -141,6 +140,6 @@ t_vector	normal_cone(t_obj *closest_obj);
 t_vector	normal_plane(t_obj *closest_obj, t_ray ray);
 t_vector	normal_cyl(t_obj *closest_obj);
 t_vector	normal_torus(t_obj *closest_obj);
-t_vector  normal_triangle(t_obj *obj, t_vector v1, t_vector v2);
+t_vector	normal_triangle(t_obj *obj, t_vector v1, t_vector v2);
 
 #endif

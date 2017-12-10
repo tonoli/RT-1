@@ -65,18 +65,18 @@ int		solve_quartic(double c[5], double s[4])
 {
 	t_quartic	q;
 
-	if (init_quartic(&q, c) && IsZero(q.r))
+	if (init_quartic(&q, c) && ISZERO(q.r))
 		root_zero(&q, s);
 	else
 	{
 		root_non_zero(&q, s);
-		if (IsZero(q.u))
+		if (ISZERO(q.u))
 			q.u = 0;
 		else if (q.u > 0)
 			q.u = sqrt(q.u);
 		else
 			return (0);
-		if (IsZero(q.v))
+		if (ISZERO(q.v))
 			q.v = 0;
 		else if (q.v > 0)
 			q.v = sqrt(q.v);

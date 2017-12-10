@@ -29,14 +29,14 @@ void	zero_d(t_cubic *cu, double s[3])
 {
 	double	u;
 
-	if (IsZero(cu->q))
+	if (ISZERO(cu->q))
 	{
 		s[0] = 0;
 		cu->num = 1;
 	}
 	else
 	{
-		u = cbrt(-cu->q);
+		u = CBRT(-cu->q);
 		s[0] = 2 * u;
 		s[1] = -u;
 		cu->num = 2;
@@ -63,8 +63,8 @@ void	positive_d(t_cubic *cu, double s[3])
 	double	v;
 
 	sqrt_d = sqrt(cu->d);
-	u = cbrt(sqrt_d - cu->q);
-	v = -cbrt(sqrt_d + cu->q);
+	u = CBRT(sqrt_d - cu->q);
+	v = -CBRT(sqrt_d + cu->q);
 	s[0] = u + v;
 	cu->num = 1;
 }
@@ -73,10 +73,10 @@ int		solve_cubic(double c[4], double s[3])
 {
 	t_cubic	cu;
 
-	if (IsZero(c[3]))
+	if (ISZERO(c[3]))
 		return (solve_quadric(c, s));
 	init_cubic(&cu, c);
-	if (IsZero(cu.d))
+	if (ISZERO(cu.d))
 		zero_d(&cu, s);
 	else if (cu.d < 0)
 		negative_d(&cu, s);

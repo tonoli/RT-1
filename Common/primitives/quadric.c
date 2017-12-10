@@ -16,9 +16,9 @@ int	solve_quadric(double c[3], double s[2])
 {
 	t_quadric	qd;
 
-	if (IsZero(c[2]))
+	if (ISZERO(c[2]))
 	{
-		if (IsZero(c[1]))
+		if (ISZERO(c[1]))
 			return (0);
 		s[0] = -c[0] / c[1];
 		return (1);
@@ -26,9 +26,9 @@ int	solve_quadric(double c[3], double s[2])
 	qd.p = c[1] / (2 * c[2]);
 	qd.q = c[0] / c[2];
 	qd.d = qd.p * qd.p - qd.q;
-	if (IsZero(qd.d))
+	if (ISZERO(qd.d))
 		s[0] = -qd.p;
-	if (IsZero(qd.d))
+	if (ISZERO(qd.d))
 		return (1);
 	else if (qd.d < 0)
 		return (0);

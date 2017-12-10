@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef server_h
-# define server_h
+#ifndef SERVER_H
+# define SERVER_H
 
 # include "rt_clu.h"
 
@@ -69,12 +69,12 @@ void		init_sdl_env(t_env *e);
 void		init_sdl_interface(t_env *e);
 int			global_loop(t_env *e);
 void		create_rect(SDL_Surface *dst, SDL_Rect rect, int color);
-void        create_txt_rect(t_env *e);
+void		create_txt_rect(t_env *e);
 void		init_rects(t_env *e);
-void        init_txt_rects(t_env *e);
+void		init_txt_rects(t_env *e);
 void		draw_button_top(t_env *e, int bt_num, int state);
 void		draw_button_left(t_env *e, int b_num, int state);
-void	 	draw_input(t_env *e, int i_num, int state);
+void		draw_input(t_env *e, int i_num, int state);
 void		draw_input_top(t_env *e, int bt_num, int state);
 int			is_mouse_in_rect(t_env *e, SDL_Rect *rect, int rect_len);
 void		is_mouse_in_rect_left(t_env *e);
@@ -86,7 +86,7 @@ void		is_mouse_in_render(t_env *e);
 void		is_mouse_in_credit(t_env *e);
 void		draw_all_button_top(t_env *e,  int state);
 void		draw_all_button_left(t_env *e,  int state);
-void        draw_selected(t_env *e);
+void		draw_selected(t_env *e);
 void		create_border(t_env *e,int active);
 void		create_rect(SDL_Surface *surf, SDL_Rect rect, int color);
 void		create_b_rect(SDL_Surface *surf, SDL_Rect rect, int bg, int bord);
@@ -99,16 +99,12 @@ void		write_right_text(t_env *e);
 **	EVENT
 */
 
-// Top input_top
-
 void        change_rebond(t_env *e, int mode);
 void        change_rot_speed(t_env *e, int mode);
 void        change_move_speed(t_env *e, int mode);
 
-//Atom
 void		atom(t_env *e);
 
-//Camera
 void		move_up(t_env *e);
 void		move_down(t_env *e);
 void		move_left(t_env *e);
@@ -120,12 +116,10 @@ void		pitch_down(t_env *e);
 void		yaw_left(t_env *e);
 void		yaw_right(t_env *e);
 
-//Color
 void		change_color_r(t_env *e, int mode);
 void		change_color_g(t_env *e, int mode);
 void		change_color_b(t_env *e, int mode);
 
-//Create
 void    	create_sphere(t_env *e);
 void		create_plane(t_env *e);
 void		create_cylinder(t_env *e);
@@ -134,10 +128,8 @@ void		create_torus(t_env *e);
 void		create_cube(t_env *e);
 void		atom(t_env *e);
 
-//Cube
 void		cube_with_spheres(t_env *e);
 
-//Damier
 void		dam_one_color_r(t_env *e, int mode);
 void		dam_one_color_g(t_env *e, int mode);
 void		dam_one_color_b(t_env *e, int mode);
@@ -145,52 +137,40 @@ void		dam_two_color_r(t_env *e, int mode);
 void		dam_two_color_g(t_env *e, int mode);
 void		dam_two_color_b(t_env *e, int mode);
 
-//Delete obj
 void		delete_object(t_env *e);
 
-//DNA
 void		dna(t_env *e);
 void		sphere_mid(t_env *e, int row);
 void		sphere_a(t_env *e, int row, double atcg);
 void		sphere_b(t_env *e, int row, double atcg);
 void		cyl_a(t_env *e, int row);
 
-//Filter
 void		switch_filter(t_env *e);
 
-//Fuzz
 void		change_fuzz(t_env *e, int mode);
 
-//Keyboard handler
 int			keyboard(int key, t_env *e);
 
-//Light
 void		light_object(t_env *e);
 void		change_light(t_env *e, int mode);
 
-//Limited objects
 void		decrease_limit(t_env *e);
 void		increase_limit(t_env *e);
 
-// Select marble or damier1
 void        damier_marble_r(t_env *e, int mode);
 void        damier_marble_g(t_env *e, int mode);
 void        damier_marble_b(t_env *e, int mode);
 
-//Marble color
 void		marble_color_r(t_env *e, int mode);
 void		marble_color_g(t_env *e, int mode);
 void		marble_color_b(t_env *e, int mode);
 
-//Marble define
 void		marble_object(t_env *e);
 
-//Mode
 void		set_live_edition_mode(t_env *e);
 void		set_render_edition_mode(t_env *e);
 void		switch_render_mode(t_env *e);
 
-//Move object
 void		move_ojbect_up(t_env *e);
 void		move_ojbect_down(t_env *e);
 void		move_ojbect_left(t_env *e);
@@ -198,7 +178,6 @@ void		move_ojbect_right(t_env *e);
 void		move_ojbect_forward(t_env *e);
 void		move_ojbect_backward(t_env *e);
 
-//Print
 void		print_scene(t_env *e);
 void		print_light(t_obj *obj);
 void		print_damier(t_obj *obj);
@@ -206,39 +185,30 @@ void		print_radius_angle(t_obj *obj);
 void		print_basics_obj(t_obj *obj, t_vector o, t_vector d);
 void	    print_marble(t_obj *obj);
 
-//Save
 void		save_scene(t_env *e);
 
-//Radius Angle
 void	    change_radius_angle(t_env *e, int mode);
 void		change_radius(t_env *e, int mode);
 void		change_angle(t_env *e, int mode);
 
-//RefRef Indices
 void		change_refraction(t_env *e, int sense);
 void		change_reflection(t_env *e, int sense);
 
-// helper
 void        set_helper(t_env *e);
 void        exit_helper(t_env *e);
 
-//Rotate
 void		rotate_object_x(t_env *e, int mode);
 void		rotate_object_y(t_env *e, int mode);
 void		rotate_object_z(t_env *e, int mode);
 
-//Selection
 void		select_obj(int x, int y, t_env *e);
 
-//Switch mapping
 void		switch_obj_tx(t_env *e);
 void		switch_skybox(t_env *e);
 void		switch_tsp_tx(t_env *e);
 
-//Type
 void		change_type(t_env *e, int mode);
 
-// change_values
 void        change_inputs(t_env *e);
 
 /*
@@ -308,6 +278,5 @@ void   		parse_skybox(t_env *e, char *content);
 int			parse_texture(char *content);
 int			parse_tsp(char *content);
 int			parse_filter(char *content);
-
 
 #endif
