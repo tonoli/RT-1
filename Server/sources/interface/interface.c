@@ -6,7 +6,7 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 17:23:36 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/12/10 03:32:00 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/10 18:18:41 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ void		where_is_mickey(t_env *e)
 		is_mouse_in_rect_top(e);
 		is_mouse_in_render(e);
 		is_mouse_in_credit(e);
+		if (e->credit_actif && e->event.type == SDL_MOUSEMOTION)
+			e->credit_actif = 0;
 	}
 	draw_selected(e);
 }
@@ -64,6 +66,7 @@ void	handle_events(t_env *e)
 		e->mouse.x = e->event.motion.x;
 		e->mouse.y = e->event.motion.y;
 		where_is_mickey(e);
+		exit_helper(e);
 	}
 }
 

@@ -6,7 +6,7 @@
 /*   By: tdelmas <tdelmas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/05 10:40:51 by tdelmas           #+#    #+#             */
-/*   Updated: 2017/12/10 15:34:00 by tdelmas          ###   ########.fr       */
+/*   Updated: 2017/12/10 17:42:35 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ double			hit_tri(t_env *e, t_obj *obj, t_ray ray)
 	t_vector	n;
 	t_vector	p;
 	double		t;
+
 
 	size_interpretor(obj, &v1, &v2);
 	n = normal_triangle(obj, v1, v2);

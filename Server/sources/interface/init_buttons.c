@@ -6,7 +6,7 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 12:29:58 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/12/08 21:02:42 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/10 18:09:12 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,4 +93,5 @@ void init_rects(t_env *e)
 	init_topin_rect(e);
 	e->help_rect = (SDL_Rect){707, 294, 350, 400};
 	e->credit_rect = (SDL_Rect){1108, 665, 195, 57};
+	e->exit_helper = (SDL_Rect){729, 194, 20, 22};
 }

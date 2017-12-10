@@ -6,7 +6,7 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/09 17:48:25 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/12/10 02:59:59 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/10 18:27:21 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void		is_mouse_in_render(t_env *e)
 
 	i = e->mouse.x;
 	j = e->mouse.y;
-	if (e->event.type == SDL_MOUSEBUTTONDOWN)
+	if (e->event.type == SDL_MOUSEBUTTONDOWN && e->help_actif != 1)
 	{
 		if (i > 82 && i < 82 + F_WIDTH && (j > 72 && j < 72 + F_WIDTH))
 		{
