@@ -94,7 +94,6 @@ void		write_top_text(t_env *e);
 void		write_right_text_top(t_env *e);
 void		write_right_text(t_env *e);
 
-
 /*
 **	EVENT
 */

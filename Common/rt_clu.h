@@ -90,6 +90,8 @@
 # define CBRT_R(x)			((x) < 0.0 ? -pow((double)-(x), 1.0/3.0) : 0.0))
 # define CBRT(x)			((x) > 0.0 ? pow((double)(x), 1.0/3.0) : CBRT_R(x)
 
+# define O_MODE				S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH
+
 # ifndef GLOBAL_CLU
 #  define GLOBAL_CLU
 

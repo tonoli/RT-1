@@ -345,7 +345,7 @@ char	*name_file(void)
 	buffer = ft_strnew(30);
 	gettimeofday(&tv, NULL);
 	tm_info = localtime(&tv.tv_sec);
-	strftime(buffer, 30, "%Y%m%d_%H%M%S.xml", tm_info);
+	strftime(buffer, 30, "%Y%m%d_%H%M%S", tm_info);
 	return (buffer);
 }
 
@@ -360,7 +360,7 @@ void  save_scene(t_env *env)
 	// int scene_folder = mkdir("./scenes");
 	char *name = name_file();
 	char *name_xml = ft_post_realloc_str(name, ".xml");
-	file_xml  = open(name_xml, O_RDWR | O_CREAT | O_TRUNC);
+	file_xml  = open(name_xml, O_RDWR | O_CREAT | O_TRUNC, O_MODE);
 
 	// XML
 	ft_save_camera(&env->camera, &buf);
@@ -398,7 +398,7 @@ void  save_scene(t_env *env)
 	// int bmp_folder = makdir("./saved_images")
 	char *names = name_file();
 	char *name_bmp = ft_post_realloc_str(names, ".bmp");
-	file_bmp = open(name_bmp, O_RDWR | O_CREAT | O_TRUNC);
+	file_bmp = open(name_bmp, O_RDWR | O_CREAT | O_TRUNC, O_MODE);
 	if (!(SDL_SaveBMP(env->s_raytracer, name_bmp)))
 		ft_printf("Save PNG: can't be saved\n");
 	//system(ft_strf("sips -s format png %s --out %s.png"), name_bmp, names);
