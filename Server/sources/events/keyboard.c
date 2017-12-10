@@ -34,6 +34,8 @@ static int g_key[] =
 	SDLK_KP_2,
 	SDLK_KP_7,
 	SDLK_KP_9,
+	SDLK_RETURN,
+	SDLK_m,
 	0
 };
 
@@ -58,7 +60,9 @@ static const int g_key_value[255] =
 	[127 + '6'] = SDLK_KP_6,
 	[127 + '2'] = SDLK_KP_2,
 	[127 + '7'] = SDLK_KP_7,
-	[127 + '9'] = SDLK_KP_9
+	[127 + '9'] = SDLK_KP_9,
+	[127 + 'R'] = SDLK_RETURN,
+	['m'] = SDLK_m,
 };
 
 void	turn_left(t_env *e)
@@ -96,7 +100,9 @@ static void (*g_key_func[255])(t_env *e) =
 	[127 + '6'] = move_ojbect_right,
 	[127 + '2'] = move_ojbect_backward,
 	[127 + '7'] = decrease_limit,
-	[127 + '9'] = increase_limit
+	[127 + '9'] = increase_limit,
+	[127 + 'R'] = set_render_edition_mode,
+	['m'] = switch_damier
 };
 
 int		is_acceptable_key(int key)

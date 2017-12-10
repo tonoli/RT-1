@@ -129,6 +129,7 @@ void		atom(t_env *e);
 
 void		cube_with_spheres(t_env *e);
 
+void		switch_damier(t_env *e);
 void		dam_one_color_r(t_env *e, int mode);
 void		dam_one_color_g(t_env *e, int mode);
 void		dam_one_color_b(t_env *e, int mode);

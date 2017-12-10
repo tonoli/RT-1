@@ -12,7 +12,12 @@
 
 #include "server.h"
 
-//Dont forget to setunset e->selected->damier....
+void	switch_damier(t_env *e)
+{
+	if (!e->selected)
+		return ;
+	e->selected->damier = (e->selected->damier ^ 1) & 1;
+}
 
 void	dam_one_color_r(t_env *e, int mode)
 {
