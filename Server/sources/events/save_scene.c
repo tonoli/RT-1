@@ -6,7 +6,7 @@
 /*   By: tdelmas <tdelmas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/05 15:47:13 by tdelmas           #+#    #+#             */
-/*   Updated: 2017/12/09 20:08:15 by tdelmas          ###   ########.fr       */
+/*   Updated: 2017/12/10 15:26:05 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -349,43 +349,58 @@ char	*name_file(void)
 	return (buffer);
 }
 
-void	save_scene(t_env *env)
-{
-	char	*buf;
-	int		file;
-	t_obj	*tmp;
 
-	char *name = name_file();
-	file = open(name, O_RDWR | O_CREAT | O_TRUNC);
-	ft_strdel(&name);
-	ft_save_camera(&env->camera, &buf);
-	write(file, buf, strlen(buf));
-	write(file, "</camera>\n\n", ft_strlen("</camera>\n\n"));
-	tmp = env->objects;
-	while (env->objects)
-	{
-		if (env->objects->type == OBJ_SPHERE)
-			ft_save_sphere(env->objects, &buf);
-		if (env->objects->type == OBJ_PLANE)
-			ft_save_plane(env->objects, &buf);
-		if (env->objects->type == OBJ_CYL)
-			ft_save_cylinder(env->objects, &buf);
-		if (env->objects->type == OBJ_CONE)
-			ft_save_cone(env->objects, &buf);
-		if (env->objects->type == OBJ_TRI)
-			ft_save_triangle(env->objects, &buf);
-		if (env->objects->type == OBJ_SQUARE)
-			ft_save_square(env->objects, &buf);
-		if (env->objects->type == OBJ_TORUS)
-			ft_save_torus(env->objects, &buf);
-		if (buf != NULL)
-		{
-			write(file, buf, strlen(buf));
-			ft_strdel(&buf);
-			write(file, "</object>", 9);
-			write(file, "\n\n", 2);
-			env->objects = env->objects->next;
-		}
-	}
-	env->objects = tmp;
+void  save_scene(t_env *env)
+{
+  char  *buf;
+  int    file_xml;
+  int    file_bmp;
+  t_obj  *tmp;
+
+  // int scene_folder = mkdir("./scenes");
+  char *name = name_file();
+  char *name_xml = ft_post_realloc_str(name, ".xml");
+  file_xml  = open(name_xml, O_RDWR | O_CREAT | O_TRUNC);
+
+  // XML
+  ft_save_camera(&env->camera, &buf);
+  write(file_xml, buf, strlen(buf));
+  write(file_xml, "</camera>\n\n", ft_strlen("</camera>\n\n"));
+  tmp = env->objects;
+  while (env->objects)
+  {
+    if (env->objects->type == OBJ_SPHERE)
+      ft_save_sphere(env->objects, &buf);
+    if (env->objects->type == OBJ_PLANE)
+      ft_save_plane(env->objects, &buf);
+    if (env->objects->type == OBJ_CYL)
+      ft_save_cylinder(env->objects, &buf);
+    if (env->objects->type == OBJ_CONE)
+      ft_save_cone(env->objects, &buf);
+    if (env->objects->type == OBJ_TRI)
+      ft_save_triangle(env->objects, &buf);
+    if (env->objects->type == OBJ_SQUARE)
+      ft_save_square(env->objects, &buf);
+    if (env->objects->type == OBJ_TORUS)
+      ft_save_torus(env->objects, &buf);
+    if (buf != NULL)
+    {
+      write(file_xml, buf, strlen(buf));
+      ft_strdel(&buf);
+      write(file_xml, "</object>", 9);
+      write(file_xml, "\n\n", 2);
+      env->objects = env->objects->next;
+    }
+  }
+  env->objects = tmp;
+
+  // BMP
+  // int bmp_folder = makdir("./saved_images")
+  char *names = name_file();
+  char *name_bmp = ft_post_realloc_str(names, ".bmp");
+  file_bmp = open(name_bmp, O_RDWR | O_CREAT | O_TRUNC);
+  if (!(SDL_SaveBMP(env->s_raytracer, name_bmp)))
+    ft_printf("Save PNG: can't be saved\n");
+  //system(ft_strf("sips -s format png %s --out %s.png"), name_bmp, names);
+  //SDL_FreeSurface(env->s_tmp);
 }
