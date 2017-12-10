@@ -41,6 +41,7 @@ void	init_globals(void)
 	}
 	if (g_win.activate)
 		start_win();
+	g_mem.frames = 0;
 	gettimeofday(&t, NULL);
 	srand(t.tv_usec);
 }

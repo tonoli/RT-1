@@ -25,6 +25,7 @@ typedef struct		s_mem
 
 	SDL_Surface		*s_tsp_tx[3];
 	int				tsp_tx_total;
+	int				frames;
 }					t_mem;
 
 typedef struct		s_texture_sources

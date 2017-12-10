@@ -90,7 +90,7 @@ void	sync_buffer(t_env *e)
 	send(g_cli_socket, (void *)&e->live, sizeof(char), 0);
 	if (r == -1)
 		fatal_quit("send buffer");
-	ft_printf(".");
+	ft_printf("\r%d frames computed yet...", ++g_mem.frames);
 }
 
 void	release_obj(t_env *e)

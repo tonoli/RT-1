@@ -75,5 +75,6 @@ t_vector	refraction(t_env *e, t_ray ray, t_obj *closest_obj)
 		cosine = -vector_dot(v, n) / vector_magnitude(v);
 	}
 	ray = launch_ray(e, closest_obj, ray.dir, cosine);
+	(closest_obj->marblesize) ? marble(e, closest_obj) : 0;
 	return (vector_mul(compute_objects(e, ray, -1), closest_obj->color));
 }
