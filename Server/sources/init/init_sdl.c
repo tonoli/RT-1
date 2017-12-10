@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 04:08:09 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/09 00:28:43 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/10 03:08:01 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ void		init_sdl_env(t_env *e)
 	e->i_actif = -1;
 	e->it_actif = -1;
 	e->bt_actif = -1;
-	e->help_actif = -1;
 	e->topin_actif = -1;
 	e->loader = 1;
 	e->render = 0;
@@ -71,6 +70,7 @@ void		init_sdl_interface(t_env *e)
 	e->s_loader = load_img("./assets/images/loader.png");
 	e->s_ui = load_img("./assets/images/ui.png");
 	e->s_slave = load_img("./assets/images/slaves.png");
+	e->s_credit = load_img("./assets/images/credit.png");
 	e->font[0] = load_ttf("./assets/font/RobotoCondensed-Regular.ttf", 20);
 	e->font[1] = load_ttf("./assets/font/RobotoCondensed-Regular.ttf", 20);
 	e->font[2] = load_ttf("./assets/font/RobotoCondensed-Bold.ttf", 12);

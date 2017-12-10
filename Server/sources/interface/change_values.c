@@ -6,7 +6,7 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/09 14:43:01 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/12/09 17:03:14 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/10 01:41:34 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,12 +48,17 @@ void		change_right_top_input(t_env *e)
 {
 	if (e->i_actif != -1 && e->i_actif < 6)
 	{
-		if (e->event.type == SDL_KEYDOWN
-			&& e->event.key.keysym.sym == SDLK_DOWN)
+		if (e->event.key.keysym.sym == SDLK_DOWN)
+		{
+			set_live_edition_mode(e);
 			g_right_top_input[e->i_actif](e, DECREASE);
-		else if (e->event.type == SDL_KEYDOWN
-			&& e->event.key.keysym.sym == SDLK_UP)
+		}
+		else if (e->event.key.keysym.sym == SDLK_UP)
+		{
+			set_live_edition_mode(e);
 			g_right_top_input[e->i_actif](e, INCREASE);
+		}
+
 	}
 }
 
@@ -76,15 +81,18 @@ static void (*g_right_input[])(t_env *e, int mode) =
 
 void		change_right_input(t_env *e)
 {
-	if (e->i_actif != -1 && e->i_actif >= 6)
+	if (e->i_actif >= 6 && e->it_actif >= 6)
 	{
-        if (e->it_actif != -1 && e->it_actif > 6)
-        {
-            if (e->event.key.keysym.sym == SDLK_DOWN)
-                g_right_input[e->it_actif - 6](e, DECREASE);
-            else if (e->event.key.keysym.sym == SDLK_UP)
-                g_right_input[e->i_actif - 6](e, INCREASE);
-        }
+        if (e->event.key.keysym.sym == SDLK_DOWN)
+		{
+			set_live_edition_mode(e);
+			g_right_input[e->it_actif - 6](e, DECREASE);
+		}
+        else if (e->event.key.keysym.sym == SDLK_UP)
+		{
+			set_live_edition_mode(e);
+			g_right_input[e->it_actif - 6](e, INCREASE);
+		}
 	}
 }
 

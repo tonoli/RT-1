@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 23:19:59 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/09 00:39:59 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/10 02:40:41 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,6 +130,7 @@ typedef struct	s_env
 	SDL_Surface		*s_ui;
 	SDL_Surface		*s_loader;
 	SDL_Surface		*s_slave;
+	SDL_Surface		*s_credit;
 	SDL_Surface		*s_title;
 	SDL_Surface		*s_raytracer;
 	TTF_Font		**font;
@@ -166,6 +167,7 @@ typedef struct	s_env
 	char			i_actif;
 	char			it_actif;
 	char			help_actif;
+	char			credit_actif;
 	char			bt_actif;
 	char			topin_actif;
 	char			run;
