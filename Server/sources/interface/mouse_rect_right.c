@@ -6,43 +6,47 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/10 01:48:21 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/12/10 03:35:01 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/10 21:38:11 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "server.h"
 
+void		btn_actif(t_env *e, int btn_i, int state)
+{
+	int btn_in;
+
+	if (btn_i != e->i_actif)
+	{
+		state = e->event.type == SDL_MOUSEBUTTONDOWN ? CLICK : 0;
+		if (state == CLICK)
+		{
+			draw_input(e, e->i_actif, 0);
+			e->i_actif = btn_i;
+			e->it_actif = -1;
+			draw_input(e, btn_i, state);
+		}
+	}
+	else if (e->event.type == SDL_MOUSEBUTTONDOWN)
+	{
+		btn_in = is_mouse_in_rect(e, e->it_rect, 18);
+		if (e->i_actif != (btn_in / 3) + 4)
+		{
+			draw_input(e, btn_i, 0);
+			e->i_actif = -1;
+			e->it_actif = -1;
+		}
+	}
+}
+
 void		is_mouse_in_rect_right(t_env *e)
 {
 	int state;
 	int btn_i;
-	int btn_in;
 
 	btn_i = is_mouse_in_rect(e, e->i_rect, 10);
 	if (btn_i != -1)
-	{
-		if (btn_i != e->i_actif)
-		{
-			state = e->event.type == SDL_MOUSEBUTTONDOWN ? CLICK : 0;
-			if (state == CLICK)
-			{
-				draw_input(e, e->i_actif, 0);
-				e->i_actif = btn_i;
-				e->it_actif = -1;
-				draw_input(e, btn_i, state);
-			}
-		}
-		else if (e->event.type == SDL_MOUSEBUTTONDOWN)
-		{
-			btn_in = is_mouse_in_rect(e, e->it_rect, 18);
-			if (e->i_actif != (btn_in / 3) + 4)
-			{
-				draw_input(e, btn_i, 0);
-				e->i_actif = -1;
-				e->it_actif = -1;
-			}
-		}
-	}
+		btn_actif(e, btn_i, state);
 }
 
 void		is_mouse_in_it_right(t_env *e)

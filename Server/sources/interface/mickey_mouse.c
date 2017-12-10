@@ -6,11 +6,27 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/09 17:48:25 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/12/10 18:27:21 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/10 21:30:12 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "server.h"
+
+void		where_is_mickey(t_env *e)
+{
+	if ((e->event.type == SDL_MOUSEMOTION ||
+		e->event.type == SDL_MOUSEBUTTONDOWN))
+	{
+		is_mouse_in_rect_top_input(e);
+		is_mouse_in_rect_left(e);
+		is_mouse_in_rect_top(e);
+		is_mouse_in_render(e);
+		is_mouse_in_credit(e);
+		if (e->credit_actif && e->event.type == SDL_MOUSEMOTION)
+			e->credit_actif = 0;
+	}
+	draw_selected(e);
+}
 
 void		is_mouse_in_render(t_env *e)
 {

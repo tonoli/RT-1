@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 02:58:15 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/10 21:15:08 by tdelmas          ###   ########.fr       */
+/*   Updated: 2017/12/10 21:43:36 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,23 +84,28 @@ void		is_mouse_in_rect_top(t_env *e);
 void		is_mouse_in_rect_top_input(t_env *e);
 void		is_mouse_in_render(t_env *e);
 void		is_mouse_in_credit(t_env *e);
-void		draw_all_button_top(t_env *e,  int state);
-void		draw_all_button_left(t_env *e,  int state);
+void		draw_all_button_top(t_env *e, int state);
+void		draw_all_button_left(t_env *e, int state);
 void		draw_selected(t_env *e);
-void		create_border(t_env *e,int active);
+void		create_border(t_env *e, int active);
 void		create_rect(SDL_Surface *surf, SDL_Rect rect, int color);
 void		create_b_rect(SDL_Surface *surf, SDL_Rect rect, int bg, int bord);
 void		write_top_text(t_env *e);
 void		write_right_text_top(t_env *e);
 void		write_right_text(t_env *e);
+void		where_is_mickey(t_env *e);
+void		right_text(t_env *e, char *str, SDL_Rect rect,
+    SDL_Color color_back);
+void		center_text(t_env *e, char *str, SDL_Rect rect,
+    SDL_Color color_back);
 
 /*
 **	EVENT
 */
 
-void        change_rebond(t_env *e, int mode);
-void        change_rot_speed(t_env *e, int mode);
-void        change_move_speed(t_env *e, int mode);
+void		change_rebond(t_env *e, int mode);
+void		change_rot_speed(t_env *e, int mode);
+void		change_move_speed(t_env *e, int mode);
 
 void		atom(t_env *e);
 
@@ -119,7 +124,7 @@ void		change_color_r(t_env *e, int mode);
 void		change_color_g(t_env *e, int mode);
 void		change_color_b(t_env *e, int mode);
 
-void    	create_sphere(t_env *e);
+void		create_sphere(t_env *e);
 void		create_plane(t_env *e);
 void		create_cylinder(t_env *e);
 void		create_cone(t_env *e);
@@ -161,9 +166,9 @@ void		change_light(t_env *e, int mode);
 void		decrease_limit(t_env *e);
 void		increase_limit(t_env *e);
 
-void        damier_marble_r(t_env *e, int mode);
-void        damier_marble_g(t_env *e, int mode);
-void        damier_marble_b(t_env *e, int mode);
+void		damier_marble_r(t_env *e, int mode);
+void		damier_marble_g(t_env *e, int mode);
+void		damier_marble_b(t_env *e, int mode);
 
 void		marble_color_r(t_env *e, int mode);
 void		marble_color_g(t_env *e, int mode);
@@ -187,19 +192,19 @@ void		print_light(t_obj *obj);
 void		print_damier(t_obj *obj);
 void		print_radius_angle(t_obj *obj);
 void		print_basics_obj(t_obj *obj, t_vector o, t_vector d);
-void	    print_marble(t_obj *obj);
+void		print_marble(t_obj *obj);
 
 void		save_scene(t_env *e);
 
-void	    change_radius_angle(t_env *e, int mode);
+void		change_radius_angle(t_env *e, int mode);
 void		change_radius(t_env *e, int mode);
 void		change_angle(t_env *e, int mode);
 
 void		change_refraction(t_env *e, int sense);
 void		change_reflection(t_env *e, int sense);
 
-void        set_helper(t_env *e);
-void        exit_helper(t_env *e);
+void		set_helper(t_env *e);
+void		exit_helper(t_env *e);
 
 void		rotate_object_x(t_env *e, int mode);
 void		rotate_object_y(t_env *e, int mode);
@@ -213,7 +218,7 @@ void		switch_tsp_tx(t_env *e);
 
 void		change_type(t_env *e, int mode);
 
-void        change_inputs(t_env *e);
+void		change_inputs(t_env *e);
 
 /*
 **	MISCELANEOUS
@@ -236,8 +241,7 @@ void		marble(t_env *e, t_vector *color, t_obj *closest_obj);
 double		noise(t_env *e, t_vector cross);
 double		turb(t_env *e, t_vector cross);
 void		perlin_generate(t_env *e);
-void		perlin_generate_perm(int *);
-
+void		perlin_generate_perm(int *p);
 
 /*
 **	FILTER
@@ -278,7 +282,7 @@ double		parse_angle(char *content);
 int			parse_type(char *content);
 t_vector	parse_direction(char *content);
 double		parse_double(char *content);
-void   		parse_skybox(t_env *e, char *content);
+void		parse_skybox(t_env *e, char *content);
 int			parse_texture(char *content);
 int			parse_tsp(char *content);
 int			parse_filter(char *content);

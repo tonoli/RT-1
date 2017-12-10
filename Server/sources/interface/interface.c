@@ -6,7 +6,7 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 17:23:36 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/12/10 18:18:41 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/10 21:43:33 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,22 +27,6 @@ void		start_render(t_env *e)
 	write_top_text(e);
 	e->loader = 0;
 	e->render = 1;
-}
-
-void		where_is_mickey(t_env *e)
-{
-	if ((e->event.type == SDL_MOUSEMOTION ||
-		e->event.type == SDL_MOUSEBUTTONDOWN))
-	{
-		is_mouse_in_rect_top_input(e);
-		is_mouse_in_rect_left(e);
-		is_mouse_in_rect_top(e);
-		is_mouse_in_render(e);
-		is_mouse_in_credit(e);
-		if (e->credit_actif && e->event.type == SDL_MOUSEMOTION)
-			e->credit_actif = 0;
-	}
-	draw_selected(e);
 }
 
 void		handle_events(t_env *e)
@@ -90,12 +74,8 @@ int			free_elements(t_env *e)
 
 int			global_loop(t_env *e)
 {
-	//Display loader
 	SDL_BlitSurface(e->s_loader, &(SDL_Rect){0, 0, e->win_w, e->win_h},
 					e->s_background, &(SDL_Rect){0, 0, e->win_w, e->win_h});
-	//While loop, two states :
-	// - Loader
-	// - Render
 	while (e->run)
 	{
 		SDL_UpdateWindowSurface(e->win);
