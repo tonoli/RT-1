@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/26 17:37:45 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/09 08:45:23 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/10 15:03:53 by nsampre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,11 +49,11 @@ static void	create_random_sphere(t_env *e, int i, int j)
 		obj->refraction = 2.00;
 	if (randb() < 0.1)
 		obj->fuzz = randb();
-//	if (randb() < 0.1)
-//	{
-//		obj->marblesize = randb() / (double)1000.0;
-//		obj->marblecolor = (t_vector){255.0 * randb(), 255.0 * randb(), 255.0 * randb()};
-//	}
+	if (randb() < 0.1)
+	{
+		obj->marblesize = randb() / (double)1000.0;
+		obj->marblecolor = (t_vector){randb(), randb(), randb()};
+	}
 	obj_push_back(&e->objects, obj);
 }
 

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parse_content.c                                    :+:      :+:    :+:   */
+/*   parse_content_one.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/26 17:37:45 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/09 08:45:23 by nsampre          ###   ########.fr       */
+/*   Created: 2017/12/10 15:10:07 by nsampre           #+#    #+#             */
+/*   Updated: 2017/12/10 15:10:07 by nsampre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,83 +71,4 @@ double		parse_angle(char *content)
 	a = ft_atod(content);
 	a = (a * M_PI) / (double)180.0;
 	return (a);
-}
-
-t_vector	parse_color(char *content)
-{
-	t_vector	c;
-	char		**split;
-
-	split = ft_strsplit(content, ',');
-	if (ft_array_len(split) != 3)
-		parse_error("Bad color\n", NULL, content);
-	c.x = ft_xtoi(split[0]) / (double)255.0;
-	c.y = ft_xtoi(split[1]) / (double)255.0;
-	c.z = ft_xtoi(split[2]) / (double)255.0;
-	ft_free_array(split);
-	return (c);
-}
-
-double		parse_double(char *content)
-{
-	double	d;
-
-	d = ft_atod(content);
-	return (d);
-}
-
-void		parse_skybox(t_env *e, char *content)
-{
-	int	i;
-
-	i = 0;
-	while (g_skybox_sources[i].name)
-	{
-		if (ft_strequ(content, g_skybox_sources[i].name))
-		{
-			e->skybox_index = i;
-			e->skybox = 1;
-			break ;
-		}
-		i++;
-	}
-}
-
-int	parse_texture(char *content)
-{
-	int i;
-
-	i = 0;
-	while (g_color_sources[i].name)
-	{
-		if (ft_strequ(content, g_color_sources[i].name))
-			return (i);
-		i++;
-	}
-	return (-1);
-}
-
-int	parse_tsp(char *content)
-{
-	int i;
-
-	i = 0;
-	while (g_tsp_sources[i].name)
-	{
-		if (ft_strequ(content, g_tsp_sources[i].name))
-			return (i);
-		i++;
-	}
-	return (-1);
-}
-
-int		parse_filter(char *content)
-{
-	if (ft_strequ(content, "sepia"))
-		return (1);
-	if (ft_strequ(content, "greyscale"))
-		return (2);
-	if (ft_strequ(content, "negative"))
-		return (3);
-	return (0);
 }

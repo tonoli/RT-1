@@ -33,18 +33,6 @@ static void		decompose_c_coef(t_obj *obj, t_cone_coef *c)
 	obj->c = vector_dot(c->sub_b, c->sub_b) - obj->radius;
 }
 
-static double	dist_priority(t_env *e, t_obj *obj, t_ray ray, double t)
-{
-	if (t > e->t_min && t < e->t_max)
-	{
-		obj->t = t;
-		obj->cross = vector_factor(ray.ori, t, ray.dir);
-		obj->normal = normal_cone(obj);
-		return (t);
-	}
-	return (-1);
-}
-
 static double	solution(t_env *e, t_obj *obj, t_ray ray, t_vector v)
 {
 	double	t;

@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 02:53:18 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/09 08:45:23 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/10 15:00:50 by nsampre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,13 @@ void	fatal_quit(char *msg)
 void	custom_quit(char *msg)
 {
 	if (msg)
-		ft_dprintf(2, "Fatal error : %s\n", msg);
+		ft_dprintf(2, "\nFatal error : %s\n", msg);
 	quit(0);
 }
 
 void	thread_quit(char *msg)
 {
-	if (msg && 0)
-		ft_dprintf(2, "Warning : %s. Quiting thread.\n", msg);
+	if (msg)
+		dprintf(STDERR_FILENO, "\nWarning : %s. Quiting thread.\n", msg);
 	pthread_exit(NULL);
 }

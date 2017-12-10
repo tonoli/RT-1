@@ -70,7 +70,7 @@ $(OBJ_DIR):
 
 $(OBJ_DIR)%.o:		$(SRC_DIR)%.c | $(OBJ_DIR)
 					@$(CC) $(FLAGS) -MMD -c $< -o $@ -I $(INC_DIR) -I $(LIBFT_INC) -I $(COMMON) 
-					@echo Compiling $(GREEN) $< $(NC)
+					@echo Compiling $(FLAGS) $(GREEN) $< $(NC)
 
 clean:
 					@printf "=> \x1B[31mDeleting $(NAME) .obj files...\x1B[37m\n"

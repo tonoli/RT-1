@@ -147,7 +147,7 @@ $(NAME):		$(OBJ_DIR) $(OBJS)
 
 $(OBJ_DIR)%.o:	$(SRC_DIR)%.c | $(OBJ_DIR)
 				@$(CC) $(FLAGS) -MMD -c $< -o $@ -I $(INC_DIR)
-				@echo Compiling $(YELLOW) $< $(NC)
+				@echo Compiling $(FLAGS) $(YELLOW) $< $(NC)
 
 $(OBJ_DIR):
 				@mkdir -p $(OBJ_DIR)
