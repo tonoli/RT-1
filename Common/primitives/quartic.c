@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/09 11:45:24 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/09 11:45:24 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/10 13:49:09 by tdelmas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 int		init_quartic(t_quartic *q, double c[5])
 {
-	q->A = c[3] / c[4];
-	q->B = c[2] / c[4];
-	q->C = c[1] / c[4];
-	q->D = c[0] / c[4];
-	q->sq_A = q->A * q->A;
-	q->p = -3.0 / 8 * q->sq_A + q->B;
-	q->q = 1.0 / 8 * q->sq_A * q->A - 1.0 / 2 * q->A * q->B + q->C;
-	q->r = -3.0 / 256 * q->sq_A * q->sq_A + 1.0 / 16 * q->sq_A * q->B
-		- 1.0 / 4 * q->A * q->C + q->D;
+	q->a = c[3] / c[4];
+	q->b = c[2] / c[4];
+	q->c = c[1] / c[4];
+	q->d = c[0] / c[4];
+	q->sq_a = q->a * q->a;
+	q->p = -3.0 / 8 * q->sq_a + q->b;
+	q->q = 1.0 / 8 * q->sq_a * q->a - 1.0 / 2 * q->a * q->b + q->c;
+	q->r = -3.0 / 256 * q->sq_a * q->sq_a + 1.0 / 16 * q->sq_a * q->b
+		- 1.0 / 4 * q->a * q->c + q->d;
 	q->i = -1;
 	return (1);
 }
@@ -84,7 +84,7 @@ int		solve_quartic(double c[5], double s[4])
 			return (0);
 		solve_resolvant_quartic(&q, s);
 	}
-	q.sub = 1.0 / 4 * q.A;
+	q.sub = 1.0 / 4 * q.a;
 	while (++q.i < q.num)
 		s[q.i] -= q.sub;
 	return (q.num);

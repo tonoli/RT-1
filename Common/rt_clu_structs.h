@@ -6,68 +6,65 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 23:19:59 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/10 02:40:41 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/10 13:46:35 by tdelmas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef rt_clu_structs_h
-# define rt_clu_structs_h
+#ifndef RT_CLU_STRUCTS_H
+# define RT_CLU_STRUCTS_H
 
-typedef struct	s_mem
+typedef struct		s_mem
 {
-	//SKYBOX
 	SDL_Surface		*s_skybox[12];
 	SDL_Surface		*current_skybox;
 	int				skybox_index;
 	int				skybox_total;
 
-	//OBJ COLOR TEXTURES
 	SDL_Surface		*s_obj_tx[30];
 	int				obj_tx_total;
 
-	//TRANSPARENCY TEXTURES
 	SDL_Surface		*s_tsp_tx[3];
 	int				tsp_tx_total;
-}				t_mem;
+}					t_mem;
 
-typedef struct 	s_texture_sources
+typedef struct		s_texture_sources
 {
-	char		*name;
-	char		*file_address;
-}				t_texture_sources;
+	char			*name;
+	char			*file_address;
+}					t_texture_sources;
 
-typedef	struct	s_xml
+typedef	struct		s_xml
 {
-	int			tag;
-	char		*value;
-}				t_xml;
+	int				tag;
+	char			*value;
+}					t_xml;
 
-typedef struct	s_vector
+typedef struct		s_vector
 {
-	double		x;
-	double		y;
-	double		z;
-}				t_vector;
+	double			x;
+	double			y;
+	double			z;
+}					t_vector;
 
-typedef struct	s_ray
+typedef struct		s_ray
 {
-	t_vector	ori;
-	t_vector	dir;
-}				t_ray;
+	t_vector		ori;
+	t_vector		dir;
+}					t_ray;
 
-typedef struct	s_cone_coef
+typedef struct		s_cone_coef
 {
-	double		dot_a;
-	t_vector	sca_a;
-	t_vector	sub_a;
-	double		dot_b;
-	t_vector	sca_b;
-	t_vector	sub_b;
-	double		csq;
-	double		ssq;
-}				t_cone_coef;
+	double			dot_a;
+	t_vector		sca_a;
+	t_vector		sub_a;
+	double			dot_b;
+	t_vector		sca_b;
+	t_vector		sub_b;
+	double			csq;
+	double			ssq;
+}					t_cone_coef;
 
-typedef struct	s_obj
+typedef struct		s_obj
 {
 	int				type;
 	t_vector		ori;
@@ -115,11 +112,11 @@ typedef struct	s_obj
 	int				tsp_index;
 
 	struct s_obj	*next;
-}				t_obj;
+}					t_obj;
 
-typedef struct	s_env
+typedef struct		s_env
 {
-	SDL_Event     	event;
+	SDL_Event		event;
 	SDL_Cursor		*cursor;
 	SDL_Window		*win;
 	SDL_Surface		*s_background;
@@ -142,26 +139,23 @@ typedef struct	s_env
 	SDL_Rect		help_rect;
 	SDL_Rect		credit_rect;
 	SDL_Point		mouse;
-	void	        *img;
-	int		        *img_data;
-	void	        *gui;
-	int		        *gui_data;
-	int		        win_w;
-	int		        win_h;
-	int		        x;
-	int		        y;
+	void			*img;
+	int				*img_data;
+	void			*gui;
+	int				*gui_data;
+	int				win_w;
+	int				win_h;
+	int				x;
+	int				y;
 	int				slave;
 
-	//Text
 	char			txt[24][10000];
 
-	//Segment
 	char			loader;
 	char			render;
 	char			helper;
 	char			live;
 
-	//Buttons
 	char			b_actif;
 	char			i_actif;
 	char			it_actif;
@@ -171,31 +165,26 @@ typedef struct	s_env
 	char			topin_actif;
 	char			run;
 
-	//TOP Rebond + Move + Rotate
 	double			rebond;
 	double			move_speed;
 	double			rot_speed;
-	//LIVE PREVIEW
+
 	int				increment;
 	int				reset;
 
-	//MULTITHREADING
 	int				threads;
 	int				i;
 	int				sum;
 
-	//PARSER
 	char			*scene_file;
 	char			*input;
 
-	//MAIN STORAGE DATA
 	int				**frame_array;
 	t_vector		**color_array;
 	t_obj			camera;
 	t_obj			*objects;
 	int				lock;
 
-	//CALCULUS
 	t_obj			*avoid;
 	double			t_min;
 	double			t_max;
@@ -203,63 +192,54 @@ typedef struct	s_env
 	int				depth;
 	int				recursion;
 
-	//LIVE EDITION
 	t_obj			*selected;
 
-	//PERLIN NOISE
 	t_vector		ranvec[256];
 	double			randouble[256];
 	int				perm_x[256];
 	int				perm_y[256];
 	int				perm_z[256];
 
-	//Filter
 	int				filter;
 
-	//SKYDIFFUSE
 	double			vpos;
 
-	//SKYBOX TEXTURES
 	int				skybox;
 	SDL_Surface		*s_skybox[12];
 	SDL_Surface		*current_skybox;
 	int				skybox_index;
 	int				skybox_total;
 
-	//OBJECTS TEXTURES
 	SDL_Surface		*s_obj_tx[30];
 	int				obj_tx_total;
 
-	//TRANSPARENCY TEXTURES
 	SDL_Surface		*s_tsp_tx[3];
 	int				tsp_tx_total;
 
-	//Transaction checkup
 	unsigned int	magic;
 	int				object_count;
 
-	//Clients Clustering
 	int				nb_cli;
 	int				local_compute;
 	pid_t			child;
-}				t_env;
+}					t_env;
 
 typedef struct		s_quartic
 {
-	double  		coeffs[4];
-	double  		z;
+	double			coeffs[4];
+	double			z;
 	double			u;
 	double			v;
 	double			sub;
-	double  		A;
-	double			B;
-	double			C;
-	double			D;
-	double 			sq_A;
+	double			a;
+	double			b;
+	double			c;
+	double			d;
+	double			sq_a;
 	double			p;
 	double			q;
 	double			r;
-	int    			i;
+	int				i;
 	int				num;
 }					t_quartic;
 
@@ -268,26 +248,26 @@ typedef struct		s_cubic
 	int				i;
 	int				num;
 	double			sub;
-	double			A;
-	double			B;
-	double			C;
-	double			sq_A;
+	double			a;
+	double			b;
+	double			c;
+	double			sq_a;
 	double			p;
 	double			q;
 	double			cb_p;
-	double			D;
+	double			d;
 }					t_cubic;
 
 typedef struct		s_quadric
 {
 	double			p;
 	double			q;
-	double			D;
+	double			d;
 }					t_quadric;
 
 typedef struct		s_window
 {
-	SDL_Event     	event;
+	SDL_Event		event;
 	int				activate;
 	SDL_Window		*win;
 	SDL_Surface		*s_background;
