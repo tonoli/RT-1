@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 02:47:25 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/10 13:22:52 by tdelmas          ###   ########.fr       */
+/*   Updated: 2017/12/10 14:13:30 by tdelmas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,6 +100,7 @@ extern const	t_texture_sources g_tsp_sources[];
 **	PRIMITIVES
 */
 
+double		dist_priority(t_env *e, t_obj *obj, t_ray ray, double t);
 void		size_interpretor(t_obj *obj, t_vector *v1, t_vector *v2);
 double		get_distance(t_env *e, t_obj *obj, t_ray ray);
 double		hit_sphere(t_env *e, t_obj *obj, t_ray ray);
