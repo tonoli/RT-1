@@ -12,19 +12,20 @@
 
 #include "server.h"
 
-void        set_helper(t_env *e)
+void		set_helper(t_env *e)
 {
-    e->help_actif = (e->help_actif == 0) ? 1 : 0;
-    if (e->help_actif)
-    {
-        SDL_BlitSurface(e->s_ui, &e->help_rect, e->s_background, &(SDL_Rect){405, 190, 350, 400});
-    }
+	e->help_actif = (e->help_actif == 0) ? 1 : 0;
+	if (e->help_actif)
+	{
+		SDL_BlitSurface(e->s_ui, &e->help_rect, e->s_background,
+						&(SDL_Rect){405, 190, 350, 400});
+	}
 }
 
-void        exit_helper(t_env *e)
+void		exit_helper(t_env *e)
 {
-    if (e->help_actif == 1
-        && e->event.type == SDL_MOUSEBUTTONDOWN
-        && SDL_PointInRect(&e->mouse, &e->exit_helper))
-        e->help_actif = 0;
+	if (e->help_actif == 1
+		&& e->event.type == SDL_MOUSEBUTTONDOWN
+		&& SDL_PointInRect(&e->mouse, &e->exit_helper))
+		e->help_actif = 0;
 }

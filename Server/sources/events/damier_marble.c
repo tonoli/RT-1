@@ -12,26 +12,26 @@
 
 #include "server.h"
 
-void        damier_marble_r(t_env *e, int mode)
+void		damier_marble_r(t_env *e, int mode)
 {
-    if (e->selected->marblesize == 0)
-        dam_one_color_r(e, mode);
-    else
-        marble_color_r(e, mode);
+	if (e->selected->marblesize == 0)
+		dam_one_color_r(e, mode);
+	else
+		marble_color_r(e, mode);
 }
 
-void        damier_marble_g(t_env *e, int mode)
+void		damier_marble_g(t_env *e, int mode)
 {
-    if (e->selected->marblesize == 0)
-        dam_one_color_g(e, mode);
-    else
-        marble_color_g(e, mode);
+	if (e->selected->marblesize == 0)
+		dam_one_color_g(e, mode);
+	else
+		marble_color_g(e, mode);
 }
 
-void        damier_marble_b(t_env *e, int mode)
+void		damier_marble_b(t_env *e, int mode)
 {
-    if (e->selected->marblesize == 0)
-        dam_one_color_b(e, mode);
-    else
-        marble_color_b(e, mode);
+	if (e->selected->marblesize == 0)
+		dam_one_color_b(e, mode);
+	else
+		marble_color_b(e, mode);
 }
