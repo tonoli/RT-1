@@ -16,7 +16,7 @@ void	increase_limit(t_env *e)
 {
 	if (!e->selected)
 		return ;
-	if (e->selected->type == OBJ_SQUARE)
+	if (e->selected->type == OBJ_SQUARE || e->selected->type == OBJ_TRI)
 	{
 		e->selected->len1++;
 		e->selected->len2++;
@@ -33,9 +33,9 @@ void	increase_limit(t_env *e)
 void	decrease_limit(t_env *e)
 {
 	if (!e->selected ||
-		(e->selected->height == 0 && e->selected->type != OBJ_TORUS))
+		(e->selected->height <= 0 && e->selected->type != OBJ_TORUS))
 		return ;
-	if (e->selected->type == OBJ_SQUARE)
+	if (e->selected->type == OBJ_SQUARE || e->selected->type == OBJ_TRI)
 	{
 		e->selected->len1--;
 		e->selected->len2--;

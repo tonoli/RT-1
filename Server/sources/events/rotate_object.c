@@ -20,10 +20,6 @@ void	rotate_object_x(t_env *e, int mode)
 		e->selected->dir.x += ROT_SPEED;
 	else if (mode == DECREASE)
 		e->selected->dir.x -= ROT_SPEED;
-	else if (mode == INCREASE_MAX)
-			e->selected->dir.x += ROT_SPEED * 10;
-	else if (mode == DECREASE_MAX)
-			e->selected->dir.x -= ROT_SPEED * 10;
 	e->selected->dir = vector_normalize(e->selected->dir);
 }
 
@@ -35,10 +31,6 @@ void	rotate_object_y(t_env *e, int mode)
 		e->selected->dir.y += ROT_SPEED;
 	else if (mode == DECREASE)
 		e->selected->dir.y -= ROT_SPEED;
-	else if (mode == INCREASE_MAX)
-		e->selected->dir.y += ROT_SPEED * 10;
-	else if (mode == DECREASE_MAX)
-		e->selected->dir.y -= ROT_SPEED * 10;
 	e->selected->dir = vector_normalize(e->selected->dir);
 }
 
@@ -50,9 +42,5 @@ void	rotate_object_z(t_env *e, int mode)
 		e->selected->dir.z += ROT_SPEED;
 	else if (mode == DECREASE)
 		e->selected->dir.z -= ROT_SPEED;
-	else if (mode == INCREASE_MAX)
-		e->selected->dir.z += ROT_SPEED * 10;
-	else if (mode == DECREASE_MAX)
-		e->selected->dir.z -= ROT_SPEED * 10;
 	e->selected->dir = vector_normalize(e->selected->dir);
 }

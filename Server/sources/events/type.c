@@ -22,6 +22,13 @@ void		int_obj(t_env *e)
 		e->selected->dir.z = 0;
 		e->selected->height = 50;
 	}
+	if (e->selected->type == OBJ_SQUARE || e->selected->type == OBJ_TRI)
+	{
+		e->selected->dir = (t_vector){1, 0, 0};
+		e->selected->dir2 = (t_vector){0, 1, 0};
+		e->selected->len1 = 42;
+		e->selected->len2 = 42;
+	}
 	if (e->selected->type == OBJ_TORUS)
 	{
 		e->selected->small_r = sqrt(10);
@@ -34,7 +41,7 @@ void		int_obj(t_env *e)
 	}
 }
 
-void	change_type(t_env *e, int mode)
+void		change_type(t_env *e, int mode)
 {
 	if (!e->selected)
 		return ;
