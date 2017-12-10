@@ -1,6 +1,6 @@
 <camera>
-	<origin>20.300398, 24.247834, -12.226245</origin>
-	<direction>-0.010000, -0.100000, 0.000000</direction>
+	<origin>23.303700, 16.300042, -11.076792</origin>
+	<direction>0.060000, 0.150000, 0.000000</direction>
 	<skybox>appartment</skybox>
 </camera>
 
@@ -16,52 +16,60 @@
 
 <object>
 	<type>torus</type>
-	<origin>27.405028, 16.696251, 28.857630</origin>
-	<direction>0.768122, -0.558841, 0.312545</direction>
+	<origin>36.982005, 18.500000, 36.199640</origin>
+	<direction>0.926258, -0.000003, 0.376890</direction>
 	<radius>3.162278</radius>
-	<small_radius>1.000000</small_radius>
+	<small_radius>1.778279</small_radius>
 	<color>0xEA,0x03, 0x06</color>
 	<refraction>1.700000</refraction></object>
 
 <object>
 	<type>torus</type>
-	<origin>21.794818, 45.835141, 20.807939</origin>
+	<origin>20.000000, 43.700000, 19.000000</origin>
 	<direction>0.000000, 0.999978, -0.006639</direction>
-	<radius>2.449490</radius>
-	<small_radius>1.892790</small_radius>
+	<radius>3.162278</radius>
+	<small_radius>1.778279</small_radius>
 	<color>0xB5,0xDF, 0x56</color>
-	<light>2000.000000</light>
+	<light>1000.000000</light>
 </object>
 
 <object>
 	<type>torus</type>
-	<origin>17.348534, 17.101508, 33.325144</origin>
-	<direction>0.770831, 0.618070, -0.154302</direction>
-	<radius>3.160000</radius>
+	<origin>20.485927, 20.500000, 27.792711</origin>
+	<direction>0.880048, 0.009733, -0.474785</direction>
+	<radius>2.000000</radius>
 	<small_radius>1.000000</small_radius>
 	<color>0x04,0x15, 0xF4</color>
 	<refraction>1.400000</refraction></object>
 
 <object>
+	<type>torus</type>
+	<origin>5.918212, 18.494381, 36.823133</origin>
+	<direction>0.980540, 0.004024, -0.196280</direction>
+	<radius>3.160000</radius>
+	<small_radius>1.770000</small_radius>
+	<color>0x04,0x15, 0xF4</color>
+	<refraction>1.400000</refraction></object>
+
+<object>
 	<type>cylinder</type>
-	<origin>-0.392947, 22.907866, 29.020594</origin>
+	<origin>1.004534, 22.907866, 29.104544</origin>
 	<direction>0.999999, 0.001152, -0.000002</direction>
 	<radius>1.000001</radius>
-	<height>7.000000</height>
+	<height>6.708204</height>
 	<color>0x6C, 0x6A, 0x9F</color>
 	<reflection>1</reflection>
 </object>
 
 <object>
 	<type>square</type>
-	<origin>0.713410, 6.591671, 7.540552</origin>
+	<origin>0.713410, 1.391671, 7.540552</origin>
 	<direction>1.000000, 0.000000, 0.000000</direction>
 	<direction2>0.000000,0.000000, 1.000000</direction2>
 	<lenght1>42.000000</lenght1>
 	<lenght2>42.000000</lenght2>
 	<color>0xFC, 0xFD, 0xFF</color>
-	<reflection>1</reflection>
-	<fuzz>0.300000</fuzz></object>
+</object>
 
 <object>
 	<type>square</type>
@@ -70,7 +78,7 @@
 	<direction2>0.000000,0.000000, 1.000000</direction2>
 	<lenght1>42.000000</lenght1>
 	<lenght2>42.000000</lenght2>
-	<color>0xFD, 0x00, 0x00</color>
+	<color>0xFD, 0x23, 0x29</color>
 </object>
 
 <object>
@@ -81,7 +89,7 @@
 	<lenght1>42.000000</lenght1>
 	<lenght2>42.000000</lenght2>
 	<color>0xFF, 0xFE, 0xFF</color>
-	<fuzz>0.500000</fuzz></object>
+</object>
 
 <object>
 	<type>square</type>
@@ -103,13 +111,3 @@
 	<color>0x00, 0x00, 0xFF</color>
 </object>
 
-<object>
-	<type>sphere</type>
-	<origin>10.026014, 10.013666, 33.700279</origin>
-	<radius>3.162278</radius>
-	<height>0.000000</height>
-	<color>0xE2, 0x23, 0x06</color>
-	<marblesize>0.000003</marblesize>
-	<marblecolor>0x54, 0x16, 0x3C</marblecolor>
-	<light>2.000000</light>
-</object>
