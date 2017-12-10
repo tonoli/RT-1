@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 22:31:12 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/10 13:47:55 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/10 22:55:32 by tdelmas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void		cyl_mapping(t_obj *obj)
 
 	i = ((atan(obj->normal.z / obj->normal.x) + M_PI / 2) / M_PI)
 		* obj->current_texture->w;
-	j =  (1 - (obj->alpha_cross / obj->height)) * obj->current_texture->h;
+	j = (1 - (obj->alpha_cross / obj->height)) * obj->current_texture->h;
 	(i < 0) ? i = 0 : 0;
 	(j < 0) ? j = 0 : 0;
 	(i > obj->current_texture->w - 1) ? i = obj->current_texture->w - 1 : 0;
@@ -77,7 +77,6 @@ void		cyl_mapping(t_obj *obj)
 	obj->color = (t_vector){color[0], color[1], color[2]};
 }
 
-
 void		cone_mapping(t_obj *obj)
 {
 	int			i;
@@ -87,7 +86,7 @@ void		cone_mapping(t_obj *obj)
 
 	i = ((atan(obj->normal.z / obj->normal.x) + M_PI / 2) / M_PI)
 		* obj->current_texture->w;
-	j =  (1 - (fabs(obj->alpha_cross) / obj->height)) * obj->current_texture->h;
+	j = (1 - (fabs(obj->alpha_cross) / obj->height)) * obj->current_texture->h;
 	(i < 0) ? i = 0 : 0;
 	(j < 0) ? j = 0 : 0;
 	(i > obj->current_texture->w - 1) ? i = obj->current_texture->w - 1 : 0;

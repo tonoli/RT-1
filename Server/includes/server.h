@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 02:58:15 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/10 21:43:36 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/10 22:52:55 by tdelmas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,9 +95,9 @@ void		write_right_text_top(t_env *e);
 void		write_right_text(t_env *e);
 void		where_is_mickey(t_env *e);
 void		right_text(t_env *e, char *str, SDL_Rect rect,
-    SDL_Color color_back);
+	SDL_Color color_back);
 void		center_text(t_env *e, char *str, SDL_Rect rect,
-    SDL_Color color_back);
+	SDL_Color color_back);
 
 /*
 **	EVENT
