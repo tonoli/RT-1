@@ -29,7 +29,7 @@ static void	create_random_sphere(t_env *e, int i, int j, int k)
 	if (mat < 0.33)
 		;
 	else if (mat < 0.66)
-		obj->reflection = 2.00;
+		obj->reflection = 1;
 	else
 		obj->refraction = 2.00;
 	if (randb() < 0.1)

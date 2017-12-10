@@ -18,10 +18,11 @@
 # ifndef GLOBAL_SERVER
 #  define GLOBAL_SERVER
 
-extern int		g_srv_socket;
-extern int		g_port;
-extern t_vector	*g_buffer;
-extern t_env	*g_e;
+extern int				g_srv_socket;
+extern int				g_port;
+extern t_vector			*g_buffer;
+extern t_env			*g_e;
+extern pthread_mutex_t	g_mutex;
 
 # endif
 

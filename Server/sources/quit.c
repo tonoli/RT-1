@@ -15,7 +15,7 @@
 void	quit(int sig)
 {
 	(void)sig;
-//	close(g_srv_socket);
+	close(g_srv_socket);
 	exit(EXIT_SUCCESS);
 }
 

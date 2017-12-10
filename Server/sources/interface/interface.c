@@ -78,7 +78,7 @@ int		free_elements(t_env *e)
 	TTF_Quit();
 	SDL_Quit();
 	kill(e->child, SIGTERM);
-//	close(g_srv_socket);
+	close(g_srv_socket);
 	exit(EXIT_SUCCESS);
 	return (0);
 }

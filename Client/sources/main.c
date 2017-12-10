@@ -25,7 +25,7 @@ t_env		*g_e;
 void	quit(int k)
 {
 	(void)k;
-//	close(g_cli_socket);
+	close(g_cli_socket);
 	exit(EXIT_SUCCESS);
 }
 

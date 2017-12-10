@@ -16,6 +16,7 @@ int			g_srv_socket;
 int			g_port;
 t_vector	*g_buffer;
 t_env		*g_e;
+pthread_mutex_t	g_mutex;
 
 void	*loop(void *data)
 {
@@ -35,8 +36,10 @@ void	*loop(void *data)
 			obj = obj->next;
 		}
 		sync_env_obj(e, cs);
+		pthread_mutex_lock(&g_mutex);
 		sync_buffer(cs, e);
 		display_buffer(e);
+		pthread_mutex_unlock(&g_mutex);
 	}
 	return (NULL);
 }

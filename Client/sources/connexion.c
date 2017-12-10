@@ -88,6 +88,7 @@ void	sync_buffer(t_env *e)
 	if (r == -1)
 		fatal_quit("send buffer");
 	send(g_cli_socket, (void *)&e->live, sizeof(char), 0);
+	printf("buffer synced ! %f\n", randb());
 }
 
 void	release_obj(t_env *e)
