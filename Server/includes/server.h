@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 02:58:15 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/10 03:32:53 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/10 18:16:31 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -220,6 +220,7 @@ void		change_reflection(t_env *e, int sense);
 
 // helper
 void        set_helper(t_env *e);
+void        exit_helper(t_env *e);
 
 //Rotate
 void		rotate_object_x(t_env *e, int mode);
