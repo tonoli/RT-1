@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   save_scene.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmartins <mmartins@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tdelmas <tdelmas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/05 15:47:13 by tdelmas           #+#    #+#             */
-/*   Updated: 2017/12/10 18:04:08 by mmartins         ###   ########.fr       */
+/*   Updated: 2017/12/10 19:43:36 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -397,9 +397,11 @@ void  save_scene(t_env *env)
 	char *names = name_file();
 	char *name_bmp = ft_post_realloc_str(names, ".bmp");
 	file_bmp = open(name_bmp, O_RDWR | O_CREAT | O_TRUNC, O_MODE);
-	if (!(SDL_SaveBMP(env->s_raytracer, name_bmp)))
-		ft_printf("Save PNG: can't be saved\n");
-	//system(ft_strf("sips -s format png %s --out %s.png"), name_bmp, names);
+	if ((SDL_SaveBMP(env->s_raytracer, name_bmp) < 0))
+		fatal_quit("Save PNG");
+	char *sys;
+	char *namess = name_file();
+	asprintf(&sys, "sips -s format png %s --out %s.png", name_bmp, namess);
+	system(sys);
 	//SDL_FreeSurface(env->s_tmp);
 }
-
