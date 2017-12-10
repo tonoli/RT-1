@@ -57,5 +57,6 @@ int				ft_is_quotestring(char *s);
 char			*ft_strreplace_once(char *orig, char *rep, char *with);
 int				ft_is_whitestring(char *str);
 char			*ft_post_realloc_str(char *str, char *add);
+char			*ft_pre_realloc_str(char *add, char *str);
 
 #endif

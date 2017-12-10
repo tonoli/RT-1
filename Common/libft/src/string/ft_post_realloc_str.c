@@ -12,6 +12,20 @@
 
 #include "libft.h"
 
+char	*ft_pre_realloc_str(char *add, char *str)
+{
+	char *new_line;
+
+	if (!str || !add)
+		return (NULL);
+	new_line = ft_strnew(ft_strlen(str) + ft_strlen(add));
+	ft_strcpy(new_line, add);
+	ft_strcat(new_line, str);
+	free(str);
+	str = NULL;
+	return (new_line);
+}
+
 char	*ft_post_realloc_str(char *str, char *add)
 {
 	char *new_line;

@@ -92,6 +92,9 @@
 
 # define O_MODE				S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH
 
+#define POST(...)			ft_post_realloc_str(__VA_ARGS__)
+#define PRE(...)			ft_pre_realloc_str(__VA_ARGS__)
+
 # ifndef GLOBAL_CLU
 #  define GLOBAL_CLU
 

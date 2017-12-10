@@ -135,6 +135,7 @@ void		create_cube(t_env *e);
 void		face_d(t_env *e, double size);
 void		face_e(t_env *e, double size);
 void		face_f(t_env *e, double size);
+void		scale_ori(t_env *e, t_obj *obj);
 
 void		cube_with_spheres(t_env *e);
 
