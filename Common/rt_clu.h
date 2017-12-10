@@ -6,12 +6,12 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 02:47:25 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/10 02:11:11 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/10 13:22:52 by tdelmas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef rt_clu_h
-# define rt_clu_h
+#ifndef RT_CLU_H
+# define RT_CLU_H
 
 # include <math.h>
 # include <errno.h>
@@ -80,7 +80,6 @@
 # define COLOR_W            (SDL_Color){255, 255, 255, 255}
 # define COLOR_Y            (SDL_Color){239, 236, 0, 255}
 
-
 # define EQN_EPS			1e-9
 # define IsZero(x)			((x) > -EQN_EPS && (x) < EQN_EPS)
 
@@ -97,7 +96,6 @@ extern const	t_texture_sources g_tsp_sources[];
 
 # endif
 
-
 /*
 **	PRIMITIVES
 */
@@ -108,13 +106,12 @@ double		hit_sphere(t_env *e, t_obj *obj, t_ray ray);
 double		hit_plane(t_env *e, t_obj *obj, t_ray ray);
 double		hit_cyl(t_env *e, t_obj *obj, t_ray ray);
 double		hit_cone(t_env *e, t_obj *obj, t_ray ray);
-double      hit_tri(t_env *e, t_obj *obj, t_ray ray);
-double	    hit_torus(t_env *e, t_obj *obj, t_ray ray);
+double		hit_tri(t_env *e, t_obj *obj, t_ray ray);
+double		hit_torus(t_env *e, t_obj *obj, t_ray ray);
 double		hit_square(t_env *e, t_obj *obj, t_ray ray);
 int			solve_quartic(double c[5], double s[4]);
 int			solve_cubic(double c[4], double s[3]);
 int			solve_quadric(double c[3], double s[2]);
-
 
 /*
 **	LIBVECTOR
