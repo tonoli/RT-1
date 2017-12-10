@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "rt_clu.h"
+
 double		dist_priority(t_env *e, t_obj *obj, t_ray ray, double t)
 {
 	if (t > e->t_min && t < e->t_max)

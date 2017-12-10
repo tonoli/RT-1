@@ -137,5 +137,6 @@ t_vector	normal_cone(t_obj *closest_obj);
 t_vector	normal_plane(t_obj *closest_obj, t_ray ray);
 t_vector	normal_cyl(t_obj *closest_obj);
 t_vector	normal_torus(t_obj *closest_obj);
+t_vector  normal_triangle(t_obj *obj, t_vector v1, t_vector v2);
 
 #endif
