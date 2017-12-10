@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   save_scene.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tdelmas <tdelmas@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mmartins <mmartins@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/05 15:47:13 by tdelmas           #+#    #+#             */
-/*   Updated: 2017/12/10 15:26:05 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/10 18:04:08 by mmartins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -154,15 +154,15 @@ static void	ft_save_square(t_obj *obj, char **buf)
 	char	*str;
 
 	asprintf(&str, "<object>\n\t<type>square</type>\n\t<origin>%f, %f, %f\
-			 </origin>\n\t<direction>%f, %f, %f</direction>\n\t<direction2>%f,\
-			 %f, %f</direction2>\n\t<direction3>%f, %f, %f</direction3>\n\t\
-			 lenght1>%f</lenght1>\n\t<lenght2>%f</lenght2>\n\t<lenght>%f\
-			 </lenght>\n\t<color>0x%.2X, 0x%.2X, 0x%.2X</color>\n", obj->ori.x,
-			 obj->ori.y, obj->ori.z, obj->dir.x, obj->dir.y, obj->dir.z,
-			 obj->dir2.x, obj->dir2.y, obj->dir2.z, obj->dir3.x, obj->dir3.y,
-			 obj->dir3.z, obj->len1, obj->len2, obj->len3,
-			 (int)(obj->color.x * 255.0), (int)(obj->color.y * 255.0),
-			 (int)(obj->color.z * 255.0));
+</origin>\n\t<direction>%f, %f, %f</direction>\n\t<direction2>%f,\
+%f, %f</direction2>\n\t<direction3>%f, %f, %f</direction3>\n\t\
+<lenght1>%f</lenght1>\n\t<lenght2>%f</lenght2>\n\t<lenght3>%f\
+</lenght3>\n\t<color>0x%.2X, 0x%.2X, 0x%.2X</color>\n", obj->ori.x,
+	obj->ori.y, obj->ori.z, obj->dir.x, obj->dir.y, obj->dir.z,
+	obj->dir2.x, obj->dir2.y, obj->dir2.z, obj->dir3.x, obj->dir3.y,
+	obj->dir3.z, obj->len1, obj->len2, obj->len3,
+	(int)(obj->color.x * 255.0), (int)(obj->color.y * 255.0),
+	(int)(obj->color.z * 255.0));
 	if (obj->reflection)
 		ft_save_reflection(&str, obj);
 	if (obj->refraction)
