@@ -36,6 +36,18 @@ static void		decompose_c_coef(t_obj *obj, t_cone_coef *c)
 	obj->c -= c->ssq * c->dot_b * c->dot_b;
 }
 
+static double	dist_priority(t_env *e, t_obj *obj, t_ray ray, double t)
+{
+	if (t > e->t_min && t < e->t_max)
+	{
+		obj->t = t;
+		obj->cross = vector_factor(ray.ori, t, ray.dir);
+		obj->normal = normal_cone(obj);
+		return (t);
+	}
+	return (-1);
+}
+
 static double	solution(t_env *e, t_obj *obj, t_ray ray, t_vector v)
 {
 	double t;
@@ -45,28 +57,14 @@ static double	solution(t_env *e, t_obj *obj, t_ray ray, t_vector v)
 	{
 		t = (-obj->b - sqrt(obj->d)) / (2.0 * obj->a);
 		x = vector_dot(ray.dir, obj->dir) * t + vector_dot(v, obj->dir);
-		if ((x < (obj->height / 2) && x > -(obj->height / 2)) || obj->height <= 0)
-		{
-			if (t > e->t_min && t < e->t_max)
-			{
-				obj->t = t;
-				obj->cross = vector_factor(ray.ori, t, ray.dir);
-				obj->normal = normal_cone(obj);
-				return (t);
-			}
-		}
+		if (((x < (obj->height / 2) && x > -(obj->height / 2)) ||
+			obj->height <= 0) && dist_priority(e, obj, ray, t) == t)
+			return (t);
 		t = (-obj->b + sqrt(obj->d)) / (2.0 * obj->a);
 		x = vector_dot(ray.dir, obj->dir) * t + vector_dot(v, obj->dir);
-		if ((x < (obj->height / 2) && x > -(obj->height / 2)) || obj->height <= 0)
-		{
-			if (t > e->t_min && t < e->t_max)
-			{
-				obj->t = t;
-				obj->cross = vector_factor(ray.ori, t, ray.dir);
-				obj->normal = normal_cone(obj);
-				return (t);
-			}
-		}
+		if (((x < (obj->height / 2) && x > -(obj->height / 2)) ||
+			obj->height <= 0) && dist_priority(e, obj, ray, t) == t)
+			return (t);
 	}
 	return (-1);
 }
