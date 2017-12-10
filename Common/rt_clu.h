@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 02:47:25 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/10 14:13:30 by tdelmas          ###   ########.fr       */
+/*   Updated: 2017/12/10 16:58:15 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,8 @@
 
 # define INCREASE			1
 # define DECREASE			2
+# define INCREASE_MAX       3
+# define DECREASE_MAX       4
 
 # define F_WIDTH			(double)1024
 # define F_HEIGHT			(double)648
