@@ -6,7 +6,7 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 22:43:16 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/12/09 14:24:54 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/10 03:01:27 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,17 +32,6 @@ void 		draw_input(t_env *e, int i_num, int state)
 	rect = e->i_rect[i_num];
 	(state == 2) ? rect.x -= 750 : 0;
 	SDL_BlitSurface(e->s_ui, &rect, e->s_background, &e->i_rect[i_num]);
-}
-
-void		draw_all_button_top(t_env *e,  int state)
-{
-	int i;
-
-	i = -1;
-	while (++i < 9)
-	{
-		SDL_BlitSurface(e->s_ui, &e->bt_rect[i], e->s_background, &e->bt_rect[i]);
-	}
 }
 
 void		draw_all_button_left(t_env *e,  int state)

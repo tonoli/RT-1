@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 02:58:15 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/09 17:32:44 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/10 03:32:53 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,12 +74,14 @@ void		draw_button_top(t_env *e, int bt_num, int state);
 void		draw_button_left(t_env *e, int b_num, int state);
 void	 	draw_input(t_env *e, int i_num, int state);
 void		draw_input_top(t_env *e, int bt_num, int state);
+int			is_mouse_in_rect(t_env *e, SDL_Rect *rect, int rect_len);
 void		is_mouse_in_rect_left(t_env *e);
 void		is_mouse_in_rect_right(t_env *e);
 void		is_mouse_in_it_right(t_env *e);
 void		is_mouse_in_rect_top(t_env *e);
 void		is_mouse_in_rect_top_input(t_env *e);
 void		is_mouse_in_render(t_env *e);
+void		is_mouse_in_credit(t_env *e);
 void		draw_all_button_top(t_env *e,  int state);
 void		draw_all_button_left(t_env *e,  int state);
 void        draw_selected(t_env *e);
@@ -213,6 +215,9 @@ void		change_angle(t_env *e, int mode);
 //RefRef Indices
 void		change_refraction(t_env *e, int sense);
 void		change_reflection(t_env *e, int sense);
+
+// helper
+void        set_helper(t_env *e);
 
 //Rotate
 void		rotate_object_x(t_env *e, int mode);

@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 11:35:45 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/09 18:47:04 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/10 02:41:18 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ void	init_render_env(t_env *e)
 	e->threads = 32;
 	e->local_compute = 1;
 	e->magic = MAGIC;
+	e->help_actif = 0;
+	e->credit_actif = 0;
 	e->skybox_index = -1;
 	e->skybox_total = count(g_skybox_sources);
 	e->obj_tx_total = count(g_color_sources);

@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 02:47:25 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/09 18:46:29 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/10 02:11:11 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,8 +75,11 @@
 
 # define COLOR_BG           (SDL_Color){43, 43, 43, 255}
 # define COLOR_BT           (SDL_Color){34, 34, 34, 255}
+# define COLOR_LO           (SDL_Color){36, 36, 36, 255}
 # define COLOR_TXT          (SDL_Color){60, 60, 60, 255}
 # define COLOR_W            (SDL_Color){255, 255, 255, 255}
+# define COLOR_Y            (SDL_Color){239, 236, 0, 255}
+
 
 # define EQN_EPS			1e-9
 # define IsZero(x)			((x) > -EQN_EPS && (x) < EQN_EPS)
