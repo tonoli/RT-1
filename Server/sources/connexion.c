@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 23:34:12 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/10 14:59:13 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/11 14:37:53 by tdelmas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,7 +101,7 @@ void	sync_buffer(int cs, t_env *e)
 
 	local_buffer = (int *)ft_memalloc(sizeof(int) * F_WIDTH * F_HEIGHT);
 	os = 0;
-	while (os < (sizeof(int) * (int)F_WIDTH * (int)F_HEIGHT))
+	while (os < ((int)sizeof(int) * (int)F_WIDTH * (int)F_HEIGHT))
 	{
 		r = recv(cs, (void *)local_buffer + os,
 						(sizeof(int) * (int)F_WIDTH * (int)F_HEIGHT) - os, 0);

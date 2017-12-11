@@ -88,7 +88,7 @@ int			global_loop(t_env *e)
 
 void		start_interface(t_env *e)
 {
-	init_sdl_modules(e);
+	init_sdl_modules();
 	init_sdl_env(e);
 	init_sdl_interface(e);
 	global_loop(e);

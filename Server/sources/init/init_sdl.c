@@ -12,7 +12,7 @@
 
 #include "server.h"
 
-void		init_sdl_modules(t_env *e)
+void		init_sdl_modules()
 {
 	if (TTF_Init() == -1)
 	{

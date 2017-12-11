@@ -54,7 +54,7 @@ void	display_buffer(t_env *e)
 	}
 }
 
-void	reset_screen(t_env *e)
+void	reset_screen()
 {
 	int	i;
 	int j;

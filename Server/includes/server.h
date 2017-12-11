@@ -55,7 +55,7 @@ void		sync_buffer(int cs, t_env *e);
 */
 
 void		display_buffer(t_env *e);
-void		reset_screen(t_env *e);
+void		reset_screen();
 void		draw_screen(t_env *e);
 
 /*
@@ -64,7 +64,7 @@ void		draw_screen(t_env *e);
 
 void		loader_wait(t_env *e);
 void		start_interface(t_env *e);
-void		init_sdl_modules(t_env *e);
+void		init_sdl_modules();
 void		init_sdl_env(t_env *e);
 void		init_sdl_interface(t_env *e);
 int			global_loop(t_env *e);
@@ -273,8 +273,8 @@ char		*get_xml_tag(char *line, char **ptr, char **tag);
 char		*get_xml_opening_tag(char *line);
 char		*get_xml_closing_tag(char *line);
 char		*closing_tag(char *opening);
-void		parse_object(t_env *e, t_obj *obj, char *object_tag, char *line);
-void		parse_camera(t_env *e, char *object_tag, char *line);
+void		parse_object(t_obj *obj, char *line);
+void		parse_camera(t_env *e, char *line);
 t_vector	parse_origin(char *content);
 double		parse_radius(char *content);
 double		parse_radius(char *content);
