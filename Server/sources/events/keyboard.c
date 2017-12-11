@@ -124,7 +124,7 @@ void	call_function(t_env *e, int key)
 	int	i;
 
 	if (!e->live)
-		reset_screen(e);
+		reset_screen();
 	i = -1;
 	while (++i < 255)
 	{

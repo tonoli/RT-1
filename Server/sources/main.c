@@ -34,7 +34,7 @@ static void	*loop(void *data)
 	return (NULL);
 }
 
-static void	*wait_client(void *data)
+static void	*wait_client()
 {
 	pthread_t	t;
 	int64_t		cs;
