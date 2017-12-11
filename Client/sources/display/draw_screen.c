@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 13:13:22 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/09 08:45:22 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/11 17:09:46 by tdelmas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,6 @@ void		draw_screen(t_env *e)
 		if (pthread_create(&tid[i], NULL, (void *)compute_block, copy) != 0)
 		{
 			printf("FATAL ERROR : Failed to create thread\n");
-//			close(g_cli_socket);
 			exit(EXIT_FAILURE);
 		}
 	}

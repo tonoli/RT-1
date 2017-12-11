@@ -67,6 +67,7 @@ int			main(int argc, char **argv)
 	pthread_t	t;
 
 	e = (t_env *)ft_memalloc(sizeof(t_env));
+	g_e = e;
 	init_render_env(e);
 	get_options(e, argc, argv);
 	init_globals(e);

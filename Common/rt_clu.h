@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 02:47:25 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/10 18:41:33 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/11 17:08:18 by tdelmas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,8 +92,8 @@
 
 # define O_MODE				S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH
 
-#define POST(...)			ft_post_realloc_str(__VA_ARGS__)
-#define PRE(...)			ft_pre_realloc_str(__VA_ARGS__)
+# define POST(...)			ft_post_realloc_str(__VA_ARGS__)
+# define PRE(...)			ft_pre_realloc_str(__VA_ARGS__)
 
 # ifndef GLOBAL_CLU
 #  define GLOBAL_CLU
