@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 02:59:21 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/10 14:57:08 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/11 17:04:37 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ int			main(int argc, char **argv)
 	pthread_t	t;
 
 	e = (t_env *)ft_memalloc(sizeof(t_env));
+	g_e = e;
 	init_render_env(e);
 	get_options(e, argc, argv);
 	init_globals(e);
