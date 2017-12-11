@@ -21,8 +21,7 @@ void	delete_object(t_env *e)
 	if (e->objects == e->selected)
 	{
 		e->objects = e->objects->next;
-		free(e->selected);
-		e->selected = NULL;
+		ft_memdel(&e->selected);
 	}
 	else
 	{

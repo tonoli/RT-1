@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 02:58:15 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/10 22:52:55 by tdelmas          ###   ########.fr       */
+/*   Updated: 2017/12/11 17:05:13 by tdelmas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -196,6 +196,30 @@ void		print_basics_obj(t_obj *obj, t_vector o, t_vector d);
 void		print_marble(t_obj *obj);
 
 void		save_scene(t_env *e);
+
+void		ft_save_filter(FILE *file);
+void		ft_save_skybox(FILE *file);
+void		ft_save_transparent(t_obj *obj, FILE *file);
+void		ft_save_texture(t_obj *obj, FILE *file);
+void		ft_save_light(t_obj *obj, FILE *file);
+
+void		ft_save_damier(t_obj *obj, FILE *file);
+void		ft_save_marble(t_obj *obj, FILE *file);
+void		ft_save_fuzz(t_obj *obj, FILE *file);
+void		ft_save_refraction(t_obj *obj, FILE *file);
+void		ft_save_reflection(t_obj *obj, FILE *file);
+
+void		ft_save_square(t_obj *obj, FILE *file);
+void		ft_save_triangle(t_obj *obj, FILE *file);
+void		ft_save_cone(t_obj *obj, FILE *file);
+void		ft_save_cylinder(t_obj *obj, FILE *file);
+void		ft_save_torus(t_obj *obj, FILE *file);
+
+void		ft_save_plane(t_obj *obj, FILE *file);
+void		ft_save_sphere(t_obj *obj, FILE *file);
+void		ft_save_camera(t_obj *cam, FILE *file);
+char		*new_name(void);
+void		(*g_print_obj[255])(t_obj *obj, FILE *file);
 
 void		change_radius_angle(t_env *e, int mode);
 void		change_radius(t_env *e, int mode);
