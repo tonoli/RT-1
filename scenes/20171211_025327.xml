@@ -1,0 +1,174 @@
+<camera>
+	<origin>78.568614, 240.976458, -133.444093</origin>
+	<direction>20.500000, -1.320000, 0.000000</direction>
+</camera>
+
+<object>
+	<type>plane</type>
+	<origin>0.000000, -10.000000, 30.000000</origin>
+	<direction>0.000000, -1.000000, 0.000000</direction>
+	<height>0.000000</height>
+	<color>0x17, 0x7F, 0x0B</color>
+	<fuzz>0.700000</fuzz></object>
+
+<object>
+	<type>plane</type>
+	<origin>-46.764577, 0.986673, 49.609035</origin>
+	<direction>0.000000, 0.000000, 0.000000</direction>
+	<height>0.000000</height>
+	<color>0xFF, 0x00, 0x00</color>
+</object>
+
+<object>
+	<type>plane</type>
+	<origin>-25.645042, 0.586507, 49.617541</origin>
+	<direction>0.000000, 0.000000, 0.000000</direction>
+	<height>0.000000</height>
+	<color>0xFF, 0xD8, 0x00</color>
+</object>
+
+<object>
+	<type>plane</type>
+	<origin>15.990677, 1.086507, 50.967558</origin>
+	<direction>0.000000, 0.000000, 0.000000</direction>
+	<height>0.000000</height>
+	<color>0xFF, 0xD9, 0x00</color>
+</object>
+
+<object>
+	<type>plane</type>
+	<origin>-4.690442, 0.986673, 50.255727</origin>
+	<direction>0.000000, 0.000000, 0.000000</direction>
+	<height>0.000000</height>
+	<color>0xFF, 0x00, 0x01</color>
+</object>
+
+<object>
+	<type>plane</type>
+	<origin>-35.943179, 0.386840, 27.489039</origin>
+	<direction>0.000000, 0.000000, 0.000000</direction>
+	<height>0.000000</height>
+	<color>0xFF, 0x00, 0x00</color>
+</object>
+
+<object>
+	<type>plane</type>
+	<origin>-13.904690, 0.387673, 28.582307</origin>
+	<direction>0.000000, 0.000000, 0.000000</direction>
+	<height>0.000000</height>
+	<color>0xFF, 0xD9, 0x01</color>
+</object>
+
+<object>
+	<type>plane</type>
+	<origin>7.119285, 0.287839, 31.464028</origin>
+	<direction>0.000000, 0.000000, 0.000000</direction>
+	<height>0.000000</height>
+	<color>0xFF, 0x00, 0x00</color>
+</object>
+
+<object>
+	<type>plane</type>
+	<origin>-12.221945, -0.109828, -10.977402</origin>
+	<direction>0.000000, 0.000000, 0.000000</direction>
+	<height>0.000000</height>
+	<color>0xFD, 0x00, 0x01</color>
+</object>
+
+<object>
+	<type>plane</type>
+	<origin>-25.032989, -0.311161, 7.846477</origin>
+	<direction>0.000000, 0.000000, 0.000000</direction>
+	<height>0.000000</height>
+	<color>0xFC, 0xD8, 0x00</color>
+</object>
+
+<object>
+	<type>plane</type>
+	<origin>8.763767, -0.910995, -8.791407</origin>
+	<direction>0.000000, 0.000000, 0.000000</direction>
+	<height>0.000000</height>
+	<color>0xFF, 0xD9, 0x00</color>
+</object>
+
+<object>
+	<type>plane</type>
+	<origin>-2.940874, -0.866031, 9.521674</origin>
+	<direction>0.000000, 0.000000, 0.000000</direction>
+	<height>0.000000</height>
+	<color>0x00, 0x00, 0x00</color>
+</object>
+
+<object>
+	<type>plane</type>
+	<origin>18.301413, 0.133117, 11.364748</origin>
+	<direction>0.000000, 0.000000, 0.000000</direction>
+	<height>0.000000</height>
+	<color>0xFF, 0x00, 0x00</color>
+</object>
+
+<object>
+	<type>plane</type>
+	<origin>37.955262, 2.132264, 51.824718</origin>
+	<direction>0.000000, 0.000000, 0.000000</direction>
+	<height>0.000000</height>
+	<color>0xFD, 0x00, 0x01</color>
+</object>
+
+<object>
+	<type>plane</type>
+	<origin>27.557253, 3.038041, 30.638808</origin>
+	<direction>0.000000, 0.000000, 0.000000</direction>
+	<height>0.000000</height>
+	<color>0xFF, 0xD9, 0x02</color>
+</object>
+
+<object>
+	<type>plane</type>
+	<origin>-1.068406, 3.131837, -27.618584</origin>
+	<direction>0.000000, 0.000000, 0.000000</direction>
+	<height>0.000000</height>
+	<color>0xFF, 0xD9, 0x00</color>
+</object>
+
+<object>
+	<type>plane</type>
+	<origin>23.704018, 5.996847, -613.296119</origin>
+	<direction>-0.005068, -0.026572, 0.999634</direction>
+	<height>16.462078</height>
+	<color>0xFF, 0xBC, 0x6F</color>
+</object>
+
+<object>
+	<type>plane</type>
+	<origin>20.850759, -0.699549, -312.677007</origin>
+	<direction>0.000000, 0.000000, 0.000000</direction>
+	<height>0.000000</height>
+	<color>0xFF, 0xFF, 0xFF</color>
+</object>
+
+<object>
+	<type>plane</type>
+	<origin>60.172179, 285.148510, -135.801133</origin>
+	<direction>0.000000, 0.000000, 0.000000</direction>
+	<height>0.000000</height>
+	<color>0xFF, 0x9F, 0x1E</color>
+	<light>2364.000000</light>
+</object>
+
+<object>
+	<type>plane</type>
+	<origin>22.570505, 0.117331, -348.786239</origin>
+	<direction>0.046244, -0.026840, 0.998570</direction>
+	<height>2.828427</height>
+	<color>0xFF, 0xFE, 0xFF</color>
+</object>
+
+<object>
+	<type>plane</type>
+	<origin>23.125422, 0.000549, -342.093269</origin>
+	<direction>0.000000, 0.000000, 0.000000</direction>
+	<height>0.000000</height>
+	<color>0x00, 0x66, 0xCB</color>
+</object>
+
