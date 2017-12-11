@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   save_scene.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tdelmas <tdelmas@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mmartins <mmartins@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/05 15:47:13 by tdelmas           #+#    #+#             */
-/*   Updated: 2017/12/10 19:43:36 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/11 19:03:11 by mmartins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void			save_xml(t_env *e, char *base)
 	obj = e->objects;
 	while (obj)
 	{
-		g_print_obj[e->objects->type](obj, file_xml);
+		g_print_obj[obj->type](obj, file_xml);
 		fprintf(file_xml, "</object>\n\n");
 		obj = obj->next;
 	}
