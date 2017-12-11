@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 02:59:21 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/11 17:04:37 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/11 17:33:19 by tdelmas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static void	*loop(void *data)
 	return (NULL);
 }
 
-static void	*wait_client()
+static void	*wait_client(void)
 {
 	pthread_t	t;
 	int64_t		cs;
