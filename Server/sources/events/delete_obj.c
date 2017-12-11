@@ -39,4 +39,5 @@ void	delete_object(t_env *e)
 			obj = obj->next;
 		}
 	}
+	g_e->object_count--;
 }

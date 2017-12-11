@@ -22,19 +22,11 @@ static void	*loop(void *data)
 {
 	int		cs;
 	t_env	*e;
-	t_obj	*obj;
 
 	e = g_e;
 	cs = (int)data;
 	while (42)
 	{
-		obj = e->objects;
-		e->object_count = 0;
-		while (obj)
-		{
-			e->object_count++;
-			obj = obj->next;
-		}
 		sync_env_obj(e, cs);
 		sync_buffer(cs, e);
 		display_buffer(e);

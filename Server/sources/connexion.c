@@ -27,7 +27,7 @@ void	init_master_socket(void)
 	address.sin_port = htons(g_port);
 	if (bind(g_srv_socket, (struct sockaddr *)&address, sizeof(address)) < 0)
 		fatal_quit("\nbind");
-	if (listen(g_srv_socket, 256) < 0)
+	if (listen(g_srv_socket, 4) < 0)
 		fatal_quit("listen");
 }
 
@@ -37,6 +37,8 @@ int		connect_to_client(void)
 	struct sockaddr		csin;
 	int					cs;
 
+	if (g_e->nb_cli == 4)
+		pthread_exit(NULL);
 	ft_printf("\nWaiting for client...\n");
 	cslen = sizeof(csin);
 	if ((cs = accept(g_srv_socket, (struct sockaddr *)&csin, &cslen)) < 0)

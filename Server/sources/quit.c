@@ -15,13 +15,15 @@
 void	quit(int sig)
 {
 	(void)sig;
-	close(g_srv_socket);
+//	close(g_srv_socket);
+	sleep(1);
 	exit(EXIT_SUCCESS);
 }
 
 void	fatal_quit(char *msg)
 {
 	perror(msg);
+	sleep(1);
 	quit(0);
 }
 
@@ -29,6 +31,7 @@ void	custom_quit(char *msg)
 {
 	if (msg)
 		ft_dprintf(2, "\nFatal error : %s\n", msg);
+	sleep(1);
 	quit(0);
 }
 
@@ -36,5 +39,6 @@ void	thread_quit(char *msg)
 {
 	if (msg)
 		dprintf(STDERR_FILENO, "\nWarning : %s. Quiting thread.\n", msg);
+	sleep(1);
 	pthread_exit(NULL);
 }

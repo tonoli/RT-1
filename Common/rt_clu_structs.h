@@ -116,6 +116,8 @@ typedef struct		s_obj
 
 typedef struct		s_env
 {
+	unsigned int	magic;
+
 	SDL_Event		event;
 	SDL_Cursor		*cursor;
 	SDL_Window		*win;
@@ -150,7 +152,7 @@ typedef struct		s_env
 	int				y;
 	int				slave;
 
-	char			txt[24][10000];
+	char			txt[24][100];
 
 	char			loader;
 	char			render;
@@ -217,7 +219,6 @@ typedef struct		s_env
 	SDL_Surface		*s_tsp_tx[3];
 	int				tsp_tx_total;
 
-	unsigned int	magic;
 	int				object_count;
 
 	int				nb_cli;

@@ -71,7 +71,7 @@
 # define _G					(0x0000ff00)
 # define _B					(0x000000ff)
 
-# define MAGIC				(0xBAADA555)
+# define MAGIC				1337
 
 # define TOTAL_SKYBOX		12
 # define TOTAL_TX			28

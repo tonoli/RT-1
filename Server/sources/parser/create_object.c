@@ -16,6 +16,7 @@ t_obj	*new_obj(void)
 {
 	t_obj *new;
 
+	g_e->object_count++;
 	new = (t_obj *)ft_memalloc(sizeof(t_obj));
 	new->tsp_index = -1;
 	new->texture_index = -1;
