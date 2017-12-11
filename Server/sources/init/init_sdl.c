@@ -6,13 +6,13 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 04:08:09 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/10 21:41:36 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/12/11 17:33:01 by tdelmas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "server.h"
 
-void		init_sdl_modules(t_env *e)
+void		init_sdl_modules(void)
 {
 	if (TTF_Init() == -1)
 	{

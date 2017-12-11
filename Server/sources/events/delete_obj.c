@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/05 02:24:57 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/09 08:45:23 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/11 17:22:58 by tdelmas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	delete_object(t_env *e)
 	if (e->objects == e->selected)
 	{
 		e->objects = e->objects->next;
-		ft_memdel(&e->selected);
+		ft_memdel((void *)&e->selected);
 	}
 	else
 	{

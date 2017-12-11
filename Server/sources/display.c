@@ -6,7 +6,7 @@
 /*   By: nsampre <nsampre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 23:35:47 by nsampre           #+#    #+#             */
-/*   Updated: 2017/12/10 14:59:49 by nsampre          ###   ########.fr       */
+/*   Updated: 2017/12/11 17:32:43 by tdelmas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void	display_buffer(t_env *e)
 	}
 }
 
-void	reset_screen(t_env *e)
+void	reset_screen(void)
 {
 	int	i;
 	int j;

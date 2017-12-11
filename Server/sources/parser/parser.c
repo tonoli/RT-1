@@ -56,11 +56,11 @@ void	add_object(t_env *e, char *tag, char *content)
 	if (ft_strequ(tag, "<object>"))
 	{
 		obj = new_obj();
-		parse_object(e, obj, tag, content);
+		parse_object(obj, content);
 		obj_push_back(&e->objects, obj);
 	}
 	else if (ft_strequ(tag, "<camera>"))
-		parse_camera(e, tag, content);
+		parse_camera(e, content);
 	else
 		parse_error("Unknown object !", NULL, NULL);
 }

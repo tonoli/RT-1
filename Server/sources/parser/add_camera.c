@@ -26,7 +26,7 @@ void	add_camera_content(t_env *e, char *tag, char *content)
 		parse_error("Unknown attribute.", tag, content);
 }
 
-void	parse_camera(t_env *e, char *object_tag, char *line)
+void	parse_camera(t_env *e, char *line)
 {
 	char *input;
 	char *content;

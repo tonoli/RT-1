@@ -48,16 +48,21 @@ char		*yes_no(int i)
 
 void		write_right_text_top(t_env *e)
 {
-	int i;
+	int		i;
+	char	*txt;
 
 	i = -1;
-	sprintf(e->txt[3], " %s ", name_obj(e->selected->type));
+	txt = name_obj(e->selected->type);
+	sprintf(e->txt[3], " %s ", txt);
+	ft_memdel((void *)&txt);
 	if (e->selected->emit != 1)
 		sprintf(e->txt[4], " - ");
 	else
 		sprintf(e->txt[4], " %.0f ", e->selected->light);
 	sprintf(e->txt[5], " %.*f ", 2, e->selected->fuzz);
-	sprintf(e->txt[6], " %s ", yes_no(e->selected->reflection));
+	txt = yes_no(e->selected->reflection);
+	sprintf(e->txt[6], " %s ", txt);
+	ft_memdel((void *)&txt);
 	sprintf(e->txt[7], " %.*f ", 1, e->selected->refraction);
 	if (e->selected->type == 6 || e->selected->type == 2)
 		sprintf(e->txt[8], " - ");

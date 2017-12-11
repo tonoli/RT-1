@@ -12,7 +12,7 @@
 
 #include "server.h"
 
-void	tag_pack_three(t_env *e, t_obj *obj, char *tag, char *content)
+void	tag_pack_three(t_obj *obj, char *tag, char *content)
 {
 	if (ft_strequ(tag, "<height>"))
 		obj->height = parse_radius(content);
@@ -33,7 +33,7 @@ void	tag_pack_three(t_env *e, t_obj *obj, char *tag, char *content)
 		parse_error("Unknown attribute.", tag, content);
 }
 
-void	tag_pack_two(t_env *e, t_obj *obj, char *tag, char *content)
+void	tag_pack_two(t_obj *obj, char *tag, char *content)
 {
 	if (ft_strequ(tag, "<color>"))
 	{
@@ -57,10 +57,10 @@ void	tag_pack_two(t_env *e, t_obj *obj, char *tag, char *content)
 	else if (ft_strequ(tag, "<damier2>"))
 		obj->damier2 = parse_color(content);
 	else
-		tag_pack_three(e, obj, tag, content);
+		tag_pack_three(obj, tag, content);
 }
 
-void	tag_pack_one(t_env *e, t_obj *obj, char *tag, char *content)
+void	tag_pack_one(t_obj *obj, char *tag, char *content)
 {
 	if (ft_strequ(tag, "<type>"))
 		obj->type = parse_type(content);
@@ -79,10 +79,10 @@ void	tag_pack_one(t_env *e, t_obj *obj, char *tag, char *content)
 	else if (ft_strequ(tag, "<angle>"))
 		obj->radius = parse_angle(content);
 	else
-		tag_pack_two(e, obj, tag, content);
+		tag_pack_two(obj, tag, content);
 }
 
-void	parse_object(t_env *e, t_obj *obj, char *object_tag, char *line)
+void	parse_object(t_obj *obj, char *line)
 {
 	char *input;
 	char *content;
@@ -96,7 +96,7 @@ void	parse_object(t_env *e, t_obj *obj, char *object_tag, char *line)
 		input = ptr;
 		if (!*content)
 			break ;
-		tag_pack_one(e, obj, tag, content);
+		tag_pack_one(obj, tag, content);
 		ft_strdel(&tag);
 		ft_strdel(&content);
 	}

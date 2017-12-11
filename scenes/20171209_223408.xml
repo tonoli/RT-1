@@ -48,7 +48,8 @@
 	<radius>5.477226</radius>
 	<height>6.557439</height>
 	<color>0xBA, 0x15, 0xDE</color>
-	<reflection>1</reflection></object>
+	<reflection>1</reflection>
+</object>
 
 <object>
 	<type>cylinder</type>
@@ -57,7 +58,8 @@
 	<radius>5.477226</radius>
 	<height>6.244998</height>
 	<color>0x1C, 0xED, 0x25</color>
-	<refraction>2.200000</refraction></object>
+	<refraction>2.200000</refraction>
+</object>
 
 <object>
 	<type>cylinder</type>
