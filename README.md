@@ -37,17 +37,17 @@ Let's just go back to this command :
 
 If everything works fine, you should see this :
 
-<-- SPLASHSCREEN -->
+<img src="./demo/SPLASHSCREEN.png"/>
 
 And the '1 client connected', meaning rt_server successfully forked and launched the rt_client on background. If not... make a 🎫.
 
 Press a key, and TADAAAAM !
 
-<-- LIVEEDITORRANDOM -->
+<img src="./demo/LIVEEDITOR.png"/>
 
 What ? Not sexy ? Blurry ? Weird ? It's the live edition mode. Just press enter or click on the 🎥 on the top right and wait a few seconds.
 
-<-- RENDERRANDOM -->
+<img src="./demo/SCENESPHERE.png"/>
 
 The first frame will always be noisy. Wait for the next frames to be added and averaged and it'll look smooth. If you like your image, you can save it by clicking on the save button [11]. It will save the image on a .png format in ./images/ and the current scene description on an .xml format in ./scenes/.
 
@@ -60,12 +60,20 @@ First of all let's start from scratch with something empty.
 
 ```./rt_server -p 1337 ./scenes/void.xml```
 
-<-- VOIDSCENE -->
+<img src="./demo/SCENEVOID.png"/>
 
 Let's add a sphere, click on the sphere[A] button
 
-<-- left menu -->
+<img src="./demo/MENULEFT.png" width="40%"/>
 
-<-- SPHEREPOPPED -->
+<img src="./demo/SPHEREPOPPED.png"/>
 
 The right menu popped, describing the selected object. To select an object, just click on one.
+
+<img src="./demo/MENURIGHT.png" width="30%"/>
+
+<img src="./demo/MENUTOP.png" />
+
+Now, time for you to get some fun.
+
+<img src="./demo/KB.png"/>
