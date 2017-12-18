@@ -72,8 +72,18 @@ The right menu popped, describing the selected object. To select an object, just
 
 <img src="./demo/MENURIGHT.png" width="30%"/>
 
+Just click on a field and modify it with arrow keys.
+
 <img src="./demo/MENUTOP.png" />
 
 Now, time for you to get some fun.
 
 <img src="./demo/KB.png"/>
+
+
+<img src="./demo/DEMO1.png"/>
+
+<img src="./demo/DEMO2.png"/>
+
+<img src="./demo/DEMO3.png"/>
+
