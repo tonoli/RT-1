@@ -7,7 +7,7 @@ Let's gear up! Following the [RTv1](http://github.com/nsampre/42/tree/rtv1) proj
 
 ## Installation
 
-```$ git clone http://github.com/nsampre/RT && cd ./RT && make```
+```$ git clone http://github.com/tonoli/RayTracing && cd ./RayTracing && make```
 
 /!\ By ~~lazyness~~ kindness we already compiled the SDL2, SDL_TTF and SDL_IMAGE frameworks in common/frameworks. Feel free to update them directly at www.libsdl.org . Oh by the way, this product was only tested for OSX users.
 
